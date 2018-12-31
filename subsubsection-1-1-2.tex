@@ -1,0 +1,32 @@
+Розглянемо рівняння вигляду
+\begin{equation}
+	\label{eq:1.8}
+	\frac{\diff y}{\diff x} = f(a x + b y + c)
+\end{equation}
+де $a$, $b$, $c$ -- сталі. \\
+
+Зробимо заміну $a x + b y + c = z$. Тоді $a \cdot \diff x + b \cdot \diff y = \diff z$ і $\frac{\diff y}{\diff x} = \frac1b \cdot \left( \frac{\diff z}{\diff x} - a \right)$. \\
+
+Підставивши в вихідне рівняння, одержимо
+\begin{equation}
+	\label{eq:1.9}
+	\frac1b \cdot \left( \frac{\diff z}{\diff x} - a \right) = f(z),
+\end{equation}
+або
+\begin{equation}
+	\label{eq:1.10}
+	\frac{\diff z}{\diff x} = a + b \cdot f (z),
+\end{equation}
+
+Розділивши змінні, запишемо
+\begin{equation}
+	\label{eq:1.11}
+	\frac{\diff z}{a + b \cdot f (z)} - \diff x = 0
+\end{equation}
+і
+\begin{equation}
+	\label{eq:1.12}
+	\int \frac{\diff z}{a + b \cdot f (z)} - x = C.
+\end{equation}
+
+Загальний інтеграл має вигляд $\Phi(a x + b y + c, x) = C$.

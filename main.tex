@@ -1,0 +1,68 @@
+% cd ..\..\Users\NikitaSkybytskyi\Desktop\de
+% pdflatex main.tex && start main.pdf
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, ukrainian]{babel}
+\usepackage{amsmath, amssymb}
+
+\allowdisplaybreaks
+\setlength\parindent{0pt}
+\numberwithin{equation}{subsection}
+
+\title{{\Huge ДИФЕРЕНЦІАЛЬНІ РІВНЯННЯ}}
+\author{Скибицький Нікіта}
+\date{\today}
+
+\usepackage{float, multirow, multicol, xcolor, hyperref}
+\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=red}
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}{Лема}[section]
+\theoremstyle{definition}
+\newtheorem*{definition}{Визначення}
+\newtheorem{example}{Приклад}[section]
+\newtheorem{problem}{Задача}[section]
+\newtheorem*{solution}{Розв'язок}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{\!#2}}
+
+\begin{document}
+
+\maketitle \thispagestyle{empty} \newpage 
+
+У ваших руках конспект лекцій з нормативного курсу ``Диференціальні рівняння'' прочитаного проф., д.ф.-м.н. Хусаїновим Денисом Ях'євичем на другому курсі спеціальності ``прикладна математика'' факультету ком\-п'ю\-тер\-них наук та кібернетики Київського національного університету імені Тараса Шевченка восени 2017-го та навесні 2018-го року. \\
+
+Конспект у компактній формі відображає матеріал курсу, допомагає сформувати загальне уявлення про предмет вивчення, правильно зорієнтуватися в даній галузі знань. Конспект лекцій з названої дисципліни сприятиме більш успішному вивченню дисципліни, причому більшою мірою для студентів заочної форми, екстернату, дистанційного та індивідуального навчання. \\
+
+Комп'ютерний набір та верстка -- Скибицький Нікіта Максимович. \newpage
+
+\tableofcontents \newpage
+
+\section*{Вступ}
+
+\input{introduction.tex}
+
+\section{Диференціальні рівняння першого порядку}
+
+\input{section-1.tex}
+
+\subsubsection{Рівняння, що зводяться до рівнянь зі змінними, що розділяються}
+
+\input{subsubsection-1-1-2.tex}
+
+\subsubsection{Вправи для самостійної роботи}
+
+\input{subsubsection-1-1-3.tex}
+
+\subsection{Однорідні рівняння}
+
+\input{subsection-1-2.tex}
+
+\subsection{Лінійні рівняння першого порядку}
+
+\input{subsection-1-3.tex}
+
+\end{document}

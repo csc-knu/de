@@ -1,0 +1,256 @@
+\subsubsection{Загальна теорія}
+
+Рівняння, що є лінійним відносно невідомої функції та її похідної, називається лінійним диференціальним рівнянням. Його загальний вигляд такий:
+\begin{equation}
+	\label{eq:1.3.1}
+	\frac{\diff y}{\diff x} + p(x) \cdot y = q(x).
+\end{equation}
+
+Якщо $q(x) \equiv 0$, тобто рівняння має вигляд
+\begin{equation}
+	\label{eq:1.3.2}
+	\frac{\diff y}{\diff x} + p(x) \cdot y = 0,
+\end{equation}
+то воно зветься однорідним. Однорідне рівняння є рівнянням зі змінними, що розділяються і розв’язується таким чином:
+\begin{align*}
+	\frac{\diff y}{y} &= -p(x) \cdot \diff x, \\
+	\int \frac{\diff y}{y} &= - \int p(x) \cdot \diff x, \\
+	\ln y &= - \int p(x) \cdot \diff x + \ln C.
+\end{align*}
+Нарешті $y = C \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\}$. \\
+
+Розв’язок неоднорідного рівняння будемо шукати методом варіації довільних сталих (методом невизначених множників Лагранжа). Він складається в тому, що розв’язок неоднорідного рівняння шукається в такому ж вигляді, як і розв’язок однорідного, але $C$ вважається невідомою функцією від $x$, тобто $C = C(x)$ і $y = C(x) \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\}$. \\
+
+Для знаходження $C(x)$ підставимо $y$ у рівняння
+\begin{multline} 
+	\label{eq:1.3.3}
+	\frac{\diff C(x)}{\diff x} \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\} = - C(x) \cdot p(x) \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\} + \\
+	+ p(x) \cdot C(x) \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\} = q(x).
+\end{multline}
+
+Звідси
+\begin{equation} 
+	\label{eq:1.3.4}
+	\diff C(x) = q(x) \cdot \exp \left\{\int p(x) \cdot \diff x \right\} \cdot \diff x.
+\end{equation}
+
+Проінтегрувавши, одержимо
+\begin{equation} 
+	\label{eq:1.3.5}
+	C(x) = \int q(x) \cdot \exp \left\{\int p(x) \cdot \diff x \right\} \cdot \diff x + C.
+\end{equation}
+
+І загальний розв’язок неоднорідного рівняння має вигляд
+\begin{equation} 
+	\label{eq:1.3.6}
+	y = \exp \left\{ - \int p(x) \cdot \diff x \right\} \cdot \left( \int q(x) \cdot \exp \left\{\int p(x) \cdot \diff x \right\} \cdot \diff x + C\right).
+\end{equation}
+
+Якщо використовувати початкові умови $y(x_0) = y_0$, то розв’язок можна записати у формі Коші:
+\begin{multline} 
+	\label{eq:1.3.7}
+	y(x, x_0, y_0) = \exp \left\{ - \int_{x_0}^x p(t) \cdot \diff t \right\} \cdot \\
+	\cdot \left( \int_{x_0}^x q(t) \cdot \exp \left\{\int_t^x p(\xi) \cdot \diff \xi \right\} \cdot \diff t + y_0\right).
+\end{multline}
+
+\subsubsection{Рівняння Бернуллі}
+
+Рівняння вигляду
+\begin{equation}
+	\label{eq:1.3.8}
+	\frac{\diff y}{\diff x} + p(x) \cdot y = q(x) \cdot y^m, \quad m \ne 1
+\end{equation}
+називається рівнянням Бернуллі. Розділимо на $y^m$ і одержимо 
+\begin{equation}
+	\label{eq:1.3.9}
+	y^{-m} \cdot \frac{\diff y}{\diff x} + p(x) \cdot y^{1-m} = q(x).
+\end{equation}
+
+Зробимо заміну: $y^{1-m} = z$, $(1 - m) \cdot y^{-m} \cdot \frac{\diff y}{\diff x} = \diff z$. \\
+
+Підставивши в рівняння, отримаємо
+\begin{equation}
+	\label{eq:1.3.10}
+	\frac{1}{1-m} \cdot \frac{\diff z}{\diff x} + p(x) \cdot z = q(x).
+\end{equation}
+
+Одержали лінійне диференціальне рівняння. Його розв’язок має вигляд
+\begin{multline}
+	\label{eq:1.3.11}
+	z = \exp\left\{ -(1 - m) \cdot \int p(x) \diff x \right\} \cdot \\
+	\cdot \left( (1-m) \cdot \int q(x) \cdot \exp\left\{ (1 - m) \cdot \int p(x) \diff x \right\} + C\right).
+\end{multline}
+ 
+\subsubsection{Рівняння Рікатті}
+
+Рівняння вигляду 
+\begin{equation}
+	\label{eq:1.3.12}
+	\frac{\diff y}{\diff x} + p(x) \cdot y + r(x) \cdot y^2 = q(x)
+\end{equation} 
+називається рівнянням Рікатті. В загальному випадку рівняння Рікатті не інтегрується. Відомі лише деякі частинні випадки рівнянь Рікатті, що інтегруються в квадратурах. Розглянемо один з них. Нехай відомий один частинний розв’язок $y = y_1(x)$. Робимо заміну $y = y_1(x) + z$ і одержуємо
+\begin{equation}
+	\label{eq:1.3.13}
+	\frac{\diff y_1(x)}{\diff x} + \frac{\diff z}{\diff x} + p(x) \cdot (y_1(x) + z) + r(x) \cdot (y_1(x) + z)^2 = q(x).
+\end{equation}
+
+Оскільки $y_1(x)$ -- частинний розв’язок, то
+\begin{equation}
+	\label{eq:1.3.14}
+	\frac{\diff y_1(x)}{\diff x} + p(x) \cdot y_1 + r(x) \cdot y_1^2 = q(x).
+\end{equation}
+
+Розкривши в \eqref{eq:1.3.13} скобки і використовуючи \eqref{eq:1.3.14}, одержуємо
+\begin{equation}
+	\label{eq:1.3.15}
+	\frac{\diff z}{\diff x} + p(x) \cdot z + 2 r(x) \cdot y_1(x) \cdot z + r(x) \cdot z^2 = 0.
+\end{equation}
+
+Перепишемо одержане рівняння у вигляді
+\begin{equation}
+	\label{eq:1.3.16}
+	\frac{\diff z}{\diff x} + \left(p(x) + 2 r(x) \cdot y_1(x)\right) \cdot z = - r(x) \cdot z^2 ,
+\end{equation}
+це рівняння Бернуллі з $m = 2$.
+
+\subsubsection{Вправи для самостійної роботи}
+
+\begin{example}
+	Розв’язати рівняння \[ y' - y \cdot \tan x = \cos x.\]
+\end{example}
+\begin{solution}
+	Використовуючи вигляд загального розв’язку, отримаємо
+	\[ y = \exp\left\{\int \tan x \diff x\right\} \cdot \left(\int \exp\left\{-\int\tan x\diff x\right\}\cdot \cos x \diff x+C\right). \]
+
+	Оскільки $\int \tan x \diff x = - \ln |\cos x|$, то отримаємо
+	\begin{align*}
+		y &= e^{-\ln|\cos x|} \cdot \left(\int e^{\ln|\cos x|} \cdot \cos x \diff x+C\right) = \\
+		&= \frac{1}{\cos x} \cdot \left( \int \cos^2 x \diff x + C \right) = \\
+		&= \frac{1}{\cos x} \cdot \left( \frac x2 + \frac{\sin 2x}{4} + C \right).
+	\end{align*}
+	Або
+	\[ y = \frac{C}{\cos x} + \frac{x}{2 \cos x} + \frac{\sin x}{2}. \]
+\end{solution}
+
+\begin{example}
+	Знайти частинний розв’язок рівняння \[ y' - \frac yx = x^2,\] що задовольняє початковій умові $y(2) = 2$.
+\end{example}
+\begin{solution}
+	Використовуючи вигляд загального розв’язку, отримаємо
+	\begin{align*}
+		y &= \exp\left\{\int \frac1x \diff x\right\} \cdot \left(\int \exp\left\{-\int\frac1x\diff x\right\}\cdot x^2 \diff x+C\right) = \\
+		&= e^{\ln|x|} \cdot \left(\int e^{-\ln|x|} \cdot x^2 \diff x+C\right) = \\
+		&= x \cdot \left(\int x \diff x+C\right) = \\
+		&= x \cdot \left(\frac{x^2}{2} + C\right).
+	\end{align*}
+	Таким чином 
+	\[ y = C x + \frac{x^3}{2}.\]
+	Підставивши початкові умови $y(2) = 2$, одержимо $2 = 2C + 4$. Звідси $C = -1$ і частинний розв’язок має вигляд \[ y_{\text{част.}} = \frac{x^3}{2} - x.\]
+\end{solution}
+
+Розв’язати рівняння:
+\begin{multicols}{2}
+\begin{problem}
+	\[x y' + (x + 1) \cdot y = 3 x^2 e^{-x};\]
+\end{problem}
+\begin{problem}
+	\[(2x + 1) \cdot y' =4x+2y;\]
+\end{problem}
+\begin{problem}
+	\[y'=2x\cdot(x^2+y);\]
+\end{problem}
+\begin{problem}
+	\[x^2y'+xy+1=0;\]
+\end{problem}
+\begin{problem}
+	\[y'+y\cdot\tan x=\sec x;\]
+\end{problem}
+\begin{problem}
+	\[x\cdot(y'-y)=e^x;\]
+\end{problem}
+\begin{problem}
+	\[(xy'-1)\cdot\ln x=2y;\]
+\end{problem}
+\begin{problem}
+	\[(y+x^2)\cdot \diff x=x \cdot\diff y;\]
+\end{problem}
+\begin{problem}
+	\[(2e^x-y)\cdot\diff x=\diff y;\]
+\end{problem}
+\begin{problem}
+	\[\sin^2 y + x \cdot \cot y = \frac1{y^2};\]
+\end{problem}
+\begin{problem}
+	\[(x+y^2)\cdot y'=y;\]
+\end{problem}
+\begin{problem}
+	\[(3e^y-x)\cdot y' = 1;\]
+\end{problem}
+\begin{problem}
+	\[y = x\cdot(y'- x \cdot \cos x).\]
+\end{problem}
+\end{multicols}
+
+Знайти частинні розв’язки рівняння з заданими початковими умовами:
+\begin{problem}
+	\[y'-\frac yx=-\frac{\ln x}x, \quad y(1)=1;\]
+\end{problem}
+\begin{problem}
+	\[y'-\frac{2xy}{1+x^2}=1+x^2, \quad y(1)=3;\]
+\end{problem}
+\begin{problem}
+	\[y'-\frac{2y}{x+1}=e^{x}\cdot(x+1)^2, \quad y(0)=1;\]
+\end{problem}
+\begin{problem}
+	\[xy'+2y=x64,\quad y(1)=-\frac58;\]	
+\end{problem}
+\begin{problem}
+	\[ y' - \frac yx  = x \cdot \sin x, \quad y\left(\frac\pi2\right)=1;\]
+\end{problem}
+\begin{problem}
+	\[y'+\frac yx=\sin x, \quad y(\pi)=\frac1\pi;\]
+\end{problem}
+\begin{problem}
+	\[(13y^3-x)\cdot y'=4y, \quad y(5)=1;\]
+\end{problem}
+\begin{problem}
+	\[2\cdot(x+\ln^2y-\ln y)\cdot y'= y, \quad y(2)=1.\]
+\end{problem}
+
+Розв’язати рівняння Бернуллі:
+\begin{multicols}{2}
+\begin{problem}
+	\[y'+xy=(1+x)\cdot e^{-x}\cdot y^2;\]
+\end{problem}
+\begin{problem}
+	\[xy'+y=2y^2\cdot \ln x;\]
+\end{problem}
+\begin{problem}
+	\[2\cdot(2xy'+y)=xy^2;\]
+\end{problem}
+\begin{problem}
+	\[3\cdot(xy'+y)=y^2\cdot \ln x;\]
+\end{problem}
+\begin{problem}
+	\[2\cdot(y'+y)=xy^2.\]
+\end{problem}
+\end{multicols}
+
+Розв’язати рівняння Рікатті:
+\begin{multicols}{2}
+\begin{problem}
+	\[x^2\cdot y' + xy +x^2y^2=4;\]
+\end{problem}
+\begin{problem}
+	\[3y'+y^2+\frac2x=0;\]
+\end{problem}
+\begin{problem}
+	\[xy'-(2x+1)\cdot y+y^2=5-x^2;\]
+\end{problem}
+\begin{problem}
+	\[y'-2xy+y^2=5-x^2;\]
+\end{problem}
+\begin{problem}
+	\[y'+2y \cdot e^x - y^2 = e^{2x} + e^x.\]
+\end{problem}
+\end{multicols}

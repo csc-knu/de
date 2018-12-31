@@ -1,0 +1,299 @@
+\subsubsection{Загальна теорія}
+Нехай рівняння має вигляд
+\begin{equation}
+	\label{eq:1.21}
+	M(x, y) \cdot \diff	x + N(x, y) \cdot \diff y = 0.
+\end{equation}
+
+Якщо функції $M(x, y)$ та $N(x, y)$ однорідні одного ступеня, то рівняння називається однорідним. Нехай функції $M(x, y)$ та $N(x, y)$ однорідні ступеня $k$, тобто
+\begin{equation}
+	\label{eq:1.22}
+	M(t x, t y) = t^k \cdot M(x, y), \qquad N(t x, t y) = t^k \cdot N(x, y).
+\end{equation}
+
+Робимо заміну $y = u x$, $\diff y = u \diff x + x \diff u$. Після підстановки одержуємо
+\begin{equation}
+	\label{eq:1.23}
+	M(x, u x) \cdot \diff x + N(x, u x) \cdot (u \diff x + x \diff u) = 0,
+\end{equation}
+або 
+\begin{equation}
+	\label{eq:1.24}
+	x^k M(1, u) \cdot \diff x + x^k N(1, u) \cdot (u \diff x + x \diff u) = 0.
+\end{equation}
+
+Скоротивши на $x^k$ і розкривши скобки, запишемо 
+\begin{equation}
+	\label{eq:1.25}
+	M(1, u) \cdot \diff x + N(1, u) \cdot u \diff x + N(1, u) \cdot x \diff u = 0.
+\end{equation}
+Згрупувавши, одержимо рівняння зі змінними, що розділяються
+\begin{equation}
+	\label{eq:1.26}
+	(M(1, u) + N(1, u) \cdot u) \diff x + N(1, u) \cdot x \diff u = 0,
+\end{equation}
+або 
+\begin{equation}
+	\label{eq:1.27}
+	\int \frac{\diff x}{x} + \int \frac{N(1, u) \cdot \diff u}{M(1, u) + N(1, u) \cdot u} = C.
+\end{equation}
+
+Взявши інтеграли та замінивши $u = y / x$, отримаємо загальний інтеграл $\Phi(x, y / x) = C$.
+
+\subsubsection{Рівняння, що зводяться до однорідних}
+
+Нехай маємо рівняння вигляду
+\begin{equation}
+	\label{eq:1.28}
+	\frac{\diff y}{\diff x} = f \left( \frac{a_1 x + b_1 y + c_1}{a_2 x + b_2 y + c_2} \right).
+\end{equation}
+
+Розглянемо два випадки
+\begin{enumerate}
+	\item 
+	\begin{equation}
+		\label{eq:1.29}
+		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} \ne 0.
+	\end{equation}
+
+	Тоді система алгебраїчних рівнянь
+	\begin{equation}
+		\label{eq:1.30}
+		\left\{
+			\begin{aligned}
+				a_1 x + b_1 y + c_1 &= 0, \\
+				a_2 x + b_2 y + c_2 &= 0,
+			\end{aligned}
+		\right.
+	\end{equation}
+	має єдиний розв’язок $(x_0, y_0)$. Проведемо заміну $x = x_1 + x_0$, $y = y_1 + y_0$ та отримаємо
+	\begin{multline}
+		\label{eq:1.31}
+		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 \cdot (x_1 + x_0) + b_1 \cdot (y_1 + y_0) + c_1}{a_2 \cdot (x_1 + x_0) + b_2 \cdot (y_1 + y_0) + c_2} \right) = \\
+		= f \left( \frac{a_1 x_1 + b_1 y_1 + (a_1 x_0 + b_1 y_0 + c_1)}{a_2 x_1 + b_2 y_1 + (a_2 x_0 + b_2 y_0 + c_2)} \right)
+	\end{multline}
+
+	Оскільки $(x_0, y_0)$ -- розв’язок \eqref{eq:1.30}, то \eqref{eq:1.28} прийме вигляд
+	\begin{equation}
+		\label{eq:1.32}
+		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 y_1}{a_2 x_1 + b_2 y_1} \right)
+	\end{equation}
+	і є однорідним нульового ступеня. Робимо заміну $y_1 = u x_1$, $\diff y_1 = u \cdot \diff x_1 + x_1 \cdot \diff u$. \\
+
+	Підставимо в \eqref{eq:1.32}
+	\begin{equation}
+		\label{eq:1.33}
+		u + x_1 \cdot \frac{\diff u}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right).
+	\end{equation}
+	
+	Одержимо
+	\begin{equation}
+		\label{eq:1.34}
+		x_1 \cdot \diff u + \left( u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right) \right) \diff x_1 = 0.
+	\end{equation}
+
+	Розділивши змінні, маємо
+	\begin{equation}
+		\label{eq:1.35}
+		\int \frac{\diff u}{u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right)} + \ln (x_1) = C.
+	\end{equation}
+
+	І загальний інтеграл диференціального рівняння має вигляд $\Phi(u, x_1) = C$. Повернувшись до вихідних змінних, запишемо
+	\begin{equation}
+		\label{eq:1.36}
+		\Phi \left( \frac{y - y_0}{x - x_0}, x - x_0 \right) = C.
+	\end{equation}
+
+	\item Нехай 
+	\begin{equation}
+		\label{eq:1.37}
+		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} = 0,
+	\end{equation}
+	тобто коефіцієнти строк лінійно залежні і
+	\begin{equation}
+		\label{eq:1.38}
+		a_1 x + b_1 y = \alpha \cdot (a_2 x + b_2 y).
+	\end{equation}
+
+	Робимо заміну $a_2 x + b_2 y = z$. Звідси $\frac{\diff y}{\diff x} = \frac{1}{b_2} \cdot \left( \frac{\diff z}{\diff x} - a_2 \right)$. \\
+
+	Підставивши в диференціальне рівняння, одержимо
+	\begin{equation}
+		\label{eq:1.39}
+		\frac{1}{b_2} \cdot \left( \frac{\diff z}{\diff x} - a_2 \right) = f \left ( \frac{\alpha z + c_1}{z + c_2} \right),
+	\end{equation}
+	або
+	\begin{equation}
+		\label{eq:1.40}
+		\frac{\diff z}{\diff x} = a_2 + b_2 \cdot f \left ( \frac{\alpha z + c_1}{z + c_2} \right),
+	\end{equation}
+	Розділивши змінні, отримаємо
+	\begin{equation}
+		\label{eq:1.41}
+		\int \frac{\diff z}{a_2 + b_2 \cdot f \left ( \frac{\alpha z + c_1}{z + c_2} \right)} - x = C,
+	\end{equation}
+
+	Загальний інтеграл має вигляд $\Phi(a_2 x + b_2 y, x) = C$
+\end{enumerate}
+
+\subsubsection{Вправи для самостійної роботи}
+
+Однорідні рівняння можуть бути записані у вигляді $y' = f \left( \frac{y}{x} \right)$ або 
+\begin{equation*}
+ 	M(x, y)\cdot\diff y + N(x, y) \cdot \diff y = 0,
+\end{equation*} де $M(x, y)$ і $N(x, y)$ -- однорідні функції одного й того ж ступеня. Для того, щоб розв’язати однорідне рівняння, необхідно провести заміну $y = u x$, $\diff y = u \diff x + x \diff u$, в результаті якої отримаємо рівняння зі змінними, що розділяються. 
+
+\begin{example}
+	Розв’язати рівняння $x \diff y = (x + y) \diff y$. 
+\end{example}
+
+\begin{solution}
+	Дане рівняння однорідне, оскільки $x$ та $x + y$ є однорідними функціями першого ступеня. \\
+
+	Проведемо заміну: $y = u x$. Тоді $\diff y = u \diff x + x \diff y$. Підставивши $y$ та $\diff y$ в задане рівняння, отримаємо  
+	\begin{align}
+		\label{eq:1.42}
+		x \cdot (x \diff u + u \diff x) &= (x + x u) \diff x, \\
+		x^2 \diff u &= x \diff x
+	\end{align}
+
+	Розв’яжемо це рівняння зі змінними, що розділяються:
+	\begin{align}
+		\label{eq:1.43}
+		\diff u &= \frac{\diff x}{x}, \\
+		u &= \ln |x| + C.
+	\end{align}
+	Повернувшись до вихідних змінних $u = y / x$, отримаємо $y = x \cdot (\ln |x| + C)$. Крім того розв’язком є $x = 0$, що було загублене при поділенні рівняння на $x$.
+\end{solution}
+
+Розв’язати рівняння:
+\begin{multicols}{2}
+\begin{problem}
+	\[ (x + 2y) \cdot \diff x - x \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ (x - y) \cdot \diff x + (x + y) \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[y^2 + x^2 y' = x y y'; \]
+\end{problem}
+\begin{problem}
+	\[ (x^2 + y^2) \cdot y' = 2 xy; \]
+\end{problem}
+\begin{problem}
+	\[ xy' - y = x \cdot \tan \left( \frac{y}{x} \right); \]
+\end{problem}
+\begin{problem}
+	\[ x y' = y - x e^{y / x}; \]
+\end{problem}
+\begin{problem}
+	\[x y' - y = (x + y) \cdot \ln \left( \frac{x + y}{x} \right); \]
+\end{problem}
+\begin{problem}
+	\[ (3x + y) \cdot \diff x - (2x + 3y) \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ x y' = y \cos \left(\ln \left(\frac{y}{x} \right)\right); \]
+\end{problem}
+\begin{problem}
+	\[ \left(y+\sqrt{xy}\right)\cdot \diff x = x \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = \sqrt{x^2 - y^2} + y; \]
+\end{problem}
+\begin{problem}
+	\[ x^2 y' = y \cdot (x + y); \]
+\end{problem}
+\begin{problem}
+	\[ y \cdot (-y + xy') = \sqrt{x^4 + y^4}; \]
+\end{problem}
+\begin{problem}
+	\[ x \diff y - y \diff x = \sqrt{x^2 + y^2} \diff x; \]
+\end{problem}
+\begin{problem}
+	\[ (y^2 - 2xy) \cdot \diff x + x^2 \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ 2x^3 y' = y \cdot (2x^2 - y^2); \]
+\end{problem}
+\begin{problem}
+	\[ \left( x - y \cos \left(\rfrac{y}{x}\right)\right) \diff x + x \cos \left(\rfrac{y}{x}\right) \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ y' (xy - x^2) = y^2; \]
+\end{problem}
+\begin{problem}
+	\[ 2xyy' = x^2 + y^2; \]
+\end{problem}
+\begin{problem}
+	\[ (6x + 3y) \cdot \diff x = (7x - 2y) \cdot \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ y^2 x \diff x = y \cdot (xy - 2y^2) \cdot \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ x^2 y \diff x = y \cdot (xy - 2y^2) \cdot \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ 2y^3 = xy' \cdot (2y^2 - x^2); \]
+\end{problem}
+\begin{problem}
+	\[ \left( x + \sqrt{xy}\right) \cdot \diff y = y \diff x; \]
+\end{problem}
+\begin{problem}
+	\[ y = \left( \sqrt{y^2 - x^2} + x\right) y'; \]
+\end{problem}
+\begin{problem}
+	\[ (3x - 2y) \cdot \diff x - (2x + y) \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ (7x + 6y) \cdot \diff x - (x + 3y) \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = y + x \cdot \cot \left(\frac{y}{x}\right). \]
+\end{problem}
+\end{multicols}
+
+Знайти частинні розв’язки, що задовольняють задані початкові умови:
+\begin{problem}
+	\[ x y' = 4 \sqrt{2x^2 + y^2} + y, \quad y(1) = 2; \]
+\end{problem}
+\begin{problem}
+	\[ (2y^2 + 3x^2) \cdot xy' = 3y^3 + 6yx^2, \quad y(2) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ y' (x^2 - 2xy) = x^2 + xy - y^2, \quad y(3) = 0; \]
+\end{problem}
+\begin{problem}
+	\[ 2 y' = \frac{y^2}{x^2} + 8 \cdot \frac{y}{x} + 8, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ y' (x^2 - 4xy) = x^2 + xy - 3 y^2, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = 3 \sqrt{2x^2 + y^2} + y, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ (2y^2 + 7x^2)\cdot x y' = 3y^3 + 14yx^2, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ 2y' = \frac{y^2}{x^2} + 6 \cdot \frac{y}{x} + 3, \quad y(3) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ x^2 y' = y^2 + 4xy + 2x^2, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = \sqrt{2x^2 + y^2} + y, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = 3 \sqrt{x^2 + y^2} + y, \quad y(3) = 4; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = 2 \sqrt{x^2 + y^2} + y, \quad y(4) = 3; \]
+\end{problem}
+\begin{problem}
+	\[ 2y' = \frac{y^2}{x^2} + 8 \cdot \frac{y}{x} + 8, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ y' = \frac{x + 2y}{2x - y}, \quad y(3) = 8. \]
+\end{problem}
