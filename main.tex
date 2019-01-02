@@ -8,7 +8,6 @@
 
 \allowdisplaybreaks
 \setlength\parindent{0pt}
-\numberwithin{equation}{subsection}
 
 \title{{\Huge ДИФЕРЕНЦІАЛЬНІ РІВНЯННЯ}}
 \author{Скибицький Нікіта}
@@ -28,6 +27,18 @@
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\rfrac[2]{{}^{#1}\!/_{\!#2}}
+
+\numberwithin{equation}{section}% reset equation counter for sections
+\numberwithin{equation}{subsection}
+% Omit `.0` in equation numbers for non-existent subsections.
+\renewcommand*{\theequation}{%
+  \ifnum\value{subsection}=0 %
+    \thesection
+  \else
+    \thesubsection
+  \fi
+  .\arabic{equation}%
+}
 
 \begin{document}
 
