@@ -4,27 +4,27 @@
 \begin{example}
 	Розв’язати рівняння
 	\begin{equation}
-		\label{eq:1.13}
+		\label{eq:1.1.13}
 		x^2 y^2 y' + y = 1.
 	\end{equation}
 \end{example}
 
 \begin{solution}
-	Підставивши $y = \frac{\diff y}{\diff x}$ в задане рівняння, отримаємо 
+	Підставивши $y = \frac{\diff y}{\diff x}$ в \eqref{eq:1.1.13}, отримаємо 
 	\begin{equation}
-		\label{eq:1.14}
+		\label{eq:1.1.14}
 		x^2 y^2 \cdot \frac{\diff y}{\diff x} + y = 1.
 	\end{equation}
 
 	Помножимо обидві частини рівняння на $\diff x$ і розділимо на $x^2 \cdot (y - 1)$. Перевіримо, що $y = 1$ при цьому є розв’язком, а $x = 0$ цим розв’язком не є:
 	\begin{equation}
-		\label{eq:1.15}
+		\label{eq:1.1.15}
 		\frac{y^2}{y - 1} \cdot \diff y = - \frac{\diff x}{x^2}.
 	\end{equation}
 
 	Проінтегрируємо обидві частини рівняння:
 	\begin{align}
-		\label{eq:1.16}
+		\label{eq:1.1.16}
 		\int \frac{y^2}{y - 1} \cdot \diff y &= - \int \frac{\diff x}{x^2}. \\
 		\frac{y^2}{2} + y + \ln |y - 1| &= \frac{1}{x} + C
 	\end{align}
@@ -33,15 +33,15 @@
 \begin{example}
 	Розв’язати рівняння
 	\begin{equation}
-		\label{eq:1.17}
+		\label{eq:1.1.17}
 		y' = \sqrt{4x + 2y - 1}.
 	\end{equation}
 \end{example}
 
 \begin{solution}
-	Введемо заміну змінних $z = 4 x + 2 y - 1$. Тоді $x' = 4 + 2 y'$. Рівняння перетвориться до вигляду $z' - 4 = 2 \sqrt{z}$; $z' = 4 + 2 \sqrt{z}$; $\frac{\diff z}{2 + \sqrt{z}} = 2 \diff x$. Проінтегруємо обидві частини рівняння:
+	Введемо заміну змінних $z = 4 x + 2 y - 1$. Тоді $x' = 4 + 2 y'$. Рівняння \eqref{eq:1.1.17} перетвориться до вигляду $z' - 4 = 2 \sqrt{z}$; $z' = 4 + 2 \sqrt{z}$; $\frac{\diff z}{2 + \sqrt{z}} = 2 \diff x$. Проінтегруємо обидві частини рівняння:
 	\begin{equation}
-		\label{eq:1.18}
+		\label{eq:1.1.18}
 		\int \frac{\diff z}{2 + \sqrt{z}} = \int 2 \diff x
 	\end{equation}
 	Обчислимо інтеграл, що стоїть зліва. При обчисленні будемо використовувати таку заміну: 
@@ -49,13 +49,13 @@
 		\sqrt{z} = t, \quad \diff z = 2 t \diff t, \quad 2 + \sqrt{z} = 2 + t,
 	\end{equation*}
 	\begin{multline}
-		\label{eq:1.19}
+		\label{eq:1.1.19}
 		\int \frac{\diff z}{2 + \sqrt{z}} = \int \frac{2 t \diff t}{2 + t} = 2 \int \frac{t + 2 - 2}{t + 2} \cdot \diff t = \\
 		= 2 t - 4 \ln |2 + t| = 2 \sqrt{z} - 4 \ln \left(2 + \sqrt{z}\right).
 	\end{multline}
 	Після інтегрування отримаємо $2 \sqrt{z} - 4 \ln \left(2 + \sqrt{z}\right) = 2 x + 2 C$. Зробимо обернену заміну: $z = 4x + 2y - 1$;
 	\begin{equation}
-		\label{eq:1.20}
+		\label{eq:1.1.20}
 		\sqrt{4x + 2y - 1} - 2 \ln \left(2 + \sqrt{4x + 2y - 1}\right) = x + C.
 	\end{equation}
 \end{solution}

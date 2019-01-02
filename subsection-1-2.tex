@@ -1,40 +1,40 @@
 \subsubsection{Загальна теорія}
 Нехай рівняння має вигляд
 \begin{equation}
-	\label{eq:1.21}
+	\label{eq:1.2.1}
 	M(x, y) \cdot \diff	x + N(x, y) \cdot \diff y = 0.
 \end{equation}
 
 Якщо функції $M(x, y)$ та $N(x, y)$ однорідні одного ступеня, то рівняння називається однорідним. Нехай функції $M(x, y)$ та $N(x, y)$ однорідні ступеня $k$, тобто
 \begin{equation}
-	\label{eq:1.22}
+	\label{eq:1.2.2}
 	M(t x, t y) = t^k \cdot M(x, y), \qquad N(t x, t y) = t^k \cdot N(x, y).
 \end{equation}
 
 Робимо заміну $y = u x$, $\diff y = u \diff x + x \diff u$. Після підстановки одержуємо
 \begin{equation}
-	\label{eq:1.23}
+	\label{eq:1.2.3}
 	M(x, u x) \cdot \diff x + N(x, u x) \cdot (u \diff x + x \diff u) = 0,
 \end{equation}
 або 
 \begin{equation}
-	\label{eq:1.24}
+	\label{eq:1.2.4}
 	x^k M(1, u) \cdot \diff x + x^k N(1, u) \cdot (u \diff x + x \diff u) = 0.
 \end{equation}
 
 Скоротивши на $x^k$ і розкривши скобки, запишемо 
 \begin{equation}
-	\label{eq:1.25}
+	\label{eq:1.2.5}
 	M(1, u) \cdot \diff x + N(1, u) \cdot u \diff x + N(1, u) \cdot x \diff u = 0.
 \end{equation}
 Згрупувавши, одержимо рівняння зі змінними, що розділяються
 \begin{equation}
-	\label{eq:1.26}
+	\label{eq:1.2.6}
 	(M(1, u) + N(1, u) \cdot u) \diff x + N(1, u) \cdot x \diff u = 0,
 \end{equation}
 або 
 \begin{equation}
-	\label{eq:1.27}
+	\label{eq:1.2.7}
 	\int \frac{\diff x}{x} + \int \frac{N(1, u) \cdot \diff u}{M(1, u) + N(1, u) \cdot u} = C.
 \end{equation}
 
@@ -44,7 +44,7 @@
 
 Нехай маємо рівняння вигляду
 \begin{equation}
-	\label{eq:1.28}
+	\label{eq:1.2.8}
 	\frac{\diff y}{\diff x} = f \left( \frac{a_1 x + b_1 y + c_1}{a_2 x + b_2 y + c_2} \right).
 \end{equation}
 
@@ -52,13 +52,13 @@
 \begin{enumerate}
 	\item 
 	\begin{equation}
-		\label{eq:1.29}
+		\label{eq:1.2.9}
 		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} \ne 0.
 	\end{equation}
 
 	Тоді система алгебраїчних рівнянь
 	\begin{equation}
-		\label{eq:1.30}
+		\label{eq:1.2.10}
 		\left\{
 			\begin{aligned}
 				a_1 x + b_1 y + c_1 &= 0, \\
@@ -68,50 +68,50 @@
 	\end{equation}
 	має єдиний розв’язок $(x_0, y_0)$. Проведемо заміну $x = x_1 + x_0$, $y = y_1 + y_0$ та отримаємо
 	\begin{multline}
-		\label{eq:1.31}
+		\label{eq:1.2.11}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 \cdot (x_1 + x_0) + b_1 \cdot (y_1 + y_0) + c_1}{a_2 \cdot (x_1 + x_0) + b_2 \cdot (y_1 + y_0) + c_2} \right) = \\
 		= f \left( \frac{a_1 x_1 + b_1 y_1 + (a_1 x_0 + b_1 y_0 + c_1)}{a_2 x_1 + b_2 y_1 + (a_2 x_0 + b_2 y_0 + c_2)} \right)
 	\end{multline}
 
-	Оскільки $(x_0, y_0)$ -- розв’язок \eqref{eq:1.30}, то \eqref{eq:1.28} прийме вигляд
+	Оскільки $(x_0, y_0)$ -- розв’язок \eqref{eq:1.2.10}, то \eqref{eq:1.2.8} прийме вигляд
 	\begin{equation}
-		\label{eq:1.32}
+		\label{eq:1.2.12}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 y_1}{a_2 x_1 + b_2 y_1} \right)
 	\end{equation}
 	і є однорідним нульового ступеня. Робимо заміну $y_1 = u x_1$, $\diff y_1 = u \cdot \diff x_1 + x_1 \cdot \diff u$. \\
 
-	Підставимо в \eqref{eq:1.32}
+	Підставимо в \eqref{eq:1.2.12}
 	\begin{equation}
-		\label{eq:1.33}
+		\label{eq:1.2.13}
 		u + x_1 \cdot \frac{\diff u}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right).
 	\end{equation}
 	
 	Одержимо
 	\begin{equation}
-		\label{eq:1.34}
+		\label{eq:1.2.14}
 		x_1 \cdot \diff u + \left( u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right) \right) \diff x_1 = 0.
 	\end{equation}
 
 	Розділивши змінні, маємо
 	\begin{equation}
-		\label{eq:1.35}
+		\label{eq:1.2.15}
 		\int \frac{\diff u}{u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right)} + \ln (x_1) = C.
 	\end{equation}
 
 	І загальний інтеграл диференціального рівняння має вигляд $\Phi(u, x_1) = C$. Повернувшись до вихідних змінних, запишемо
 	\begin{equation}
-		\label{eq:1.36}
+		\label{eq:1.2.16}
 		\Phi \left( \frac{y - y_0}{x - x_0}, x - x_0 \right) = C.
 	\end{equation}
 
 	\item Нехай 
 	\begin{equation}
-		\label{eq:1.37}
+		\label{eq:1.2.17}
 		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} = 0,
 	\end{equation}
 	тобто коефіцієнти строк лінійно залежні і
 	\begin{equation}
-		\label{eq:1.38}
+		\label{eq:1.2.18}
 		a_1 x + b_1 y = \alpha \cdot (a_2 x + b_2 y).
 	\end{equation}
 
@@ -119,17 +119,17 @@
 
 	Підставивши в диференціальне рівняння, одержимо
 	\begin{equation}
-		\label{eq:1.39}
+		\label{eq:1.2.19}
 		\frac{1}{b_2} \cdot \left( \frac{\diff z}{\diff x} - a_2 \right) = f \left ( \frac{\alpha z + c_1}{z + c_2} \right),
 	\end{equation}
 	або
 	\begin{equation}
-		\label{eq:1.40}
+		\label{eq:1.2.20}
 		\frac{\diff z}{\diff x} = a_2 + b_2 \cdot f \left ( \frac{\alpha z + c_1}{z + c_2} \right),
 	\end{equation}
 	Розділивши змінні, отримаємо
 	\begin{equation}
-		\label{eq:1.41}
+		\label{eq:1.2.21}
 		\int \frac{\diff z}{a_2 + b_2 \cdot f \left ( \frac{\alpha z + c_1}{z + c_2} \right)} - x = C,
 	\end{equation}
 
@@ -152,14 +152,14 @@
 
 	Проведемо заміну: $y = u x$. Тоді $\diff y = u \diff x + x \diff y$. Підставивши $y$ та $\diff y$ в задане рівняння, отримаємо  
 	\begin{align}
-		\label{eq:1.42}
+		\label{eq:1.2.22}
 		x \cdot (x \diff u + u \diff x) &= (x + x u) \diff x, \\
 		x^2 \diff u &= x \diff x
 	\end{align}
 
 	Розв’яжемо це рівняння зі змінними, що розділяються:
 	\begin{align}
-		\label{eq:1.43}
+		\label{eq:1.2.23}
 		\diff u &= \frac{\diff x}{x}, \\
 		u &= \ln |x| + C.
 	\end{align}
