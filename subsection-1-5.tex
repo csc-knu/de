@@ -1,0 +1,134 @@
+Диференціальне рівняння першого порядку, не розв’язане відносно похідної, має такий вигляд
+\begin{equation}
+	\label{eq:1.5.1}
+	F(x, y, y') = 0. 	
+\end{equation}
+
+\subsubsection{Частинні випадки рівнянь, що інтегруються в квадратурах}
+
+Розглянемо ряд диференціальних рівнянь, що інтегруються в квадратурах.
+\begin{enumerate}
+	\item Рівняння вигляду 
+	\begin{equation}
+		\label{eq:1.5.2}
+		F(y') = 0.
+	\end{equation}
+	Нехай алгебраїчне рівняння $F(k) = 0$ має принаймні один дійсний корінь $k = k_0$. Тоді, інтегруючи $y' = k_0$, одержимо $y = k_0 \cdot x + C$. Звідси $k_0 = (y - C) / x$ і вираз
+	\begin{equation}
+		\label{eq:1.5.3}
+		F \left( \frac{y - c}{x} \right) = 0	
+	\end{equation}
+	містить всі розв’язки вихідного диференціального рівняння.
+	\item Рівняння вигляду 
+	\begin{equation}
+		\label{eq:1.5.4}
+		F(x, y') = 0.
+	\end{equation}
+	Нехай це рівняння можна записати у параметричному вигляді
+	\begin{equation}
+		\label{eq:1.5.5}
+		\left\{\begin{aligned}
+			x &= \phi(t), \\
+			y' &= \psi(t).
+		\end{aligned}\right.
+	\end{equation}
+	Використовуючи співвідношення $\diff y = y ' \cdot \diff x$, одержимо 
+	\begin{equation}
+		\label{eq:1.5.6}
+		\diff y = \psi(t) \cdot \phi'(t) \cdot \diff t.
+	\end{equation}
+	Проінтегрувавши, запишемо
+	\begin{equation}
+		\label{eq:1.5.7}
+		y = \int \psi(t) \cdot \phi'(t) \cdot \diff t + C.
+	\end{equation}
+	І загальний розв’язок в параметричній формі має вигляд
+	\begin{equation}
+		\label{eq:1.5.8}
+		\left\{\begin{aligned}
+		x &= \phi(t), \\
+		y &= \int \psi(t) \cdot \phi'(t) \cdot \diff t + C.
+		\end{aligned}\right.
+	\end{equation}
+	\item Рівняння вигляду 
+	\begin{equation}
+		\label{eq:1.5.9}
+		F(y, y') = 0.
+	\end{equation}
+	Нехай це рівняння можна записати у параметричному вигляді
+	\begin{equation}
+		\label{eq:1.5.10}
+		\left\{\begin{aligned}
+			y &= \phi(t), \\
+			y' &= \psi(t).
+		\end{aligned}\right.
+	\end{equation}
+	Використовуючи співвідношення $\diff y = y ' \cdot \diff x$, одержимо 
+	\begin{equation}
+		\label{eq:1.5.11}
+		\phi'(t) \cdot \diff t = \psi(t) \cdot \diff x
+	\end{equation}
+	і
+	\begin{equation}
+		\label{eq:1.5.12}
+		\diff x = \frac{\phi'(t)}{\psi(t)} \cdot \diff t
+	\end{equation}
+	Проінтегрувавши, запишемо
+	\begin{equation}
+		\label{eq:1.5.13}
+		x = \int \frac{\phi'(t)}{\psi(t)}\cdot \diff t + C.
+	\end{equation}
+	І загальний розв’язок в параметричній формі має вигляд
+	\begin{equation}
+		\label{eq:1.5.14}
+		\left\{\begin{aligned}
+		x &= \int \frac{\phi'(t)}{\psi(t)}\cdot \diff t + C, \\
+		y &= \phi(t).
+		\end{aligned}\right.
+	\end{equation}
+	\item Рівняння Лагранжа
+	\begin{equation}
+		\label{eq:1.5.15}
+		y = \phi(y') \cdot x + \psi(y').
+	\end{equation}
+	Введемо параметр $y' = \frac{\diff y}{\diff x} = p$ і отримаємо
+	\begin{equation}
+		\label{eq:1.5.16}
+		y = \phi(p) \cdot x + \psi(p).
+	\end{equation}
+	Продиференціювавши, запишемо
+	\begin{equation}
+		\label{eq:1.5.17}
+		\diff y = \phi'(p) \cdot x \cdot \diff p + \phi(p) \cdot \diff x + \psi'(p) \cdot \diff p.
+	\end{equation}
+	Замінивши $\diff y = p \cdot \diff x$ одержимо
+	\begin{equation}
+		\label{eq:1.5.18}
+		p \cdot \diff x = \phi'(p) \cdot x \cdot \diff p + \phi(p) \cdot \diff x + \psi'(p) \cdot \diff p.
+	\end{equation}
+	Звідси
+	\begin{equation}
+		\label{eq:1.5.19}
+		(p - \phi(p)) \cdot \diff x - \phi'(p) \cdot x \cdot \diff p = \psi'(p) \cdot \diff p.
+	\end{equation}
+	І отримали лінійне неоднорідне диференціальне рівняння
+	\begin{equation}
+		\label{eq:1.5.20}
+		\frac{\diff x}{\diff p} + \frac{\phi'(p)}{\phi(p)-p} \cdot x = \frac{\phi'(p)}{p-\phi(p)}.
+	\end{equation}
+	Його розв’язок
+	\begin{multline}
+		\label{eq:1.5.21}
+		x = \exp\left\{\int \frac{\phi'(p)}{p-\phi(p)} \cdot \diff p\right\} \cdot \\
+		\cdot \left(\int \frac{\phi'(p)}{p-\phi(p)} \cdot \exp\left\{\int \frac{\phi'(p)}{\phi(p)-p} \cdot \diff p\right\} \diff p + C \right) = \\
+		= \Psi(p, C).
+	\end{multline}
+	І остаточний розв’язок рівняння Лагранжа в параметричній формі запишеться у вигляді
+	\begin{equation}
+		\label{eq:1.5.22}
+		\left\{\begin{aligned}
+			x &= \Psi(p,C), \\
+			y &= \phi(p) \cdot \Phi(p, C) + \psi(p).
+		\end{aligned}\right.
+	\end{equation}
+\end{enumerate}

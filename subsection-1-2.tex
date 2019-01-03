@@ -8,10 +8,15 @@
 Якщо функції $M(x, y)$ та $N(x, y)$ однорідні одного ступеня, то рівняння називається однорідним. Нехай функції $M(x, y)$ та $N(x, y)$ однорідні ступеня $k$, тобто
 \begin{equation}
 	\label{eq:1.2.2}
-	M(t x, t y) = t^k \cdot M(x, y), \qquad N(t x, t y) = t^k \cdot N(x, y).
+	M(t \cdot x, t \cdot y) = t^k \cdot M(x, y), \qquad N(t \cdot x, t \cdot y) = t^k \cdot N(x, y).
 \end{equation}
 
-Робимо заміну $y = u x$, $\diff y = u \diff x + x \diff u$. Після підстановки одержуємо
+Робимо заміну 
+\begin{equation}
+	\label{eq:1.2.2_5}
+	y = u x, \quad \diff y = u \diff x + x \diff u.
+\end{equation}
+Після підстановки одержуємо
 \begin{equation}
 	\label{eq:1.2.3}
 	M(x, u x) \cdot \diff x + N(x, u x) \cdot (u \diff x + x \diff u) = 0,
@@ -22,7 +27,7 @@
 	x^k M(1, u) \cdot \diff x + x^k N(1, u) \cdot (u \diff x + x \diff u) = 0.
 \end{equation}
 
-Скоротивши на $x^k$ і розкривши скобки, запишемо 
+Скоротивши на $x^k$ і розкривши дужки, запишемо 
 \begin{equation}
 	\label{eq:1.2.5}
 	M(1, u) \cdot \diff x + N(1, u) \cdot u \diff x + N(1, u) \cdot x \diff u = 0.
@@ -66,19 +71,31 @@
 			\end{aligned}
 		\right.
 	\end{equation}
-	має єдиний розв’язок $(x_0, y_0)$. Проведемо заміну $x = x_1 + x_0$, $y = y_1 + y_0$ та отримаємо
+	має єдиний розв’язок $(x_0, y_0)$. Проведемо заміну 
+	\begin{equation}
+		\label{eq:1.2.10_5}
+		\left\{\begin{aligned}
+			x &= x_1 + x_0, \\
+			y &= y_1 + y_0
+		\end{aligned}\right.
+	\end{equation}
+	та отримаємо
 	\begin{multline}
 		\label{eq:1.2.11}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 \cdot (x_1 + x_0) + b_1 \cdot (y_1 + y_0) + c_1}{a_2 \cdot (x_1 + x_0) + b_2 \cdot (y_1 + y_0) + c_2} \right) = \\
 		= f \left( \frac{a_1 x_1 + b_1 y_1 + (a_1 x_0 + b_1 y_0 + c_1)}{a_2 x_1 + b_2 y_1 + (a_2 x_0 + b_2 y_0 + c_2)} \right)
 	\end{multline}
 
-	Оскільки $(x_0, y_0)$ -- розв’язок \eqref{eq:1.2.10}, то \eqref{eq:1.2.8} прийме вигляд
+	Оскільки $(x_0, y_0)$ -- розв’язок \eqref{eq:1.2.10}, то \eqref{eq:1.2.8} набуде вигляду
 	\begin{equation}
 		\label{eq:1.2.12}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 y_1}{a_2 x_1 + b_2 y_1} \right)
 	\end{equation}
-	і є однорідним нульового ступеня. Робимо заміну $y_1 = u x_1$, $\diff y_1 = u \cdot \diff x_1 + x_1 \cdot \diff u$. \\
+	і є однорідним нульового ступеня. Робимо заміну 
+	\begin{equation}
+		\label{eq:1.2.12_5}
+		y_1 = u x_1, \quad \diff y_1 = u \cdot \diff x_1 + x_1 \cdot \diff u.
+	\end{equation}
 
 	Підставимо в \eqref{eq:1.2.12}
 	\begin{equation}
@@ -109,7 +126,7 @@
 		\label{eq:1.2.17}
 		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} = 0,
 	\end{equation}
-	тобто коефіцієнти строк лінійно залежні і
+	тобто коефіцієнти рядків лінійно залежні і
 	\begin{equation}
 		\label{eq:1.2.18}
 		a_1 x + b_1 y = \alpha \cdot (a_2 x + b_2 y).
@@ -138,32 +155,27 @@
 
 \subsubsection{Вправи для самостійної роботи}
 
-Однорідні рівняння можуть бути записані у вигляді $y' = f \left( \frac{y}{x} \right)$ або 
-\begin{equation*}
- 	M(x, y)\cdot\diff y + N(x, y) \cdot \diff y = 0,
-\end{equation*} де $M(x, y)$ і $N(x, y)$ -- однорідні функції одного й того ж ступеня. Для того, щоб розв’язати однорідне рівняння, необхідно провести заміну $y = u x$, $\diff y = u \diff x + x \diff u$, в результаті якої отримаємо рівняння зі змінними, що розділяються. 
+Однорідні рівняння можуть бути записані у вигляді \[y' = f \left( \frac{y}{x} \right)\] або  \[ M(x, y)\cdot\diff y + N(x, y) \cdot \diff y = 0, \] де $M(x, y)$ і $N(x, y)$ -- однорідні функції одного й того ж ступеня. Для того, щоб розв’язати однорідне рівняння, необхідно провести заміну \[y = u x, \quad \diff y = u \cdot \diff x + x \cdot \diff u,\] в результаті якої отримаємо рівняння зі змінними, що розділяються. 
 
 \begin{example}
-	Розв’язати рівняння $x \diff y = (x + y) \diff y$. 
+	Розв’язати рівняння $x \cdot \diff y = (x + y) \cdot \diff y$. 
 \end{example}
 
 \begin{solution}
 	Дане рівняння однорідне, оскільки $x$ та $x + y$ є однорідними функціями першого ступеня. \\
 
 	Проведемо заміну: $y = u x$. Тоді $\diff y = u \diff x + x \diff y$. Підставивши $y$ та $\diff y$ в задане рівняння, отримаємо  
-	\begin{align}
-		\label{eq:1.2.22}
+	\begin{align*}
 		x \cdot (x \diff u + u \diff x) &= (x + x u) \diff x, \\
 		x^2 \diff u &= x \diff x
-	\end{align}
+	\end{align*}
 
 	Розв’яжемо це рівняння зі змінними, що розділяються:
-	\begin{align}
-		\label{eq:1.2.23}
+	\begin{align*}
 		\diff u &= \frac{\diff x}{x}, \\
 		u &= \ln |x| + C.
-	\end{align}
-	Повернувшись до вихідних змінних $u = y / x$, отримаємо $y = x \cdot (\ln |x| + C)$. Крім того розв’язком є $x = 0$, що було загублене при поділенні рівняння на $x$.
+	\end{align*}
+	Повернувшись до вихідних змінних $u = y / x$, отримаємо \[y = x \cdot (\ln |x| + C).\] Крім того розв’язком є $x = 0$, що було загублене при поділенні рівняння на $x$.
 \end{solution}
 
 Розв’язати рівняння:

@@ -9,7 +9,7 @@
 	\label{eq:1.4.2}
 	\diff u(x, y) = M(x, y) \cdot \diff x + N(x, y) \cdot \diff y,
 \end{equation}
-і, таким чином, \eqref{eq:1.4.1} приймає вигляд $\diff u (x, y) = 0$ то рівняння називається рівнянням в повних диференціалах. Звідси вираз
+і, таким чином, \eqref{eq:1.4.1} набуває вигляду $\diff u (x, y) = 0$ то рівняння називається рівнянням в повних диференціалах. Звідси вираз
 \begin{equation}
 	\label{eq:1.4.3}
 	u(x, y) = C
@@ -57,7 +57,7 @@
 	\int_{x_0}^{x} M(\xi,y_0) \cdot \diff \xi + \int_{y_0}^{y} N(x, \eta) \cdot \diff \eta = 0.
 \end{equation}
 
-\subsubsection{Множник, що Інтегрує}
+\subsubsection{Множник, що інтегрує}
 В деяких випадках рівняння \eqref{eq:1.4.1} не є рівнянням в повних диференціалах, але існує функція $\mu = \mu(x,y)$ така, що рівняння
 \begin{equation}
 	\label{eq:1.4.11}
@@ -131,12 +131,14 @@
 	Розв’язати рівняння \[(2x + 3x^2y) \cdot \diff x + (x^3 - 3y^2) \cdot \diff y = 0.\]
 \end{example}
 \begin{solution}
-	Перевіримо, що це рівняння є рівнянням в повних диференціалах. Обчислимо
-	\[ \frac{\partial}{\partial y} (2x + 3x^2y) = 3x^2, \quad \frac{\partial}{\partial x} (x^3 - 3y^2) = 3x^2. \]
-	Таким чином існує функція $u(x,y)$, що \[\frac{\partial u(x,y)}{\partial x} = 2x + 3x^2y.\] Проінтегруємо по $x$. Отримаємо
-	\[ u(x,y) = \int(2x+3x^2y)\cdot\diff x+\Phi(y)=x^2+x^3y+\Phi(y).\]
-	Для знаходження функції $\Phi(y)$ візьмемо похідну від $u(x,y)$ по $y$ і прирівняємо до $x^3-3y^2$. Отримаємо
-	\[ \frac{\partial u(x,y)}{\partial y} = x^3 + \Phi'(y) = x^3 - 3y^2.\]
+	Перевіримо, що це рівняння є рівнянням в повних диференціалах. Обчислимо \[ \frac{\partial}{\partial y} (2x + 3x^2y) = 3x^2, \quad \frac{\partial}{\partial x} (x^3 - 3y^2) = 3x^2. \]
+	
+	Таким чином існує функція $u(x,y)$, що \[\frac{\partial u(x,y)}{\partial x} = 2x + 3x^2y.\] 
+	
+	Проінтегруємо по $x$. Отримаємо \[ u(x,y) = \int(2x+3x^2y)\cdot\diff x+\Phi(y)=x^2+x^3y+\Phi(y).\]
+	
+	Для знаходження функції $\Phi(y)$ візьмемо похідну від $u(x,y)$ по $y$ і прирівняємо до $x^3-3y^2$. Отримаємо \[ \frac{\partial u(x,y)}{\partial y} = x^3 + \Phi'(y) = x^3 - 3y^2.\]
+
 	Звідси $\Phi'(y) = -3y^2$ і $\Phi(y) = -y^3$. Таким чином, \[u(x,y)=x^2+x^3y-y^3\] і загальний інтеграл диференціального рівняння має вигляд \[x^2+x^3y-y^3=C.\]
 \end{solution}
 
@@ -178,7 +180,7 @@
 	\[\left(3y^2-\frac{y}{x^2+y^2}\right)\cdot\diff x+\left(6xy+\frac{x}{x^2+y^2}\right)\cdot \diff y=0.\]
 \end{problem}
 
-Розв’язати, використовуючи інтегруючий множник:
+Розв’язати, використовуючи множник, що інтегрує:
 \begin{problem} $\mu=\mu(x-y)$,
 	\[(2x^3+3x^2y+y^2-y^3)\cdot\diff x+(2y^3+3xy^2+x^2-x^3)\cdot\diff x=0;\]
 \end{problem}
