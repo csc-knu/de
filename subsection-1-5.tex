@@ -131,4 +131,184 @@
 			y &= \phi(p) \cdot \Phi(p, C) + \psi(p).
 		\end{aligned}\right.
 	\end{equation}
+	\item Рівняння Клеро. \\
+
+	Частинним випадком рівняння Лагранжа, що відповідає $\phi(y') = y'$ є рівняння Клеро
+ 	\begin{equation}
+ 		\label{eq:1.5.23}
+ 		y = y' x + \psi(y').
+ 	\end{equation}
+	Поклавши $y' = \frac{\diff y}{\diff x} = p$, отримаємо $y = p x + \psi(p)$. Продиференціюємо 
+	\begin{equation}
+		\label{eq:1.5.24}
+		\diff y = p \cdot \diff x + x \cdot \diff p + \psi'(p) \cdot \diff p.
+	\end{equation}
+	Оскільки $\diff y = p \cdot \diff x$, то
+	\begin{equation}
+		\label{eq:1.5.25}
+		p \cdot \diff x = p \cdot \diff x + x \cdot \diff p + \psi'(p) \cdot \diff p.
+	\end{equation}
+	Скоротивши, одержимо
+	\begin{equation}
+		\label{eq:1.5.25}
+		(x + \psi'(p)) \cdot \diff p = 0.
+	\end{equation}
+	Можливі два випадки.
+	\begin{enumerate}
+		\item $x + \psi'(p) - 0$ і розв’язок має вигляд
+		\begin{equation}
+			\label{eq:1.5.26}
+			\left\{\begin{aligned}
+				x &= - \psi'(p), \\
+				y &= -p \cdot \psi'(p) + \psi(p).
+			\end{aligned}\right.
+		\end{equation}
+		\item $\diff p = 0$, $p = C$ і розв’язок має вигляд
+		\begin{equation}
+			\label{eq:1.5.27}
+			y = C x + \psi(C).
+		\end{equation}
+	\end{enumerate}
+	Загальним розв’язком рівняння Клеро буде сім’я ``прямих'' \eqref{eq:1.5.27}. Цю сім’ю огинає особлива крива \eqref{eq:1.5.26}.
+	\item Параметризація загального вигляду. Нехай диференціальне рівняння $F(x, y, y') = 0$ вдалося записати у вигляді системи рівнянь з двома параметрами
+	\begin{equation}
+		\label{eq:1.5.28}
+		x = \phi(u, v), \quad y = \psi(u, v), \quad y' = \theta(u, v).	
+	\end{equation}
+	Використовуючи співвідношення $\diff y = y' \cdot \diff x$, одержимо
+	\begin{multline}
+		\label{eq:1.5.29}
+		\frac{\partial \psi(u,v)}{\partial u} \cdot \diff u + \frac{\partial \psi(u, v)}{\partial v} \cdot \diff v = \\
+		= \theta(u,v) \cdot \left( \frac{\partial \phi(u,v)}{\partial u} \cdot \diff u + \frac{\partial \phi(u, v)}{\partial v} \cdot \diff v\right)
+	\end{multline}
+	Перегрупувавши члени, одержимо
+	\begin{multline}
+		\label{eq:1.5.30}
+		\left( \frac{\partial \psi(u,v)}{\partial u} - \theta(u, v) \cdot \frac{\partial \phi(u,v)}{\partial u} \right) \diff u = \\
+		= \left( \theta(u,v) \cdot \frac{\partial \phi(u, v)}{\partial v} - \frac{\partial \psi(u, v)}{\partial v} \right) \diff v.
+	\end{multline}
+	Звідси
+	\begin{equation}
+		\label{eq:1.5.32}
+		\frac{\diff u}{\diff v} = \frac{\theta(u,v) \cdot \frac{\partial \phi(u, v)}{\partial v} - \frac{\partial \psi(u, v)}{\partial v}}{\frac{\partial \psi(u,v)}{\partial u} - \theta(u, v) \cdot \frac{\partial \phi(u,v)}{\partial u}}.
+	\end{equation}
+	Або отримали рівняння вигляду
+	\begin{equation}
+		\label{eq:1.5.33}
+		\frac{\diff u}{\diff v} = f(u, v).
+	\end{equation}
+	Параметризація загального вигляду не дає інтеграл диференціального рівняння. Вона дозволяє звести диференціальне рівняння, не розв’язане відносно похідної, до диференціального рівняння, розв’язаного відносно похідної.
+	\item Нехай рівняння $F(x, y, y') = 0$ можна розв’язати відносно $y'$ і воно має $n$ коренів, тобто його  можна записати у вигляді  
+	\begin{equation}
+		\label{eq:1.5.34}
+		\prod_{i=1}^n (y' - f_i(x, y)) = 0.
+	\end{equation}
+	Розв’язавши кожне з рівнянь $y' = f_i(x, y)$, $i=\overline{1,n}$, отримаємо $n$ загальних розв’язків (або інтервалів) $y = \phi_i(x, C)$, $i=\overline{1,n}$ (або $\phi_u(x,y)=C$, $i=\overline{1,n}$). І загальний розв’язок вихідного рівняння, не розв’язаного відносно похідної має вигляд
+	\begin{equation}
+		\label{eq:1.5.35}
+		\prod_{i=1}^n (y - \phi_i(x, C)) = 0,
+	\end{equation}
+	або
+	\begin{equation}
+		\label{eq:1.5.36}
+		\prod_{i=1}^n (\phi_i(x, y) - C) = 0.
+	\end{equation}
 \end{enumerate}
+
+\subsubsection{Вправи для самостійної роботи}
+
+Розв’язати рівняння вигляду $F(y') = 0$:
+\begin{example}
+	$(y')^3 - 1 = 0$;
+\end{example}
+\begin{solution}
+	Рівняння має дійсний розв’язок, тобто воно поставлене коректно. Тому його розв’язком буде $\left(\frac{y - C}{x}\right)^3 - 1 = 0$.	
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[(y')^2 - 2 y' + 1 = 0;\]
+\end{problem}
+\begin{problem}
+	\[ (y')^4 - 16 = 0. \]
+\end{problem}
+\end{multicols}
+
+Розв’язати рівняння вигляду $F(x, y') = 0$:
+\begin{example}
+	$x = (y')^3 + y'$;
+\end{example}
+\begin{solution}
+	Робимо параметризацію $y' = t$, $x = t^3 + t$. Використовуючи основну форму запису $\diff y = y' \cdot \diff x$ одержимо \[ \diff y = t \cdot (3t^2 + 1) \cdot \diff t.\]
+	Звідси  \[ y = \int t \cdot (3t^2 + 1) \cdot \diff t = \frac{3t^4}{4} + \frac{t^2}{2} + C.\]
+	Остаточний розв’язок у параметричній формі має вигляд\[ x = t^3 + t, \quad y = \frac{3t^4}{4} + \frac{t^2}{2} + C.\]
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[ x \cdot ((y')^2 - 1) = 2y'; \]
+\end{problem}
+\begin{problem}
+	\[ x = y' \cdot \sqrt{(y')^2 - 1}; \]
+\end{problem}
+\begin{problem}
+ 	\[ y' \cdot (x - \ln y') - 1. \]
+\end{problem}
+\end{multicols}
+
+Розв’язати рівняння вигляду $F(y, y') = 0$:
+\begin{example}
+	$y = (y')^2 + 2 (y')^3$;
+\end{example}
+\begin{solution}
+	Робимо параметризацію $y' = t$, $y = t^2 + 2t^3$. Використовуючи основну форму запису $\diff y = y' \cdot \diff x$, одержуємо
+	\[ (2t + 6t^2) \cdot \diff t = t \cdot \diff x.\]
+	Звідси \[ \diff x = (2 + 6t) \cdot \diff t, \quad x = \int(2+6t) \cdot \diff t = 2t + 3t^2 + C.\]
+	Остаточний розв’язок у параметричній формі має вигляд 
+	\[ x = 2t + 3t^2, \quad y = t^2 + 2t^.\]
+	Крім того за рахунок скорочення втрачено $y \equiv 0$.
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[ y = \ln ( 1 + (y')^2); \]
+\end{problem}
+\begin{problem}
+	\[ y = (y' - 1) \cdot e^{y'}; \]
+\end{problem}
+\begin{problem}
+ 	\[ (y')^4 - (y')^2 = y^2. \]
+\end{problem}
+\end{multicols}
+
+Розв’язати рівняння Лагранжа
+\begin{example}
+	$y = - x y' + 4 \sqrt{y'}$;
+\end{example}
+\begin{solution}
+	Робимо параметризацію $y' = t$, $y = - xt + 4 \sqrt{t}$. Диференціюємо друге рівняння.
+	\[ \diff y = - x \cdot \diff t - t \cdot \diff x + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t.\]
+	Оскільки зроблено заміну $\diff y = t \cdot \diff x$, то одержимо
+	\[ t \cdot \diff x = - x \cdot \diff t - t \cdot \diff x + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t,\]
+	або
+	\[ 2 t \cdot \diff x = - x \cdot \diff t + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t.\]
+	Звідси
+	\[ \frac{\diff x}{\diff t} + \frac{x}{2t} = \frac{1}{t \cdot \sqrt{t}}.\]
+	Розв’язок лінійного неоднорідного рівняння може бути представлений у вигляді
+	\begin{multline*}
+		x = \exp\left\{ - \int \frac{\diff t}{2t} \right\} \cdot \left( \int \exp\left\{\int \frac{\diff t}{2t} \right\} \cdot \frac{1}{t\cdot\sqrt{t}} + C\right) = \\
+		= \frac{1}{\sqrt{t}} \cdot \left(\int \frac {\diff t}{t} + C\right) = \frac{\ln |t| + C}{\sqrt{t}}.
+	\end{multline*}
+	Остаточно маємо \[ x = \frac{\ln |t| + C}{\sqrt{t}}, \quad y = - \sqrt{t} \cdot (\ln |t| + C) + 4 \sqrt{t}. \] Крім того при діленні на $t$ втратили $y \equiv 0$.
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[ y = 2 x y' - 4 \cdot (y')^3;\]
+\end{problem}
+\begin{problem}
+	\[ y = x \cdot (y')^2 - 2 \cdot (y')^3;\]
+\end{problem}
+\begin{problem}
+ 	\[ x y' \cdot (y' + 2) = y;\]
+\end{problem}
+\begin{problem}
+ 	\[ 2 x y' - y = \ln y'.\]
+\end{problem}
+\end{multicols}
