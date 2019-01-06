@@ -1,5 +1,5 @@
 % cd ..\..\Users\NikitaSkybytskyi\Desktop\differential-equations
-% pdflatex main.tex && pdflatex main.tex && del main.toc && del main.aux && del main.log && del main.out && start main.pdf
+% pdflatex main.tex && pdflatex main.tex && del main.toc, main.aux, main.log, main.out && start main.pdf
 \documentclass[a4paper, 12pt]{article}
 \usepackage[T2A,T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -24,8 +24,12 @@
 \newtheorem{problem}{Задача}[subsection]
 \newtheorem{example}[problem]{Приклад}
 \newtheorem*{solution}{Розв'язок}
+\newtheorem*{remark}{Зауваження}
 
 \renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\NN}{\mathbb{N}}
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\rfrac[2]{{}^{#1}\!/_{\!#2}}
@@ -85,4 +89,17 @@
 \subsection{Диференціальні рівняння першого порядку, не розв’язані відносно похідної}
 
 \input{subsection-1-5.tex}
+
+\subsection{Існування та єдиність розв’язків диференціальних рівнянь першого порядку. Неперервна залежність та диференційованість}
+
+\input{subsection-1-6.tex}
+
+\subsubsection{Особливі розв’язки}
+
+\input{subsubsection-1-6-1.tex}
+
+\subsubsection{Вправи для самостійної роботи}
+
+\input{subsubsection-1-6-2.tex}
+
 \end{document}
