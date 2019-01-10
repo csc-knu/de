@@ -1,0 +1,119 @@
+Розглянемо деякі типи диференціальних рівнянь вищого порядку, що допускають зниження порядку.
+\begin{enumerate}
+\item Рівняння не містить шуканої функції і її похідних до $(k-1)$-го порядку включно:
+\begin{equation}
+	\label{eq:2.3.1}
+	F \left( x, y^{(k)}, y^{(k + 1)}, \ldots, y^{(n)} \right) = 0.
+\end{equation}
+Зробивши заміну:
+\begin{equation}
+	\label{eq:2.3.2}
+	y^{(k)} = z, \quad y^{(k + 1)} = z', \quad \ldots, \quad y^{(n)} = z^{(n - k)},
+\end{equation}
+одержимо рівняння $(n-k)$-го порядку
+\begin{equation}
+	\label{eq:2.3.3}
+	F \left( x, z, z', \ldots, z^{(n - k)} \right) = 0.
+\end{equation}
+
+\item Рівняння не містить явно незалежної змінної
+\begin{equation}
+	\label{eq:2.3.4}
+	F \left( y, y', \ldots, y^{(n)} \right) = 0.
+\end{equation}
+
+Будемо вважати, що $y$ -- нова незалежна змінна, а $y', \ldots, y^{(n)}$ -- функції від $y$. Тоді
+\begin{align}
+	\label{eq:2.3.5}
+	y_x^\prime &= p(y), \\
+	\label{eq:2.3.6}
+	y_{x^2}^{\prime\prime} &= \frac{\diff}{\diff x} \cdot y_x^\prime = \frac{\diff}{\diff x} \cdot p(y) \cdot \frac{\diff y}{\diff x} = p_y^{\prime} \cdot  p(y), \\
+	\label{eq:2.3.7}
+	y_{x^3}^{\prime\prime\prime} &= \frac{\diff}{\diff x} \cdot y_{x^2}^{\prime\prime} = \frac{\diff}{\diff x} \cdot (p_y^\prime p) \cdot \frac{\diff y}{\diff x} = \left( p_{y^2}^{\prime\prime} \cdot p + \left( p_y^\prime \right)^2 \right) \cdot p,
+\end{align}
+і так далі до $y_{x^n}^{(n)}$. Після підстановки одержимо 
+\begin{equation}
+	\label{eq:2.3.8}
+	F \left( y, p, p_y^{\prime} \cdot  p(y), \left( p_{y^2}^{\prime\prime} \cdot p + \left( p_y^\prime \right)^2 \right) \cdot p, \ldots, p^{(n - 1)} \right) = 0,
+\end{equation}
+диференціальне рівняння $(n-1)$-го порядку.
+\item Нехай функція $F$ диференціального рівняння
+\begin{equation}
+	\label{eq:2.3.9}
+	F \left( x, y, y', \ldots, y^{(n)} \right) = 0.
+\end{equation}
+є однорідної щодо аргументів  $y, y', \ldots, y^{(n)}$. \\
+
+Робимо заміну $y = e^{\int u \diff x}$, де $u=u(x)$ -- нова невідома функція. Одержимо
+\begin{align}
+	\label{eq:2.3.10}
+	y' &= e^{\int u \diff x} u, \\
+	\label{eq:2.3.11}
+	y^{\prime\prime} &= e^{\int u \diff x}  u^2 + e^{\int u \diff x} u' = e^{\int u \diff x} \left(u^2 + u'\right), \\
+	\label{eq:2.3.12}
+	y^{\prime\prime\prime} &= e^{\int u \diff x} u \left( u^2 + u' \right) + e^{\int u \diff x}  \left(2 u u' + u''\right) = \\ 
+	&= e^{\int u \diff x} \left( u^3 + 3 u u' + u'' \right), \nonumber
+\end{align}
+і так далі до $y^{(n)}$. Після підстановки одержимо
+\begin{equation}
+	\label{eq:2.3.13}
+	F \left( x, e^{\int u \diff x}, e^{\int u \diff x} u, e^{\int u \diff x} \left(u^2 + u'\right), e^{\int u \diff x} \left( u^3 + 3 u u' + u'' \right), \ldots \right) = 0.
+\end{equation}
+
+Оскільки \eqref{eq:2.3.9} (а отже і \eqref{eq:2.3.13}) однорідне відносно $e^{\int u\diff x}$, то цей член можна винести і на нього скоротити. Одержимо
+\begin{equation}
+	\label{eq:2.3.14}
+	F \left( x, 1, u, u^2 + u', u^3 + 3 u u' + u'', \ldots \right) = 0,
+\end{equation} 
+диференціальне рівняння $(n-1)$-го порядку. 
+\item Нехай ліва частина рівняння
+\begin{equation}
+	\label{eq:2.3.15}
+	F \left( x, y, y', \ldots, y^{(n)} \right) = 0.
+\end{equation}
+є похідної деякого диференціального вираза ступеня $(n-1)$, тобто
+\begin{equation}
+	\label{eq:2.3.16}
+	\frac{\diff}{\diff x} \cdot \Phi\left( x, y, y', \ldots, y^{(n-1)} \right) = F \left( x, y, y', \ldots, y^{(n)} \right).
+\end{equation}
+У цьому випадку легко обчислюється так званий перший інтеграл
+\begin{equation}
+	\label{eq:2.3.17}
+	\Phi\left( x, y, y', \ldots, y^{(n-1)} \right) = C.
+\end{equation}
+
+\item Нехай диференціальне рівняння
+\begin{equation}
+	\label{eq:2.3.18}
+	F \left( x, y, y', \ldots, y^{(n)} \right) = 0,
+\end{equation}
+розписано у вигляді диференціалів
+\begin{equation}
+	\label{eq:2.3.19}
+	F \left( x, y, \diff y, \diff^2 y , \ldots, \diff^n y \right) = 0,
+\end{equation}
+і $F$ -- функція однорідна по всім змінним. Зробимо заміну $x = e^t$, $y = u \cdot e^t$, де $u$, $t$ -- нові змінні. Тоді одержуємо
+\begin{align}
+	\label{eq:2.3.20}
+	\diff x &= e^t \diff t, \\
+	\label{eq:2.3.21}
+	y_x^\prime &=  \frac{y_t^\prime}{x_y^\prime} = \frac{u_t^\prime e^t + u e^t}{e^t} = u_t^\prime + u, \\
+	\label{eq:2.3.22}
+	y_{x^2}^{\prime\prime} &= \frac{\diff}{\diff x} \cdot y_x^\prime = \frac{\diff}{\diff t} \left( u_t^\prime + u \right) \cdot \frac{\diff t}{\diff x} = \frac{u_{t^2}^{\prime\prime} + u_t^\prime}{e^t}, \\
+	\label{eq:2.3.23}
+	y_{x^3}^{\prime\prime\prime} &= \frac{\diff}{\diff x} \cdot y_{x^2}^{\prime\prime} = \frac{\diff}{\diff t} \left( \frac{u_{t^2}^{\prime\prime} + u_t^\prime }{e^t} \right) \cdot \frac{\diff t}{\diff x} = \\
+	&= \frac{\left( u_{t^3}^{\prime\prime\prime} + u_{t^2}^{\prime\prime} \right) e^t - \left( u_{t^2}^{\prime\prime} + u_t^\prime \right) e^t}{e^{3t}} = \frac{u_{t^3}^{\prime\prime\prime} - u_t^\prime}{e^{2t}}, \nonumber
+\end{align}
+і так далі до $y^{(n)}$. Підставивши, одержимо
+\begin{multline}
+	\label{eq:2.3.24}
+	\Phi \left(x, y, \diff y, \diff^2 y, \ldots, \diff^n y\right) = \\
+	= \Phi\left( e^t, u e^t, e^t \diff t, (u_t^\prime + u)e^t \diff t, \left(u_{t^2}^{\prime\prime} + u_t^\prime\right) e^t \diff t, \ldots\right) = 0.
+\end{multline} 
+Скоротивши на $e^t$ одержимо
+\begin{equation}
+	\label{eq:2.3.25}
+	\Phi\left( 1, u, \diff t, u_t^\prime + u, u_{t^2}^{\prime\prime} + u_t^\prime, \ldots\right) = 0.
+\end{equation} 
+Тобто одержимо диференціальне рівняння вигляду \eqref{eq:2.3.4} і повертаємося до другого випадку.
+\end{enumerate}
