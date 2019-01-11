@@ -1,0 +1,83 @@
+\begin{theorem}
+	Якщо $y = y_1(x)$ є розв’язком однорідного лінійного рівняння, то і $y = C y_1 (x)$, де $C$ -- довільна стала, теж буде розв’язком однорідного лінійного рівняння.
+\end{theorem}
+\begin{proof}
+	Справді, нехай $y = y_1(x)$ -- розв’язок лінійного однорідного рівняння, тобто
+	\begin{equation}
+		\label{eq:3.1.7}
+		a_0(x) \cdot y_1^{(n)} (x) + a_1(x) \cdot y_1^{(n - 1)} (x) + \ldots + a_n(x) \cdot y_1(x) \equiv 0.
+	\end{equation}
+	Тоді і
+	\begin{multline}
+		\label{eq:3.1.8}
+		a_0(x) \cdot (C y_1)^{(n)}(x) + a_1(x) \cdot (C y_1)^{(n - 1)}(x) + \ldots + a_n(x) \cdot (C y_1)(x) = \\
+		= C \left( a_0(x) \cdot y_1^{(n)} (x) + a_1(x) \cdot y_1^{(n - 1)} (x) + \ldots + a_n(x) \cdot y_1(x) \right) \equiv 0,
+	\end{multline}
+	оскільки вираз в дужках дорівнює нулю.
+\end{proof}
+
+\begin{theorem}
+	Якщо $y_1(x)$ і $y_2(x)$ є розв’язками лінійного однорідного рівняння, то і $y = y_1(x) + y_2(x)$ теж буде розв’язком лінійного однорідного рівняння.
+\end{theorem}
+\begin{proof}
+	Справді, нехай $y_1(x)$ і $y_2(x)$ -- розв’язки лінійного рівняння, тобто
+	\begin{align}
+		\label{eq:3.1.9}
+		a_0(x) \cdot y_1^{(n)} (x) + a_1(x) \cdot y_1^{(n - 1)} (x) + \ldots + a_n(x) \cdot y_1(x) &\equiv 0, \\
+		\label{eq:3.1.10}
+		a_0(x) \cdot y_2^{(n)} (x) + a_1(x) \cdot y_2^{(n - 1)} (x) + \ldots + a_n(x) \cdot y_2(x) &\equiv 0.
+	\end{align}
+	Тоді і
+	\begin{multline}
+		\label{eq:3.1.11}
+		a_0(x) \cdot (y_1 + y_2)^{(n)} (x) + a_1(x) \cdot (y_1 + y_2)^{(n - 1)} (x) + \ldots + a_n(x) \cdot (y_1 + y_2) (x) = \\
+		= \left( a_0(x) \cdot y_1^{(n)} (x) + a_1(x) \cdot y_1^{(n - 1)} (x) + \ldots + a_n(x) \cdot y_1(x) \right) + \\
+		+ \left( a_0(x) \cdot y_2^{(n)} (x) + a_1(x) \cdot y_2^{(n - 1)} (x) + \ldots + a_n(x) \cdot y_2(x) \right) \equiv 0,
+	\end{multline}
+	оскільки обидві дужки дорівнюють нулю.
+\end{proof}
+
+\begin{theorem}
+	Якщо $y_1(x), y_2(x), \ldots, y_n(x)$ -- розв’язки однорідного лінійного рівняння, то і  $y = \sum_{i=1}^n C_i y_i(x)$, де $C_i$ -- довільні сталі, також буде розв’язком лінійного однорідного рівняння.
+\end{theorem}
+\begin{proof}
+	Справді, нехай $y_1(x), y_2(x), \ldots, y_n(x)$ -- розв’язки лінійного однорідного рівняння, тобто
+	\begin{equation}
+		\label{eq:3.1.12}
+		a_0(x) \cdot y_i^{(n)} (x) + a_1(x) \cdot y_i^{(n - 1)} (x) + \ldots + a_n(x) \cdot y_i(x) \equiv 0, \quad i = \overline{1, n}.
+	\end{equation}
+	Тоді і   
+ 	\begin{multline}
+ 		\label{eq:3.1.13}
+ 		a_0(x) \cdot \left(\sum_{i=1}^n C_i y_i\right)^{(n)} (x) + a_1(x) \cdot \left(\sum_{i=1}^n C_i y_i\right)^{(n - 1)} (x) + \ldots \\
+ 		\ldots + a_{n-1}(x) \cdot \left(\sum_{i=1}^n C_i y_i\right)'(x) + a_n(x) \cdot \left(\sum_{i=1}^n C_i y_i\right)(x) = \\
+ 		= \sum_{i=1}^n C_i  \left( a_0(x) \cdot y_i^{(n)} (x) + a_1(x) \cdot y_i^{(n - 1)} (x) + \ldots + a_n(x) \cdot y_i(x) \right) \equiv 0,
+ 	\end{multline}
+	оскільки кожна дужка дорівнює нулю.
+\end{proof}
+
+\begin{theorem}
+	Якщо комплексна функція дійсного аргументу $y = u(x) + i v(x)$ є розв’язком лінійного однорідного рівняння, то окремо дійсна частина $u(x)$ і уявна $v(x)$ будуть також розв’язками цього рівняння.
+\end{theorem}
+\begin{proof}
+	Справді, нехай $y = u(x) + i v(x)$ є розв’язком лінійного однорідного рівняння, тобто
+	\begin{multline}
+		\label{eq:3.1.14}
+		a_0(x) \cdot (u) + i v)^{(n)} (x) + a_1(x) \cdot (u + i v)^{(n - 1)} (x) + \ldots \\
+		\ldots + a_{n - 1}(x) \cdot (u + i v)' (x) + a_n(x) \cdot (u + i v) (x) \equiv 0.
+	\end{multline}
+	Розкривши дужки і перегрупувавши члени, одержимо
+	\begin{multline}
+		\label{eq:3.1.15}
+		\left( a_0(x) \cdot u^{(n)}(x) + a_1(x) \cdot u^{(n - 1)} (x) + \ldots + a_n(x) \cdot u(x) \right) + \\
+		+ i \left( a_0(x) \cdot v^{(n)}(x) + a_1(x) \cdot v^{(n - 1)} (x) + \ldots + a_n(x) \cdot v(x) \right) \equiv 0.
+	\end{multline}
+	Комплексний вираз дорівнює нулю тоді і тільки тоді, коли дорівнюють нулю дійсна і уявна частини, тобто
+ 	\begin{align}
+		\label{eq:3.1.16}
+		a_0(x) \cdot u^{(n)}(x) + a_1(x) \cdot u^{(n - 1)} (x) + \ldots + a_n(x) \cdot u(x) &\equiv 0, \\
+		\label{eq:3.1.17}
+		a_0(x) \cdot v^{(n)}(x) + a_1(x) \cdot v^{(n - 1)} (x) + \ldots + a_n(x) \cdot v(x) &\equiv 0,
+	\end{align}
+	або функції $u(x)$, $v(x)$ є розв’язками рівняння, що і було потрібно довести.
+\end{proof}
