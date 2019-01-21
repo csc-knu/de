@@ -1,49 +1,49 @@
 Метод варіації довільної сталої полягає в тому, що розв’язок неоднорідного рівняння шукається в такому ж вигляді, як і розв’язок однорідного, але сталі $C_i$, $i = \overline{1, n}$ вважаються невідомими функціями. Нехай загальний розв’язок лінійного однорідного рівняння
-\begin{equation}
-	\label{eq:3.3.16}
+\begin{equation*}
+	%\label{eq:3.3.16}
 	a_0(x) \cdot y^{(n)}(x) + a_1(x) \cdot y^{(n - 1)}(x) + \ldots + a_n(x) \cdot y(x) = 0.
-\end{equation}
+\end{equation*}
 записано у вигляді $y(x) = C_1 \cdot y_1(x) + C_2 \cdot y_2(x) + \ldots + C_n \cdot y_n(x)$. \\
 
 Розв’язок лінійного неоднорідного рівняння
-\begin{equation}
-	\label{eq:3.3.17}
+\begin{equation*}
+	%\label{eq:3.3.17}
 	a_0(x) \cdot y^{(n)}(x) + a_1(x) \cdot y^{(n - 1)}(x) + \ldots + a_n(x) \cdot y(x) = b(x).
-\end{equation}
+\end{equation*}
 шукаємо у вигляді $y(x) = C_1(x) \cdot y_1(x) + C_2(x) \cdot y_2(x) + \ldots + C_n(x) \cdot y_n(x)$, де $C_i(x)$, $i = \overline{1, n}$ -- невідомі функції. Оскільки підбором $n$ функцій необхідно задовольнити одному рівнянню, тобто одній умові, то $n - 1$ умову можна накласти довільно. Розглянемо першу похідну від записаного розв’язку
-\begin{equation}
-	\label{eq:3.3.18}
+\begin{equation*}
+	%\label{eq:3.3.18}
 	y'(x) = \sum_{i = 1}^n C_i(x) \cdot y_i'(x) + \sum_{i = 1}^n C_i'(x) \cdot y_i(x).
-\end{equation}
+\end{equation*}
 і зажадаємо, щоб $\sum_{i = 1}^n C_i'(x) \cdot y_i(x) = 0$. Розглянемо другу похідну
-\begin{equation}
-	\label{eq:3.3.19}
+\begin{equation*}
+	%\label{eq:3.3.19}
 	y'(x) = \sum_{i = 1}^n C_i(x) \cdot y_i''(x) + \sum_{i = 1}^n C_i'(x) \cdot y_i'(x).
-\end{equation}
+\end{equation*}
 і зажадаємо, щоб $\sum_{i = 1}^n C_i'(x) \cdot y_i'(x) = 0$. Продовжимо процес взяття похідних до $(n - 1)$-ої 
-\begin{equation}
-	\label{eq:3.3.20}
+\begin{equation*}
+	%\label{eq:3.3.20}
 	y^{(n - 1)}(x) = \sum_{i = 1}^n C_i(x) \cdot y_i^{(n - 1)}(x) + \sum_{i = 1}^n C_i'(x) \cdot y_i^{(n - 2)}(x).
-\end{equation}
+\end{equation*}
 і зажадаємо, щоб $\sum_{i = 1}^n C_i'(x) \cdot y_i^{(n - 2)}(x)$. На цьому $(n - 1)$ умова вичерпалася. І для $n$-ої похідної справедливо
-\begin{equation}
-	\label{eq:3.3.21}
+\begin{equation*}
+	%\label{eq:3.3.21}
 	y^{(n)}(x) = \sum_{i = 1}^n C_i(x) \cdot y_i^{(n)}(x) + \sum_{i = 1}^n C_i'(x) \cdot y_i^{(n - 1)}(x).
-\end{equation}
+\end{equation*}
 
 Підставимо взяту функцію та її похідні в неоднорідне диференціальне рівняння
 \begin{multline}
- 	\label{eq:3.3.22}
+ 	%\label{eq:3.3.22}
  	a_0(x) \cdot \left( \sum_{i = 1}^n C_i(x) \cdot y_i^{(n)}(x) \right) + a_0(x) \cdot \left( \sum_{i = 1}^n C_i'(x) \cdot y_i^{(n - 1)}(x) \right) + \\ + a_1(x) \cdot \left( \sum_{i = 1}^n C_i(x) \cdot y_i^{(n - 1)}(x) \right) + \ldots + a_n(x) \cdot \left( \sum_{i = 1}^n C_i(x) \cdot y_i(x) \right) = b(x).
 \end{multline} 
 Оскільки $y(x) = \sum_{i = 1}^n C_i(x) \cdot y_i(x)$ -- розв’язок однорідного диференціального рівняння, то після скорочення одержимо $n$-у умову
-\begin{equation}
-	\label{eq:3.3.23}
+\begin{equation*}
+	%\label{eq:3.3.23}
 	\left( \sum_{i = 1}^n C_i'(x) \cdot y_i^{(n - 1)}(x) \right) = \frac{b(x)}{a_0(x)}.
-\end{equation}
+\end{equation*}
 Додаючи перші $(n -1 )$ умови, одержимо систему
-\begin{equation}
-	\label{eq:3.3.24}
+\begin{equation*}
+	%\label{eq:3.3.24}
 	\left\{ \begin{aligned}
 		C_1'(x) \cdot y_1(x) + C_2'(x) \cdot y_2(x) + \ldots + C_n'(x) \cdot y_n(x) &= 0, \\
 		C_1'(x) \cdot y_1'(x) + C_2'(x) \cdot y_2'(x) + \ldots + C_n'(x) \cdot y_n'(x) &= 0, \\
@@ -51,57 +51,57 @@
 		C_1'(x) \cdot y_1^{(n - 2)}(x) + C_2'(x) \cdot y_2^{(n - 2)}(x) + \ldots + C_n'(x) \cdot y_n^{(n - 2)}(x) &= 0, \\
 		C_1'(x) \cdot y_1^{(n - 1)}(x) + C_2'(x) \cdot y_2^{(n - 1)}(x) + \ldots + C_n'(x) \cdot y_n^{(n - 1)}(x) &= \frac{b(x)}{a_0(x)}.
 	\end{aligned} \right.
-\end{equation}
+\end{equation*}
  
 Оскільки визначником системи є визначник Вронського і він відмінний від нуля, то система має єдиний розв’язок
-\begin{equation}
-	\label{eq:3.3.25}
+\begin{equation*}
+	%\label{eq:3.3.25}
 	\begin{aligned}
 		C_1(x) &= \int \frac{\begin{vmatrix} 0 & y_2(x) & \cdots & y_{n - 1}(x) & y_n'(x) \\ 0 & y_2'(x) & \cdots & y_{n - 1}'(x) & y_n'(x) \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & y_2^{(n - 2)}(x) & \cdots & y_{n - 1}^{(n - 2)}(x) & y_n^{(n - 2)}(x) \\ \frac{b(x)}{a_0(x)} & y_2^{(n - 1)}(x) & \cdots & y_{n - 1}^{(n - 1)}(x) & y_n^{(n - 1)}(x) \end{vmatrix}}{W[y_1, y_2, \ldots, y_n]} \diff x, \\
 		\ldots \ldots & \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \\
 		C_n(x) &= \int \frac{\begin{vmatrix} y_1(x) & y_2(x) & \cdots & y_{n - 1}(x) & 0 \\ y_1'(x) & y_2'(x) & \cdots & y_{n - 1}'(x) & 0 \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ y_1^{(n - 2)} & y_2^{(n - 2)}(x) & \cdots & y_{n - 1}^{(n - 2)}(x) & 0 \\ y_1^{(n - 1)}(x) & y_2^{(n - 1)}(x) & \cdots & y_{n - 1}^{(n - 1)}(x) & \frac{b(x)}{a_0(x)} \end{vmatrix}}{W[y_1, y_2, \ldots, y_n]} \diff x.
 	\end{aligned}
-\end{equation}
+\end{equation*}
 
 І загальний розв’язок лінійного неоднорідного диференціального рівняння запишеться у вигляді
-\begin{equation}
-	\label{eq:3.3.26}
+\begin{equation*}
+	%\label{eq:3.3.26}
 	y(x) = \bar C_1 \cdot y_1(x) + \bar C_2 \cdot y_2(x) + \ldots + \bar C_n \cdot y_n(x) + y_{\text{hetero}}(x),
-\end{equation}
+\end{equation*}
 де $\bar C_i$ -- довільні сталі, а
-\begin{equation}
-	\label{eq:3.3.27}
+\begin{equation*}
+	%\label{eq:3.3.27}
 	y_{\text{hetero}}(x) = C_1(x) \cdot y_1(x) + C_2(x) \cdot y_2(x) + \ldots + C_n(x) \cdot y_n(x).
-\end{equation}
+\end{equation*}
 
 Якщо розглядати диференціальне рівняння другого порядку
-\begin{equation}
-	\label{eq:3.3.27}
+\begin{equation*}
+	%\label{eq:3.3.27}
 	a_0(x) \cdot y''(x) + a_1(x) \cdot y'(x) + a_2(x) \cdot y(x) = b(x),
-\end{equation}
+\end{equation*}
 і загальний розв’язок однорідного рівняння має вигляд
-\begin{equation}
-	\label{eq:3.3.28}
+\begin{equation*}
+	%\label{eq:3.3.28}
 	y_{\text{homo}}(x) = C_1 \cdot y_1(x) + C_2 \cdot y_2(x),
-\end{equation}
+\end{equation*}
 то частинний розв’язок неоднорідного має вигляд 
-\begin{equation}
-	\label{eq:3.3.29}
+\begin{equation*}
+	%\label{eq:3.3.29}
 	y_{\text{hetero}}(x) = C_1(x) \cdot y_1(x) + C_2(x) \cdot y_2(x).
-\end{equation}
+\end{equation*}
 І для знаходження функцій $C_1(x), C_2(x)$ маємо систему
-\begin{equation}
-	\label{eq:3.3.30}
+\begin{equation*}
+	%\label{eq:3.3.30}
 	\left\{ \begin{aligned}
 		C_1'(x) \cdot y_1(x) + C_2'(x) \cdot y_2(x) &= 0, \\
 		C_1'(x) \cdot y_1'(x) + C_2'(x) \cdot y_2'(x) &= \frac{b(x)}{a_0(x)}.
 	\end{aligned} \right.
-\end{equation}
+\end{equation*}
 
 Звідси
-\begin{equation}
-	\label{eq:3.3.31}
+\begin{equation*}
+	%\label{eq:3.3.31}
 	C_1(x) = \int \frac{\begin{vmatrix} 0 & y_2(x) \\ \frac{b(x)}{a_0(x)} & y_2'(x) \end{vmatrix}}{\begin{vmatrix} y_1(x) & y_2(x) \\ y_1'(x) & y_2'(x) \end{vmatrix}} \diff x, \quad C_2(x) = \int \frac{\begin{vmatrix} y_1(x) & 0 \\ y_1'(x) & \frac{b(x)}{a_0(x)} \end{vmatrix}}{\begin{vmatrix} y_1(x) & y_2(x) \\ y_1'(x) & y_2'(x) \end{vmatrix}} \diff x
-\end{equation}
+\end{equation*}
 
 І одержуємо $y_{\text{hetero}}(x) = C_1(x) \cdot y_1(x) + C_2(x) \cdot y_2(x)$ з обчисленими функціями $C_1(x)$ і $C_2(x)$.

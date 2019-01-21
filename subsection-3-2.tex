@@ -1,8 +1,8 @@
 Загальний вигляд лінійних неоднорідних диференціальних рівнянь наступний
-\begin{equation}
-	\label{eq:3.3.1}
+\begin{equation*}
+	%\label{eq:3.3.1}
 	a_0(x) \cdot y^{(n)}(x) + a_1(x) \cdot y^{(n - 1)}(x) + \ldots + a_n(x) \cdot y(x) = b(x).
-\end{equation}
+\end{equation*}
 
 \subsubsection{Властивості розв’язків лінійних неоднорідних рівнянь. Загальний розв’язок лінійного неоднорідного рівняння}
 
@@ -14,15 +14,15 @@
 \begin{proof}
 	Дійсно, нехай $y_0(x)$ і $y_1(x)$ -- розв’язки відповідно однорідного і неоднорідного рівнянь, тобто
 	\begin{align}
-		\label{eq:3.3.2}
+		%\label{eq:3.3.2}
 		a_0(x) \cdot y_0^{(n)}(x) + a_1(x) \cdot y_0^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_0(x) &= 0, \\
-		\label{eq:3.3.3}
+		%\label{eq:3.3.3}
 		a_0(x) \cdot y_1^{(n)}(x) + a_1(x) \cdot y_1^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_1(x) &= b(x).
 	\end{align}	
 	
 	Тоді 
 	\begin{multline}
-		\label{eq:3.3.4}
+		%\label{eq:3.3.4}
 		a_0(x) (y_0 + y_1)^{(n)}(x) + a_1(x) (y_0 + y_1)^{(n - 1)}(x) + \ldots + a_n(x) (y_0 + y_1)(x) = \\ = \left( a_0(x) \cdot y_0^{(n)}(x) + a_1(x) \cdot y_0^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_0(x) \right) + \\ + \left( a_0(x) \cdot y_1^{(n)}(x) + a_1(x) \cdot y_1^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_1(x) \right) = \\ = 0 + b(x) = b(x),
 	\end{multline}
 	тобто $y(x) = y_0(x) + y_1(x)$ -- розв’язок неоднорідного диференціального рівняння.
@@ -30,32 +30,32 @@
 
 \begin{property}[Принцип суперпозиції]
 	Якщо $y_i(x)$, $i = \overline{1, n}$ -- розв’язки лінійних неоднорідних диференціальних рівнянь
-	\begin{equation}
-		\label{eq:3.3.5}
+	\begin{equation*}
+		%\label{eq:3.3.5}
 		a_0(x) \cdot y^{(n)}(x) + a_1(x) \cdot y^{(n - 1)}(x) + \ldots + a_n(x) \cdot y(x) = b_i(x), \quad i = \overline{1, n}
-	\end{equation}
+	\end{equation*}
 	то $y(x) = \sum_{i = 1}^n C_i \cdot y_i(x)$ з довільними сталими $C_i$ буде розв’язком лінійного неоднорідного рівняння
-	\begin{equation}
-		\label{eq:3.3.6}
+	\begin{equation*}
+		%\label{eq:3.3.6}
 		a_0(x) y^{(n)}(x) + a_1(x) y^{(n - 1)}(x) + \ldots + a_n(x) y(x) = \sum_{i = 1}^n C_i  b_i(x)
-	\end{equation}
+	\end{equation*}
 \end{property}
 
 \begin{proof}
 	Дійсно, нехай $y_i(x)$, $i = \overline{1, n}$ -- розв’язки відповідних неоднорідних рівнянь, тобто
-	\begin{equation}
-		\label{eq:3.3.7}
+	\begin{equation*}
+		%\label{eq:3.3.7}
 		a_0(x) \cdot y_i^{(n)}(x) + a_1(x) \cdot y_i^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_i(x) = b_i(x), \quad i = \overline{1, n}
-	\end{equation}
+	\end{equation*}
 
 	Склавши лінійну комбінацію з рівнянь і їхніх правих частин з коефіцієнтами $C_i$ одержимо
 	\begin{multline}
-		\label{eq:3.3.8}
+		%\label{eq:3.3.8}
 		\sum_{i = 1}^n C_i \cdot \left( a_0(x) \cdot y_i^{(n)}(x) + a_1(x) \cdot y_i^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_i(x) \right) = \\ = \sum_{i = 1}^n C_i \cdot b_i(x),
 	\end{multline}
 	або, перегрупувавши, запишемо
 	\begin{multline}
-		\label{eq:3.3.9}
+		%\label{eq:3.3.9}
 		a_0(x) \cdot \left( \sum_{i = 1}^n C_i \cdot y_i^{(n)}(x) \right) + a_1(x) \cdot \left( \sum_{i = 1}^n C_i \cdot y_i^{(n - 1)}(x)\right) + \ldots \\ \ldots + a_n(x) \cdot \left( \sum_{i = 1}^n C_i \cdot y_i(x) \right) = \sum_{i = 1}^n C_i \cdot b_i(x),
 	\end{multline}
 	що і було потрібно довести.
@@ -68,21 +68,21 @@
 \begin{proof}
 	Дійсно, як випливає з умови,
 	\begin{multline}
-	 	\label{eq:3.3.10}
+	 	%\label{eq:3.3.10}
 	 	a_0(x) \cdot (u + i v)^{(n)}(x) + a_1(x) \cdot (u + i v)^{(n - 1)}(x) + \ldots + a_n(x) \cdot (u + i v)(x) = \\ = f(x) + i p(x).
 	\end{multline}
 	
 	Розкривши дужки, одержимо
 	\begin{multline}
-		\label{eq:3.3.11}
+		%\label{eq:3.3.11}
 		\left( a_0(x) \cdot u^{(n)}(x) + a_1(x) \cdot u^{(n - 1)}(x) + \ldots + a_n(x) \cdot u(x) \right) + \\ + i \left( a_0(x) \cdot v^{(n)}(x) + a_1(x) \cdot v^{(n - 1)}(x) + \ldots + a_n(x) \cdot v(x) \right) = \\ = f(x) + i p(x).
 	\end{multline}
 
 	А комплексні вирази рівні між собою тоді і тільки тоді, коли дорівнюють окремо дійсні та уявні частини, тобто
 	\begin{align}
-		\label{eq:3.3.12}
+		%\label{eq:3.3.12}
 		a_0(x) \cdot u^{(n)}(x) + a_1(x) \cdot u^{(n - 1)}(x) + \ldots + a_n(x) \cdot u(x) &= f(x), \\ 
-		\label{eq:3.3.13}
+		%\label{eq:3.3.13}
 		a_0(x) \cdot v^{(n)}(x) + a_1(x) \cdot v^{(n - 1)}(x) + \ldots + a_n(x) \cdot v(x) &= p(x),
 	\end{align}
 	що і було потрібно довести.
@@ -92,24 +92,24 @@
 	Загальний розв’язок лінійного неоднорідного диференціального рівняння складається з загального розв’язку лінійного однорідного рівняння і частинного розв’язку неоднорідного рівняння.
 \end{theorem}
 \begin{proof}
-	Нехай $y_{\text{homo}}(x) = \sum_{i = 1}^n C_i \cdot y_i(x)$ -- загальний розв’язок однорідного\footnote{Homogeneous equation -- однорідне рівняння.} рівняння, а $y_{\text{hetero}}(x)$ -- частинний розв’язок неоднорідного\footnote{Heterogeneous equation -- неоднорідне рівняння.} рівняння. \\
+	Нехай $y_{\text{homo}}(x) = \sum_{i = 1}^n C_i \cdot y_i(x)$ -- загальний розв’язок однорідного\footnote{Homogeneous equation* -- однорідне рівняння.} рівняння, а $y_{\text{hetero}}(x)$ -- частинний розв’язок неоднорідного\footnote{Heterogeneous equation* -- неоднорідне рівняння.} рівняння. \\
 
 	Тоді, як випливає з властивості \ref{prop:3.3.1}, $y(x) = \sum_{i = 1}^n C_i \cdot y_i(x) + y_{\text{hetero}}(x)$, буде розв’язком неоднорідного рівняння. Покажемо, що цей розв’язок  загальний, тобто вибором коефіцієнтів $C_i$ можна розв’язати довільну задачу Коші
-	\begin{equation}
-		\label{eq:3.3.14}
+	\begin{equation*}
+		%\label{eq:3.3.14}
 		y(x_0) = y_0, \quad y'(x_0) = y_0', \quad \ldots, \quad y^{(n - 1)}(x_0) = y_0^{(n - 1)}.
-	\end{equation}
+	\end{equation*}
 
 	Дійсно, оскільки $y_{\text{homo}}$ загальний розв’язок однорідного рівняння, то $y_i$, $i = \overline{1, n}$ лінійно незалежні, а отже визначник Вронського $W[y_1, y_2, \ldots, y_n] \ne 0$. Звідси, неоднорідна система лінійних алгебраїчних рівнянь 
-	\begin{equation}
-		\label{eq:3.3.15}
+	\begin{equation*}
+		%\label{eq:3.3.15}
 		\left\{ \begin{aligned}
 			C_1 \cdot y_1(x_0) + C_2 \cdot y_2(x_0) + \ldots + C_n \cdot y_n(x_0) &= y_0 - y_{\text{hetero}}(x_0), \\
 			C_1 \cdot y_1'(x_0) + C_2 \cdot y_2'(x_0) + \ldots + C_n \cdot y_n'(x_0) &= y_0' - y_{\text{hetero}}'(x_0), \\
 			\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots & \ldots \ldots \ldots \ldots \ldots \ldots 	\\
 			C_1 \cdot y_1^{(n - 1)}(x_0) + C_2 \cdot y_2^{(n - 1)}(x_0) + \ldots + C_n \cdot y_n^{(n - 1)}(x_0) &= y_0 - y_{\text{hetero}}^{(n - 1)}(x_0),
 		\end{aligned} \right.
-	\end{equation}
+	\end{equation*}
 	має єдиний розв’язок для довільних наперед обраних $y_0, y_0', \ldots, y_0^{(n - 1)}$. Нехай розв’язком системи буде $C_1^0, C_2^0, \ldots, C_n^0$. Тоді, як випливає з вигляду системи, функція $y(x) = \sum_{i = 1}^n C_i^0 \cdot y_i(x) + y_{\text{hetero}}$ є розв’язком поставленому задачі Коші.
 \end{proof}
 

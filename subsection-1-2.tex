@@ -1,154 +1,156 @@
 \subsubsection{Загальна теорія}
 Нехай рівняння має вигляд
-\begin{equation}
-	\label{eq:1.2.1}
+\begin{equation*}
+	%\label{eq:1.2.1}
 	M(x, y) \cdot \diff	x + N(x, y) \cdot \diff y = 0.
-\end{equation}
+\end{equation*}
 
 Якщо функції $M(x, y)$ та $N(x, y)$ однорідні одного ступеня, то рівняння називається однорідним. Нехай функції $M(x, y)$ та $N(x, y)$ однорідні ступеня $k$, тобто
-\begin{equation}
-	\label{eq:1.2.2}
+\begin{equation*}
+	%\label{eq:1.2.2}
 	M(t \cdot x, t \cdot y) = t^k \cdot M(x, y), \qquad N(t \cdot x, t \cdot y) = t^k \cdot N(x, y).
-\end{equation}
+\end{equation*}
 
 Робимо заміну 
-\begin{equation}
-	\label{eq:1.2.2_5}
+\begin{equation*}
+	%\label{eq:1.2.2_5}
 	y = u x, \quad \diff y = u \diff x + x \diff u.
-\end{equation}
+\end{equation*}
 Після підстановки одержуємо
-\begin{equation}
-	\label{eq:1.2.3}
+\begin{equation*}
+	%\label{eq:1.2.3}
 	M(x, u x) \cdot \diff x + N(x, u x) \cdot (u \diff x + x \diff u) = 0,
-\end{equation}
+\end{equation*}
 або 
-\begin{equation}
-	\label{eq:1.2.4}
+\begin{equation*}
+	%\label{eq:1.2.4}
 	x^k M(1, u) \cdot \diff x + x^k N(1, u) \cdot (u \diff x + x \diff u) = 0.
-\end{equation}
+\end{equation*}
 
 Скоротивши на $x^k$ і розкривши дужки, запишемо 
-\begin{equation}
-	\label{eq:1.2.5}
+\begin{equation*}
+	%\label{eq:1.2.5}
 	M(1, u) \cdot \diff x + N(1, u) \cdot u \diff x + N(1, u) \cdot x \diff u = 0.
-\end{equation}
+\end{equation*}
 Згрупувавши, одержимо рівняння зі змінними, що розділяються
-\begin{equation}
-	\label{eq:1.2.6}
+\begin{equation*}
+	%\label{eq:1.2.6}
 	(M(1, u) + N(1, u) \cdot u) \diff x + N(1, u) \cdot x \diff u = 0,
-\end{equation}
+\end{equation*}
 або 
-\begin{equation}
-	\label{eq:1.2.7}
+\begin{equation*}
+	%\label{eq:1.2.7}
 	\int \frac{\diff x}{x} + \int \frac{N(1, u) \cdot \diff u}{M(1, u) + N(1, u) \cdot u} = C.
-\end{equation}
+\end{equation*}
 
 Взявши інтеграли та замінивши $u = y / x$, отримаємо загальний інтеграл $\Phi(x, y / x) = C$.
 
 \subsubsection{Рівняння, що зводяться до однорідних}
 
 Нехай маємо рівняння вигляду
-\begin{equation}
-	\label{eq:1.2.8}
+\begin{equation*}
+	%\label{eq:1.2.8}
+	\label{eq:linear-fractional-equation}
 	\frac{\diff y}{\diff x} = f \left( \frac{a_1 x + b_1 y + c_1}{a_2 x + b_2 y + c_2} \right).
-\end{equation}
+\end{equation*}
 
 Розглянемо два випадки
 \begin{enumerate}
 	\item 
-	\begin{equation}
-		\label{eq:1.2.9}
+	\begin{equation*}
+		%\label{eq:1.2.9}
 		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} \ne 0.
-	\end{equation}
+	\end{equation*}
 
 	Тоді система алгебраїчних рівнянь
-	\begin{equation}
-		\label{eq:1.2.10}
+	\begin{equation*}
+		%\label{eq:1.2.10}
+		\label{eq:linear-algebraic-system}
 		\left\{
 			\begin{aligned}
 				a_1 x + b_1 y + c_1 &= 0, \\
 				a_2 x + b_2 y + c_2 &= 0,
 			\end{aligned}
 		\right.
-	\end{equation}
+	\end{equation*}
 	має єдиний розв’язок $(x_0, y_0)$. Проведемо заміну 
-	\begin{equation}
-		\label{eq:1.2.10_5}
+	\begin{equation*}
+		%\label{eq:1.2.10_5}
 		\left\{\begin{aligned}
 			x &= x_1 + x_0, \\
 			y &= y_1 + y_0
 		\end{aligned}\right.
-	\end{equation}
+	\end{equation*}
 	та отримаємо
 	\begin{multline}
-		\label{eq:1.2.11}
+		%\label{eq:1.2.11}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 \cdot (x_1 + x_0) + b_1 \cdot (y_1 + y_0) + c_1}{a_2 \cdot (x_1 + x_0) + b_2 \cdot (y_1 + y_0) + c_2} \right) = \\
 		= f \left( \frac{a_1 x_1 + b_1 y_1 + (a_1 x_0 + b_1 y_0 + c_1)}{a_2 x_1 + b_2 y_1 + (a_2 x_0 + b_2 y_0 + c_2)} \right)
 	\end{multline}
 
-	Оскільки $(x_0, y_0)$ -- розв’язок \eqref{eq:1.2.10}, то \eqref{eq:1.2.8} набуде вигляду
-	\begin{equation}
-		\label{eq:1.2.12}
+	Оскільки $(x_0, y_0)$ -- розв’язок \eqref{eq:linear-algebraic-system}, то \eqref{eq:linear-fractional-equation} набуде вигляду
+	\begin{equation*}
+		%\label{eq:1.2.12}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 y_1}{a_2 x_1 + b_2 y_1} \right)
-	\end{equation}
+	\end{equation*}
 	і є однорідним нульового ступеня. Робимо заміну 
-	\begin{equation}
-		\label{eq:1.2.12_5}
+	\begin{equation*}
+		%\label{eq:1.2.12_5}
 		y_1 = u x_1, \quad \diff y_1 = u \cdot \diff x_1 + x_1 \cdot \diff u.
-	\end{equation}
+	\end{equation*}
 
-	Підставимо в \eqref{eq:1.2.12}
-	\begin{equation}
-		\label{eq:1.2.13}
+	Підставимо в рівняння
+	\begin{equation*}
+		%\label{eq:1.2.13}
 		u + x_1 \cdot \frac{\diff u}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right).
-	\end{equation}
+	\end{equation*}
 	
 	Одержимо
-	\begin{equation}
-		\label{eq:1.2.14}
+	\begin{equation*}
+		%\label{eq:1.2.14}
 		x_1 \cdot \diff u + \left( u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right) \right) \diff x_1 = 0.
-	\end{equation}
+	\end{equation*}
 
 	Розділивши змінні, маємо
-	\begin{equation}
-		\label{eq:1.2.15}
+	\begin{equation*}
+		%\label{eq:1.2.15}
 		\int \frac{\diff u}{u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right)} + \ln (x_1) = C.
-	\end{equation}
+	\end{equation*}
 
 	І загальний інтеграл диференціального рівняння має вигляд $\Phi(u, x_1) = C$. Повернувшись до вихідних змінних, запишемо
-	\begin{equation}
-		\label{eq:1.2.16}
+	\begin{equation*}
+		%\label{eq:1.2.16}
 		\Phi \left( \frac{y - y_0}{x - x_0}, x - x_0 \right) = C.
-	\end{equation}
+	\end{equation*}
 
 	\item Нехай 
-	\begin{equation}
-		\label{eq:1.2.17}
+	\begin{equation*}
+		%\label{eq:1.2.17}
 		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} = 0,
-	\end{equation}
+	\end{equation*}
 	тобто коефіцієнти рядків лінійно залежні і
-	\begin{equation}
-		\label{eq:1.2.18}
+	\begin{equation*}
+		%\label{eq:1.2.18}
 		a_1 x + b_1 y = \alpha \cdot (a_2 x + b_2 y).
-	\end{equation}
+	\end{equation*}
 
 	Робимо заміну $a_2 x + b_2 y = z$. Звідси $\frac{\diff y}{\diff x} = \frac{1}{b_2} \cdot \left( \frac{\diff z}{\diff x} - a_2 \right)$. \\
 
 	Підставивши в диференціальне рівняння, одержимо
-	\begin{equation}
-		\label{eq:1.2.19}
+	\begin{equation*}
+		%\label{eq:1.2.19}
 		\frac{1}{b_2} \cdot \left( \frac{\diff z}{\diff x} - a_2 \right) = f \left ( \frac{\alpha z + c_1}{z + c_2} \right),
-	\end{equation}
+	\end{equation*}
 	або
-	\begin{equation}
-		\label{eq:1.2.20}
+	\begin{equation*}
+		%\label{eq:1.2.20}
 		\frac{\diff z}{\diff x} = a_2 + b_2 \cdot f \left ( \frac{\alpha z + c_1}{z + c_2} \right),
-	\end{equation}
+	\end{equation*}
 	Розділивши змінні, отримаємо
-	\begin{equation}
-		\label{eq:1.2.21}
+	\begin{equation*}
+		%\label{eq:1.2.21}
 		\int \frac{\diff z}{a_2 + b_2 \cdot f \left ( \frac{\alpha z + c_1}{z + c_2} \right)} - x = C,
-	\end{equation}
+	\end{equation*}
 
 	Загальний інтеграл має вигляд $\Phi(a_2 x + b_2 y, x) = C$
 \end{enumerate}
