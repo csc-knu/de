@@ -1,5 +1,5 @@
 % cd ..\..\Users\NikitaSkybytskyi\Desktop\differential-equations
-% pdflatex main.tex && pdflatex main.tex && del main.toc, main.aux, main.log, main.out && start main.pdf
+% pdflatex main.tex && cls && pdflatex main.tex && del main.toc, main.log, main.aux, main.out && start main.pdf
 \documentclass[a4paper, 12pt]{article}
 \usepackage[T2A,T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -25,6 +25,7 @@
 \theoremstyle{definition}
 \newtheorem*{definition}{Визначення}
 \newtheorem{problem}{Задача}[subsection]
+\newtheorem*{example*}{Приклад}
 \newtheorem{example}[problem]{Приклад}
 \newtheorem{property}{Властивість}
 \newtheorem*{solution}{Розв'язок}
@@ -126,11 +127,11 @@
 
 \input{section-3.tex}
 
-\subsubsection{Властивості розв’язків лінійних однорідних рівнянь}
+\subsubsection{Властивості роз\-в'яз\-ків лінійних однорідних рівнянь}
 
 \input{subsubsection-3-1-2.tex}
 
-\subsubsection{Лінійна залежність і незалежність розв’язків. Загальний розв’язок лінійного однорідного рівняння вищого порядку}
+\subsubsection{Лінійна залежність і незалежність роз\-в'яз\-ків. Загальний роз\-в'яз\-ок лінійного однорідного рівняння вищого порядку}
 
 \input{subsubsection-3-1-3.tex}
 
@@ -158,12 +159,21 @@
 
 \input{subsection-3-2.tex}
 
-\subsubsection{Метод варіації довільної сталої побудови частинного розв’язку лінійного неоднорідного диференціального рівняння}
+\subsubsection{Метод варіації довільної сталої побудови частинного роз\-в'яз\-ку лінійного неоднорідного диференціального рівняння}
 
 \input{subsubsection-3-2-2.tex}
 
 \subsubsection{Метод Коші}
 
 \input{subsubsection-3-2-3.tex}
+
+\subsubsection{Метод невизначених коефіцієнтів}
+
+\input{subsubsection-3-2-4.tex}
+
+\subsubsection{Вправи для самостійної роботи}
+
+\input{subsubsection-3-2-5.tex}
+
 
 \end{document}

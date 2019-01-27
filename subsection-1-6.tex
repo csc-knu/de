@@ -9,9 +9,9 @@
 		\item $\rho(x,y)=\rho(y,x)$ (комутативність);
 		\item $\rho(x,y)+\rho(y,z)\ge\rho(x,z)$ (нерівність трикутника).
 	\end{enumerate}
-	Функція $\rho(x,y)$ називається відстанню в просторі $M$ (метрикою простору $M$).
+	Функція $\rho(x,y)$ називається відстанню (метрикою) в просторі $M$.
 \end{definition}
-\begin{example} 
+\begin{example*} 
 	Векторний $n$-вимірний простір $\RR^n$. \\
 
 	Нехай $x=(x_1,x_2,\ldots,x_n)$, $y=(y_1,y_2,\ldots,y_n)$. За метрику можна взяти: 
@@ -24,10 +24,10 @@
 		%\label{eq:1.6.2}
 		\rho(x,y)=\max_{i=\overline{1,n}}|x_i-y_i|.
 	\end{equation*}
-\end{example}
-\begin{example} 
-	Простір неперервних функцій на відрізку $[a,b]$ позначається $C([a,b])$. За метрику можна взяти 
-	\begin{equation*}
+\end{example*}
+\begin{example*} 
+	Простір неперервних функцій на відрізку $[a,b]$ позначається $C([a,b])$. За метрику можна взяти
+		\begin{equation*}
 		%\label{eq:1.6.3}
 		\rho(x(t), y(t)) = \left(\int_a^b (x(t)-y(t))^2 \diff t\right)^{1/2},
 	\end{equation*}
@@ -36,9 +36,9 @@
 		%\label{eq:1.6.4}
 		\rho(x(t), y(t)) = \max_{t\in[a,b]} |x(t)-y(t)|.
 	\end{equation*}
-\end{example}
+\end{example*}
 \begin{definition} 
-	Послідовність $\{x_n\}_{n=1}^\infty$ називається фундаментальною, якщо для довільного $\epsilon > 0$ існує $n \ge N(\epsilon)$ таке, що при $n \ge N(\epsilon)$ і довільному $m\in\NN$ буде $\rho(x_n,x_{n+m}) < \epsilon$.
+	Послідовність $\{x_n\}_{n=1}^\infty$ називається фундаментальною, як\-що для довільного $\epsilon > 0$ існує $n \ge N(\epsilon)$ таке, що при $n \ge N(\epsilon)$ і довільному $m\in\NN$ буде $\rho(x_n,x_{n+m}) < \epsilon$.
 \end{definition}
 \begin{definition} 
 	Метричний простір $M$ називається повним, якщо довільна фундаментальна послідовність точок $\{x_n\}$ простору $M$ збігається до деякої точки $x_0$ простору $M$.
@@ -53,21 +53,21 @@
 \end{theorem}
 \begin{proof}
 	Візьмемо довільну точку $x_0\in M$ і побудуємо послідовність $A^nx_0$. Покажемо, що побудована послідовність є фундаментальною. Дійсно
-	\begin{align}
+	\begin{align*}
 		%\label{eq:1.6.5}
 		\rho(x_2, x_1) &= \rho(A x_1, A x_0) \le \alpha \rho (x_1, x_0), \\
 		%\label{eq:1.6.6}
 		\rho(x_3, x_2) &= \rho(A x_2, A x_1) \le \alpha \rho (x_2, x_1) \le \alpha^2 \rho(x_1, x_0), \\
 		%\label{eq:1.6.7}
 		\rho(x_{n+1}, x_n) &= \rho(A x_n, A x_{n-1}) \le \alpha \rho (x_n, x_{n-1}) \le \ldots \le \alpha^n \rho(x_1, x_0).
-	\end{align}
+	\end{align*}
 	Оцінимо $\rho(x_n, x_{n+m})$. Застосувавши $m-1$ раз нерівність трикутника, отримуємо 
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:1.6.8}
 		\rho(x_n, x_{n+m}) \le \rho(x_n, x_{n+1}) + \rho(x_{n+1}, x_{n+2}) + \ldots + \rho(x_{n+m-1},x_{n+m}) \le \\
 		\le \alpha^n \rho(x_1, x_0) + \alpha^{n+1} \rho(x_1, x_0) +\alpha^{n+m-1} \rho(x_1, x_0) = \\
 		= (\alpha^n + \alpha^{n+1} + \ldots + \alpha^{n + m}) \cdot \rho(x_1, x_0) < \frac{\alpha^n}{1 - \alpha} \cdot \rho(x_1, x_0) \xrightarrow[n\to\infty]{} 0.
-	\end{multline}
+	\end{multline*}
 	Тобто послідовність $\{x_n\}$ є фундаментальною і, в силу повноти простору $M$, збігається до деякого елемента цього ж простора $x$. \\
 
 	Покажемо, що $x$ є нерухомою точкою $A$, тобто $Ax=x$.\\
@@ -126,13 +126,13 @@
 	то оператор $A$ ставить у відповідність кожній неперервній функції $y(x)$, визначеній при $x\in[x_0 - h, x_0 + h]$ й обмеженій $|y(x)-y_0|\le b$ також неперервну функцію $Ay$,  визначену при $x\in[x_0 - h, x_0 + h]$ й обмежену $|y(x)-y_0|\le b$. \\
 
 	Перевіримо, чи є оператор $A$ оператором стиску:
-	\begin{multline}
+	\begin{align*}
 		%\label{eq:1.6.15}
-		\rho(Ay, Az) = \max_{x \in[x_0-h,x_0+h]} \left|y_0 + \int_{x_0}^x f(t, y(t)) \diff y - y_0 - \int_{x_0}^x f(t, z(t)) \diff t\right| \le \\
-		\le \max_{x \in[x_0-h,x_0+h]} \int_{x_0}^x |f(t, y(t)) - f(t, z(t))| \diff t \le \\
-		\le N \cdot \max_{x \in[x_0-h,x_0+h]} \int_{x_0}^x |y(t) - z(t)| \diff t \le \\
-		\le N \cdot \max_{x \in[x_0-h,x_0+h]} |y(t) - z(t)| \cdot \int_{x_0}^x \diff t \le N \cdot \rho(y, z) \cdot h.
-	\end{multline}
+		\rho(Ay, Az) &= \max_{x \in[x_0-h,x_0+h]} \left|y_0 + \int_{x_0}^x f(t, y(t)) \diff y - y_0 - \int_{x_0}^x f(t, z(t)) \diff t\right| \le \\
+		&\le \max_{x \in[x_0-h,x_0+h]} \int_{x_0}^x |f(t, y(t)) - f(t, z(t))| \diff t \le \\
+		&\le N \cdot \max_{x \in[x_0-h,x_0+h]} \int_{x_0}^x |y(t) - z(t)| \diff t \le \\
+		&\le N \cdot \max_{x \in[x_0-h,x_0+h]} |y(t) - z(t)| \cdot \int_{x_0}^x \diff t \le N \cdot \rho(y, z) \cdot h.
+	\end{align*}
 	І оскільки $Nh < 1$, то оператор $A$ є оператором стиску. Відповідно до принципу стискаючих відображень операторне рівняння $Ay=y$ має єдиний розв’язок, тобто інтегральне рівняння чи початкова задача Коші також має єдиний розв’язок.
 \end{proof}
 
@@ -145,9 +145,9 @@
 	де $N = \max_{(x,y)\in D} |f_y^\prime(x,y)|$.
 \end{remark}
 
-Використовуючи доведену теорему про існування та єдиність розв’язку задачі Коші розглянемо ряд теорем, що описують якісну поведінку розв’язків.
+Використовуючи доведену теорему про існування та єдиність роз\-в'яз\-ку задачі Коші розглянемо ряд теорем, що описують якісну поведінку роз\-в'яз\-ків.
 
-\begin{theorem}[про неперервну залежність розв’язків від параметру]
+\begin{theorem}[про неперервну залежність роз\-в'яз\-ків від параметру]
 	Якщо права частина диференціального рівняння
 	\begin{equation*}
 		%\label{eq:1.6.17}
@@ -165,7 +165,7 @@
 \end{proof}
 
 \begin{theorem}[про неперервну залежність від початкових умов]
-	Нехай виконані умови теореми про існування та єдиність розв’язків рівняння
+	Нехай виконані умови теореми про існування та єдиність роз\-в'я\-зків рівняння
 	\begin{equation*}
 		%\label{eq:1.6.19}
 		\frac{\diff y}{\diff x} = f(x,y)
@@ -201,11 +201,11 @@
 		\frac{\diff^2 y}{{\diff x}^2} = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot \frac{\diff y}{\diff x} = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot f.
 	\end{equation*}
 	Якщо $k > 1$, то праворуч функція неперервно диференційована. Продиференціюємо її ще раз
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:1.6.24}
 		\frac{\diff^3 y}{{\diff x}^3} = \frac{\partial^2 f}{{\partial x}^2} + \frac{\partial^2 f}{\partial x \partial y} \cdot \frac{\diff y}{\diff x} + \left( \frac{\partial^2 f}{\partial y \partial x} + \frac{\partial^2 f}{{\partial y}^2} \cdot \frac{\diff y}{\diff x} \right) \cdot f + \\
 		+ \frac{\partial f}{\partial y} \cdot \left( \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot \frac{\diff y}{\diff x} \right),
-	\end{multline}
+	\end{multline*}
 	або
 	\begin{equation*}
 		%\label{eq:1.6.25}

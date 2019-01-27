@@ -65,7 +65,6 @@
 	Тоді система алгебраїчних рівнянь
 	\begin{equation*}
 		%\label{eq:1.2.10}
-		\label{eq:linear-algebraic-system}
 		\left\{
 			\begin{aligned}
 				a_1 x + b_1 y + c_1 &= 0, \\
@@ -82,13 +81,13 @@
 		\end{aligned}\right.
 	\end{equation*}
 	та отримаємо
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:1.2.11}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 \cdot (x_1 + x_0) + b_1 \cdot (y_1 + y_0) + c_1}{a_2 \cdot (x_1 + x_0) + b_2 \cdot (y_1 + y_0) + c_2} \right) = \\
 		= f \left( \frac{a_1 x_1 + b_1 y_1 + (a_1 x_0 + b_1 y_0 + c_1)}{a_2 x_1 + b_2 y_1 + (a_2 x_0 + b_2 y_0 + c_2)} \right)
-	\end{multline}
+	\end{multline*}
 
-	Оскільки $(x_0, y_0)$ -- розв’язок \eqref{eq:linear-algebraic-system}, то \eqref{eq:linear-fractional-equation} набуде вигляду
+	Оскільки $(x_0, y_0)$ -- розв’язок алгебраїчної системи, то диференціальне рівняння набуде вигляду
 	\begin{equation*}
 		%\label{eq:1.2.12}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 y_1}{a_2 x_1 + b_2 y_1} \right)
@@ -117,7 +116,7 @@
 		\int \frac{\diff u}{u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right)} + \ln (x_1) = C.
 	\end{equation*}
 
-	І загальний інтеграл диференціального рівняння має вигляд $\Phi(u, x_1) = C$. Повернувшись до вихідних змінних, запишемо
+	І загальний інтеграл рівняння має вигляд $\Phi(u, x_1) = C$. Повернувшись до вихідних змінних, запишемо
 	\begin{equation*}
 		%\label{eq:1.2.16}
 		\Phi \left( \frac{y - y_0}{x - x_0}, x - x_0 \right) = C.
@@ -231,7 +230,7 @@
 	\[ 2x^3 y' = y \cdot (2x^2 - y^2); \]
 \end{problem}
 \begin{problem}
-	\[ \left( x - y \cos \left(\rfrac{y}{x}\right)\right) \diff x + x \cos \left(\rfrac{y}{x}\right) \diff y = 0; \]
+	\[ \left( x - y \cos \left(\rfrac{y}{x}\right)\right) \diff x = - x \cos \left(\rfrac{y}{x}\right) \diff y; \]
 \end{problem}
 \begin{problem}
 	\[ y' (xy - x^2) = y^2; \]

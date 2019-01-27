@@ -116,13 +116,12 @@
 		%\label{eq:1.5.20}
 		\frac{\diff x}{\diff p} + \frac{\phi'(p)}{\phi(p)-p} \cdot x = \frac{\phi'(p)}{p-\phi(p)}.
 	\end{equation*}
-	Його розв’язок
-	\begin{multline}
+	Його роз\-в'яз\-ок
+	\begin{multline*}
 		%\label{eq:1.5.21}
 		x = \exp\left\{\int \frac{\phi'(p)}{p-\phi(p)} \cdot \diff p\right\} \cdot \\
-		\cdot \left(\int \frac{\phi'(p)}{p-\phi(p)} \cdot \exp\left\{\int \frac{\phi'(p)}{\phi(p)-p} \cdot \diff p\right\} \diff p + C \right) = \\
-		= \Psi(p, C).
-	\end{multline}
+		\cdot \left(\int \frac{\phi'(p)}{p-\phi(p)} \cdot \exp\left\{\int \frac{\phi'(p)}{\phi(p)-p} \cdot \diff p\right\} \diff p + C \right) = \Psi(p, C).
+	\end{multline*}
 	І остаточний розв’язок рівняння Лагранжа в параметричній формі запишеться у вигляді
 	\begin{equation*}
 		%\label{eq:1.5.22}
@@ -169,24 +168,24 @@
 			y = C x + \psi(C).
 		\end{equation*}
 	\end{enumerate}
-	Загальним розв’язком рівняння Клеро буде сім’я ``прямих''. Цю сім’ю огинає особлива крива.
+	Загальним розв’язком рівняння Клеро буде сім'я ``прямих''. Її огинає особлива крива.
 	\item Параметризація загального вигляду. Нехай диференціальне рівняння $F(x, y, y') = 0$ вдалося записати у вигляді системи рівнянь з двома параметрами
 	\begin{equation*}
 		%\label{eq:1.5.28}
 		x = \phi(u, v), \quad y = \psi(u, v), \quad y' = \theta(u, v).	
 	\end{equation*}
 	Використовуючи співвідношення $\diff y = y' \cdot \diff x$, одержимо
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:1.5.29}
 		\frac{\partial \psi(u,v)}{\partial u} \cdot \diff u + \frac{\partial \psi(u, v)}{\partial v} \cdot \diff v = \\
 		= \theta(u,v) \cdot \left( \frac{\partial \phi(u,v)}{\partial u} \cdot \diff u + \frac{\partial \phi(u, v)}{\partial v} \cdot \diff v\right)
-	\end{multline}
+	\end{multline*}
 	Перегрупувавши члени, одержимо
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:1.5.30}
 		\left( \frac{\partial \psi(u,v)}{\partial u} - \theta(u, v) \cdot \frac{\partial \phi(u,v)}{\partial u} \right) \diff u = \\
 		= \left( \theta(u,v) \cdot \frac{\partial \phi(u, v)}{\partial v} - \frac{\partial \psi(u, v)}{\partial v} \right) \diff v.
-	\end{multline}
+	\end{multline*}
 	Звідси
 	\begin{equation*}
 		%\label{eq:1.5.32}
@@ -197,7 +196,7 @@
 		%\label{eq:1.5.33}
 		\frac{\diff u}{\diff v} = f(u, v).
 	\end{equation*}
-	Параметризація загального вигляду не дає інтеграл диференціального рівняння. Вона дозволяє звести диференціальне рівняння, не розв’язане відносно похідної, до диференціального рівняння, розв’язаного відносно похідної.
+	Параметризація загального вигляду не дає інтеграл диференціального рівняння. Вона дозволяє звести диференціальне рівняння, не роз\-в'яз\-а\-не відносно похідної, до диференціального рівняння, роз\-в'яз\-а\-но\-го відносно похідної.
 	\item Нехай рівняння $F(x, y, y') = 0$ можна розв’язати відносно $y'$ і воно має $n$ коренів, тобто його  можна записати у вигляді  
 	\begin{equation*}
 		%\label{eq:1.5.34}

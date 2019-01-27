@@ -13,18 +13,18 @@
 
 \begin{proof}
 	Дійсно, нехай $y_0(x)$ і $y_1(x)$ -- розв’язки відповідно однорідного і неоднорідного рівнянь, тобто
-	\begin{align}
+	\begin{align*}
 		%\label{eq:3.3.2}
 		a_0(x) \cdot y_0^{(n)}(x) + a_1(x) \cdot y_0^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_0(x) &= 0, \\
 		%\label{eq:3.3.3}
 		a_0(x) \cdot y_1^{(n)}(x) + a_1(x) \cdot y_1^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_1(x) &= b(x).
-	\end{align}	
+	\end{align*}	
 	
 	Тоді 
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:3.3.4}
 		a_0(x) (y_0 + y_1)^{(n)}(x) + a_1(x) (y_0 + y_1)^{(n - 1)}(x) + \ldots + a_n(x) (y_0 + y_1)(x) = \\ = \left( a_0(x) \cdot y_0^{(n)}(x) + a_1(x) \cdot y_0^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_0(x) \right) + \\ + \left( a_0(x) \cdot y_1^{(n)}(x) + a_1(x) \cdot y_1^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_1(x) \right) = \\ = 0 + b(x) = b(x),
-	\end{multline}
+	\end{multline*}
 	тобто $y(x) = y_0(x) + y_1(x)$ -- розв’язок неоднорідного диференціального рівняння.
 \end{proof}
 
@@ -49,15 +49,15 @@
 	\end{equation*}
 
 	Склавши лінійну комбінацію з рівнянь і їхніх правих частин з коефіцієнтами $C_i$ одержимо
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:3.3.8}
 		\sum_{i = 1}^n C_i \cdot \left( a_0(x) \cdot y_i^{(n)}(x) + a_1(x) \cdot y_i^{(n - 1)}(x) + \ldots + a_n(x) \cdot y_i(x) \right) = \\ = \sum_{i = 1}^n C_i \cdot b_i(x),
-	\end{multline}
+	\end{multline*}
 	або, перегрупувавши, запишемо
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:3.3.9}
 		a_0(x) \cdot \left( \sum_{i = 1}^n C_i \cdot y_i^{(n)}(x) \right) + a_1(x) \cdot \left( \sum_{i = 1}^n C_i \cdot y_i^{(n - 1)}(x)\right) + \ldots \\ \ldots + a_n(x) \cdot \left( \sum_{i = 1}^n C_i \cdot y_i(x) \right) = \sum_{i = 1}^n C_i \cdot b_i(x),
-	\end{multline}
+	\end{multline*}
 	що і було потрібно довести.
 \end{proof}
 
@@ -67,24 +67,24 @@
 
 \begin{proof}
 	Дійсно, як випливає з умови,
-	\begin{multline}
+	\begin{multline*}
 	 	%\label{eq:3.3.10}
 	 	a_0(x) \cdot (u + i v)^{(n)}(x) + a_1(x) \cdot (u + i v)^{(n - 1)}(x) + \ldots + a_n(x) \cdot (u + i v)(x) = \\ = f(x) + i p(x).
-	\end{multline}
+	\end{multline*}
 	
 	Розкривши дужки, одержимо
-	\begin{multline}
+	\begin{multline*}
 		%\label{eq:3.3.11}
 		\left( a_0(x) \cdot u^{(n)}(x) + a_1(x) \cdot u^{(n - 1)}(x) + \ldots + a_n(x) \cdot u(x) \right) + \\ + i \left( a_0(x) \cdot v^{(n)}(x) + a_1(x) \cdot v^{(n - 1)}(x) + \ldots + a_n(x) \cdot v(x) \right) = \\ = f(x) + i p(x).
-	\end{multline}
+	\end{multline*}
 
 	А комплексні вирази рівні між собою тоді і тільки тоді, коли дорівнюють окремо дійсні та уявні частини, тобто
-	\begin{align}
+	\begin{align*}
 		%\label{eq:3.3.12}
 		a_0(x) \cdot u^{(n)}(x) + a_1(x) \cdot u^{(n - 1)}(x) + \ldots + a_n(x) \cdot u(x) &= f(x), \\ 
 		%\label{eq:3.3.13}
 		a_0(x) \cdot v^{(n)}(x) + a_1(x) \cdot v^{(n - 1)}(x) + \ldots + a_n(x) \cdot v(x) &= p(x),
-	\end{align}
+	\end{align*}
 	що і було потрібно довести.
 \end{proof}
 
@@ -100,7 +100,7 @@
 		y(x_0) = y_0, \quad y'(x_0) = y_0', \quad \ldots, \quad y^{(n - 1)}(x_0) = y_0^{(n - 1)}.
 	\end{equation*}
 
-	Дійсно, оскільки $y_{\text{homo}}$ загальний розв’язок однорідного рівняння, то $y_i$, $i = \overline{1, n}$ лінійно незалежні, а отже визначник Вронського $W[y_1, y_2, \ldots, y_n] \ne 0$. Звідси, неоднорідна система лінійних алгебраїчних рівнянь 
+	Дійсно, оскільки $y_{\text{homo}}$ загальний роз\-в'яз\-ок однорідного рівняння, то $y_i$, $i = \overline{1, n}$ лінійно незалежні, тому визначник Вронського $W[y_1, y_2, \ldots, y_n] \ne 0$. Звідси, неоднорідна система лінійних алгебраїчних рівнянь 
 	\begin{equation*}
 		%\label{eq:3.3.15}
 		\left\{ \begin{aligned}
@@ -110,7 +110,7 @@
 			C_1 \cdot y_1^{(n - 1)}(x_0) + C_2 \cdot y_2^{(n - 1)}(x_0) + \ldots + C_n \cdot y_n^{(n - 1)}(x_0) &= y_0 - y_{\text{hetero}}^{(n - 1)}(x_0),
 		\end{aligned} \right.
 	\end{equation*}
-	має єдиний розв’язок для довільних наперед обраних $y_0, y_0', \ldots, y_0^{(n - 1)}$. Нехай розв’язком системи буде $C_1^0, C_2^0, \ldots, C_n^0$. Тоді, як випливає з вигляду системи, функція $y(x) = \sum_{i = 1}^n C_i^0 \cdot y_i(x) + y_{\text{hetero}}$ є розв’язком поставленому задачі Коші.
+	має єдиний роз\-в'яз\-ок для довільних наперед обраних $y_0, y_0', \ldots, y_0^{(n - 1)}$. Нехай роз\-в'яз\-ком системи буде $C_1^0, C_2^0, \ldots, C_n^0$. Тоді, як випливає з вигляду системи, функція $y(x) = \sum_{i = 1}^n C_i^0 \cdot y_i(x) + y_{\text{hetero}}$ є роз\-в'яз\-ком поставленої задачі Коші.
 \end{proof}
 
-Як випливає з теореми для знаходження загального розв’язку лінійного неоднорідного рівняння треба шукати загальний розв’язок однорідного рівняння, тобто будь-які $n$ лінійно незалежні розв’язкі і якийсь частинний розв’язок неоднорідного рівняння. Розглянемо три методи побудови частинного розв’язку лінійного неоднорідного рівняння.
+Як випливає з теореми для знаходження загального розв’язку лінійного неоднорідного рівняння треба шукати загальний розв’язок однорідного рівняння, тобто будь-які $n$ лінійно незалежні розв’язки і якийсь частинний розв’язок неоднорідного рівняння. Розглянемо три методи побудови частинного розв’язку лінійного неоднорідного рівняння.

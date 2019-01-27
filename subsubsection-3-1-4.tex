@@ -11,7 +11,7 @@
  
 Розкладаючи визначник по елементах останнього стовпця, одержимо
  
-\begin{multline}
+\begin{multline*}
 	%\label{eq:3.1.28}
 	\begin{vmatrix}
 		y_1 & y_2 & \cdots & y_n \\
@@ -40,7 +40,7 @@
 		\vdots & \vdots & \ddots & \vdots \\
 		y_1^{(n)} & y_2^{(n)} & \cdots & y_n^{(n)}
 	\end{vmatrix}  y\equiv 0.
-\end{multline}
+\end{multline*}
 
 Порівнюючи з рівнянням 
 \begin{equation*}
@@ -58,34 +58,34 @@
 	\end{vmatrix}}{W[y_1, y_2, \ldots, y_n](x)}.
 \end{equation*}
 Але оскільки
-\begin{multline}
+\begin{multline*}
 	%\label{eq:3.1.31}
-	\frac{\diff}{\diff x} W[y_1, y_2, \ldots, y_n] = \begin{vmatrix}
+	\frac{\diff}{\diff x} W[y_1, y_2, \ldots, y_n] = \\ = \begin{vmatrix}
 		y_1' & y_2' & \cdots & y_n' \\
 		y_1' & y_2' & \cdots & y_n' \\
 		\vdots & \vdots & \ddots & \vdots \\
 		y_1^{(n - 2)} & y_2^{(n - 2)} & \cdots & y_n^{(n - 2)} \\
 		y_1^{(n - 1)} & y_2^{(n - 1)} & \cdots & y_n^{(n - 1)}
-	\end{vmatrix} + \\ + \begin{vmatrix}
+	\end{vmatrix} + \begin{vmatrix}
 		y_1 & y_2 & \cdots & y_n \\
-		y_1'' & y_2'' & \cdots & y_n'' \\
+		y\_1'' & y_2'' & \cdots & y_n'' \\
 		\vdots & \vdots & \ddots & \vdots \\
 		y_1^{(n - 2)} & y_2^{(n - 2)} & \cdots & y_n^{(n - 2)} \\
 		y_1^{(n - 1)} & y_2^{(n - 1)} & \cdots & y_n^{(n - 1)}
-	\end{vmatrix} + \ldots + \begin{vmatrix}
+	\end{vmatrix} + \ldots \\ \ldots + \begin{vmatrix}
 		y_1 & y_2 & \cdots & y_n \\
 		y_1' & y_2' & \cdots & y_n' \\
 		\vdots & \vdots & \ddots & \vdots \\
 		y_1^{(n - 2)} & y_2^{(n - 2)} & \cdots & y_n^{(n - 2)} \\
 		y_1^{(n)} & y_2^{(n)} & \cdots & y_n^{(n)}
-	\end{vmatrix} = \\ = 0 + 0 + \ldots + \begin{vmatrix}
+	\end{vmatrix} = 0 + 0 + \ldots + \begin{vmatrix}
 		y_1 & y_2 & \cdots & y_n \\
 		y_1' & y_2' & \cdots & y_n' \\
 		\vdots & \vdots & \ddots & \vdots \\
 		y_1^{(n - 2)} & y_2^{(n - 2)} & \cdots & y_n^{(n - 2)}\\
 		y_1^{(n)} & y_2^{(n)} & \cdots & y_n^{(n)}
 	\end{vmatrix}
-\end{multline}   
+\end{multline*}   
 то, підставивши в попередній вираз, одержимо
 \begin{equation*}
 	%\label{eq:3.1.32}

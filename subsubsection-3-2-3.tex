@@ -54,7 +54,7 @@
 	y(x_0) = y'(x_0) = \ldots = y^{(n - 1)}(x_0) = 0.
 \end{equation*}
 
-Для знаходження функції $K(x, s)$ (інтегрального ядра) можна використати такий спосіб. Якщо $y_1(x), y_2(x), \ldots, y_n(x)$ лінійно незалежні розв’язки однорідного рівняння, то загальний розв’язок однорідного рівняння має вигляд 
+Для знаходження функції $K(x, s)$ (інтегрального ядра) можна використати такий спосіб. Якщо $y_1(x), y_2(x), \ldots, y_n(x)$ лінійно незалежні роз\-в'яз\-ки однорідного рівняння, то загальний роз\-в'яз\-ок однорідного рівняння має вигляд 
 \begin{equation*}
 	y_{\text{homo}}(x) = C_1 \cdot y_1(x) + C_2 \cdot y_2(x) + \ldots + C_n \cdot y_n(x).
 \end{equation*}
@@ -68,10 +68,13 @@
 	K_x'(s, s) = 0 &\Rightarrow C_1(s) \cdot y_1'(s) + C_2(s) \cdot y_2'(s) + \ldots + C_n(s) \cdot y_n'(s) = 0,
 \end{align*}
 і так далі до
-\begin{align*}
-	K_{x^{n - 2}}^{(n - 2)}(s, s) = 0 &\Rightarrow C_1(s) \cdot y_1^{(n - 2)}(s) + C_2(s) \cdot y_2^{(n - 2)}(s) + \ldots + C_n(s) \cdot y_n^{(n - 2)}(s) = 0, \\
-	K_{x^{n - 1}}^{(n - 1)}(s, s) = 1 &\Rightarrow C_1(s) \cdot y_1^{(n - 1)}(s) + C_2(s) \cdot y_2^{(n - 1)}(s) + \ldots + C_n(s) \cdot y_n^{(n - 1)}(s) = 0. 
-\end{align*}
+\begin{multline*}
+	K_{x^{n - 2}}^{(n - 2)}(s, s) = 0 \Rightarrow \\ \Rightarrow C_1(s) \cdot y_1^{(n - 2)}(s) + C_2(s) \cdot y_2^{(n - 2)}(s) + \ldots + C_n(s) \cdot y_n^{(n - 2)}(s) = 0,
+\end{multline*}
+і
+\begin{multline*}
+	K_{x^{n - 1}}^{(n - 1)}(s, s) = 1 \Rightarrow \\ \Rightarrow C_1(s) \cdot y_1^{(n - 1)}(s) + C_2(s) \cdot y_2^{(n - 1)}(s) + \ldots + C_n(s) \cdot y_n^{(n - 1)}(s) = 0. 
+\end{multline*}
 Звідси
 \begin{align*}
 	C_1(s) &= \int \frac{\begin{vmatrix} 0 & y_2(s) & \cdots & y_n(s) \\ \vdots & \vdots & \ddots & \vdots \\ 0 & y_2^{(n - 2)}(s) & \cdots & y_n^{(n - 2)}(s) \\ 1 & y_2^{(n - 1)}(s) & \cdots & y_n^{(n - 1)}(s) \end{vmatrix}}{W[y_1, y_2, \ldots, y_n](s)} \diff s, \\
@@ -102,5 +105,5 @@
 \end{equation*}
 Звідси
 \begin{equation*}
-	K(x, s) = \frac{\begin{vmatrix} 0 & y_2(s) \\ 1 & y_2'(s) \end{vmatrix} \cdot y_1(x) + \begin{vmatrix} y_1(s) & 0 \\ y_1'(s) & 1 \end{vmatrix} \cdot y_2(x) }{W[y_1, y_2](s)} = \frac{y_1(s) \cdot y_2(x) - y_1(x) \cdot y_2(s)}{W[y_1, y_2](s)}
+	K(x, s) = \frac{\begin{vmatrix} 0 & y_2(s) \\ 1 & y_2'(s) \end{vmatrix} y_1(x) + \begin{vmatrix} y_1(s) & 0 \\ y_1'(s) & 1 \end{vmatrix} y_2(x) }{W[y_1, y_2](s)} = \frac{y_1(s) \cdot y_2(x) - y_1(x) \cdot y_2(s)}{W[y_1, y_2](s)}
 \end{equation*}
