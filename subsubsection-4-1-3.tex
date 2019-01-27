@@ -1,0 +1,22 @@
+Нехай маємо диференціальне рівняння
+\begin{equation*}
+ 	\frac{\diff^n y}{\diff x^n} = f \left( x, y, \frac{\diff y}{\diff x}, \frac{\diff^2 y}{\diff x^2}, \ldots, \frac{\diff^{n - 1} y}{\diff x^{n - 1}} \right).
+\end{equation*}
+
+Розглянемо заміну змінних
+\begin{equation*}
+	x \mapsto t, \quad y \mapsto x_1, \quad, \frac{\diff y}{\diff x} \mapsto x_2, \quad \ldots, \quad \frac{\diff^{n - 1} y}{\diff x^{n - 1}} \mapsto x_n.
+\end{equation*}
+
+Тоді одержимо систему рівнянь
+\begin{equation*}
+	\left\{
+		\begin{aligned}
+			\dot x_1 &= x_2, \\
+			\dot x_2 &= x_3, \\
+			\ldots & \ldots \ldots \\
+			\dot x_{n - 1} &= x_n, \\
+			\dot x_n &= f(t, x_1, x_2, \ldots, x_n).
+		\end{aligned}
+	\right.
+\end{equation*}
