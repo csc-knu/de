@@ -1,9 +1,9 @@
 \begin{example}
-	Розв’язати систему диференціальних рівнянь зведенням до одного рівняння вищого порядку: \[ \frac{\diff y}{\diff x} = \frac{x}{z}, \quad \frac{\diff z}{\diff x} = -\frac{x}{y}.\]
+	Розв'язати систему диференціальних рівнянь зведенням до одного рівняння вищого порядку: \[ \frac{\diff y}{\diff x} = \frac{x}{z}, \quad \frac{\diff z}{\diff x} = -\frac{x}{y}.\]
 \end{example}
 
 \begin{solution}
-	Продиференціюємо перше рівняння по змінній $x$:
+	Диференціюємо перше рівняння по змінній $x$:
 	\[ y'' = \frac{1}{z} - \frac{x}{z^2} \cdot z' = \frac{1}{z} + \frac{x}{z^2} \cdot \frac{x}{y}. \]
 	
 	Таким чином, одержали допоміжну систему:
@@ -11,15 +11,15 @@
 
 	З першого рівняння отримаємо $z = \frac{x}{y'}$. Підставляємо одержане значення в другу систему \[ y'' = \frac{y'}{x} + \frac{(y')^2}{y}.\]
 
-	Маємо однорідне (по $y, y', y''$) диференціальне рівняння другого порядку. Робимо заміну \[y = \exp\left\{\int u \diff x\right\}, \quad y' = u \cdot \exp\left\{\int u \diff x\right\}, \quad y'' = (u^2 + u') \cdot \exp\left\{\int u \diff x\right\}. \]
+	Маємо однорідне (по $y, y', y''$) диференціальне рівняння другого порядку. Робимо заміну \begin{align*} y &= \exp\left\{\int u \diff x\right\}, \\ y' &= u \cdot \exp\left\{\int u \diff x\right\}, \\ y'' &= (u^2 + u') \cdot \exp\left\{\int u \diff x\right\}. \end{align*}
 
 	Після підстановки та скорочення на $e^{\int u \diff x}$ одержуємо \[ u^2 + u' = \frac{u}{x} + u^2, \] або \[ \frac{\diff u}{\diff x} = \frac{u}{x}. \]
 
 	Далі \[ \frac{\diff u}{u} = \frac{\diff x}{x} \implies u = \frac{C_1 \cdot x}{2}. \]
 
-	Звідси \[ y = \exp\left\{\int \frac{C_1 \cdot x}{2} \diff x\right\} = \exp\left\{C_1 \cdot x^2 + \ln C_2\right\}, \] або \[ y_2 = C_2 \cdot e^{C_1 x^2}. \]
+	Звідси \[ y = \exp\left\{\int \frac{C_1 \cdot x}{2} \diff x\right\} = e^{C_1 x^2 + \ln C_2}, \] або \[ y_2 = C_2 \cdot e^{C_1 x^2}. \]
 
-	Змінна $z$ знаходиться з умови $x = \frac{x}{y'}$, або \[ x = \frac{x}{2 \cdot C_2 \cdot C_1  \cdot x \cdot e^{C_1 \cdot x^2}} = \frac{1}{2 \cdot C_1 \cdot C_2} \cdot e^{- C_1 x^2}. \]
+	Змінна $z$ знаходиться з умови $z = \frac{x}{y'}$, або \[ z = \frac{x}{2 \cdot C_2 \cdot C_1 \cdot x \cdot e^{C_1 x^2}} = \frac{1}{2 \cdot C_1 \cdot C_2} \cdot e^{- C_1 x^2}. \]
 \end{solution}
 
 \begin{example}
@@ -39,7 +39,7 @@
 	Таким чином \[ z \cdot (x - y) = C_1, \quad \frac{x + y + z}{z} = C_2 \] є загальним інтегралом системи.
 \end{solution}
 
-Розв’язати системи диференціальних рівнянь, зведенням до одного рівняння вищого порядку
+Розв'язати системи диференціальних рівнянь, зведенням до одного рівняння вищого порядку
 
 \begin{multicols}{2}
 \begin{problem}
