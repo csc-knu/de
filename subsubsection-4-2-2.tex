@@ -1,0 +1,78 @@
+Нехай $x_1(t), \ldots, x_n(t)$ --- лінійно незалежні розв'язки однорідної системи, $W[x_1, \ldots, x_n]$ --- визначник Вронського. Обчислимо похідну визначника Вронського
+\begin{multline*}
+	\frac{\diff}{\diff t} W[x_1, \ldots, x_n] = \frac{\diff}{\diff t} \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} = \\
+	= \begin{vmatrix} x_{11}'(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}'(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}'(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} + \begin{vmatrix} x_{11}(t) & x_{12}'(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}'(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}'(t) & \ldots & x_{nn}(t) \end{vmatrix} + \ldots \\
+	\ldots + \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}'(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}'(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}'(t) \end{vmatrix}.
+\end{multline*}
+
+Оскільки для похідних виконується співвідношення
+\begin{equation*}
+\begin{array}{rl}
+	& \left\{
+		\begin{array}{rl}
+			x_{11}'(t) &= \alpha_{11} \cdot x_{11} (t) + \alpha_{12} \cdot x_{12}(t) + \ldots + \alpha_{1n} \cdot x_{1n}(t), \\
+			x_{12}'(t) &= \alpha_{11} \cdot x_{21} (t) + \alpha_{12} \cdot x_{22}(t) + \ldots + \alpha_{1n} \cdot x_{2n}(t), \\
+			\hdotsfor{2}, \\
+			x_{1n}'(t) &= \alpha_{11} \cdot x_{n1} (t) + \alpha_{12} \cdot x_{n2}(t) + \ldots + \alpha_{1n} \cdot x_{nn}(t),
+		\end{array}
+	\right. \\
+	& \left\{
+		\begin{array}{rl}
+			x_{21}'(t) &= \alpha_{21} \cdot x_{11} (t) + \alpha_{22} \cdot x_{12}(t) + \ldots + \alpha_{2n} \cdot x_{1n}(t), \\
+			x_{22}'(t) &= \alpha_{21} \cdot x_{21} (t) + \alpha_{22} \cdot x_{22}(t) + \ldots + \alpha_{2n} \cdot x_{2n}(t), \\
+			\hdotsfor{2}, \\
+			x_{2n}'(t) &= \alpha_{21} \cdot x_{n1} (t) + \alpha_{22} \cdot x_{n2}(t) + \ldots + \alpha_{2n} \cdot x_{nn}(t),
+		\end{array}
+	\right. \\
+	\hdotsfor{2}, \\
+	& \left\{
+		\begin{array}{rl}
+			x_{n1}'(t) &= \alpha_{n1} \cdot x_{11} (t) + \alpha_{n2} \cdot x_{12}(t) + \ldots + \alpha_{nn} \cdot x_{1n}(t), \\
+			x_{2n}'(t) &= \alpha_{n1} \cdot x_{21} (t) + \alpha_{n2} \cdot x_{22}(t) + \ldots + \alpha_{nn} \cdot x_{2n}(t), \\
+			\hdotsfor{2}, \\
+			x_{nn}'(t) &= \alpha_{n1} \cdot x_{n1} (t) + \alpha_{n2} \cdot x_{n2}(t) + \ldots + \alpha_{nn} \cdot x_{nn}(t),
+		\end{array}
+	\right.
+\end{array}
+\end{equation*}
+то після підстановки одержимо
+\begin{multline*}
+	\frac{\diff}{\diff t} W[x_1, \ldots, x_n] = \\
+	= \begin{vmatrix} \alpha_{11} \cdot x_{11} (t) + \alpha_{12} \cdot x_{12}(t) + \ldots + \alpha_{1n} \cdot x_{1n}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\  \alpha_{11} \cdot x_{21} (t) + \alpha_{12} \cdot x_{22}(t) + \ldots + \alpha_{1n} \cdot x_{2n}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ \alpha_{11} \cdot x_{n1} (t) + \alpha_{12} \cdot x_{n2}(t) + \ldots + \alpha_{1n} \cdot x_{nn}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} + \\
+	+ \begin{vmatrix} x_{11}(t) & \alpha_{21} \cdot x_{11} (t) + \alpha_{22} \cdot x_{12}(t) + \ldots + \alpha_{2n} \cdot x_{1n}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & \alpha_{21} \cdot x_{21} (t) + \alpha_{22} \cdot x_{22}(t) + \ldots + \alpha_{2n} \cdot x_{2n}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & \alpha_{21} \cdot x_{n1} (t) + \alpha_{22} \cdot x_{n2}(t) + \ldots + \alpha_{2n} \cdot x_{nn}(t) & \ldots & x_{nn}(t) \end{vmatrix} + \ldots \\
+	\ldots + \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & \alpha_{n1} \cdot x_{11} (t) + \alpha_{n2} \cdot x_{12}(t) + \ldots + \alpha_{nn} \cdot x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & \alpha_{n1} \cdot x_{21} (t) + \alpha_{n2} \cdot x_{22}(t) + \ldots + \alpha_{nn} \cdot x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & \alpha_{n1} \cdot x_{n1} (t) + \alpha_{n2} \cdot x_{n2}(t) + \ldots + \alpha_{nn} \cdot x_{nn}(t) \end{vmatrix}.
+\end{multline*}
+
+Розкривши кожний з визначників, і з огляду на те, що визначники з однаковими стовпцями дорівнюють нулю, одержимо
+\begin{multline*}
+	\frac{\diff}{\diff t} W[x_1, \ldots, x_n] = a_{11} \cdot \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} + \\
+	+ a_{22} \cdot \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} + \ldots + a_{nn} \cdot \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} = \\
+	= (a_{11} + a_{22} + \ldots + a_{nn}) \cdot \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} = \\
+	= \trace A \cdot \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} = \trace A \cdot W[x_1, \ldots, x_n].
+\end{multline*}
+
+Або
+\begin{equation*}
+	\frac{\diff}{\diff t} W[x_1, \ldots, x_n] = \trace A \cdot W[x_1, \ldots, x_n].
+\end{equation*}
+
+Розділивши змінні, одержимо
+\begin{equation*}
+	\frac{\diff W[x_1, \ldots, x_n]}{W[x_1, \ldots, x_n]}  = \trace A \cdot \diff t.
+\end{equation*}
+
+Проінтегруємо в межах $t_0 \le s \le t$,
+\begin{equation*}
+	\ln W[x_1, \ldots, x_n](t) - \ln W[x_1, \ldots, x_n](t_0) = \int_{t_0}^t \trace A \cdot \diff t,
+\end{equation*}
+або 
+\begin{equation*}
+	W[x_1, \ldots, x_n](t) = W[x_1, \ldots, x_n](t_0) \cdot \exp\left\{\int_{t_0}^t \trace A \cdot \diff t\right\}.
+\end{equation*}
+
+Взагалі кажучи, доведення проводилося в припущенні, що система рівнянь може залежати від часу, тобто
+\begin{equation*}
+	W[x_1, \ldots, x_n](t) = W[x_1, \ldots, x_n](t_0) \cdot \exp\left\{\int_{t_0}^t \trace A(t) \cdot \diff t\right\}.
+\end{equation*}
+
+Отримана формула називається формулою Якобі.
