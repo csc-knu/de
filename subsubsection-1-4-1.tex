@@ -1,0 +1,57 @@
+Якщо ліва частина диференціального рівняння
+\begin{equation*}
+	%\label{eq:1.4.1}
+	M(x, y) \cdot \diff x + N(x, y) \cdot \diff y = 0,
+\end{equation*}
+є повним диференціалом деякої функції $u(x, y)$, тобто
+\begin{equation*}
+	%\label{eq:1.4.2}
+	\diff u(x, y) = M(x, y) \cdot \diff x + N(x, y) \cdot \diff y,
+\end{equation*}
+і, таким чином, рівняння набуває вигляду $\diff u (x, y) = 0$ то рівняння називається рівнянням в повних диференціалах. Звідси вираз
+\begin{equation*}
+	%\label{eq:1.4.3}
+	u(x, y) = C
+\end{equation*}
+є загальним інтегралом диференціального рівняння. \\
+
+Критерієм того, що рівняння є рівнянням в повних диференціалах, тобто необхідною та достатньою умовою, є виконання рівності
+\begin{equation*}
+	%\label{eq:1.4.4}
+	\frac{\partial M(x, y)}{\partial y} = \frac{\partial N(x, y)}{\partial x}.
+\end{equation*}
+ 
+Нехай маємо рівняння в повних диференціалах. Тоді
+\begin{equation*}
+	%\label{eq:1.4.5}
+	\frac{\partial u(x, y)}{\partial x} = M(x, y), \quad \frac{\partial u(x, y)}{\partial y} = N(x, y).
+\end{equation*}
+Звідси $u(x, y) = \int M(x, y) \diff x + \phi(y)$ де $\phi(y)$ -- невідома функція. Для її визначення продиференціюємо співвідношення по $y$ і прирівняємо $N(x, y)$:
+\begin{equation*}
+	%\label{eq:1.4.6}
+	\frac{\partial u(x, y)}{\partial y} = \frac{\partial}{\partial y} \left( \int M(x, y) \diff x \right) + \frac{\diff \phi(y)}{\diff y} = N(x, y).
+\end{equation*}
+Звідси
+\begin{equation*}
+	%\label{eq:1.4.7}
+	\phi(y) = \int \left( N(x, y) - \frac{\partial}{\partial y} \left( \int M(x, y) \diff x \right) \right) \diff y.
+\end{equation*}
+Остаточно, загальний інтеграл має вигляд
+\begin{equation*}
+	%\label{eq:1.4.8}
+	\int M(x, y) \diff x + \int \left( N(x, y) - \frac{\partial}{\partial y} \left( \int M(x, y) \diff x \right) \right) \diff y = C.
+\end{equation*}
+Як відомо з математичного аналізу, якщо відомий повний диференціал, то $u(x, y)$ можна визначити, взявши криволінійний інтеграл по довільному контуру, що з’єднує фіксовану точку $(x_0, y_0)$ і точку із змінними координатами $(x, y)$. \\
+
+Більш зручно брати криву, що складається із двох відрізків прямих. В цьому випадку криволінійний інтеграл розпадається на два простих інтеграла
+\begin{multline}
+	%\label{eq:1.4.9}
+	u(x, y) = \int_{(x_0, y_0)}^{(x,y)} M(x,y) \cdot \diff x + N(x, y) \cdot \diff y = \\
+	= \int_{(x_0, y_0)}^{(x,y_0)} M(x,y) \cdot \diff x + \int_{(x,y_0)}^{(x,y)} N(x, y) \cdot \diff y = \\
+	= \int_{x_0}^{x} M(\xi,y_0) \cdot \diff \xi + \int_{y_0}^{y} N(x, \eta) \cdot \diff \eta.
+\end{multline}
+В цьому випадку одразу одержуємо розв’язок задачі Коші.
+\begin{equation*}
+	%\label{eq:1.4.10}
+	\int_{x_0}^{x} M(\xi,y_0) \cdot \diff \xi + \int_{y_0}^{y} N(x, \eta) \cdot \diff \eta = 0.
+\end{equation*}

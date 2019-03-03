@@ -1,0 +1,154 @@
+Однорідні рівняння можуть бути записані у вигляді \[y' = f \left( \frac{y}{x} \right)\] або  \[ M(x, y)\cdot\diff y + N(x, y) \cdot \diff y = 0, \] де $M(x, y)$ і $N(x, y)$ -- однорідні функції одного й того ж ступеня. Для того, щоб розв’язати однорідне рівняння, необхідно провести заміну \[y = u x, \quad \diff y = u \cdot \diff x + x \cdot \diff u,\] в результаті якої отримаємо рівняння зі змінними, що розділяються. 
+
+\begin{example}
+	Розв’язати рівняння $x \cdot \diff y = (x + y) \cdot \diff y$. 
+\end{example}
+
+\begin{solution}
+	Дане рівняння однорідне, оскільки $x$ та $x + y$ є однорідними функціями першого ступеня. \\
+
+	Проведемо заміну: $y = u x$. Тоді $\diff y = u \diff x + x \diff y$. Підставивши $y$ та $\diff y$ в задане рівняння, отримаємо  
+	\begin{align*}
+		x \cdot (x \diff u + u \diff x) &= (x + x u) \diff x, \\
+		x^2 \diff u &= x \diff x
+	\end{align*}
+
+	Розв’яжемо це рівняння зі змінними, що розділяються:
+	\begin{align*}
+		\diff u &= \frac{\diff x}{x}, \\
+		u &= \ln |x| + C.
+	\end{align*}
+	Повернувшись до вихідних змінних $u = y / x$, отримаємо \[y = x \cdot (\ln |x| + C).\] Крім того розв’язком є $x = 0$, що було загублене при поділенні рівняння на $x$.
+\end{solution}
+
+Розв’язати рівняння:
+\begin{multicols}{2}
+\begin{problem}
+	\[ (x + 2y) \cdot \diff x - x \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ (x - y) \cdot \diff x + (x + y) \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[y^2 + x^2 y' = x y y'; \]
+\end{problem}
+\begin{problem}
+	\[ (x^2 + y^2) \cdot y' = 2 xy; \]
+\end{problem}
+\begin{problem}
+	\[ xy' - y = x \cdot \tan \left( \frac{y}{x} \right); \]
+\end{problem}
+\begin{problem}
+	\[ x y' = y - x e^{y / x}; \]
+\end{problem}
+\begin{problem}
+	\[x y' - y = (x + y) \cdot \ln \left( \frac{x + y}{x} \right); \]
+\end{problem}
+\begin{problem}
+	\[ (3x + y) \cdot \diff x - (2x + 3y) \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ x y' = y \cos \left(\ln \left(\frac{y}{x} \right)\right); \]
+\end{problem}
+\begin{problem}
+	\[ \left(y+\sqrt{xy}\right)\cdot \diff x = x \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = \sqrt{x^2 - y^2} + y; \]
+\end{problem}
+\begin{problem}
+	\[ x^2 y' = y \cdot (x + y); \]
+\end{problem}
+\begin{problem}
+	\[ y \cdot (-y + xy') = \sqrt{x^4 + y^4}; \]
+\end{problem}
+\begin{problem}
+	\[ x \diff y - y \diff x = \sqrt{x^2 + y^2} \diff x; \]
+\end{problem}
+\begin{problem}
+	\[ (y^2 - 2xy) \cdot \diff x + x^2 \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ 2x^3 y' = y \cdot (2x^2 - y^2); \]
+\end{problem}
+\begin{problem}
+	\[ \left( x - y \cos \left(\rfrac{y}{x}\right)\right) \diff x = - x \cos \left(\rfrac{y}{x}\right) \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ y' (xy - x^2) = y^2; \]
+\end{problem}
+\begin{problem}
+	\[ 2xyy' = x^2 + y^2; \]
+\end{problem}
+\begin{problem}
+	\[ (6x + 3y) \cdot \diff x = (7x - 2y) \cdot \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ y^2 x \diff x = y \cdot (xy - 2y^2) \cdot \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ x^2 y \diff x = y \cdot (xy - 2y^2) \cdot \diff y; \]
+\end{problem}
+\begin{problem}
+	\[ 2y^3 = xy' \cdot (2y^2 - x^2); \]
+\end{problem}
+\begin{problem}
+	\[ \left( x + \sqrt{xy}\right) \cdot \diff y = y \diff x; \]
+\end{problem}
+\begin{problem}
+	\[ y = \left( \sqrt{y^2 - x^2} + x\right) y'; \]
+\end{problem}
+\begin{problem}
+	\[ (3x - 2y) \cdot \diff x - (2x + y) \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ (7x + 6y) \cdot \diff x - (x + 3y) \cdot \diff y = 0; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = y + x \cdot \cot \left(\frac{y}{x}\right). \]
+\end{problem}
+\end{multicols}
+
+Знайти частинні розв’язки, що задовольняють задані початкові умови:
+\begin{problem}
+	\[ x y' = 4 \sqrt{2x^2 + y^2} + y, \quad y(1) = 2; \]
+\end{problem}
+\begin{problem}
+	\[ (2y^2 + 3x^2) \cdot xy' = 3y^3 + 6yx^2, \quad y(2) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ y' (x^2 - 2xy) = x^2 + xy - y^2, \quad y(3) = 0; \]
+\end{problem}
+\begin{problem}
+	\[ 2 y' = \frac{y^2}{x^2} + 8 \cdot \frac{y}{x} + 8, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ y' (x^2 - 4xy) = x^2 + xy - 3 y^2, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = 3 \sqrt{2x^2 + y^2} + y, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ (2y^2 + 7x^2)\cdot x y' = 3y^3 + 14yx^2, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ 2y' = \frac{y^2}{x^2} + 6 \cdot \frac{y}{x} + 3, \quad y(3) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ x^2 y' = y^2 + 4xy + 2x^2, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = \sqrt{2x^2 + y^2} + y, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = 3 \sqrt{x^2 + y^2} + y, \quad y(3) = 4; \]
+\end{problem}
+\begin{problem}
+	\[ xy' = 2 \sqrt{x^2 + y^2} + y, \quad y(4) = 3; \]
+\end{problem}
+\begin{problem}
+	\[ 2y' = \frac{y^2}{x^2} + 8 \cdot \frac{y}{x} + 8, \quad y(1) = 1; \]
+\end{problem}
+\begin{problem}
+	\[ y' = \frac{x + 2y}{2x - y}, \quad y(3) = 8. \]
+\end{problem}

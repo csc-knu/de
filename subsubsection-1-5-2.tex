@@ -1,0 +1,224 @@
+\begin{enumerate}
+
+\item Розв’язати рівняння вигляду $F(y') = 0$:
+\begin{example}
+	$(y')^3 - 1 = 0$;
+\end{example}
+\begin{solution}
+	Рівняння має дійсний розв’язок, тобто воно поставлене коректно. Тому його розв’язком буде $\left(\frac{y - C}{x}\right)^3 - 1 = 0$.	
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[(y')^2 - 2 y' + 1 = 0;\]
+\end{problem}
+\begin{problem}
+	\[ (y')^4 - 16 = 0. \]
+\end{problem}
+\end{multicols}
+
+\item Розв’язати рівняння вигляду $F(x, y') = 0$:
+\begin{example}
+	$x = (y')^3 + y'$;
+\end{example}
+\begin{solution}
+	Робимо параметризацію $y' = t$, $x = t^3 + t$. Використовуючи основну форму запису $\diff y = y' \cdot \diff x$ одержимо \[ \diff y = t \cdot (3t^2 + 1) \cdot \diff t.\]
+	Звідси  \[ y = \int t \cdot (3t^2 + 1) \cdot \diff t = \frac{3t^4}{4} + \frac{t^2}{2} + C.\]
+	Остаточний розв’язок у параметричній формі має вигляд\[ x = t^3 + t, \quad y = \frac{3t^4}{4} + \frac{t^2}{2} + C.\]
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[ x \cdot ((y')^2 - 1) = 2y'; \]
+\end{problem}
+\begin{problem}
+	\[ x = y' \cdot \sqrt{(y')^2 - 1}; \]
+\end{problem}
+\begin{problem}
+ 	\[ y' \cdot (x - \ln y') - 1. \]
+\end{problem}
+\end{multicols}
+
+\item Розв’язати рівняння вигляду $F(y, y') = 0$:
+\begin{example}
+	$y = (y')^2 + 2 (y')^3$;
+\end{example}
+\begin{solution}
+	Робимо параметризацію $y' = t$, $y = t^2 + 2t^3$. Використовуючи основну форму запису $\diff y = y' \cdot \diff x$, одержуємо
+	\[ (2t + 6t^2) \cdot \diff t = t \cdot \diff x.\]
+	Звідси \[ \diff x = (2 + 6t) \cdot \diff t, \quad x = \int(2+6t) \cdot \diff t = 2t + 3t^2 + C.\]
+	Остаточний розв’язок у параметричній формі має вигляд 
+	\[ x = 2t + 3t^2, \quad y = t^2 + 2t^.\]
+	Крім того за рахунок скорочення втрачено $y \equiv 0$.
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[ y = \ln ( 1 + (y')^2); \]
+\end{problem}
+\begin{problem}
+	\[ y = (y' - 1) \cdot e^{y'}; \]
+\end{problem}
+\begin{problem}
+ 	\[ (y')^4 - (y')^2 = y^2. \]
+\end{problem}
+\end{multicols}
+
+\item Розв’язати рівняння Лагранжа
+\begin{example}
+	$y = - x y' + 4 \sqrt{y'}$;
+\end{example}
+\begin{solution}
+	Робимо параметризацію $y' = t$, $y = - xt + 4 \sqrt{t}$. Диференціюємо друге рівняння.
+	\[ \diff y = - x \cdot \diff t - t \cdot \diff x + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t.\]
+	Оскільки зроблено заміну $\diff y = t \cdot \diff x$, то одержимо
+	\[ t \cdot \diff x = - x \cdot \diff t - t \cdot \diff x + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t,\]
+	або
+	\[ 2 t \cdot \diff x = - x \cdot \diff t + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t.\]
+	Звідси
+	\[ \frac{\diff x}{\diff t} + \frac{x}{2t} = \frac{1}{t \cdot \sqrt{t}}.\]
+	Розв’язок лінійного неоднорідного рівняння може бути представлений у вигляді
+	\begin{multline*}
+		x = \exp\left\{ - \int \frac{\diff t}{2t} \right\} \cdot \left( \int \exp\left\{\int \frac{\diff t}{2t} \right\} \cdot \frac{1}{t\cdot\sqrt{t}} + C\right) = \\
+		= \frac{1}{\sqrt{t}} \cdot \left(\int \frac {\diff t}{t} + C\right) = \frac{\ln |t| + C}{\sqrt{t}}.
+	\end{multline*}
+	Остаточно маємо \[ x = \frac{\ln |t| + C}{\sqrt{t}}, \quad y = - \sqrt{t} \cdot (\ln |t| + C) + 4 \sqrt{t}. \] Крім того при діленні на $t$ втратили $y \equiv 0$.
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[ y = 2 x y' - 4 \cdot (y')^3;\]
+\end{problem}
+\begin{problem}
+	\[ y = x \cdot (y')^2 - 2 \cdot (y')^3;\]
+\end{problem}
+\begin{problem}
+ 	\[ x y' \cdot (y' + 2) = y;\]
+\end{problem}
+\begin{problem}
+ 	\[ 2 x y' - y = \ln y'.\]
+\end{problem}
+\end{multicols}
+
+\item Розв’язати рівняння Клеро
+\begin{example}
+	$y = x y' - (y')^2$;
+\end{example}
+\begin{solution}
+	Робимо параметризацію $y' = t$, $y = x t - t^2$. Диференціюємо друге рівняння:
+	\[ \diff y = x \cdot \diff t + t \cdot \diff x - 2 t \cdot \diff t.\]
+	Оскільки зроблено заміну $\diff y = t \cdot \diff x$, то одержимо
+	\[ t \cdot \diff x = x \cdot \diff t + t \cdot \diff x - 2 t \cdot \diff t.\]
+	Звідси $(x - 2t) \cdot \diff t = 0$. І маємо дві гілки
+	\begin{enumerate}
+		\item Особливий розв’язок $x = 2t$, $y = t^2$, або $y = \frac{x^2}{4}$.
+		\item Загальний розвозок $y = C x - C^2$.
+	\end{enumerate}
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[ y=xy'+4\sqrt{y'}; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'+2-y'; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'-\ln y'; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'+\sin y'; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'+\sqrt{1+(y')^2}; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'+(y')^3; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'+\cos(2+y'); \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'-\ln\sqrt{1+(y')^2}; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'-y'-(y')^3; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'-\sqrt{2-(y')^2}; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'+\sqrt{2y'+2}; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'-e^{y'}; \]
+\end{problem}
+\begin{problem}
+	\[ y=xy'-\tan y'; \]
+\end{problem}
+\begin{problem}
+	\[ (y')^3=3(xy'-y). \]
+\end{problem}
+\end{multicols}
+
+\item Розв’язати рівняння параметризацією загального виду
+\begin{example}
+	$(y')^2 - 2 x y' = x^2 - 4y$;
+\end{example}
+\begin{solution}
+	Введемо параметризацію рівняння \[x = u, \quad y' = v, \quad y = \frac {u^2 + 2 u v - v^2}{4}.\] 
+
+	Використовуючи співвідношення $\diff y = y' \cdot \diff x$, одержимо рівняння
+	\[ \frac1u (2u \cdot \diff u + 2 u \cdot \diff v + 2 v \cdot \diff u - 2 v \cdot \diff v) = v \cdot \diff u.\]
+
+	Перепишемо його у вигляді \[ (u+v)\cdot\diff u+(u-v)\cdot\diff v=2v\cdot\diff u,\] або \[ (u-v)\cdot\diff u+(u-v)\cdot\diff v=0,\]
+	Воно розділяється на два 
+	\begin{enumerate}
+		\item $\diff u + \diff v = 0 \implies v = - u + C$. \\
+
+		Підставивши в параметризовану систему, одержуємо \[x = u, \quad y = \frac{u^2+2u\cdot(-u+C)-(-u+C)^2}{4},\] або \[y = \frac{x^2+2x\cdot(-x+C)-(-x+C)^2}{4} = \frac{-2x^2+4Cx-C^2}{4}.\]
+		\item $u - v = 0 \implies v = u$. І розв’язок має вигляд $y = \frac{x^2}{2}$.
+	\end{enumerate}
+\end{solution}
+
+\begin{multicols}{2}
+\begin{problem}
+	\[5y+(y')^2=x\cdot(x+y');\]
+\end{problem}
+\begin{problem}
+	\[x^2\cdot(y')^2=xyy'+1;\]
+\end{problem}
+\begin{problem}
+	\[(y')^3+y^2=xyy';\]
+\end{problem}
+\begin{problem}
+	\[y=x\cdot(y')^2-2\cdot(y')^3;\]
+\end{problem}
+\begin{problem}
+	\[2xy'-y=y'\cdot\ln(yy');\]
+\end{problem}
+\begin{problem}
+	\[y'=e^{xy'/y}.\]
+\end{problem}
+\end{multicols}
+
+\item Розв’язати рівняння
+\begin{example}
+	$(y')^2 - y^2 = 0$;
+\end{example}
+\begin{solution}
+	Це рівняння розв’язується відносно $y'$. Маємо  \[y' = y, \quad y' = - y.\] Розв’язок першого має вигляд $y = ce^x$, другого $Ce^{-x}$. Загальний розв’язок має вигляд \[ (y - ce^x)\cdot(y-Ce^{-x})=0.\]
+\end{solution}
+\begin{multicols}{2}
+\begin{problem}
+	\[y^2\cdot((y')^2+1)=1;\]
+\end{problem}
+\begin{problem}
+	\[(y')^2-4y^3=0;\]
+\end{problem}
+\begin{problem}
+	\[x\cdot(y')^2=y;\]
+\end{problem}
+\begin{problem}
+	\[(y')^2+xy=y^2+xy';\]
+\end{problem}
+\begin{problem}
+	\[xy'\cdot(xy'+y)=2y^2.\]
+\end{problem}
+\end{multicols}
+\end{enumerate}

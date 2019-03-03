@@ -1,0 +1,71 @@
+Як вже було сказано, рівняння \[M(x, y) \cdot \diff x + N(x, y) \cdot \diff y = 0\] буде рівнянням в повних диференціалах, якщо його ліва частина є повним диференціалом деякої функції. Це має місце при \[\frac{\partial M(x, y)}{\partial y} = \frac{\partial N(x, y)}{\partial x}.\]
+
+\begin{example}
+	Розв’язати рівняння \[(2x + 3x^2y) \cdot \diff x + (x^3 - 3y^2) \cdot \diff y = 0.\]
+\end{example}
+\begin{solution}
+	Перевіримо, що це рівняння є рівнянням в повних диференціалах. Обчислимо \[ \frac{\partial}{\partial y} (2x + 3x^2y) = 3x^2, \quad \frac{\partial}{\partial x} (x^3 - 3y^2) = 3x^2. \]
+	
+	Таким чином існує функція $u(x,y)$, що \[\frac{\partial u(x,y)}{\partial x} = 2x + 3x^2y.\] 
+	
+	Проінтегруємо по $x$. Отримаємо \[ u(x,y) = \int(2x+3x^2y)\cdot\diff x+\Phi(y)=x^2+x^3y+\Phi(y).\]
+	
+	Для знаходження функції $\Phi(y)$ візьмемо похідну від $u(x,y)$ по $y$ і прирівняємо до $x^3-3y^2$. Отримаємо \[ \frac{\partial u(x,y)}{\partial y} = x^3 + \Phi'(y) = x^3 - 3y^2.\]
+
+	Звідси $\Phi'(y) = -3y^2$ і $\Phi(y) = -y^3$. Таким чином, \[u(x,y)=x^2+x^3y-y^3\] і загальний інтеграл диференціального рівняння має вигляд \[x^2+x^3y-y^3=C.\]
+\end{solution}
+
+Перевірити, що дані рівняння є рівняннями в повних диференціалах, і розв’язати їх:
+\begin{problem}
+	\[ 2 x y \cdot \diff x + (x^2 - y^2) \cdot \diff y = 0;\]
+\end{problem}
+\begin{problem}
+	\[(2-9xy^2)\cdot x\cdot \diff x + (4y^2-6x^3)\cdot y\cdot \diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[e^{-y}\cdot\diff x-(2y+x\cdot e^{-y})\cdot\diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[ \frac yx\cdot\diff x+(y^3+\ln x)\cdot\diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[\frac{3x^2+y^2}{y^2}\cdot\diff x-\frac{2x^3+5y}{y^3}\cdot\diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[2x\cdot\left(1+\sqrt{x^2-y}\right)\cdot\diff x-\sqrt{x^2-y}\cdot\diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[(1+y^2\cdot\sin 2x)\cdot\diff x-2y\cdot\cos^2x\cdot\diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[3x^2\cdot(1+\ln y)\cdot\diff x=\left(2y-\frac{x^3}y\right)\cdot\diff y;\]
+\end{problem}
+\begin{problem}
+	\[\left(\frac x{\sin y}+2\right)\cdot\diff x+\frac{(x^2+1)\cdot\cos y}{\cos2y-1}\cdot\diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[(2x+y\cdot e^{xy})\cdot\diff x+(x\cdot e^{xy}+3y^2)\cdot\diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[\left(2+\frac{1}{x^2+y^2}\right)\cdot x\cdot\diff x+\frac{y}{x^2+y^2}\cdot \diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[\left(3y^2-\frac{y}{x^2+y^2}\right)\cdot\diff x+\left(6xy+\frac{x}{x^2+y^2}\right)\cdot \diff y=0.\]
+\end{problem}
+
+Розв’язати, використовуючи множник, що інтегрує:
+\begin{problem} $\mu=\mu(x-y)$,
+	\[(2x^3+3x^2y+y^2-y^3)\cdot\diff x+(2y^3+3xy^2+x^2-x^3)\cdot\diff x=0;\]
+\end{problem}
+\begin{problem}
+	\[ \left(y-\frac{ay}{x}+x\right)\cdot\diff x+a\cdot\diff y=0, \quad \mu=\mu(x+y);\]
+\end{problem}
+\begin{problem}
+	\[(x^2+y)\cdot\diff y+x\cdot(1-y)\cdot\diff x=0, \quad \mu=\mu(xy);\]
+\end{problem}
+\begin{problem}
+	\[(x^2-y^2+y)\cdot\diff x+x\cdot(2y-1)\cdot\diff y=0;\]
+\end{problem}
+\begin{problem}
+	\[(2x^2y^2+y)\cdot\diff x+(x^3y-x)\cdot\diff y=0.\]
+\end{problem}
