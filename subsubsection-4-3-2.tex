@@ -1,0 +1,258 @@
+Досить універсальним методом розв’язку лінійних однорідних систем з сталими коефіцієнтами є матричний метод. Він полягає в наступному. Розглядається лінійна система з сталими коефіцієнтами, що записана у векторно-матричному вигляді
+\begin{equation*}
+	\dot x(t) = A \cdot x, \quad x \in \RR^n.	
+\end{equation*}
+
+Робиться невироджене перетворення $x = S \cdot y$, $y \in \RR^n$, $\det S \ne 0$, де вектор $y(t)$ --- нова невідома векторна функція. Тоді рівняння прийме вигляд
+\begin{equation*}
+	S \cdot \dot y = A \cdot S \cdot y,
+\end{equation*}
+або
+\begin{equation*}
+	\dot y = S^{-1} \cdot A \cdot S \cdot y.
+\end{equation*}
+
+Для довільної матриці $A$ завжди існує неособлива матриця $S$, що приводить її до жорданової форми, тобто $S^{-1} \cdot A \cdot S = \Lambda$, де $\Lambda$ --- жорданова форма матриці $A$. І система диференціальних рівнянь прийме вигляд
+\begin{equation*}
+	\dot y = \Lambda \cdot y, \quad y \in \RR^n.
+\end{equation*}
+
+Складемо характеристичне рівняння матриці $A$
+\begin{equation*}
+	\det (D - \lambda E) = 0,
+\end{equation*}
+або
+\begin{equation*}
+	\lambda^n + p_1 \cdot \lambda^{n - 1} + \ldots + p_{n - 1} \cdot \lambda + p_n = 0.
+\end{equation*}
+
+Алгебраїчне рівняння $n$-го ступеня має $n$ коренів. Розглянемо різні випадки:
+\begin{enumerate}
+\item Нехай $\lambda_1, \lambda_2, \ldots, \lambda_n$ --- дійсні різні числа. Тоді матриця $\Lambda$ має вигляд
+\begin{equation*}
+	\Lambda = 
+	\begin{pmatrix}
+		\lambda_1 & 0 & \cdots & 0 \\
+		0 & \lambda_2 & \cdots & 0 \\
+		\vdots & \vdots & \ddots & \vdots \\
+		0 & 0 & \cdots & \lambda_n.
+	\end{pmatrix}
+\end{equation*}
+
+І перетворена система диференціальних рівнянь розпадається на $n$ незалежних рівнянь
+\begin{equation*}
+	\dot y_1 = \lambda_1 \cdot y_1, \quad \dot y_2 = \lambda_2 \cdot y_2, \quad \ldots, \quad \dot y_n = \lambda_n \cdot y_n.
+\end{equation*}
+
+Розв’язуючи кожне окремо, отримаємо
+\begin{equation*}
+	y_1 = C_1 \cdot e^{\lambda_1 t}, \quad y_2 = C_2 \cdot e^{\lambda_2 t}, \quad \ldots, \quad y_n = C_n \cdot e^{\lambda_n t}.
+\end{equation*}
+
+Або в матричному вигляді
+\begin{equation*}
+	y = e^{\Lambda t} \cdot C,
+\end{equation*}
+де
+\begin{equation*}
+	e^{\Lambda t} = 
+	\begin{pmatrix}
+		e^{\lambda_1 t} & 0 & \cdots & 0 \\
+		0 & e^{\lambda_2 t} & \cdots & 0 \\
+		\vdots & \vdots & \ddots & \vdots \\
+		0 & 0 & \cdots & e^{\lambda_n t}
+	\end{pmatrix}, \quad
+	C = \begin{pmatrix} C_1 \\ C_2 \\ \vdots \\ C_n \end{pmatrix}.
+\end{equation*}
+
+Звідси розв’язок вихідного рівняння має вигляд $x = S \cdot e^{\Lambda t} \cdot C$. Для знаходження матриці $S$ треба розв’язати матричне рівняння
+\begin{equation*}
+	S^{-1} \cdot A \cdot S = \Lambda
+\end{equation*}
+або
+\begin{equation*}
+	A \cdot S = S \cdot \Lambda
+\end{equation*}
+де $\Lambda$ --- жорданова форма матриці $A$. Якщо матрицю $S$ записати у вигляді
+\begin{equation*}
+	S = 
+	\begin{pmatrix} 
+		\alpha_1^1 & \alpha_1^2 & \cdots & \alpha_1^n \\
+		\alpha_2^1 & \alpha_2^2 & \cdots & \alpha_2^n \\
+		\vdots & \vdots & \ddots & \vdots \\
+		\alpha_n^1 & \alpha_n^2 & \cdots & \alpha_n^n
+	\end{pmatrix},
+\end{equation*}
+то для кожного з стовпчиків $s_i = (\alpha_1^i, \alpha_2^i, \ldots, \alpha_n^i)^T$, матричне рівняння перетвориться до
+\begin{equation*}
+	A \cdot s_i = \lambda_i \cdot s_i, \quad i = \overline{1, n}.
+\end{equation*}
+
+Таким чином, у випадку різних дійсних власних чисел матриця $S$ являє собою набір $n$ власних векторів, що відповідають різним власним числам.
+
+\item Нехай $\lambda_{1,2} = p \pm i \cdot q$ --- комплексний корінь. Тоді відповідна клітка Жордана має вигляд
+\begin{equation*}
+	\Lambda_{1,2} = \begin{pmatrix} p & q \\ -q & p \end{pmatrix},
+\end{equation*}
+а перетворена система диференціальних рівнянь
+\begin{equation*}
+	\left\{
+		\begin{aligned}
+			\dot y_1 &= p \cdot y_1 + q \cdot y_2, \\
+			\dot y_2 &= - q \cdot y_1 + p \cdot y_2.
+		\end{aligned}
+	\right.
+\end{equation*}
+
+Неважко перевірити, що розв’язок отриманої системи диференціальних рівнянь має вигляд
+\begin{align*}
+	y_1 &= c_1 \cdot e^{pt} \cdot \cos (qt) + c_2 \cdot e^{pt} \cdot \sin(qt), \\
+	y_2 &= c_2 \cdot e^{pt} \cdot \cos (qt) - c_1 \cdot e^{pt} \cdot \sin(qt).
+\end{align*}
+
+Або в матричному вигляді
+\begin{equation*}
+	\begin{pmatrix} y_1 \\ y_2 \end{pmatrix} =
+	\begin{pmatrix}
+		e^{pt} \cdot \cos(qt) & e^{pt} \cdot \sin(qt) \\
+		- e^{pt} \cdot \sin(qt) & e^{pt} \cdot \cos(qt)
+	\end{pmatrix} \cdot
+	\begin{pmatrix} c_1 \\ c_2 \end{pmatrix}.
+\end{equation*}
+
+Таким чином, комплексно-спряженим власним числам $\lambda_{1,2}$ відповідає розв’язок  
+\begin{equation*}
+	y = e^{\Lambda t} \cdot C,
+\end{equation*}
+де
+\begin{equation*}
+	e^{\Lambda t} =
+	\begin{pmatrix}
+		e^{pt} \cdot \cos(qt) & e^{pt} \cdot \sin(qt) \\
+		- e^{pt} \cdot \sin(qt) & e^{pt} \cdot \cos(qt)
+	\end{pmatrix} 
+\end{equation*}
+
+\item Нехай $\lambda$ --- кратний корінь, кратності $m \le n$, тобто $\lambda_1 = \lambda_2 = \ldots = \lambda_m = \lambda$ і йому відповідають $r \le m$ лінійно незалежних векторів. Тоді клітка Жордана, що відповідає цьому власному числу, має вид
+\begin{equation*}
+	\Lambda = 
+	\begin{pmatrix}
+		\Lambda_1 & \textbf{0} \\
+		\textbf{0} & \Lambda_2, 
+	\end{pmatrix}
+\end{equation*}
+де
+\begin{align*}
+	\Lambda_1 &= 
+	\begin{pmatrix} 
+		\lambda & 0 & \cdots & 0 & 0 \\
+		0 & \lambda & \cdots & 0 & 0 \\
+		\vdots & \vdots & \ddots & \vdots & \vdots \\
+		0 & 0 & \cdots & \lambda & 0 \\
+		0 & 0 & \cdots & 0 & \lambda
+	\end{pmatrix} \in \RR^{r \times r}, \\
+	\Lambda_2 &= 
+	\begin{pmatrix} 
+		\lambda & 1 & \cdots & 0 & 0 \\
+		0 & \lambda & \ddots & 0 & 0 \\
+		\vdots & \vdots & \ddots & \ddots & \vdots \\
+		0 & 0 & \cdots & \lambda & 1 \\
+		0 & 0 & \cdots & 0 & \lambda
+	\end{pmatrix} \in \RR^{(m - r) \times (m - r)}.
+\end{align*}
+ 
+І перетворена підсистема, що відповідає власному числу $\lambda$, розпадається не дві підсистеми
+\begin{align*}
+	\dot y_1 &= \Lambda_1 \cdot y_1, \quad y_1 \in \RR^r, \\
+	\dot y_2 &= \Lambda_2 \cdot y_2, \quad y_2 \in \RR^{m - r},
+\end{align*}
+
+Розв’язок першої знаходиться з використанням зазначеного в першому пункті підходу. Розглянемо другу підсистему. Запишемо її в координатному вигляді
+ 
+Розв’язок останнього рівняння цієї підсистеми має вигляд
+\begin{equation*}
+	y_{2, m - r} = c_{2, m - r} \cdot e^{\lambda t}
+\end{equation*}
+
+Підставимо його в передостаннє рівняння. Одержуємо
+\begin{equation*}
+	\dot y_{2, m - r - 1} = \lambda \cdot y_{2, m - r - 1} + c_{2, m - r} \cdot e^{\lambda t}.
+\end{equation*}
+
+Загальний розв’язок лінійного неоднорідного рівняння має вигляд суми загального розв’язку однорідного і частинного розв’язку неоднорідних рівнянь, тобто
+\begin{equation*}
+	y_{2, m - r - 1} = y_{2, m - r - 1, \text{homo}} + y_{2, m - r - 1, \text{hetero}}.
+\end{equation*}
+
+Загальний розв’язок однорідного має вигляд
+\begin{equation*}
+	\dot y_{2, m - r - 1, \text{homo}} = c_{2, m - r - 1} \cdot e^{\lambda t}.
+\end{equation*}
+
+Частинний розв’язок неоднорідного шукаємо методом невизначених коефіцієнтів у вигляді
+\begin{equation*}
+	y_{2, m - r - 1, \text{hetero}} = A \cdot t \cdot e^{\lambda t},
+\end{equation*}
+де $A$ --- невідома стала. Підставивши в неоднорідне рівняння, одержимо
+\begin{equation*}
+	A \cdot e^{\lambda t} + A \cdot \lambda \cdot t \cdot e^{\lambda t} = A \cdot \lambda \cdot t \cdot e^{\lambda t} + c_{2, m - r} \cdot e^{\lambda t}.
+\end{equation*}
+
+Звідси $A = c_{2, m - r}$ і загальний розв’язок неоднорідного рівняння має вигляд
+\begin{equation*}
+	y_{2, m - r - 1} = c_{2, m - r - 1} \cdot e^{\lambda t} + c_{2, m - r} \cdot t \cdot e^{\lambda t}.
+\end{equation*}
+
+Піднявшись ще на один крок нагору одержимо
+\begin{equation*}
+	y_{2, m - r - 1} = c_{2, m - r - 2} \cdot e^{\lambda t} + c_{2, m - r - 1} \cdot t \cdot e^{\lambda t} + c_{2, m - r } \cdot \frac{t^2}{2!} \cdot e^{\lambda t}.
+\end{equation*}
+
+Продовжуючи процес далі, маємо
+\begin{equation*}
+	y_{2, 1} = c_{2, 1} \cdot e^{\lambda t} + c_{2, 2} \cdot t \cdot e^{\lambda t} + \ldots + c_{2, m - r} \cdot \frac{t^{m - r - 1}}{(m - r - 1)!} \cdot e^{\lambda t}.
+\end{equation*}
+
+Або у векторно-матричному вигляді
+\begin{equation*}
+	y_2(t) = 
+	\begin{pmatrix}
+		e^{\lambda t} & t \cdot e^{\lambda t} & \cdots & \frac{t^{m - r - 2}}{(m - r - 2)!} & \frac{t^{m - r - 1}}{(m - r - 1)!} \\
+		0 & e^{\lambda t} & \cdots & \frac{t^{m - r - 3}}{(m - r - 3)!} & \frac{t^{m - r - 2}}{(m - r - 2)!} \\
+		\vdots & \vdots & \ddots & \vdots & \vdots \\
+		0 & 0 & \cdots & e^{\lambda t} & t \cdot e^{\lambda t} \\
+		0 & 0 & \cdots & 0 & e^{\lambda t}
+	\end{pmatrix} \cdot
+	\begin{pmatrix} c_{2,1} \\ c_{2,2} \\ \vdots \\ c_{2,m-r-1} \\ c_{2,m-r} \end{pmatrix}.
+\end{equation*}
+
+Додавши першу підсистему, одержимо
+\begin{equation*}
+	y = \begin{pmatrix} e^{\Lambda_1 t} & \textbf{0} \\ \textbf{0} & e^{\Lambda_2 t} \end{pmatrix} \cdot C,
+\end{equation*}
+де
+\begin{align*}
+	e^{\Lambda_1 t} &= 
+	\begin{pmatrix} 
+		e^{\lambda t} & 0 & \cdots & 0 & 0 \\
+		0 & e^{\lambda t} & \cdots & 0 & 0 \\
+		\vdots & \vdots & \ddots & \vdots & \vdots \\
+		0 & 0 & \cdots & e^{\lambda t} & 0 \\
+		0 & 0 & \cdots & 0 & e^{\lambda t}
+	\end{pmatrix}, \\
+	e^{\Lambda_2 t} &= 
+	\begin{pmatrix}
+		e^{\lambda t} & t \cdot e^{\lambda t} & \cdots & \frac{t^{m - r - 2}}{(m - r - 2)!} & \frac{t^{m - r - 1}}{(m - r - 1)!} \\
+		0 & e^{\lambda t} & \cdots & \frac{t^{m - r - 3}}{(m - r - 3)!} & \frac{t^{m - r - 2}}{(m - r - 2)!} \\
+		\vdots & \vdots & \ddots & \vdots & \vdots \\
+		0 & 0 & \cdots & e^{\lambda t} & t \cdot e^{\lambda t} \\
+		0 & 0 & \cdots & 0 & e^{\lambda t}
+	\end{pmatrix}, \\
+	C &= \begin{pmatrix} c_{1,1} & \cdots & c_{1,r} & c_{2,1} & \cdots & c_{2,m-r} \end{pmatrix}^T.
+\end{align*}
+
+Для останніх двох випадків матриця   знаходиться як розв’язок матричного рівняння
+\begin{equation*}
+	A \cdot S = S \cdot \Lambda	
+\end{equation*}
+\end{enumerate}

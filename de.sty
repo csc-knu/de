@@ -9,8 +9,6 @@
 \allowdisplaybreaks
 \setlength\parindent{0pt}
 
-\setlength{\arraycolsep}{0pt}
-
 \title{{\Huge ДИФЕРЕНЦІАЛЬНІ РІВНЯННЯ}}
 \author{Скибицький Нікіта}
 % \title{{\Huge ДИФЕРЕНЦІАЛЬНІ РІВНЯННЯ} \\ {\LARGE (КУРС ЛЕКЦІЙ)}}
@@ -55,3 +53,15 @@
   \fi
   .\arabic{equation}%
 }
+
+\makeatletter
+\def\old@comma{,}
+\catcode`\,=13
+\def,{%
+  \ifmmode%
+    \old@comma\discretionary{}{}{}%
+  \else%
+    \old@comma%
+  \fi%
+}
+\makeatother
