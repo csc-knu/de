@@ -1,18 +1,17 @@
-% version 1.0
 \begin{example}
-	Розв'язати рівняння \[ y' - y \cdot \tan x = \cos x.\]
+	Розв'язати рівняння \[ y' - y \tan x = \cos x.\]
 \end{example}
 
 \begin{solution}
-	Використовуючи вигляд загального розв'язку, отримаємо \[ y = \exp\left\{\int \tan x \diff x\right\} \cdot \left(\int \exp\left\{-\int\tan x\diff x\right\} \cdot \cos x \diff x + C \right). \]
+	Використовуючи вигляд загального розв'язку, отримаємо \[ y = \exp\left\{\int \tan x \diff x\right\} \left(\int \exp\left\{-\int\tan x\diff x\right\} \cos x \diff x + C \right). \]
 
 	Оскільки \[\int \tan x \diff x = - \ln |\cos x|,\] 
 
 	то отримаємо
 	\begin{align*}
-		y &= e^{-\ln|\cos x|} \cdot \left(\int e^{\ln|\cos x|} \cdot \cos x \diff x+C\right) = \\
-		&= \frac{1}{\cos x} \cdot \left( \int \cos^2 x \diff x + C \right) = \\
-		&= \frac{1}{\cos x} \cdot \left( \frac x2 + \frac{\sin 2x}{4} + C \right).
+		y &= e^{-\ln|\cos x|} \left(\int e^{\ln|\cos x|} \cos x \diff x+C\right) = \\
+		&= \frac{1}{\cos x} \left( \int \cos^2 x \diff x + C \right) = \\
+		&= \frac{1}{\cos x} \left( \frac x2 + \frac{\sin 2x}{4} + C \right).
 	\end{align*}
 	
 	Або
@@ -28,10 +27,10 @@
 \begin{solution}
 	Використовуючи вигляд загального розв'язку, отримаємо
 	\begin{align*}
-		y &= \exp\left\{\int \frac1x \diff x\right\} \cdot \left(\int \exp\left\{-\int\frac1x\diff x\right\}\cdot x^2 \diff x+C\right) = \\
-		&= e^{\ln|x|} \cdot \left(\int e^{-\ln|x|} \cdot x^2 \diff x+C\right) = \\
-		&= x \cdot \left(\int x \diff x+C\right) = \\
-		&= x \cdot \left(\frac{x^2}{2} + C\right).
+		y &= \exp\left\{\int \frac1x \diff x\right\} \left(\int \exp\left\{-\int\frac1x\diff x\right\} x^2 \diff x+C\right) = \\
+		&= e^{\ln|x|} \left(\int e^{-\ln|x|} x^2 \diff x+C\right) = \\
+		&= x \left(\int x \diff x+C\right) = \\
+		&= x \left(\frac{x^2}{2} + C\right).
 	\end{align*}
 
 	Таким чином \[ y = C x + \frac{x^3}{2}.\]
@@ -42,15 +41,15 @@
 Розв'язати рівняння:
 \begin{multicols}{2}
 	\begin{problem}
-		\[x y' + (x + 1) \cdot y = 3 x^2 e^{-x};\]
+		\[x y' + (x + 1) y = 3 x^2 e^{-x};\]
 	\end{problem}
 	
 	\begin{problem}
-		\[(2x + 1) \cdot y' =4x+2y;\]
+		\[(2x + 1) y' =4x+2y;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[y'=2x\cdot(x^2+y);\]
+		\[y'=2x(x^2+y);\]
 	\end{problem}
 	
 	\begin{problem}
@@ -58,39 +57,39 @@
 	\end{problem}
 	
 	\begin{problem}
-		\[y'+y\cdot\tan x=\sec x;\]
+		\[y'+y\tan x=\sec x;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[x\cdot(y'-y)=e^x;\]
+		\[x(y'-y)=e^x;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[(xy'-1)\cdot\ln x=2y;\]
+		\[(xy'-1)\ln x=2y;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[(y+x^2)\cdot \diff x=x \cdot\diff y;\]
+		\[(y+x^2) \diff x=x \diff y;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[(2e^x-y)\cdot\diff x=\diff y;\]
+		\[(2e^x-y)\diff x=\diff y;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[\sin^2 y + x \cdot \cot y = \frac1{y^2};\]
+		\[\sin^2 y + x \cot y = \frac1{y^2};\]
 	\end{problem}
 	
 	\begin{problem}
-		\[(x+y^2)\cdot y'=y;\]
+		\[(x+y^2) y'=y;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[(3e^y-x)\cdot y' = 1;\]
+		\[(3e^y-x) y' = 1;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[y = x\cdot(y'- x \cdot \cos x).\]
+		\[y = x(y'- x \cos x).\]
 	\end{problem}
 \end{multicols}
 
@@ -104,7 +103,7 @@
 \end{problem}
 
 \begin{problem}
-	\[y'-\frac{2y}{x+1}=e^{x}\cdot(x+1)^2, \quad y(0)=1;\]
+	\[y'-\frac{2y}{x+1}=e^{x}(x+1)^2, \quad y(0)=1;\]
 \end{problem}
 
 \begin{problem}
@@ -112,7 +111,7 @@
 \end{problem}
 
 \begin{problem}
-	\[ y' - \frac yx  = x \cdot \sin x, \quad y\left(\frac\pi2\right)=1;\]
+	\[ y' - \frac yx = x \sin x, \quad y\left(\frac\pi2\right)=1;\]
 \end{problem}
 
 \begin{problem}
@@ -120,40 +119,40 @@
 \end{problem}
 
 \begin{problem}
-	\[(13y^3-x)\cdot y'=4y, \quad y(5)=1;\]
+	\[(13y^3-x) y'=4y, \quad y(5)=1;\]
 \end{problem}
 
 \begin{problem}
-	\[2\cdot(x+\ln^2y-\ln y)\cdot y'= y, \quad y(2)=1.\]
+	\[2(x+\ln^2y-\ln y) y'= y, \quad y(2)=1.\]
 \end{problem}
 
 Розв'язати рівняння Бернуллі:
 \begin{multicols}{2}
 	\begin{problem}
-		\[y'+xy=(1+x)\cdot e^{-x}\cdot y^2;\]
+		\[y'+xy=(1+x) e^{-x} y^2;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[xy'+y=2y^2\cdot \ln x;\]
+		\[xy'+y=2y^2 \ln x;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[2\cdot(2xy'+y)=xy^2;\]
+		\[2(2xy'+y)=xy^2;\]
 	\end{problem}
 	
 	\begin{problem}
-		\[3\cdot(xy'+y)=y^2\cdot \ln x;\]
+		\[3(xy'+y)=y^2 \ln x;\]
 	\end{problem}
 
 	\begin{problem}
-		\[2\cdot(y'+y)=xy^2.\]
+		\[2(y'+y)=xy^2.\]
 	\end{problem}
 \end{multicols}
 
 Розв'язати рівняння Рікатті:
 \begin{multicols}{2}
 	\begin{problem}
-		\[x^2\cdot y' + xy +x^2y^2=4;\]
+		\[x^2 y' + xy +x^2y^2=4;\]
 	\end{problem}
 
 	\begin{problem}
@@ -161,7 +160,7 @@
 	\end{problem}
 
 	\begin{problem}
-		\[xy'-(2x+1)\cdot y+y^2=5-x^2;\]
+		\[xy'-(2x+1) y+y^2=5-x^2;\]
 	\end{problem}
 
 	\begin{problem}
@@ -169,6 +168,6 @@
 	\end{problem}
 	
 	\begin{problem}
-		\[y'+2y \cdot e^x - y^2 = e^{2x} + e^x.\]
+		\[y'+2y e^x - y^2 = e^{2x} + e^x.\]
 	\end{problem}
 \end{multicols}

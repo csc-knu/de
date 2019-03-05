@@ -1,4 +1,3 @@
-% version 1.0
 Розглянемо ряд диференціальних рівнянь, що інтегруються в квадратурах.
 \begin{enumerate}
 	\item Рівняння вигляду 
@@ -6,7 +5,7 @@
 		F(y') = 0.
 	\end{equation*}
 
-	Нехай алгебраїчне рівняння $F(k) = 0$ має принаймні один дійсний корінь $k = k_0$. Тоді, інтегруючи $y' = k_0$, одержимо $y = k_0 \cdot x + C$. Звідси $k_0 = (y - C) / x$ і вираз
+	Нехай алгебраїчне рівняння $F(k) = 0$ має принаймні один дійсний корінь $k = k_0$. Тоді, інтегруючи $y' = k_0$, одержимо $y = k_0 x + C$. Звідси знаходимо $k_0 = (y - C) / x$ і вираз
 	\begin{equation*}
 		F \left( \frac{y - c}{x} \right) = 0	
 	\end{equation*}
@@ -25,14 +24,14 @@
 		\end{aligned}\right.
 	\end{equation*}
 
-	Використовуючи співвідношення $\diff y = y ' \cdot \diff x$, одержимо 
+	Використовуючи співвідношення $\diff y = y ' \diff x$, одержимо 
 	\begin{equation*}
-		\diff y = \psi(t) \cdot \phi'(t) \cdot \diff t.
+		\diff y = \psi(t) \phi'(t) \diff t.
 	\end{equation*}
 
 	Проінтегрувавши, запишемо
 	\begin{equation*}
-		y = \int \psi(t) \cdot \phi'(t) \cdot \diff t + C.
+		y = \int \psi(t) \phi'(t) \diff t + C.
 	\end{equation*}
 
 	І загальний розв'язок в параметричній формі має вигляд
@@ -40,7 +39,7 @@
 		\left\{
 			\begin{aligned}
 				x &= \phi(t), \\
-				y &= \int \psi(t) \cdot \phi'(t) \cdot \diff t + C.
+				y &= \int \psi(t) \phi'(t) \diff t + C.
 			\end{aligned}
 		\right.
 	\end{equation*}
@@ -60,25 +59,25 @@
 		\right.
 	\end{equation*}
 	
-	Використовуючи співвідношення $\diff y = y ' \cdot \diff x$, одержимо 
+	Використовуючи співвідношення $\diff y = y ' \diff x$, одержимо 
 	\begin{equation*}
-		\phi'(t) \cdot \diff t = \psi(t) \cdot \diff x
+		\phi'(t) \diff t = \psi(t) \diff x
 	\end{equation*}
 	і
 	\begin{equation*}
-		\diff x = \frac{\phi'(t)}{\psi(t)} \cdot \diff t
+		\diff x = \frac{\phi'(t)}{\psi(t)} \diff t
 	\end{equation*}
 	
 	Проінтегрувавши, запишемо
 	\begin{equation*}
-		x = \int \frac{\phi'(t)}{\psi(t)}\cdot \diff t + C.
+		x = \int \frac{\phi'(t)}{\psi(t)} \diff t + C.
 	\end{equation*}
 	
 	І загальний розв'язок в параметричній формі має вигляд
 	\begin{equation*}
 		\left\{
 			\begin{aligned}
-				x &= \int \frac{\phi'(t)}{\psi(t)}\cdot \diff t + C, \\
+				x &= \int \frac{\phi'(t)}{\psi(t)} \diff t + C, \\
 				y &= \phi(t).
 			\end{aligned}
 		\right.
@@ -86,38 +85,38 @@
 	
 	\item Рівняння Лагранжа
 	\begin{equation*}
-		y = \phi(y') \cdot x + \psi(y').
+		y = \phi(y') x + \psi(y').
 	\end{equation*}
 	
-	Введемо параметр $y' = \frac{\diff y}{\diff x} = p$ і отримаємо
+	Введемо параметр $y' = \diff y / \diff x = p$ і отримаємо
 	\begin{equation*}
-		y = \phi(p) \cdot x + \psi(p).
+		y = \phi(p) x + \psi(p).
 	\end{equation*}
 	
 	Продиференціювавши, запишемо
 	\begin{equation*}
-		\diff y = \phi'(p) \cdot x \cdot \diff p + \phi(p) \cdot \diff x + \psi'(p) \cdot \diff p.
+		\diff y = \phi'(p) x \diff p + \phi(p) \diff x + \psi'(p) \diff p.
 	\end{equation*}
 	
-	Замінивши $\diff y = p \cdot \diff x$ одержимо
+	Замінивши $\diff y = p \diff x$ одержимо
 	\begin{equation*}
-		p \cdot \diff x = \phi'(p) \cdot x \cdot \diff p + \phi(p) \cdot \diff x + \psi'(p) \cdot \diff p.
+		p \diff x = \phi'(p) x \diff p + \phi(p) \diff x + \psi'(p) \diff p.
 	\end{equation*}
 	
 	Звідси
 	\begin{equation*}
-		(p - \phi(p)) \cdot \diff x - \phi'(p) \cdot x \cdot \diff p = \psi'(p) \cdot \diff p.
+		(p - \phi(p)) \diff x - \phi'(p) x \diff p = \psi'(p) \diff p.
 	\end{equation*}
 	
 	І отримали лінійне неоднорідне диференціальне рівняння
 	\begin{equation*}
-		\frac{\diff x}{\diff p} + \frac{\phi'(p)}{\phi(p)-p} \cdot x = \frac{\phi'(p)}{p-\phi(p)}.
+		\frac{\diff x}{\diff p} + \frac{\phi'(p)}{\phi(p)-p} x = \frac{\phi'(p)}{p-\phi(p)}.
 	\end{equation*}
 	
 	Його роз\-в'яз\-ок
 	\begin{multline*}
-		x = \exp\left\{\int \frac{\phi'(p)}{p-\phi(p)} \cdot \diff p\right\} \cdot \\
-		\cdot \left(\int \frac{\phi'(p)}{p-\phi(p)} \cdot \exp\left\{\int \frac{\phi'(p)}{\phi(p)-p} \cdot \diff p\right\} \diff p + C \right) = \Psi(p, C).
+		x = \exp\left\{\int \frac{\phi'(p)}{p-\phi(p)} \diff p\right\} \cdot \\
+		 \cdot \left(\int \frac{\phi'(p)}{p-\phi(p)} \exp\left\{\int \frac{\phi'(p)}{\phi(p)-p} \diff p\right\} \diff p + C \right) = \Psi(p, C).
 	\end{multline*}
 	
 	І остаточний розв'язок рівняння Лагранжа в параметричній формі запишеться у вигляді
@@ -125,31 +124,31 @@
 		\left\{
 			\begin{aligned}
 				x &= \Psi(p,C), \\
-				y &= \phi(p) \cdot \Phi(p, C) + \psi(p).
+				y &= \phi(p) \Phi(p, C) + \psi(p).
 			\end{aligned}
 		\right.
 	\end{equation*}
 	
-	\item Рівняння Клеро. \\
+	\item Рівняння Клеро. \parvskip
 
 	Частинним випадком рівняння Лагранжа, що відповідає $\phi(y') = y'$ є рівняння Клеро
  	\begin{equation*}
  		y = y' x + \psi(y').
  	\end{equation*}
 	
-	Поклавши $y' = \frac{\diff y}{\diff x} = p$, отримаємо $y = p x + \psi(p)$. Продиференціюємо 
+	Поклавши $y' = \diff y / \diff x = p$, отримаємо $y = p x + \psi(p)$. Продиференціюємо 
 	\begin{equation*}
-		\diff y = p \cdot \diff x + x \cdot \diff p + \psi'(p) \cdot \diff p.
+		\diff y = p \diff x + x \diff p + \psi'(p) \diff p.
 	\end{equation*}
 	
-	Оскільки $\diff y = p \cdot \diff x$, то
+	Оскільки $\diff y = p \diff x$, то
 	\begin{equation*}
-		p \cdot \diff x = p \cdot \diff x + x \cdot \diff p + \psi'(p) \cdot \diff p.
+		p \diff x = p \diff x + x \diff p + \psi'(p) \diff p.
 	\end{equation*}
 	
 	Скоротивши, одержимо
 	\begin{equation*}
-		(x + \psi'(p)) \cdot \diff p = 0.
+		(x + \psi'(p)) \diff p = 0.
 	\end{equation*}
 	
 	Можливі два випадки.
@@ -159,7 +158,7 @@
 			\left\{
 				\begin{aligned}
 					x &= - \psi'(p), \\
-					y &= -p \cdot \psi'(p) + \psi(p).
+					y &= -p \psi'(p) + \psi(p).
 				\end{aligned}
 			\right.
 		\end{equation*}
@@ -172,22 +171,20 @@
 	
 	Загальним розв'язком рівняння Клеро буде сім'я ``прямих''. Її огинає особлива крива.
 	
-	\item Параметризація загального вигляду. Нехай диференціальне рівняння $F(x, y, y') = 0$ вдалося записати у вигляді системи рівнянь з двома параметрами
+	\item Параметризація загального вигляду. Нехай диференціальне рівняння \[F(x, y, y') = 0\] вдалося записати у вигляді системи рівнянь з двома параметрами
 	\begin{equation*}
 		x = \phi(u, v), \quad y = \psi(u, v), \quad y' = \theta(u, v).	
 	\end{equation*}
 	
-	Використовуючи співвідношення $\diff y = y' \cdot \diff x$, одержимо
-	\begin{multline*}
-		\frac{\partial \psi(u,v)}{\partial u} \cdot \diff u + \frac{\partial \psi(u, v)}{\partial v} \cdot \diff v = \\
-		= \theta(u,v) \cdot \left( \frac{\partial \phi(u,v)}{\partial u} \cdot \diff u + \frac{\partial \phi(u, v)}{\partial v} \cdot \diff v\right)
-	\end{multline*}
+	Використовуючи співвідношення $\diff y = y' \diff x$, одержимо
+	\begin{equation*}
+		\frac{\partial \psi(u,v)}{\partial u} \diff u + \frac{\partial \psi(u, v)}{\partial v} \diff v = \theta(u,v) \left( \frac{\partial \phi(u,v)}{\partial u} \diff u + \frac{\partial \phi(u, v)}{\partial v} \diff v\right)
+	\end{equation*}
 	
 	Перегрупувавши члени, одержимо
-	\begin{multline*}
-		\left( \frac{\partial \psi(u,v)}{\partial u} - \theta(u, v) \cdot \frac{\partial \phi(u,v)}{\partial u} \right) \diff u = \\
-		= \left( \theta(u,v) \cdot \frac{\partial \phi(u, v)}{\partial v} - \frac{\partial \psi(u, v)}{\partial v} \right) \diff v.
-	\end{multline*}
+	\begin{equation*}
+		\left( \frac{\partial \psi(u,v)}{\partial u} - \theta(u, v) \frac{\partial \phi(u,v)}{\partial u} \right) \diff u = \left( \theta(u,v) \frac{\partial \phi(u, v)}{\partial v} - \frac{\partial \psi(u, v)}{\partial v} \right) \diff v.
+	\end{equation*}
 	
 	Звідси
 	\begin{equation*}
@@ -201,7 +198,7 @@
 
 	Параметризація загального вигляду не дає інтеграл диференціального рівняння. Вона дозволяє звести диференціальне рівняння, не роз\-в'яз\-а\-не відносно похідної, до диференціального рівняння, роз\-в'яз\-а\-но\-го відносно похідної.
 
-	\item Нехай рівняння $F(x, y, y') = 0$ можна розв'язати відносно $y'$ і воно має $n$ коренів, тобто його  можна записати у вигляді  
+	\item Нехай рівняння $F(x, y, y') = 0$ можна розв'язати відносно $y'$ і воно має $n$ коренів, тобто його можна записати у вигляді 
 	\begin{equation*}
 		\prod_{i=1}^n (y' - f_i(x, y)) = 0.
 	\end{equation*}

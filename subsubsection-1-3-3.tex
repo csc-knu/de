@@ -1,25 +1,24 @@
-% version 1.0
 Рівняння вигляду 
 \begin{equation*}
-	\frac{\diff y}{\diff x} + p(x) \cdot y + r(x) \cdot y^2 = q(x)
+	\frac{\diff y}{\diff x} + p(x) y + r(x) y^2 = q(x)
 \end{equation*} 
 називається рівнянням Рікатті. В загальному випадку рівняння Рікатті не інтегрується. Відомі лише деякі частинні випадки рівнянь Рікатті, що інтегруються в квадратурах. Розглянемо один з них. Нехай відомий один частинний розв’язок $y = y_1(x)$. Робимо заміну $y = y_1(x) + z$ і одержуємо
 \begin{equation*}
-	\frac{\diff y_1(x)}{\diff x} + \frac{\diff z}{\diff x} + p(x) \cdot (y_1(x) + z) + r(x) \cdot (y_1(x) + z)^2 = q(x).
+	\frac{\diff y_1(x)}{\diff x} + \frac{\diff z}{\diff x} + p(x) (y_1(x) + z) + r(x) (y_1(x) + z)^2 = q(x).
 \end{equation*}
 
 Оскільки $y_1(x)$ --- частинний розв’язок, то
 \begin{equation*}
-	\frac{\diff y_1(x)}{\diff x} + p(x) \cdot y_1 + r(x) \cdot y_1^2 = q(x).
+	\frac{\diff y_1(x)}{\diff x} + p(x) y_1 + r(x) y_1^2 = q(x).
 \end{equation*}
 
 Розкривши в попередній рівності дужки і використовуючи останнє зауваження, одержуємо
 \begin{equation*}
-	\frac{\diff z}{\diff x} + p(x) \cdot z + 2 r(x) \cdot y_1(x) \cdot z + r(x) \cdot z^2 = 0.
+	\frac{\diff z}{\diff x} + p(x) z + 2 r(x) y_1(x) z + r(x) z^2 = 0.
 \end{equation*}
 
 Перепишемо одержане рівняння у вигляді
 \begin{equation*}
-	\frac{\diff z}{\diff x} + \left(p(x) + 2 r(x) \cdot y_1(x)\right) \cdot z = - r(x) \cdot z^2 ,
+	\frac{\diff z}{\diff x} + \left(p(x) + 2 r(x) y_1(x)\right) z = - r(x) z^2 ,
 \end{equation*}
 це рівняння Бернуллі з $m = 2$.

@@ -1,66 +1,65 @@
-% version 1.0
 В деяких випадках рівняння
 \begin{equation*}
-	M(x, y) \cdot \diff x + N(x, y) \cdot \diff y = 0,
+	M(x, y) \diff x + N(x, y) \diff y = 0,
 \end{equation*}
 не є рівнянням в повних диференціалах, але існує функція $\mu = \mu(x,y)$ така, що рівняння
 \begin{equation*}
-	\mu(x,y) \cdot M(x, y) \cdot \diff x + \mu(x,y) \cdot N(x, y) \cdot \diff y = 0,
+	\mu(x,y) M(x, y) \diff x + \mu(x,y) N(x, y) \diff y = 0,
 \end{equation*}
 вже буде рівнянням в повних диференціалах. Необхідною та достатньою умовою цього є рівність
 \begin{equation*}
-	\frac{\partial}{\partial y} (\mu(x,y) \cdot M(x, y)) = \frac{\partial}{\partial x} (\mu(x,y) \cdot N(x, y)),
+	\frac{\partial}{\partial y} (\mu(x,y) M(x, y)) = \frac{\partial}{\partial x} (\mu(x,y) N(x, y)),
 \end{equation*}
 або
 \begin{equation*}
-	\frac{\partial \mu}{\partial y} \cdot M + \mu \cdot \frac{\partial M}{\partial y} = \frac{\partial \mu}{\partial x} \cdot N + \mu \cdot \frac{\partial N}{\partial x}.
+	\frac{\partial \mu}{\partial y} M + \mu \frac{\partial M}{\partial y} = \frac{\partial \mu}{\partial x} N + \mu \frac{\partial N}{\partial x}.
 \end{equation*}
 
-Таким чином замість звичайного диференціального рівняння відносно функції $y(x)$ одержимо диференціальне рівняння в частинних похідних відносно функції $\mu(x, y)$. \\
+Таким чином замість звичайного диференціального рівняння відносно функції $y(x)$ одержимо диференціальне рівняння в частинних похідних відносно функції $\mu(x, y)$. \parvskip
 
-Задача інтегрування його значно спрощується, якщо відомо в якому вигляді шукати функцію $\mu(x,y)$, наприклад $\mu = \mu(\omega(x,y))$ де $\omega(x,y)$ -- відома функція. В цьому випадку одержуємо
+Задача інтегрування його значно спрощується, якщо відомо в якому вигляді шукати функцію $\mu(x,y)$, наприклад $\mu = \mu(\omega(x,y))$ де $\omega(x,y)$ --- відома функція. В цьому випадку одержуємо
 \begin{equation*}
 	\frac{\partial \mu}{\partial y} = \frac{\diff \mu}{\diff \omega} \cdot \frac{\partial \omega}{\partial y}, \quad \frac{\partial \mu}{\partial x} = \frac{\diff \mu}{\diff \omega} \cdot \frac{\partial \omega}{\partial x}
 \end{equation*}
 
 Після підстановки в попереднє рівняння маємо
 \begin{equation*}
-	\frac{\diff \mu}{\diff \omega} \cdot \frac{\partial \omega}{\partial y} \cdot M + \mu \cdot \frac{\partial M}{\partial y} = \frac{\diff \mu}{\diff \omega} \cdot \frac{\partial \omega}{\partial x} \cdot N + \mu \cdot \frac{\partial N}{\partial x}.
+	\frac{\diff \mu}{\diff \omega} \cdot \frac{\partial \omega}{\partial y} \cdot M + \mu \frac{\partial M}{\partial y} = \frac{\diff \mu}{\diff \omega} \cdot \frac{\partial \omega}{\partial x} \cdot N + \mu \frac{\partial N}{\partial x}.
 \end{equation*}
 або
 \begin{equation*}
-	\frac{\diff \mu}{\diff \omega} \left( \frac{\partial \omega}{\partial x} \cdot N - \frac{\partial \omega}{\partial y} \cdot M \right) = \mu \left( \frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} \right).
+	\frac{\diff \mu}{\diff \omega} \left( \frac{\partial \omega}{\partial x} N - \frac{\partial \omega}{\partial y} M \right) = \mu \left( \frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} \right).
 \end{equation*}
 
 Розділимо змінні
 \begin{equation*}
-	\frac{\diff \mu}{\mu} = \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{\frac{\partial \omega}{\partial x} \cdot N - \frac{\partial \omega}{\partial y} \cdot M} \cdot \diff \omega.
+	\frac{\diff \mu}{\mu} = \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{\frac{\partial \omega}{\partial x} N - \frac{\partial \omega}{\partial y} M} \diff \omega.
 \end{equation*}
 
 Проінтегрувавши і поклавши сталу інтегрування одиницею, одержимо:
 \begin{equation*}
-	\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{\frac{\partial \omega}{\partial x} \cdot N - \frac{\partial \omega}{\partial y} \cdot M} \cdot \diff \omega\right\}.
+	\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{\frac{\partial \omega}{\partial x} N - \frac{\partial \omega}{\partial y} M} \diff \omega\right\}.
 \end{equation*}
 
 Розглянемо частинні випадки.
 \begin{enumerate}
-	\item Нехай $\omega(x, y) = x$. Тоді $\frac{\partial \omega}{\partial x} = 1$, $\frac{\partial \omega}{\partial y} = 0$, $\diff \omega = \diff x$ і формула має вигляд
+	\item Нехай $\omega(x, y) = x$. Тоді $\partial \omega / \partial x = 1$, $\partial \omega / \partial y = 0$, $\diff \omega = \diff x$ і формула має вигляд
 	\begin{equation*}
-		\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{N} \cdot \diff x\right\}.
+		\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{N} \diff x\right\}.
 	\end{equation*}	
 
-	\item Нехай $\omega(x, y) = y$. Тоді $\frac{\partial \omega}{\partial x} = 0$, $\frac{\partial \omega}{\partial y} = 1$, $\diff \omega = \diff y$ і формула має вигляд
+	\item Нехай $\omega(x, y) = y$. Тоді $\partial \omega / \partial x = 0$, $\partial \omega / \partial y = 1$, $\diff \omega = \diff y$ і формула має вигляд
 	\begin{equation*}
-		\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{-M} \cdot \diff y\right\}.
+		\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{-M} \diff y\right\}.
 	\end{equation*}
 
-	\item Нехай $\omega(x, y) = x^2 \pm y^2$. Тоді $\frac{\partial \omega}{\partial x} = 2 x$, $\frac{\partial \omega}{\partial y} = \pm 2y$, $\diff \omega = \diff (x^2 \pm y^2)$ і формула має вигляд
+	\item Нехай $\omega(x, y) = x^2 \pm y^2$. Тоді $\partial \omega / \partial x = 2 x$, $\partial \omega / \partial y = \pm 2y$, $\diff \omega = \diff (x^2 \pm y^2)$ і формула має вигляд
 	\begin{equation*}
-		\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{2 x N \mp 2 y M} \cdot \diff (x^2 \pm y^2)\right\}.
+		\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{2 x N \mp 2 y M} \diff (x^2 \pm y^2)\right\}.
 	\end{equation*}
 
-	\item Нехай $\omega(x, y) = x y$. Тоді $\frac{\partial \omega}{\partial x} = y$, $\frac{\partial \omega}{\partial y} = x$, $\diff \omega = \diff (xy)$ і формула має вигляд
+	\item Нехай $\omega(x, y) = x y$. Тоді $\partial \omega / \partial x = y$, $\partial \omega / \partial y = x$, $\diff \omega = \diff (xy)$ і формула має вигляд
 	\begin{equation*}
-		\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{yN-xM} \cdot \diff (xy)\right\}.
+		\mu(\omega(x,y)) = \exp\left\{\int \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} }{yN-xM} \diff (xy)\right\}.
 	\end{equation*}
 \end{enumerate}

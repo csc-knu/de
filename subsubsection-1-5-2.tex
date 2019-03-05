@@ -1,4 +1,3 @@
-% version 1.0
 \begin{enumerate}
 	\item Розв'язати рівняння вигляду $F(y') = 0$:
 	\begin{example}
@@ -6,7 +5,7 @@
 	\end{example}
 	
 	\begin{solution}
-		Рівняння має дійсний розв'язок, тобто воно поставлене коректно. Тому його розв'язком буде $\left(\frac{y - C}{x}\right)^3 - 1 = 0$.	
+		Рівняння має дійсний розв'язок, тобто воно поставлене коректно. Тому його розв'язком буде \[\left(\frac{y - C}{x}\right)^3 - 1 = 0.\]
 	\end{solution}
 	
 	\begin{multicols}{2}
@@ -25,24 +24,24 @@
 	\end{example}
 	
 	\begin{solution}
-		Робимо параметризацію $y' = t$, $x = t^3 + t$. Використовуючи основну форму запису $\diff y = y' \cdot \diff x$ одержимо \[ \diff y = t \cdot (3t^2 + 1) \cdot \diff t.\]
+		Робимо параметризацію $y' = t$, $x = t^3 + t$. Використовуючи основну форму запису $\diff y = y' \diff x$ одержимо \[ \diff y = t (3t^2 + 1) \diff t.\]
 	
-		Звідси \[ y = \int t \cdot (3t^2 + 1) \cdot \diff t = \frac{3t^4}{4} + \frac{t^2}{2} + C.\]
+		Звідси \[ y = \int t (3t^2 + 1) \diff t = \frac{3t^4}{4} + \frac{t^2}{2} + C.\]
 	
 		Остаточний розв'язок у параметричній формі має вигляд\[ x = t^3 + t, \quad y = \frac{3t^4}{4} + \frac{t^2}{2} + C.\]
 	\end{solution}
 
 	\begin{multicols}{2}
 		\begin{problem}
-			\[ x \cdot ((y')^2 - 1) = 2y'; \]
+			\[ x ((y')^2 - 1) = 2y'; \]
 		\end{problem}
 		
 		\begin{problem}
-			\[ x = y' \cdot \sqrt{(y')^2 - 1}; \]
+			\[ x = y' \sqrt{(y')^2 - 1}; \]
 		\end{problem}
 		
 		\begin{problem}
-		 	\[ y' \cdot (x - \ln y') - 1. \]
+		 	\[ y' (x - \ln y') - 1. \]
 		\end{problem}
 	\end{multicols}
 
@@ -52,10 +51,10 @@
 	\end{example}
 
 	\begin{solution}
-		Робимо параметризацію $y' = t$, $y = t^2 + 2t^3$. Використовуючи основну форму запису $\diff y = y' \cdot \diff x$, одержуємо
-		\[ (2t + 6t^2) \cdot \diff t = t \cdot \diff x.\]
+		Робимо параметризацію $y' = t$, $y = t^2 + 2t^3$. Використовуючи основну форму запису $\diff y = y' \diff x$, одержуємо
+		\[ (2t + 6t^2) \diff t = t \diff x.\]
 
-		Звідси \[ \diff x = (2 + 6t) \cdot \diff t, \quad x = \int(2+6t) \cdot \diff t = 2t + 3t^2 + C.\]
+		Звідси \[ \diff x = (2 + 6t) \diff t, \quad x = \int(2+6t) \diff t = 2t + 3t^2 + C.\]
 
 		Остаточний розв'язок у параметричній формі має вигляд 
 		\[ x = 2t + 3t^2, \quad y = t^2 + 2t^.\]
@@ -69,7 +68,7 @@
 		\end{problem}
 		
 		\begin{problem}
-			\[ y = (y' - 1) \cdot e^{y'}; \]
+			\[ y = (y' - 1) e^{y'}; \]
 		\end{problem}
 		
 		\begin{problem}
@@ -83,40 +82,35 @@
 	\end{example}
 
 	\begin{solution}
-		Робимо параметризацію $y' = t$, $y = - xt + 4 \sqrt{t}$. Диференціюємо друге рівняння.
-		\[ \diff y = - x \cdot \diff t - t \cdot \diff x + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t.\]
+		Робимо параметризацію \[ y' = t, \quad y = - xt + 4 \sqrt{t}.\] Диференціюємо друге рівняння.
+		\[ \diff y = - x \diff t - t \diff x + \frac{2}{\sqrt{t}} \diff t.\]
 
-		Оскільки зроблено заміну $\diff y = t \cdot \diff x$, то одержимо
-		\[ t \cdot \diff x = - x \cdot \diff t - t \cdot \diff x + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t,\]
+		Оскільки зроблено заміну $\diff y = t \diff x$, то одержимо \[ t \diff x = - x \diff t - t \diff x + \frac{2\diff t}{\sqrt{t}},\] або \[ 2 t \diff x = - x \diff t + \frac{2 \diff t}{\sqrt{t}}.\]
 
-		або
-		\[ 2 t \cdot \diff x = - x \cdot \diff t + 2 \cdot \frac{1}{\sqrt{t}} \cdot \diff t.\]
-
-		Звідси
-		\[ \frac{\diff x}{\diff t} + \frac{x}{2t} = \frac{1}{t \cdot \sqrt{t}}.\]
+		Звідси \[ \frac{\diff x}{\diff t} + \frac{x}{2t} = \frac{1}{t \sqrt{t}}.\]
 
 		Розв'язок лінійного неоднорідного рівняння може бути представлений у вигляді
 		\begin{multline*}
-			x = \exp\left\{ - \int \frac{\diff t}{2t} \right\} \cdot \left( \int \exp\left\{\int \frac{\diff t}{2t} \right\} \cdot \frac{1}{t\cdot\sqrt{t}} + C\right) = \\
-			= \frac{1}{\sqrt{t}} \cdot \left(\int \frac {\diff t}{t} + C\right) = \frac{\ln |t| + C}{\sqrt{t}}.
+			x = \exp\left\{ - \int \frac{\diff t}{2t} \right\} \left( \int \exp\left\{\int \frac{\diff t}{2t} \right\} \frac{1}{t\sqrt{t}} + C\right) = \\
+			= \frac{1}{\sqrt{t}} \left(\int \frac {\diff t}{t} + C\right) = \frac{\ln |t| + C}{\sqrt{t}}.
 		\end{multline*}
 
-		Остаточно маємо \[ x = \frac{\ln |t| + C}{\sqrt{t}}, \quad y = - \sqrt{t} \cdot (\ln |t| + C) + 4 \sqrt{t}. \] 
+		Остаточно маємо \[ x = \frac{\ln |t| + C}{\sqrt{t}}, \quad y = - \sqrt{t} (\ln |t| + C) + 4 \sqrt{t}. \] 
 
 		Крім того при діленні на $t$ втратили $y \equiv 0$.
 	\end{solution}
 
 	\begin{multicols}{2}
 		\begin{problem}
-			\[ y = 2 x y' - 4 \cdot (y')^3;\]
+			\[ y = 2 x y' - 4 (y')^3;\]
 		\end{problem}
 	
 		\begin{problem}
-			\[ y = x \cdot (y')^2 - 2 \cdot (y')^3;\]
+			\[ y = x (y')^2 - 2 (y')^3;\]
 		\end{problem}
 	
 		\begin{problem}
-		 	\[ x y' \cdot (y' + 2) = y;\]
+		 	\[ x y' (y' + 2) = y;\]
 		\end{problem}
 	
 		\begin{problem}
@@ -131,14 +125,14 @@
 	
 	\begin{solution}
 		Робимо параметризацію $y' = t$, $y = x t - t^2$. Диференціюємо друге рівняння:
-		\[ \diff y = x \cdot \diff t + t \cdot \diff x - 2 t \cdot \diff t.\]
+		\[ \diff y = x \diff t + t \diff x - 2 t \diff t.\]
 
-		Оскільки зроблено заміну $\diff y = t \cdot \diff x$, то одержимо
-		\[ t \cdot \diff x = x \cdot \diff t + t \cdot \diff x - 2 t \cdot \diff t.\]
+		Оскільки зроблено заміну $\diff y = t \diff x$, то одержимо
+		\[ t \diff x = x \diff t + t \diff x - 2 t \diff t.\]
 
-		Звідси $(x - 2t) \cdot \diff t = 0$. І маємо дві гілки
+		Звідси $(x - 2t) \diff t = 0$. І маємо дві гілки
 		\begin{enumerate}
-			\item Особливий розв'язок $x = 2t$, $y = t^2$, або $y = \frac{x^2}{4}$.
+			\item Особливий розв'язок $x = 2t$, $y = t^2$, або $y = x^2 / 4$.
 			\item Загальний розвозок $y = C x - C^2$.
 		\end{enumerate}
 	\end{solution}
@@ -209,30 +203,30 @@
 	\begin{solution}
 		Введемо параметризацію рівняння \[x = u, \quad y' = v, \quad y = \frac {u^2 + 2 u v - v^2}{4}.\] 
 
-		Використовуючи співвідношення $\diff y = y' \cdot \diff x$, одержимо рівняння
-		\[ \frac1u (2u \cdot \diff u + 2 u \cdot \diff v + 2 v \cdot \diff u - 2 v \cdot \diff v) = v \cdot \diff u.\]
+		Використовуючи співвідношення $\diff y = y' \diff x$, одержимо рівняння
+		\[ \frac1u (2u \diff u + 2 u \diff v + 2 v \diff u - 2 v \diff v) = v \diff u.\]
 
-		Перепишемо його у вигляді \[ (u+v)\cdot\diff u+(u-v)\cdot\diff v=2v\cdot\diff u,\] або \[ (u-v)\cdot\diff u+(u-v)\cdot\diff v=0,\]
+		Перепишемо його у вигляді \[ (u+v)\diff u+(u-v)\diff v=2v\diff u,\] або \[ (u-v)\diff u+(u-v)\diff v=0,\]
 	
 		Воно розділяється на два 
 		\begin{enumerate}
-			\item $\diff u + \diff v = 0 \implies v = - u + C$. \\
+			\item $\diff u + \diff v = 0 \implies v = - u + C$. \parvskip
 
-			Підставивши в параметризовану систему, одержуємо \[x = u, \quad y = \frac{u^2+2u\cdot(-u+C)-(-u+C)^2}{4},\]
+			Підставивши в параметризовану систему, одержуємо \[x = u, \quad y = \frac{u^2+2u(-u+C)-(-u+C)^2}{4},\]
 
-			 або \[y = \frac{x^2+2x\cdot(-x+C)-(-x+C)^2}{4} = \frac{-2x^2+4Cx-C^2}{4}.\]
+			 або \[y = \frac{x^2+2x(-x+C)-(-x+C)^2}{4} = \frac{-2x^2+4Cx-C^2}{4}.\]
 
-			\item $u - v = 0 \implies v = u$. І розв'язок має вигляд $y = \frac{x^2}{2}$.
+			\item $u - v = 0 \implies v = u$. І розв'язок має вигляд $y = x^2/ 2$.
 		\end{enumerate}
 	\end{solution}
 
 	\begin{multicols}{2}
 		\begin{problem}
-			\[5y+(y')^2=x\cdot(x+y');\]
+			\[5y+(y')^2=x(x+y');\]
 		\end{problem}
 
 		\begin{problem}
-			\[x^2\cdot(y')^2=xyy'+1;\]
+			\[x^2(y')^2=xyy'+1;\]
 		\end{problem}
 
 		\begin{problem}
@@ -240,11 +234,11 @@
 		\end{problem}
 
 		\begin{problem}
-			\[y=x\cdot(y')^2-2\cdot(y')^3;\]
+			\[y=x(y')^2-2(y')^3;\]
 		\end{problem}
 
 		\begin{problem}
-			\[2xy'-y=y'\cdot\ln(yy');\]
+			\[2xy'-y=y'\ln(yy');\]
 		\end{problem}
 
 		\begin{problem}
@@ -258,14 +252,14 @@
 	\end{example}
 
 	\begin{solution}
-		Це рівняння розв'язується відносно $y'$. Маємо  \[y' = y, \quad y' = - y.\]
+		Це рівняння розв'язується відносно $y'$. Маємо \[y' = y, \quad y' = - y.\]
 
-		Розв'язок першого має вигляд $y = ce^x$, другого $Ce^{-x}$. Загальний розв'язок має вигляд \[ (y - ce^x)\cdot(y-Ce^{-x})=0.\]
+		Розв'язок першого має вигляд $y = ce^x$, другого $Ce^{-x}$. Загальний роз\-в'яз\-ок має вигляд \[ (y - ce^x)(y-Ce^{-x})=0.\]
 	\end{solution}
 	
 	\begin{multicols}{2}
 		\begin{problem}
-			\[y^2\cdot((y')^2+1)=1;\]
+			\[y^2((y')^2+1)=1;\]
 		\end{problem}
 		
 		\begin{problem}
@@ -273,7 +267,7 @@
 		\end{problem}
 		
 		\begin{problem}
-			\[x\cdot(y')^2=y;\]
+			\[x(y')^2=y;\]
 		\end{problem}
 		
 		\begin{problem}
@@ -281,7 +275,7 @@
 		\end{problem}
 		
 		\begin{problem}
-			\[xy'\cdot(xy'+y)=2y^2.\]
+			\[xy'(xy'+y)=2y^2.\]
 		\end{problem}
 	\end{multicols}
 \end{enumerate}

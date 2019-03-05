@@ -1,7 +1,6 @@
-% version 1.0
-Клас диференціальних рівнянь, що інтегруються в квадратурах, досить невеликий, тому мають велике значення наближені методи розв'язку диференціальних рівнянь. Але, щоб використовувати ці методи, треба бути впевненим в існуванні розв'язку шуканого рівняння та в його єдиності. \\
+Клас диференціальних рівнянь, що інтегруються в квадратурах, досить невеликий, тому мають велике значення наближені методи розв'язку диференціальних рівнянь. Але, щоб використовувати ці методи, треба бути впевненим в існуванні розв'язку шуканого рівняння та в його єдиності. \parvskip
 
-Зараз значна частина теорем існування  та єдиності розв'язків не тільки диференціальних, але й рівнянь інших видів доводиться методом стискаючих відображень. \\
+Зараз значна частина теорем існування та єдиності розв'язків не тільки диференціальних, але й рівнянь інших видів доводиться методом стискаючих відображень. \parvskip
 
 \begin{definition} 
 	Простір $M$ називається метричним, якщо для довільних двох точок $x,y\in M$ визначена функція $\rho(x,y)$, що задовольняє аксіомам:
@@ -15,7 +14,7 @@
 \end{definition}
 
 \begin{example*} 
-	Векторний $n$-вимірний простір $\RR^n$. \\
+	Векторний $n$-вимірний простір $\RR^n$. \parvskip
 
 	Нехай $x=(x_1,x_2,\ldots,x_n)$, $y=(y_1,y_2,\ldots,y_n)$. За метрику можна взяти: 
 	\begin{equation*}
@@ -43,14 +42,14 @@
 \end{definition}
 
 \begin{definition} 
-	Метричний простір $M$ називається повним, якщо довільна фундаментальна послідовність точок $\{x_n\}$ простору $M$ збігається до деякої точки $x_0$ простору $M$.
+	Метричний простір називається повним, якщо довільна фундаментальна послідовність точок простору збігається до деякої точки простору.
 \end{definition}
 
 \begin{theorem}[принцип стискаючих відображень] 
 	Нехай в повному метричному просторі $M$ задано оператор $A$, що задовольняє умовам.
 	\begin{enumerate}
 		\item Оператор $A$ переводить точки простору $M$ в точки цього ж простору, тобто якщо $x\in M$, то і $Ax \in M$.
-		\item Оператор $A$ є оператором стиску, тобто $\rho(Ax,Ay)\le\alpha\rho(x,y)$, де $0<\alpha<1$, $x,y$ --- довільні точки $M$. 
+		\item Оператор $A$ є оператором стиску, тобто $\rho(Ax,Ay)\le\alpha\rho(x,y)$, де стала $0 < \alpha < 1$, а $x,y$ --- довільні точки $M$. 
 	\end{enumerate}
 
 	Тоді існує єдина нерухома точка $\bar x \in M$, яка є розв'язком операторного рівняння $A\bar x=\bar x$ і вона може бути знайдена методом послідовних відображень, тобто $x = \lim_{n\to\infty} x_n$, де $x_{n+1} = A x_n$, причому $x_0$ вибирається довільно.
@@ -65,15 +64,15 @@
 	\end{align*}
 
 	Оцінимо $\rho(x_n, x_{n+m})$. Застосувавши $m-1$ раз нерівність трикутника, отримуємо 
-	\begin{multline*}
-		\rho(x_n, x_{n+m}) \le \rho(x_n, x_{n+1}) + \rho(x_{n+1}, x_{n+2}) + \ldots + \rho(x_{n+m-1},x_{n+m}) \le \\
-		\le \alpha^n \rho(x_1, x_0) + \alpha^{n+1} \rho(x_1, x_0) +\alpha^{n+m-1} \rho(x_1, x_0) = \\
-		= (\alpha^n + \alpha^{n+1} + \ldots + \alpha^{n + m}) \cdot \rho(x_1, x_0) < \frac{\alpha^n}{1 - \alpha} \cdot \rho(x_1, x_0) \xrightarrow[n\to\infty]{} 0.
-	\end{multline*}
+	\begin{align*}
+		\rho(x_n, x_{n+m}) &\le \rho(x_n, x_{n+1}) + \rho(x_{n+1}, x_{n+2}) + \ldots + \rho(x_{n+m-1},x_{n+m}) \le \\
+		&\le \alpha^n \rho(x_1, x_0) + \alpha^{n+1} \rho(x_1, x_0) +\alpha^{n+m-1} \rho(x_1, x_0) = \\
+		&= (\alpha^n + \alpha^{n+1} + \ldots + \alpha^{n + m}) \rho(x_1, x_0) < \frac{\alpha^n}{1 - \alpha} \rho(x_1, x_0) \xrightarrow[n\to\infty]{} 0.
+	\end{align*}
 	
-	Тобто послідовність $\{x_n\}$ є фундаментальною і, в силу повноти простору $M$, збігається до деякого елемента цього ж простора $x$. \\
+	Тобто послідовність $\{x_n\}$ є фундаментальною і, в силу повноти простору $M$, збігається до деякого елемента цього ж простора $x$. \parvskip
 
-	Покажемо, що $x$ є нерухомою точкою $A$, тобто $Ax=x$.\\
+	Покажемо, що $x$ є нерухомою точкою $A$, тобто $Ax=x$.\parvskip
 
 	Нехай від супротивного $Ax=\bar x$ і $x\ne\bar x$. Застосувавши нерівність трикутника, одержимо $\rho(x,\bar x) < \rho(x, x_{n+1}) + \rho(x_{n+1}, \bar x)$. Оцінимо кожний з доданків.
 	\begin{enumerate}
@@ -81,7 +80,7 @@
 		\item $\rho(x_{n+1}, \bar x) = \rho(Ax_n, Ax) \le \alpha \rho(x_n, x) \xrightarrow[n\to\infty]{} 0$.
 	\end{enumerate}
 	
-	Таким чином $\rho(x, \bar x) \le 0$, а в силу невід'ємності метрики це значить, що $x = \bar x$. \\
+	Таким чином $\rho(x, \bar x) \le 0$, а в силу невід'ємності метрики це значить, що $x = \bar x$. \parvskip
 
 	Покажемо, що нерухома точка єдина. Нехай, від супротивного, існують дві точки $x$ і $y$: $A x = x$ і $A y = y$. Але тоді
 	\begin{equation*}
@@ -94,7 +93,7 @@
 З використанням теореми про нерухому точку доведемо теорему про існування та єдиність розв'язку задачі Коші диференціального рівняння, розв'язаного відносно похідної.
 
 \begin{theorem}[про існування та єдиність розв'язку задачі Коші]
-	Нехай у диференціальному рівнянні $\frac{\diff y}{\diff x} = f(x, y)$ функція $f(x,y)$ визначена в прямокутнику
+	Нехай у диференціальному рівнянні $\diff y / \diff x = f(x, y)$ функція $f(x,y)$ визначена в прямокутнику
 	\begin{equation*}
 		D = \{(x,y) : x_0 - a \le x \le x_0 + a, y_0 - b \le y \le y_0 + b\},
 	\end{equation*}
@@ -103,11 +102,11 @@
 		\item $f(x,y)$ неперервна по $x$ та $y$ у $D$;
 		\item $f(x,y)$ задовольняє умові Ліпшиця по змінній $y$, тобто 
 		\begin{equation*}
-			|f(x, y_1) - f(x, y_2)| \le N \cdot |y_1 - y_2|, \quad N = const.
+			|f(x, y_1) - f(x, y_2)| \le N |y_1 - y_2|, \quad N = const.
 		\end{equation*}
 	\end{enumerate}
 
-	Тоді існує єдиний розв'язок $y = y(x)$ диференціального рівняння, який визначений при $x_0 - h \le x \le x_0 + h$, і задовольняє умові $y(x_0) = y_0$, де $h < \min \{a, b / M, 1 / N\}$, $M = \max_{(x, y) \in D} |f(x,y)|$.
+	Тоді існує єдиний розв'язок $y = y(x)$ диференціального рівняння, який визначений при $x_0 - h \le x \le x_0 + h$, і задовольняє умові $y(x_0) = y_0$, де позначено $h < \min \{a, b / M, 1 / N\}$, $M = \max_{(x, y) \in D} |f(x,y)|$.
 \end{theorem}
 
 \begin{proof}
@@ -121,28 +120,28 @@
 		y(x) = \int_{x_0}^x f(t, y(t)) \diff t + y_0 = A y.
 	\end{equation*}
 	
-	Розглянемо оператор $A$. Через те, що  
+	Розглянемо оператор $A$. Через те, що 
 	\begin{equation*}
-		\left|\int_{x_0}^x f(t, y(t)) \diff t \right| \le \int_{x_0}^x |f(t, y(t))| \diff t \le M \cdot |x-x_0| \le Mh \le b,
+		\left|\int_{x_0}^x f(t, y(t)) \diff t \right| \le \int_{x_0}^x |f(t, y(t))| \diff t \le M |x-x_0| \le Mh \le b,
 	\end{equation*}
 
-	то оператор $A$ ставить у відповідність кожній неперервній функції $y(x)$, визначеній при $x\in[x_0 - h, x_0 + h]$ й обмеженій $|y(x)-y_0|\le b$ також неперервну функцію $Ay$,  визначену при $x\in[x_0 - h, x_0 + h]$ й обмежену $|y(x)-y_0|\le b$. \\
+	то оператор $A$ ставить у відповідність кожній неперервній функції $y(x)$, визначеній при $x\in[x_0 - h, x_0 + h]$ й обмеженій $|y(x)-y_0|\le b$ також неперервну функцію $Ay$, визначену при $x\in[x_0 - h, x_0 + h]$ й обмежену $|y(x)-y_0|\le b$. \parvskip
 
 	Перевіримо, чи є оператор $A$ оператором стиску:
 	\begin{align*}
 		\rho(Ay, Az) &= \max_{x \in[x_0-h,x_0+h]} \left|y_0 + \int_{x_0}^x f(t, y(t)) \diff y - y_0 - \int_{x_0}^x f(t, z(t)) \diff t\right| \le \\
 		&\le \max_{x \in[x_0-h,x_0+h]} \int_{x_0}^x |f(t, y(t)) - f(t, z(t))| \diff t \le \\
-		&\le N \cdot \max_{x \in[x_0-h,x_0+h]} \int_{x_0}^x |y(t) - z(t)| \diff t \le \\
-		&\le N \cdot \max_{x \in[x_0-h,x_0+h]} |y(t) - z(t)| \cdot \int_{x_0}^x \diff t \le N \cdot \rho(y, z) \cdot h.
+		&\le N \max_{x \in[x_0-h,x_0+h]} \int_{x_0}^x |y(t) - z(t)| \diff t \le \\
+		&\le N \max_{x \in[x_0-h,x_0+h]} |y(t) - z(t)| \int_{x_0}^x \diff t \le N \rho(y, z) h.
 	\end{align*}
 
-	І оскільки $Nh < 1$, то оператор $A$ є оператором стиску. Відповідно до принципу стискаючих відображень операторне рівняння $Ay=y$ має єдиний розв'язок, тобто інтегральне рівняння чи початкова задача Коші також має єдиний розв'язок.
+	Оскільки $Nh < 1$, то оператор $A$ є оператором стиску. Відповідно до принципу стискаючих відображень операторне рівняння $Ay=y$ має єдиний розв'язок. Тобто інтегральне рівняння чи початкова задача Коші також має єдиний роз\-в'яз\-ок.
 \end{proof}
 
 \begin{remark}
 	Умову Ліпшиця можна замінити іншою, більш грубою, але легше перевіряємою умовою існування обмеженої по модулю частинної похідної $f_y^\prime (x,y)$ в області $D$. Дійсно,
 	\begin{equation*}
-		|f(x,y_1)-f(x,y_2)|=|f_y^\prime(x,\xi)|\cdot|y_1-y_2|\le N\cdot|y_1-y_2|,
+		|f(x,y_1)-f(x,y_2)|=|f_y^\prime(x,\xi)||y_1-y_2|\le N|y_1-y_2|,
 	\end{equation*}
 
 	де $N = \max_{(x,y)\in D} |f_y^\prime(x,y)|$.
@@ -178,7 +177,7 @@
 \end{theorem}
 
 \begin{proof}
-	Роблячи заміну $x = y(x_0, y_0, x) - y_0$, $t = x - x_0$ одержимо диференціальне рівняння  
+	Роблячи заміну $x = y(x_0, y_0, x) - y_0$, $t = x - x_0$ одержимо диференціальне рівняння 
 	\begin{equation*}
 		\frac{\diff z}{\diff t} = f(t + x_0, z + y_0)
 	\end{equation*}
@@ -187,7 +186,7 @@
 \end{proof}
 
 \begin{theorem}[про диференційованість розв'язків]
-	Якщо в околі точки $(x_0,y_0)$ функція $f(x,y)$ має неперервні змішані похідні до $k$-го порядку, то розв'язок $y(x)$ рівняння
+	Якщо в околі деякої точки $(x_0,y_0)$ функція $f(x,y)$ має неперервні змішані похідні до $k$-го порядку, то роз\-в'яз\-ок $y(x)$ рівняння
 	\begin{equation*}
 		\frac{\diff y}{\diff x} = f(x, y)
 	\end{equation*}
@@ -203,18 +202,17 @@
 
 	яку можна диференціювати
 	\begin{equation*}
-		\frac{\diff^2 y}{{\diff x}^2} = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot \frac{\diff y}{\diff x} = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot f.
+		\frac{\diff^2 y}{{\diff x}^2} = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \frac{\diff y}{\diff x} = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} f.
 	\end{equation*}
 
 	Якщо $k > 1$, то праворуч функція неперервно диференційована. Продиференціюємо її ще раз
-	\begin{multline*}
-		\frac{\diff^3 y}{{\diff x}^3} = \frac{\partial^2 f}{{\partial x}^2} + \frac{\partial^2 f}{\partial x \partial y} \cdot \frac{\diff y}{\diff x} + \left( \frac{\partial^2 f}{\partial y \partial x} + \frac{\partial^2 f}{{\partial y}^2} \cdot \frac{\diff y}{\diff x} \right) \cdot f + \\
-		+ \frac{\partial f}{\partial y} \cdot \left( \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot \frac{\diff y}{\diff x} \right),
-	\end{multline*}
+	\begin{equation*}
+		\frac{\diff^3 y}{{\diff x}^3} = \frac{\partial^2 f}{{\partial x}^2} + \frac{\partial^2 f}{\partial x \partial y} \frac{\diff y}{\diff x} + \left( \frac{\partial^2 f}{\partial y \partial x} + \frac{\partial^2 f}{{\partial y}^2} \frac{\diff y}{\diff x} \right) f + \frac{\partial f}{\partial y} \left( \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \frac{\diff y}{\diff x} \right),
+	\end{equation*}
 
 	або
 	\begin{equation*}
-		\frac{\diff^3 y}{{\diff x}^3} = \frac{\partial^2 f}{{\partial x}^2} + 2 \cdot \frac{\partial^2 f}{\partial x \partial y} \cdot f + \frac{\partial^2 f}{{\partial y}^2} \cdot f^2 + \frac{\partial f}{\partial y} \cdot \left( \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot F \right),
+		\frac{\diff^3 y}{{\diff x}^3} = \frac{\partial^2 f}{{\partial x}^2} + 2 \frac{\partial^2 f}{\partial x \partial y} f + \frac{\partial^2 f}{{\partial y}^2} f^2 + \frac{\partial f}{\partial y} \left( \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} F \right),
 	\end{equation*}
 
 	Проробивши це $k$ разів, отримаємо твердження теореми.
@@ -230,25 +228,25 @@
 	F(x_0, y_0, y') = 0.
 \end{equation*}
 
-Це рівняння має корені $y_0^\prime, y_1^\prime, \ldots, y_n^\prime$. Задача Коші для диференціального рівняння, не розв'язаного відносно похідної, ставиться в такий спосіб. \\
+Це рівняння має корені $y_0^\prime, y_1^\prime, \ldots, y_n^\prime$. Задача Коші для диференціального рівняння, не розв'язаного відносно похідної, ставиться в такий спосіб. \parvskip
 
 Потрібно знайти розв'язок $y=y(x)$ диференціального, що задовольняє умовам $y(x_0)=y_0$, $y'(x_0)=y_i^\prime$, де $x_0,y_0$ --- довільні значення, а $y_i^\prime$ --- один з вибраних наперед коренів алгебраїчного рівняння.
 
-\begin{theorem}[існування й єдиність розв'язку задачі Коші рівняння, не розв'язаного  відносно похідної]
+\begin{theorem}[існування й єдиність розв'язку задачі Коші рівняння, не роз\-в'яз\-а\-но\-го відносно похідної]
 	Нехай у замкненому околі точки $(x_0, y_0, y_i^\prime)$ функція $F(x,y,y')$ задовольняє умовам:
 	\begin{enumerate}
 		\item $F(x,y,y')$ --- неперервна по всіх аргументах;
-		\item $\frac{\partial F}{\partial y'}$ існує і відмінна від нуля;
-		\item $\left| \frac{\partial F}{\partial y}\right| \le N_0$.
+		\item $\partial F / \partial y'$ існує і відмінна від нуля;
+		\item $\left| \partial F / \partial y \right| \le N_0$.
 	\end{enumerate}
 
-	Тоді при $x \in [x_0 - h, x_0 + h]$, де $h$ --- досить мал е, існує єдиний розв'язок $y=y(x)$ рівняння $F(x, y, y') =0$, що задовольняє початковій умові $y(x_0)=y_0$, $y'(x_0)=y_i^\prime$.
+	Тоді при $x \in [x_0 - h, x_0 + h]$, де $h$ --- досить мале, існує єдиний розв'язок $y=y(x)$ рівняння $F(x, y, y') =0$, що задовольняє початковій умові $y(x_0)=y_0$, $y'(x_0)=y_i^\prime$.
 \end{theorem}
 
 \begin{proof}
-	Як випливає з математичного аналізу відповідно до теореми про неявну функцію можна стверджувати, що умови 1) і 2) гарантують існування єдиної неперервної в околі точки $(x_0,y_0,y_i^\prime)$ функції $y'=f(x,y)$, обумовленої рівнянням $F(x,y,y')=0$, для якої $y'(x_0)=y_i^\prime$. Перевіримо, чи задовольняє $f(x,y)$ умові Ліпшиця чи більш грубій $\left|\frac{\partial f}{\partial y}\right| \le N$. Диференціюємо $F(x,y,y')=0$ по $y$. Оскільки $y'=f(x,y)$, то одержуємо
+	Як випливає з математичного аналізу відповідно до теореми про неявну функцію можна стверджувати, що умови 1) і 2) гарантують існування єдиної неперервної в околі точки $(x_0,y_0,y_i^\prime)$ функції $y'=f(x,y)$, обумовленої рівнянням $F(x,y,y')=0$, для якої $y'(x_0)=y_i^\prime$. Перевіримо, чи задовольняє функція $f(x,y)$ умові Ліпшиця чи більш грубій $\left|\partial f / \partial y\right| \le N$. Диференціюємо $F(x,y,y')=0$ по $y$. Оскільки $y'=f(x,y)$, то одержуємо
 	\begin{equation*}
-		\frac{\partial F}{\partial y} + \frac{\partial F}{\partial y'} \cdot \frac{\partial f}{\partial y} = 0.
+		\frac{\partial F}{\partial y} + \frac{\partial F}{\partial y'} \frac{\partial f}{\partial y} = 0.
 	\end{equation*}
 
 	Звідси
@@ -256,5 +254,5 @@
 		\frac{\partial f}{\partial y} = - \frac{\frac{\partial F}{\partial y}}{\frac{\partial F}{\partial y'}} 
 	\end{equation*} 
 
-	З огляду на умови 2), 3), одержимо, що в деякому околі точки $(x_0,y_0)$ буде $\left|\frac{\partial f}{\partial y}\right| \le N$ і для рівняння $y'=f(x,y)$ виконані умови теореми існування й єдиності розв'язку задачі Коші.
+	З огляду на умови 2), 3), одержимо, що в деякому околі точки $(x_0,y_0)$ буде $\left|\partial f / \partial y\right| \le N$ і для рівняння $y'=f(x,y)$ виконані умови теореми існування й єдиності розв'язку задачі Коші.
 \end{proof}

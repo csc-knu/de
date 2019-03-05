@@ -1,12 +1,11 @@
-% version 1.0
 Нехай рівняння має вигляд
 \begin{equation*}
-	M(x, y) \cdot \diff	x + N(x, y) \cdot \diff y = 0.
+	M(x, y) \diff	x + N(x, y) \diff y = 0.
 \end{equation*}
 
 Якщо функції $M(x, y)$ та $N(x, y)$ однорідні одного ступеня, то рівняння називається однорідним. Нехай функції $M(x, y)$ та $N(x, y)$ однорідні ступеня $k$, тобто
 \begin{equation*}
-	M(t \cdot x, t \cdot y) = t^k \cdot M(x, y), \qquad N(t \cdot x, t \cdot y) = t^k \cdot N(x, y).
+	M(t x, t y) = t^k M(x, y), \qquad N(t x, t y) = t^k N(x, y).
 \end{equation*}
 
 Робимо заміну 
@@ -16,25 +15,25 @@
 
 Після підстановки одержуємо
 \begin{equation*}
-	M(x, u x) \cdot \diff x + N(x, u x) \cdot (u \diff x + x \diff u) = 0,
+	M(x, u x) \diff x + N(x, u x) (u \diff x + x \diff u) = 0,
 \end{equation*}
 або 
 \begin{equation*}
-	x^k M(1, u) \cdot \diff x + x^k N(1, u) \cdot (u \diff x + x \diff u) = 0.
+	x^k M(1, u) \diff x + x^k N(1, u) (u \diff x + x \diff u) = 0.
 \end{equation*}
 
 Скоротивши на $x^k$ і розкривши дужки, запишемо 
 \begin{equation*}
-	M(1, u) \cdot \diff x + N(1, u) \cdot u \diff x + N(1, u) \cdot x \diff u = 0.
+	M(1, u) \diff x + N(1, u) u \diff x + N(1, u) x \diff u = 0.
 \end{equation*}
 
 Згрупувавши, одержимо рівняння зі змінними, що розділяються
 \begin{equation*}
-	(M(1, u) + N(1, u) \cdot u) \diff x + N(1, u) \cdot x \diff u = 0,
+	(M(1, u) + N(1, u) u) \diff x + N(1, u) x \diff u = 0,
 \end{equation*}
 або 
 \begin{equation*}
-	\int \frac{\diff x}{x} + \int \frac{N(1, u) \cdot \diff u}{M(1, u) + N(1, u) \cdot u} = C.
+	\int \frac{\diff x}{x} + \int \frac{N(1, u) \diff u}{M(1, u) + N(1, u) u} = C.
 \end{equation*}
 
-Взявши інтеграли та замінивши $u = y / x$, отримаємо загальний інтеграл $\Phi(x, y / x) = C$.
+Явно узявши інтеграли та заміняючи $u = y / x$, отримаємо загальний інтеграл $\Phi \left( x, y / x \right) = C$.

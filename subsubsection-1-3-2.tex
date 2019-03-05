@@ -1,25 +1,24 @@
-% version 1.0
 Рівняння вигляду
 \begin{equation*}
-	\frac{\diff y}{\diff x} + p(x) \cdot y = q(x) \cdot y^m, \quad m \ne 1
+	\frac{\diff y}{\diff x} + p(x) y = q(x) y^m, \quad m \ne 1
 \end{equation*}
 називається рівнянням Бернуллі. Розділимо на $y^m$ і одержимо 
 \begin{equation*}
-	y^{-m} \cdot \frac{\diff y}{\diff x} + p(x) \cdot y^{1-m} = q(x).
+	y^{-m} \frac{\diff y}{\diff x} + p(x) y^{1-m} = q(x).
 \end{equation*}
 
 Зробимо заміну: 
 \begin{equation*}
-	y^{1-m} = z, \quad (1 - m) \cdot y^{-m} \cdot \frac{\diff y}{\diff x} = \diff z.
+	y^{1-m} = z, \quad (1 - m) y^{-m} \frac{\diff y}{\diff x} = \diff z.
 \end{equation*}
 
 Підставивши в рівняння, отримаємо
 \begin{equation*}
-	\frac{1}{1-m} \cdot \frac{\diff z}{\diff x} + p(x) \cdot z = q(x).
+	\frac{1}{1-m} \cdot \frac{\diff z}{\diff x} + p(x) z = q(x).
 \end{equation*}
 
 Одержали лінійне диференціальне рівняння. Його розв’язок має вигляд
 \begin{multline*}
-	z = \exp\left\{ -(1 - m) \cdot \int p(x) \diff x \right\} \cdot \\
-	\cdot \left( (1-m) \cdot \int q(x) \cdot \exp\left\{ (1 - m) \cdot \int p(x) \diff x \right\} + C\right).
+	z = \exp\left\{ -(1 - m) \int p(x) \diff x \right\} \cdot \\ 
+	\cdot \left( (1-m) \int q(x) \exp\left\{ (1 - m) \int p(x) \diff x \right\} \diff x + C\right).
 \end{multline*}
