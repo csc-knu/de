@@ -1,46 +1,40 @@
+% version 1.0
 Нехай рівняння має вигляд
 \begin{equation*}
-	%\label{eq:1.2.1}
 	M(x, y) \cdot \diff	x + N(x, y) \cdot \diff y = 0.
 \end{equation*}
 
 Якщо функції $M(x, y)$ та $N(x, y)$ однорідні одного ступеня, то рівняння називається однорідним. Нехай функції $M(x, y)$ та $N(x, y)$ однорідні ступеня $k$, тобто
 \begin{equation*}
-	%\label{eq:1.2.2}
 	M(t \cdot x, t \cdot y) = t^k \cdot M(x, y), \qquad N(t \cdot x, t \cdot y) = t^k \cdot N(x, y).
 \end{equation*}
 
 Робимо заміну 
 \begin{equation*}
-	%\label{eq:1.2.2_5}
 	y = u x, \quad \diff y = u \diff x + x \diff u.
 \end{equation*}
+
 Після підстановки одержуємо
 \begin{equation*}
-	%\label{eq:1.2.3}
 	M(x, u x) \cdot \diff x + N(x, u x) \cdot (u \diff x + x \diff u) = 0,
 \end{equation*}
 або 
 \begin{equation*}
-	%\label{eq:1.2.4}
 	x^k M(1, u) \cdot \diff x + x^k N(1, u) \cdot (u \diff x + x \diff u) = 0.
 \end{equation*}
 
 Скоротивши на $x^k$ і розкривши дужки, запишемо 
 \begin{equation*}
-	%\label{eq:1.2.5}
 	M(1, u) \cdot \diff x + N(1, u) \cdot u \diff x + N(1, u) \cdot x \diff u = 0.
 \end{equation*}
+
 Згрупувавши, одержимо рівняння зі змінними, що розділяються
 \begin{equation*}
-	%\label{eq:1.2.6}
 	(M(1, u) + N(1, u) \cdot u) \diff x + N(1, u) \cdot x \diff u = 0,
 \end{equation*}
 або 
 \begin{equation*}
-	%\label{eq:1.2.7}
 	\int \frac{\diff x}{x} + \int \frac{N(1, u) \cdot \diff u}{M(1, u) + N(1, u) \cdot u} = C.
 \end{equation*}
 
 Взявши інтеграли та замінивши $u = y / x$, отримаємо загальний інтеграл $\Phi(x, y / x) = C$.
-

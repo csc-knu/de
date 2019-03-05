@@ -1,62 +1,54 @@
+% version 1.0
 Рівняння, що є лінійним відносно невідомої функції та її похідної, називається лінійним диференціальним рівнянням. Його загальний вигляд такий:
 \begin{equation*}
-	%\label{eq:1.3.1}
 	\frac{\diff y}{\diff x} + p(x) \cdot y = q(x).
 \end{equation*}
 
 Якщо $q(x) \equiv 0$, тобто рівняння має вигляд
 \begin{equation*}
-	%\label{eq:1.3.2}
 	\frac{\diff y}{\diff x} + p(x) \cdot y = 0,
 \end{equation*}
-то воно зветься однорідним. Однорідне рівняння є рівнянням зі змінними, що розділяються і розв’язується таким чином:
+то воно зветься однорідним. Однорідне рівняння є рівнянням зі змінними, що розділяються і розв'язується таким чином:
 \begin{align*}
-	%\label{eq:1.3.2_25}
 	\frac{\diff y}{y} &= -p(x) \cdot \diff x, \\
 	\int \frac{\diff y}{y} &= - \int p(x) \cdot \diff x, \\
 	\ln y &= - \int p(x) \cdot \diff x + \ln C.
 \end{align*}
+
 Нарешті 
 \begin{equation*}
-	%\label{eq:1.3.2_5}
 	y = C \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\}
 \end{equation*}
 
-Розв’язок неоднорідного рівняння будемо шукати методом варіації довільних сталих (методом невизначених множників Лагранжа). Він складається в тому, що розв’язок неоднорідного рівняння шукається в такому ж вигляді, як і розв’язок однорідного, але $C$ вважається невідомою функцією від $x$, тобто $C = C(x)$ і 
+Розв'язок неоднорідного рівняння будемо шукати методом варіації довільних сталих (методом невизначених множників Лагранжа). Він складається в тому, що розв'язок неоднорідного рівняння шукається в такому ж вигляді, як і розв'язок однорідного, але $C$ вважається невідомою функцією від $x$, тобто $C = C(x)$ і 
 \begin{equation*}
-	%\label{eq:1.3.2_75}
 	y = C(x) \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\}	
 \end{equation*}
 
 Для знаходження $C(x)$ підставимо $y$ у рівняння
 \begin{multline*} 
-	%\label{eq:1.3.3}
 	\frac{\diff C(x)}{\diff x} \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\} = - C(x) \cdot p(x) \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\} + \\
 	+ p(x) \cdot C(x) \cdot \exp \left\{ - \int p(x) \cdot \diff x \right\} = q(x).
 \end{multline*}
 
 Звідси
 \begin{equation*} 
-	%\label{eq:1.3.4}
 	\diff C(x) = q(x) \cdot \exp \left\{\int p(x) \cdot \diff x \right\} \cdot \diff x.
 \end{equation*}
 
 Проінтегрувавши, одержимо
 \begin{equation*} 
-	%\label{eq:1.3.5}
 	C(x) = \int q(x) \cdot \exp \left\{\int p(x) \cdot \diff x \right\} \cdot \diff x + C.
 \end{equation*}
 
-І загальний розв’язок неоднорідного рівняння має вигляд
+І загальний розв'язок неоднорідного рівняння має вигляд
 \begin{multline*} 
-	%\label{eq:1.3.6}
 	y = \exp \left\{ - \int p(x) \cdot \diff x \right\} \cdot \\
 	\cdot \left( \int q(x) \cdot \exp \left\{\int p(x) \cdot \diff x \right\} \cdot \diff x + C\right).
 \end{multline*}
 
-Якщо використовувати початкові умови $y(x_0) = y_0$, то розв’язок можна записати у формі Коші:
+Якщо використовувати початкові умови $y(x_0) = y_0$, то розв'язок можна записати у формі Коші:
 \begin{multline*} 
-	%\label{eq:1.3.7}
 	y(x, x_0, y_0) = \exp \left\{ - \int_{x_0}^x p(t) \cdot \diff t \right\} \cdot \\
 	\cdot \left( \int_{x_0}^x q(t) \cdot \exp \left\{\int_t^x p(\xi) \cdot \diff \xi \right\} \cdot \diff t + y_0\right).
 \end{multline*}

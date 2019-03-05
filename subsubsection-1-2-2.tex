@@ -1,7 +1,6 @@
-Нехай маємо рівняння вигляду
+% version 1.0
+Нехай маємо дробово-лінійне рівняння вигляду
 \begin{equation*}
-	%\label{eq:1.2.8}
-	\label{eq:linear-fractional-equation}
 	\frac{\diff y}{\diff x} = f \left( \frac{a_1 x + b_1 y + c_1}{a_2 x + b_2 y + c_2} \right).
 \end{equation*}
 
@@ -9,13 +8,16 @@
 \begin{enumerate}
 	\item 
 	\begin{equation*}
-		%\label{eq:1.2.9}
-		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} \ne 0.
+		\Delta = 
+		\begin{vmatrix} 
+			a_1 & b_1 \\ 
+			a_2 & b_2 
+		\end{vmatrix} 
+		\ne 0.
 	\end{equation*}
 
 	Тоді система алгебраїчних рівнянь
 	\begin{equation*}
-		%\label{eq:1.2.10}
 		\left\{
 			\begin{aligned}
 				a_1 x + b_1 y + c_1 &= 0, \\
@@ -25,80 +27,78 @@
 	\end{equation*}
 	має єдиний розв’язок $(x_0, y_0)$. Проведемо заміну 
 	\begin{equation*}
-		%\label{eq:1.2.10_5}
-		\left\{\begin{aligned}
+		\left\{
+			\begin{aligned}
 			x &= x_1 + x_0, \\
 			y &= y_1 + y_0
-		\end{aligned}\right.
+			\end{aligned}
+		\right.
 	\end{equation*}
 	та отримаємо
 	\begin{multline*}
-		%\label{eq:1.2.11}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 \cdot (x_1 + x_0) + b_1 \cdot (y_1 + y_0) + c_1}{a_2 \cdot (x_1 + x_0) + b_2 \cdot (y_1 + y_0) + c_2} \right) = \\
 		= f \left( \frac{a_1 x_1 + b_1 y_1 + (a_1 x_0 + b_1 y_0 + c_1)}{a_2 x_1 + b_2 y_1 + (a_2 x_0 + b_2 y_0 + c_2)} \right)
 	\end{multline*}
 
-	Оскільки $(x_0, y_0)$ -- розв’язок алгебраїчної системи, то диференціальне рівняння набуде вигляду
+	Оскільки $(x_0, y_0)$ --- розв’язок алгебраїчної системи, то диференціальне рівняння набуде вигляду
 	\begin{equation*}
-		%\label{eq:1.2.12}
 		\frac{\diff y_1}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 y_1}{a_2 x_1 + b_2 y_1} \right)
 	\end{equation*}
 	і є однорідним нульового ступеня. Робимо заміну 
 	\begin{equation*}
-		%\label{eq:1.2.12_5}
 		y_1 = u x_1, \quad \diff y_1 = u \cdot \diff x_1 + x_1 \cdot \diff u.
 	\end{equation*}
 
 	Підставимо в рівняння
 	\begin{equation*}
-		%\label{eq:1.2.13}
 		u + x_1 \cdot \frac{\diff u}{\diff x_1} = f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right).
 	\end{equation*}
 	
 	Одержимо
 	\begin{equation*}
-		%\label{eq:1.2.14}
 		x_1 \cdot \diff u + \left( u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right) \right) \diff x_1 = 0.
 	\end{equation*}
 
 	Розділивши змінні, маємо
 	\begin{equation*}
-		%\label{eq:1.2.15}
 		\int \frac{\diff u}{u - f \left( \frac{a_1 x_1 + b_1 u x_1}{a_2 x_1 + b_2 u x_1} \right)} + \ln (x_1) = C.
 	\end{equation*}
 
 	І загальний інтеграл рівняння має вигляд $\Phi(u, x_1) = C$. Повернувшись до вихідних змінних, запишемо
 	\begin{equation*}
-		%\label{eq:1.2.16}
 		\Phi \left( \frac{y - y_0}{x - x_0}, x - x_0 \right) = C.
 	\end{equation*}
 
 	\item Нехай 
 	\begin{equation*}
-		%\label{eq:1.2.17}
-		\Delta = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} = 0,
+		\Delta = 
+		\begin{vmatrix} 
+			a_1 & b_1 \\ 
+			a_2 & b_2 
+		\end{vmatrix} 
+		= 0,
 	\end{equation*}
 	тобто коефіцієнти рядків лінійно залежні і
 	\begin{equation*}
-		%\label{eq:1.2.18}
 		a_1 x + b_1 y = \alpha \cdot (a_2 x + b_2 y).
 	\end{equation*}
 
-	Робимо заміну $a_2 x + b_2 y = z$. Звідси $\frac{\diff y}{\diff x} = \frac{1}{b_2} \cdot \left( \frac{\diff z}{\diff x} - a_2 \right)$. \\
+	Робимо заміну $a_2 x + b_2 y = z$. Звідси 
+	\begin{equation*}
+		\frac{\diff y}{\diff x} = \frac{1}{b_2} \cdot \left( \frac{\diff z}{\diff x} - a_2 \right)
+	\end{equation*}
 
 	Підставивши в диференціальне рівняння, одержимо
 	\begin{equation*}
-		%\label{eq:1.2.19}
 		\frac{1}{b_2} \cdot \left( \frac{\diff z}{\diff x} - a_2 \right) = f \left ( \frac{\alpha z + c_1}{z + c_2} \right),
 	\end{equation*}
 	або
 	\begin{equation*}
-		%\label{eq:1.2.20}
 		\frac{\diff z}{\diff x} = a_2 + b_2 \cdot f \left ( \frac{\alpha z + c_1}{z + c_2} \right),
 	\end{equation*}
+
 	Розділивши змінні, отримаємо
 	\begin{equation*}
-		%\label{eq:1.2.21}
 		\int \frac{\diff z}{a_2 + b_2 \cdot f \left ( \frac{\alpha z + c_1}{z + c_2} \right)} - x = C,
 	\end{equation*}
 
