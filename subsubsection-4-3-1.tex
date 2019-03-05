@@ -1,6 +1,6 @@
-Розглянемо один з методів побудови розв’язку систем з сталими коефіцієнтами. \\
+Розглянемо один з методів побудови розв'язку систем з сталими коефіцієнтами. \parvskip
 
-Розв’язок системи шукаємо у вигляді вектора \[x(t) = (\alpha_1 \cdot e^{\lambda t}, \alpha_2 \cdot e^{\lambda t}, \ldots, \alpha_n \cdot e^{\lambda t})^T. \]
+Розв'язок системи шукаємо у вигляді вектора \[x(t) = (\alpha_1 \cdot e^{\lambda t}, \alpha_2 \cdot e^{\lambda t}, \ldots, \alpha_n \cdot e^{\lambda t})^T. \]
 
 Підставивши в систему диференціальних рівнянь, одержимо
 \begin{equation*}
@@ -26,7 +26,7 @@
 	\right.
 \end{equation*}
  
-Отримана однорідна система лінійних алгебраїчних рівнянь має розв’язок тоді і тільки тоді, коли її визначник дорівнює нулю, тобто
+Отримана однорідна система лінійних алгебраїчних рівнянь має роз\-в'яз\-ок тоді і тільки тоді, коли її визначник дорівнює нулю, тобто
 \begin{equation*}
 	\begin{vmatrix}
 		a_{11} - \lambda & a_{12} & \ldots & a_{1n} \\
@@ -59,16 +59,16 @@
 	\right.
 \end{equation*}
 
-одержуємо відповідні ненульові розв’язки системи
+одержуємо відповідні ненульові розв'язки системи
 \begin{equation*}
 	\alpha^1 = \begin{pmatrix} \alpha_1^1 \\ \alpha_2^1 \\ \vdots \\ \alpha_n^1 \end{pmatrix}, \quad
 	\alpha^2 = \begin{pmatrix} \alpha_1^2 \\ \alpha_2^2 \\ \vdots \\ \alpha_n^2 \end{pmatrix}, \quad
 	\ldots, \quad
 	\alpha^n = \begin{pmatrix} \alpha_1^n \\ \alpha_2^n \\ \vdots \\ \alpha_n^n \end{pmatrix}
 \end{equation*}
-що являють собою власні вектори, які відповідають власним числам $\lambda_i$, $i = \overline{1, n}$. \\
+що являють собою власні вектори, які відповідають власним числам $\lambda_i$, $i = \overline{1, n}$. \parvskip
 
-У такий спосіб одержимо $n$ розв’язків
+У такий спосіб одержимо $n$ розв'язків
 \begin{equation*}
 	x_1(t) = \begin{pmatrix} \alpha_1^1 \cdot e^{\lambda_1 x} \\ \alpha_2^1 \cdot e^{\lambda_1 x} \\ \vdots \\ \alpha_n^1 \cdot e^{\lambda_1 x} \end{pmatrix}, 
 	x_2(t) = \begin{pmatrix} \alpha_1^2 \cdot e^{\lambda_2 x} \\ \alpha_2^2 \cdot e^{\lambda_2 x} \\ \vdots \\ \alpha_n^2 \cdot e^{\lambda_2 x} \end{pmatrix},
@@ -76,7 +76,7 @@
 	x_n(t) = \begin{pmatrix} \alpha_1^n \cdot e^{\lambda_n x} \\ \alpha_2^n \cdot e^{\lambda_n x} \\ \vdots \\ \alpha_n^n \cdot e^{\lambda_n x} \end{pmatrix}
 \end{equation*}
 
-Причому оскільки $\lambda_1, \lambda_2, \ldots, \lambda_n$ --- різні а $\alpha^1, \alpha^2, \ldots, \alpha^n$ -- відповідні їм власні вектори, то розв’язки $x_1(t), x_2(t), \ldots, x_n(t)$ --- лінійно незалежні, і загальний розв’язок системи має вигляд
+Причому оскільки $\lambda_1, \lambda_2, \ldots, \lambda_n$ --- різні а $\alpha^1, \alpha^2, \ldots, \alpha^n$ -- відповідні їм власні вектори, то розв'язки $x_1(t), x_2(t), \ldots, x_n(t)$ --- лінійно незалежні, і загальний розв'язок системи має вигляд
 \begin{equation*}
 	x(t) = \sum_{i = 1}^n C_i \cdot x_i(t).
 \end{equation*}
@@ -100,13 +100,13 @@
 	\begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n \end{pmatrix} =
 	\begin{pmatrix} r_1 + i \cdot s_1 \\ r_2 + i \cdot s_2 \\ \vdots \\ r_n + i \cdot s_n \end{pmatrix}
 \end{equation*}
-і, відповідно, розв’язок
+і, відповідно, розв'язок
 \begin{equation*}
 	\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} =
 	\begin{pmatrix} (r_1 + i \cdot s_1) \cdot e^{(p + i q) t} \\ (r_2 + i \cdot s_2) \cdot e^{(p + i q) t} \\ \vdots \\ (r_n + i \cdot s_n) \cdot e^{(p + i q) t} \end{pmatrix}
 \end{equation*}
 
-Використовуючи залежність $e^{(p + i q) t} = e^{pt} \cdot (\cos (qt) + i \cdot \sin(qt))$, перетворимо розв’язок до вигляду:
+Використовуючи залежність $e^{(p + i q) t} = e^{pt} \cdot (\cos (qt) + i \cdot \sin(qt))$, перетворимо розв'язок до вигляду:
 \begin{multline*}
 	\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} =
 	\begin{pmatrix} (r_1 + i \cdot s_1) \cdot e^{p t} \cdot (\cos (qt) + i \cdot \sin(qt)) \\ (r_2 + i \cdot s_2) \cdot e^{p t} \cdot (\cos (qt) + i \cdot \sin(qt)) \\ \vdots \\ (r_n + i \cdot s_n) \cdot e^{p t} \cdot (\cos (qt) + i \cdot \sin(qt)) \end{pmatrix} = \\
@@ -114,18 +114,18 @@
 	= u(t) + i \cdot v(t).
 \end{multline*}
 
-І, як випливає з властивості 4 розв’язків однорідних систем, якщо комплексна функція $u(t) + i \cdot v(t)$ дійсного аргументу є розв’язком однорідної системи, то окремо дійсна і уявна частини також будуть розв’язками, тобто комплексним власним числам $\lambda_{1,2} = p \pm i \cdot q$  відповідають лінійно незалежні розв’язки
+І, як випливає з властивості 4 розв'язків однорідних систем, якщо комплексна функція $u(t) + i \cdot v(t)$ дійсного аргументу є розв'язком однорідної системи, то окремо дійсна і уявна частини також будуть розв'язками, тобто комплексним власним числам $\lambda_{1,2} = p \pm i \cdot q$  відповідають лінійно незалежні розв'язки
 \begin{align*}
 	u(t) &= \begin{pmatrix} e^{p t} \cdot (r_1 \cdot \cos (qt) - s_1 \cdot \sin(qt)) \\ e^{pt} \cdot (r_2 \cdot \cos (qt) - s_2 \cdot \sin(qt)) \\ \vdots \\ e^{pt} \cdot (r_n \cdot \cos (qt) - s_n \cdot \sin(qt)) \end{pmatrix}, \\
 	v(t) &= \begin{pmatrix} e^{p t} \cdot (s_1 \cdot \cos (qt) + r_1 \cdot \sin(qt)) \\ e^{pt} \cdot (s_2 \cdot \cos (qt) + r_2 \cdot \sin(qt)) \\ \vdots \\ e^{pt} \cdot (s_n \cdot \cos (qt) + r_n \cdot \sin(qt)) \end{pmatrix}
 \end{align*}
 
-\item Якщо характеристичне рівняння має кратний корінь $\lambda$ кратності $\gamma$, тобто $\lambda_1 = \lambda_2 = \ldots = \lambda_\gamma = \lambda$, то розв’язок системи рівнянь має вигляд
+\item Якщо характеристичне рівняння має кратний корінь $\lambda$ кратності $\gamma$, тобто $\lambda_1 = \lambda_2 = \ldots = \lambda_\gamma = \lambda$, то розв'язок системи рівнянь має вигляд
 \begin{equation*}
 	\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} \left(\alpha_1^1 + \alpha_1^2 \cdot t + \ldots + \alpha_1^\gamma \cdot t^{\gamma - 1}\right) \cdot e^{\lambda t} \\ \left(\alpha_2^1 + \alpha_2^2 \cdot t + \ldots + \alpha_2^\gamma \cdot t^{\gamma - 1}\right) \cdot e^{\lambda t} \\ \vdots \\ \left(\alpha_n^1 + \alpha_n^2 \cdot t + \ldots + \alpha_n^\gamma \cdot t^{\gamma - 1}\right) \cdot e^{\lambda t} \end{pmatrix}
 \end{equation*}
 
-Підставивши його у вихідне диференціальне рівняння і прирівнявши коефіцієнти при однакових степенях, одержимо $\gamma \cdot n$ рівнянь, що містять $\gamma \cdot n$ невідомих. Тому що корінь характеристичного рівняння $\lambda$ має кратність $\gamma$, то ранг отриманої системи $\gamma n - \gamma = \gamma \cdot (n - 1)$. Уводячи $\gamma$ довільних сталих $C_1, C_2, \ldots, C_\gamma$ і розв’язуючи систему, одержимо
+Підставивши його у вихідне диференціальне рівняння і прирівнявши коефіцієнти при однакових степенях, одержимо $\gamma \cdot n$ рівнянь, що містять $\gamma \cdot n$ невідомих. Тому що корінь характеристичного рівняння $\lambda$ має кратність $\gamma$, то ранг отриманої системи $\gamma n - \gamma = \gamma \cdot (n - 1)$. Уводячи $\gamma$ довільних сталих $C_1, C_2, \ldots, C_\gamma$ і розв'язуючи систему, одержимо
 \begin{equation*}
 	\alpha_i^j = \alpha_i^j(C_1, C_2, \ldots, C_\gamma), \quad i = \overline{1, n}, \quad j = \overline{1, \gamma}.
 \end{equation*}
