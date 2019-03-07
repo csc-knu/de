@@ -1,15 +1,15 @@
 Розглянемо один з методів побудови розв'язку систем з сталими коефіцієнтами. \parvskip
 
-Розв'язок системи шукаємо у вигляді вектора \[x(t) = (\alpha_1 \cdot e^{\lambda t}, \alpha_2 \cdot e^{\lambda t}, \ldots, \alpha_n \cdot e^{\lambda t})^T. \]
+Розв'язок системи шукаємо у вигляді вектора \[x(t) = (\alpha_1 e^{\lambda t}, \alpha_2 e^{\lambda t}, \ldots, \alpha_n e^{\lambda t})^T. \]
 
 Підставивши в систему диференціальних рівнянь, одержимо
 \begin{equation*}
 	\left\{
 		\begin{array}{rl}
-			\alpha_1 \cdot \lambda \cdot e^{\lambda t} &= a_{11} \cdot \alpha_1 \cdot e^{\lambda t} + a_{12} \cdot \alpha_2  \cdot e^{\lambda t} + \ldots + a_{1n} \cdot \alpha_n \cdot e^{\lambda t}, \\
-			\alpha_2 \cdot \lambda \cdot e^{\lambda t} &= a_{21} \cdot \alpha_1 \cdot e^{\lambda t} + a_{22} \cdot \alpha_2 \cdot e^{\lambda t} + \ldots + a_{2n} \cdot \alpha_n \cdot e^{\lambda t}, \\
+			\alpha_1 \lambda e^{\lambda t} &= a_{11} \alpha_1 e^{\lambda t} + a_{12} \alpha_2  e^{\lambda t} + \ldots + a_{1n} \alpha_n e^{\lambda t}, \\
+			\alpha_2 \lambda e^{\lambda t} &= a_{21} \alpha_1 e^{\lambda t} + a_{22} \alpha_2 e^{\lambda t} + \ldots + a_{2n} \alpha_n e^{\lambda t}, \\
 			\hdotsfor{2} \\
-			\alpha_n \cdot \lambda \cdot e^{\lambda t} &= a_{n1} \cdot \alpha_1 \cdot e^{\lambda t} + a_{n2} \cdot \alpha_2 \cdot e^{\lambda t} + \ldots + a_{nn} \cdot \alpha_n \cdot e^{\lambda t}.
+			\alpha_n \lambda e^{\lambda t} &= a_{n1} \alpha_1 e^{\lambda t} + a_{n2} \alpha_2 e^{\lambda t} + \ldots + a_{nn} \alpha_n e^{\lambda t}.
 		\end{array}
 	\right.
 \end{equation*}
@@ -18,10 +18,10 @@
 \begin{equation*}
 	\left\{
 		\begin{array}{rl}
-			(a_{11} - \lambda) \cdot \alpha_1 + a_{12} \cdot \alpha_2 + \ldots + a_{1n} \cdot \alpha_n &= 0, \\
-			a_{21} \cdot \alpha_1 + (a_{22} - \lambda) \cdot \alpha_2 + \ldots + a_{2n} \cdot \alpha_n &= 0, \\
+			(a_{11} - \lambda) \alpha_1 + a_{12} \alpha_2 + \ldots + a_{1n} \alpha_n &= 0, \\
+			a_{21} \alpha_1 + (a_{22} - \lambda) \alpha_2 + \ldots + a_{2n} \alpha_n &= 0, \\
 			\hdotsfor{2} \\
-			a_{n1} \cdot \alpha_1 + a_{n2} \cdot \alpha_2 + \ldots + (a_{nn} - \lambda) \cdot \alpha_n &= 0.
+			a_{n1} \alpha_1 + a_{n2} \alpha_2 + \ldots + (a_{nn} - \lambda) \alpha_n &= 0.
 		\end{array}
 	\right.
 \end{equation*}
@@ -29,10 +29,10 @@
 Отримана однорідна система лінійних алгебраїчних рівнянь має роз\-в'яз\-ок тоді і тільки тоді, коли її визначник дорівнює нулю, тобто
 \begin{equation*}
 	\begin{vmatrix}
-		a_{11} - \lambda & a_{12} & \ldots & a_{1n} \\
-		a_{21} & a_{22} - \lambda & \ldots & a_{2n} \\
+		a_{11} - \lambda & a_{12} & \cdots & a_{1n} \\
+		a_{21} & a_{22} - \lambda & \cdots & a_{2n} \\
 		\vdots & \vdots & \ddots & \vdots \\
-		a_{n1} & a_{n2} & \ldots & a_{nn} - \lambda
+		a_{n1} & a_{n2} & \cdots & a_{nn} - \lambda
 	\end{vmatrix} = 0.
 \end{equation*}
 
@@ -42,7 +42,7 @@
 \end{equation*}
 і воно називається характеристичним рівнянням. Розкриємо його
 \begin{equation*}
-	\lambda^n + p_1 \cdot \lambda^{n - 1} + \ldots + p_{n - 1} \cdot \lambda + p_n = 0.
+	\lambda^n + p_1 \lambda^{n - 1} + \ldots + p_{n - 1} \lambda + p_n = 0.
 \end{equation*}
 
 Алгебраїчне рівняння $n$-го ступеня має $n$ коренів. Розглянемо різні випадки:
@@ -51,10 +51,10 @@
 \begin{equation*}
 	\left\{
 		\begin{array}{rl}
-			(a_{11} - \lambda_i) \cdot \alpha_1 + a_{12} \cdot \alpha_2 + \ldots + a_{1n} \cdot \alpha_n &= 0, \\
-			a_{21} \cdot \alpha_1 + (a_{22} - \lambda_i) \cdot \alpha_2 + \ldots + a_{2n} \cdot \alpha_n &= 0, \\
+			(a_{11} - \lambda_i) \alpha_1 + a_{12} \alpha_2 + \ldots + a_{1n} \alpha_n &= 0, \\
+			a_{21} \alpha_1 + (a_{22} - \lambda_i) \alpha_2 + \ldots + a_{2n} \alpha_n &= 0, \\
 			\hdotsfor{2} \\
-			a_{n1} \cdot \alpha_1 + a_{n2} \cdot \alpha_2 + \ldots + (a_{nn} - \lambda_i) \cdot \alpha_n &= 0.
+			a_{n1} \alpha_1 + a_{n2} \alpha_2 + \ldots + (a_{nn} - \lambda_i) \alpha_n &= 0.
 		\end{array}
 	\right.
 \end{equation*}
@@ -70,62 +70,62 @@
 
 У такий спосіб одержимо $n$ розв'язків
 \begin{equation*}
-	x_1(t) = \begin{pmatrix} \alpha_1^1 \cdot e^{\lambda_1 x} \\ \alpha_2^1 \cdot e^{\lambda_1 x} \\ \vdots \\ \alpha_n^1 \cdot e^{\lambda_1 x} \end{pmatrix}, 
-	x_2(t) = \begin{pmatrix} \alpha_1^2 \cdot e^{\lambda_2 x} \\ \alpha_2^2 \cdot e^{\lambda_2 x} \\ \vdots \\ \alpha_n^2 \cdot e^{\lambda_2 x} \end{pmatrix},
+	x_1(t) = \begin{pmatrix} \alpha_1^1 e^{\lambda_1 x} \\ \alpha_2^1 e^{\lambda_1 x} \\ \vdots \\ \alpha_n^1 e^{\lambda_1 x} \end{pmatrix}, 
+	x_2(t) = \begin{pmatrix} \alpha_1^2 e^{\lambda_2 x} \\ \alpha_2^2 e^{\lambda_2 x} \\ \vdots \\ \alpha_n^2 e^{\lambda_2 x} \end{pmatrix},
 	\ldots, 
-	x_n(t) = \begin{pmatrix} \alpha_1^n \cdot e^{\lambda_n x} \\ \alpha_2^n \cdot e^{\lambda_n x} \\ \vdots \\ \alpha_n^n \cdot e^{\lambda_n x} \end{pmatrix}
+	x_n(t) = \begin{pmatrix} \alpha_1^n e^{\lambda_n x} \\ \alpha_2^n e^{\lambda_n x} \\ \vdots \\ \alpha_n^n e^{\lambda_n x} \end{pmatrix}
 \end{equation*}
 
 Причому оскільки $\lambda_1, \lambda_2, \ldots, \lambda_n$ --- різні а $\alpha^1, \alpha^2, \ldots, \alpha^n$ -- відповідні їм власні вектори, то розв'язки $x_1(t), x_2(t), \ldots, x_n(t)$ --- лінійно незалежні, і загальний розв'язок системи має вигляд
 \begin{equation*}
-	x(t) = \sum_{i = 1}^n C_i \cdot x_i(t).
+	x(t) = \sum_{i = 1}^n C_i x_i(t).
 \end{equation*}
 
 Або у векторно-матричній формі запису
 \begin{equation*}
 	\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = 
 	\begin{pmatrix}
-		\alpha_1^1 \cdot e^{\lambda_1 t} & \alpha_1^2 \cdot e^{\lambda_2 t} & \ldots & \alpha_1^n \cdot e^{\lambda_n t} \\
-		\alpha_2^1 \cdot e^{\lambda_1 t} & \alpha_2^2 \cdot e^{\lambda_2 t} & \ldots & \alpha_2^n \cdot e^{\lambda_n t} \\
+		\alpha_1^1 e^{\lambda_1 t} & \alpha_1^2 e^{\lambda_2 t} & \cdots & \alpha_1^n e^{\lambda_n t} \\
+		\alpha_2^1 e^{\lambda_1 t} & \alpha_2^2 e^{\lambda_2 t} & \cdots & \alpha_2^n e^{\lambda_n t} \\
 		\vdots & \vdots & \ddots & \vdots \\
-		\alpha_n^1 \cdot e^{\lambda_1 t} & \alpha_n^2 \cdot e^{\lambda_2 t} & \ldots & \alpha_n^n \cdot e^{\lambda_n t}
+		\alpha_n^1 e^{\lambda_1 t} & \alpha_n^2 e^{\lambda_2 t} & \cdots & \alpha_n^n e^{\lambda_n t}
 	\end{pmatrix}
 	\cdot
 	\begin{pmatrix} C_1 \\ C_2 \\ \vdots \\ C_n \end{pmatrix},
 \end{equation*}
 де $C_1, C_2, \ldots, C_n$ --- довільні сталі.
 
-\item Нехай $\lambda_{1,2} = p \pm i \cdot q$ --- пара комплексно спряжених коренів. Візьмемо один з них, наприклад $\lambda = p + i \cdot q$. Комплексному власному числу відповідає комплексний власний вектор
+\item Нехай $\lambda_{1,2} = p \pm i q$ --- пара комплексно спряжених коренів. Візьмемо один з них, наприклад $\lambda = p + i q$. Комплексному власному числу відповідає комплексний власний вектор
 \begin{equation*}
 	\begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n \end{pmatrix} =
-	\begin{pmatrix} r_1 + i \cdot s_1 \\ r_2 + i \cdot s_2 \\ \vdots \\ r_n + i \cdot s_n \end{pmatrix}
+	\begin{pmatrix} r_1 + i s_1 \\ r_2 + i s_2 \\ \vdots \\ r_n + i s_n \end{pmatrix}
 \end{equation*}
 і, відповідно, розв'язок
 \begin{equation*}
 	\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} =
-	\begin{pmatrix} (r_1 + i \cdot s_1) \cdot e^{(p + i q) t} \\ (r_2 + i \cdot s_2) \cdot e^{(p + i q) t} \\ \vdots \\ (r_n + i \cdot s_n) \cdot e^{(p + i q) t} \end{pmatrix}
+	\begin{pmatrix} (r_1 + i s_1) e^{(p + i q) t} \\ (r_2 + i s_2) e^{(p + i q) t} \\ \vdots \\ (r_n + i s_n) e^{(p + i q) t} \end{pmatrix}
 \end{equation*}
 
-Використовуючи залежність $e^{(p + i q) t} = e^{pt} \cdot (\cos (qt) + i \cdot \sin(qt))$, перетворимо розв'язок до вигляду:
+Використовуючи залежність $e^{(p + i q) t} = e^{pt} (\cos qt + i \sin qt)$, перетворимо розв'язок до вигляду:
 \begin{multline*}
 	\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} =
-	\begin{pmatrix} (r_1 + i \cdot s_1) \cdot e^{p t} \cdot (\cos (qt) + i \cdot \sin(qt)) \\ (r_2 + i \cdot s_2) \cdot e^{p t} \cdot (\cos (qt) + i \cdot \sin(qt)) \\ \vdots \\ (r_n + i \cdot s_n) \cdot e^{p t} \cdot (\cos (qt) + i \cdot \sin(qt)) \end{pmatrix} = \\
-	= \begin{pmatrix} e^{p t} \cdot (r_1 \cdot \cos (qt) - s_1 \cdot \sin(qt)) \\ e^{pt} \cdot (r_2 \cdot \cos (qt) - s_2 \cdot \sin(qt)) \\ \vdots \\ e^{pt} \cdot (r_n \cdot \cos (qt) - s_n \cdot \sin(qt)) \end{pmatrix} + \\ + i \cdot \begin{pmatrix} e^{p t} \cdot (s_1 \cdot \cos (qt) + r_1 \cdot \sin(qt)) \\ e^{pt} \cdot (s_2 \cdot \cos (qt) + r_2 \cdot \sin(qt)) \\ \vdots \\ e^{pt} \cdot (s_n \cdot \cos (qt) + r_n \cdot \sin(qt)) \end{pmatrix} = \\
-	= u(t) + i \cdot v(t).
+	\begin{pmatrix} (r_1 + i s_1) e^{p t} (\cos qt + i \sin qt) \\ (r_2 + i s_2) e^{p t} (\cos qt + i \sin qt) \\ \vdots \\ (r_n + i s_n) e^{p t} (\cos qt + i \sin qt) \end{pmatrix} = \\
+	= \begin{pmatrix} e^{p t} (r_1 \cos qt - s_1 \sin qt) \\ e^{pt} (r_2 \cos qt - s_2 \sin qt) \\ \vdots \\ e^{pt} (r_n \cos qt - s_n \sin qt) \end{pmatrix} + i \begin{pmatrix} e^{p t} (s_1 \cos qt + r_1 \sin qt) \\ e^{pt} (s_2 \cos qt + r_2 \sin qt) \\ \vdots \\ e^{pt} (s_n \cos qt + r_n \sin qt) \end{pmatrix} = \\
+	= u(t) + i v(t).
 \end{multline*}
 
-І, як випливає з властивості 4 розв'язків однорідних систем, якщо комплексна функція $u(t) + i \cdot v(t)$ дійсного аргументу є розв'язком однорідної системи, то окремо дійсна і уявна частини також будуть розв'язками, тобто комплексним власним числам $\lambda_{1,2} = p \pm i \cdot q$  відповідають лінійно незалежні розв'язки
+І, як випливає з властивості 4 розв'язків однорідних систем, якщо комплексна функція $u(t) + i v(t)$ дійсного аргументу є розв'язком однорідної системи, то окремо дійсна і уявна частини також будуть розв'язками, тобто комплексним власним числам $\lambda_{1,2} = p \pm i q$  відповідають лінійно незалежні розв'язки
 \begin{align*}
-	u(t) &= \begin{pmatrix} e^{p t} \cdot (r_1 \cdot \cos (qt) - s_1 \cdot \sin(qt)) \\ e^{pt} \cdot (r_2 \cdot \cos (qt) - s_2 \cdot \sin(qt)) \\ \vdots \\ e^{pt} \cdot (r_n \cdot \cos (qt) - s_n \cdot \sin(qt)) \end{pmatrix}, \\
-	v(t) &= \begin{pmatrix} e^{p t} \cdot (s_1 \cdot \cos (qt) + r_1 \cdot \sin(qt)) \\ e^{pt} \cdot (s_2 \cdot \cos (qt) + r_2 \cdot \sin(qt)) \\ \vdots \\ e^{pt} \cdot (s_n \cdot \cos (qt) + r_n \cdot \sin(qt)) \end{pmatrix}
+	u(t) &= \begin{pmatrix} e^{p t} (r_1 \cos qt - s_1 \sin qt) \\ e^{pt} (r_2 \cos qt - s_2 \sin qt) \\ \vdots \\ e^{pt} (r_n \cos qt - s_n \sin qt) \end{pmatrix}, \\
+	v(t) &= \begin{pmatrix} e^{p t} (s_1 \cos qt + r_1 \sin qt) \\ e^{pt} (s_2 \cos qt + r_2 \sin qt) \\ \vdots \\ e^{pt} (s_n \cos qt + r_n \sin qt) \end{pmatrix}
 \end{align*}
 
 \item Якщо характеристичне рівняння має кратний корінь $\lambda$ кратності $\gamma$, тобто $\lambda_1 = \lambda_2 = \ldots = \lambda_\gamma = \lambda$, то розв'язок системи рівнянь має вигляд
 \begin{equation*}
-	\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} \left(\alpha_1^1 + \alpha_1^2 \cdot t + \ldots + \alpha_1^\gamma \cdot t^{\gamma - 1}\right) \cdot e^{\lambda t} \\ \left(\alpha_2^1 + \alpha_2^2 \cdot t + \ldots + \alpha_2^\gamma \cdot t^{\gamma - 1}\right) \cdot e^{\lambda t} \\ \vdots \\ \left(\alpha_n^1 + \alpha_n^2 \cdot t + \ldots + \alpha_n^\gamma \cdot t^{\gamma - 1}\right) \cdot e^{\lambda t} \end{pmatrix}
+	\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} \left(\alpha_1^1 + \alpha_1^2 t + \ldots + \alpha_1^\gamma t^{\gamma - 1}\right) e^{\lambda t} \\ \left(\alpha_2^1 + \alpha_2^2 t + \ldots + \alpha_2^\gamma t^{\gamma - 1}\right) e^{\lambda t} \\ \vdots \\ \left(\alpha_n^1 + \alpha_n^2 t + \ldots + \alpha_n^\gamma t^{\gamma - 1}\right) e^{\lambda t} \end{pmatrix}
 \end{equation*}
 
-Підставивши його у вихідне диференціальне рівняння і прирівнявши коефіцієнти при однакових степенях, одержимо $\gamma \cdot n$ рівнянь, що містять $\gamma \cdot n$ невідомих. Тому що корінь характеристичного рівняння $\lambda$ має кратність $\gamma$, то ранг отриманої системи $\gamma n - \gamma = \gamma \cdot (n - 1)$. Уводячи $\gamma$ довільних сталих $C_1, C_2, \ldots, C_\gamma$ і розв'язуючи систему, одержимо
+Підставивши його у вихідне диференціальне рівняння і прирівнявши коефіцієнти при однакових степенях, одержимо $\gamma n$ рівнянь, що містять $\gamma n$ невідомих. Тому що корінь характеристичного рівняння $\lambda$ має кратність $\gamma$, то ранг отриманої системи $\gamma n - \gamma = \gamma (n - 1)$. Уводячи $\gamma$ довільних сталих $C_1, C_2, \ldots, C_\gamma$ і розв'язуючи систему, одержимо
 \begin{equation*}
 	\alpha_i^j = \alpha_i^j(C_1, C_2, \ldots, C_\gamma), \quad i = \overline{1, n}, \quad j = \overline{1, \gamma}.
 \end{equation*}

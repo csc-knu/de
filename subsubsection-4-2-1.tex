@@ -1,36 +1,36 @@
 \setcounter{property}{0}
 \begin{property}
-	Якщо вектор $x(t) = (x_1(t), x_2(t), \ldots, x_n(t))^T$ є розв'язком лінійної однорідної системи, то і \[ C \cdot x(t) = (C \cdot x_1(t), C \cdot x_2(t), \ldots, C \cdot x_n(t))^T,\] де $C$ --- стала скалярна величина, також є розв'язком цієї системи.
+	Якщо вектор $x(t) = (x_1(t), x_2(t), \ldots, x_n(t))^T$ є розв'язком лінійної однорідної системи, то і \[ C x(t) = (C x_1(t), C x_2(t), \ldots, C x_n(t))^T,\] де $C$ --- стала скалярна величина, також є розв'язком цієї системи.
 \end{property}
 
 \begin{proof}
 	Дійсно, за умовою 
 	\begin{equation*}
-		\dot x(t) - A(t) \cdot x(t) \equiv 0.
+		\dot x(t) - A(t) x(t) \equiv 0.
 	\end{equation*}
 
 	Але тоді і
 	\begin{equation*}
-		\frac{\diff}{\diff t} (C \cdot x(t)) - A(t) \cdot (C \cdot x(t)) = \\ = C \cdot (\dot x(t) - A(t) \cdot x(t)) \equiv 0
+		\frac{\diff}{\diff t} (C x(t)) - A(t) (C x(t)) = \\ = C (\dot x(t) - A(t) x(t)) \equiv 0
 	\end{equation*}
-	оскільки дорівнює нулю вираз в дужках. Тобто $C \cdot x(t)$ є розв'язком однорідної системи.
+	оскільки дорівнює нулю вираз в дужках. Тобто $C x(t)$ є розв'язком однорідної системи.
 \end{proof}
 
 \begin{property}
-	Якщо дві векторні функції $x_1 = (x_{11}(t), x_{21}(t), \ldots, x_{n1}(t))^T$, $x_2 = (x_{12}(t), x_{22}(t), \ldots, x_{n2}(t))^T$ є розв'язками однорідної системи, то і їхня сума також буде розв'язком однорідної системи.
+	Якщо дві векторні функції \begin{align*} x_1 &= (x_{11}(t), x_{21}(t), \ldots, x_{n1}(t))^T, \\ x_2 &= (x_{12}(t), x_{22}(t), \ldots, x_{n2}(t))^T \end{align*} є розв'язками однорідної системи, то і їхня сума також буде розв'язком однорідної системи.
 \end{property}
 
 \begin{proof}
 	Дійсно, за умовою
 	\begin{align*}
-		\dot x_1(t) - A(t) \cdot x_1(t) &\equiv 0, \\
-		\dot x_2(t) - A(t) \cdot x_2(t) &\equiv 0.
+		\dot x_1(t) - A(t) x_1(t) &\equiv 0, \\
+		\dot x_2(t) - A(t) x_2(t) &\equiv 0.
 	\end{align*}
 
 	Але тоді і
-	\begin{equation*}
-		\frac{\diff}{\diff t} (x_1(t) + x_2(t)) - A(t) \cdot (x_1(t) + x_2(t)) = (\dot x_1(t) - A(t) \cdot x_1(t)) + (\dot x_2(t) - A(t) \cdot x_2(t)) \equiv 0
-	\end{equation*}
+	\begin{multline*}
+		\frac{\diff}{\diff t} (x_1(t) + x_2(t)) - A(t) (x_1(t) + x_2(t)) = \\ = (\dot x_1(t) - A(t) x_1(t)) + (\dot x_2(t) - A(t) x_2(t)) \equiv 0
+	\end{multline*}
 	тому що дорівнюють нулю вирази в дужках, тобто $x_1(t) + x_2(t)$ є розв'язком однорідної системи.
 \end{proof}
 
@@ -41,35 +41,35 @@
 \begin{proof}
 	Дійсно, за умовою
 	\begin{equation*}
-		\dot x_i(t) - A(t) \cdot x_i(t) \equiv 0, \quad i = \overline{1, n}.
+		\dot x_i(t) - A(t) x_i(t) \equiv 0, \quad i = \overline{1, n}.
 	\end{equation*}
 	
 	Але тоді і
-	\begin{multline*}
-		\frac{\diff}{\diff t} \left( \sum_{i=1}^n C_i \cdot x_i(t) \right) - A(t) \cdot \left( \sum_{i = 1}^n C_i \cdot x_i(t) \right) = \\ = \sum_{i = 1}^n C_i \cdot \left( \dot x_i(t) - A(t) \cdot x_i(t) \right) \equiv 0
-	\end{multline*}
-	тому що дорівнює нулю кожний з доданків, тобто $\sum_{i=1}^n C_i \cdot x_i(t)$ є роз\-в'яз\-ком однорідної системи.
+	\begin{equation*}
+		\frac{\diff}{\diff t} \left( \sum_{i=1}^n C_i x_i(t) \right) - A(t) \left( \sum_{i = 1}^n C_i x_i(t) \right) = \sum_{i = 1}^n C_i \left( \dot x_i(t) - A(t) x_i(t) \right) \equiv 0
+	\end{equation*}
+	тому що дорівнює нулю кожний з доданків, тобто $\sum_{i=1}^n C_i x_i(t)$ є роз\-в'яз\-ком однорідної системи.
 \end{proof}
 
 \begin{property}
-	Якщо комплексний вектор з дійсними елементами $u(t) + i \cdot v(t) = (u_1(t), \ldots, u_n(t))^T + i \cdot (v_1(t), \ldots, v_n(t))^T$ є розв'язком однорідної системи, то окремо дійсна та уявна частини є розв'язками системи.
+	Якщо комплексний вектор з дійсними елементами $u(t) + i v(t) = (u_1(t), \ldots, u_n(t))^T + i (v_1(t), \ldots, v_n(t))^T$ є розв'язком однорідної системи, то окремо дійсна та уявна частини є розв'язками системи.
 \end{property}
 
 \begin{proof}
 	Дійсно за умовою
 	\begin{equation*}
-		\frac{\diff}{\diff t} (u(t) + i \cdot v(t)) - A(t) \cdot (u(t) + i \cdot v(t)) \equiv 0.
+		\frac{\diff}{\diff t} (u(t) + i v(t)) - A(t) (u(t) + i v(t)) \equiv 0.
 	\end{equation*}
 
 	Розкривши дужки і зробивши перетворення, одержимо
 	\begin{equation*}
-		(\dot u(t) - A(t) \cdot u(t)) + i \cdot (\dot v(t) - A(t) \cdot v(t)) \equiv 0.
+		(\dot u(t) - A(t) u(t)) + i (\dot v(t) - A(t) v(t)) \equiv 0.
 	\end{equation*}
 	 
 	А комплексний вираз дорівнює нулю тоді і тільки тоді, коли дорівнюють нулю дійсна і уявна частини, тобто
 	\begin{align*}
-		\dot u(t) - A(t) \cdot u(t) &\equiv 0, \\
-		\dot v(t) - A(t) \cdot v(t) &\equiv 0.
+		\dot u(t) - A(t) u(t) &\equiv 0, \\
+		\dot v(t) - A(t) v(t) &\equiv 0.
 	\end{align*}
 	що і було потрібно довести.
 \end{proof}
@@ -77,7 +77,7 @@
 \begin{definition}
 	Вектори \[ x_1 = \begin{pmatrix} x_{11}(t) \\ x_{21}(t) \\ \vdots \\ x_{n1}(t) \end{pmatrix}, \quad x_2 = \begin{pmatrix} x_{12}(t) \\ x_{22}(t) \\ \vdots \\ x_{n2}(t) \end{pmatrix}, \quad \ldots, \quad x_n = \begin{pmatrix} x_{1n}(t) \\ x_{2n}(t) \\ \vdots \\ x_{nn}(t) \end{pmatrix} \] називаються лінійно залежними на відрізку $t \in [a, b]$, якщо існують не всі рівні нулю сталі $C_1, C_2, \ldots, C_n$, такі, що 
 	\begin{equation*}
-		C_1 \cdot x_1(t) + C_2 \cdot x_2(t) + \ldots + C_n \cdot x_n(t) \equiv 0
+		C_1 x_1(t) + C_2 x_2(t) + \ldots + C_n x_n(t) \equiv 0
 	\end{equation*}
 	при $t \in [a, b]$. \\
 
@@ -87,7 +87,7 @@
 \begin{definition}
 	Визначник, що складається з векторів $x_1(t), x_2(t), \ldots, x_n(t)$, тобто
 	\begin{equation*}
-		W[x_1, x_2, \ldots, x_n](t) = \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix}.
+		W[x_1, x_2, \ldots, x_n](t) = \begin{vmatrix} x_{11}(t) & x_{12}(t) & \cdots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \cdots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \cdots & x_{nn}(t) \end{vmatrix}.
 	\end{equation*}
 	називається визначником Вронського.
 \end{definition}
@@ -97,23 +97,23 @@
 \end{theorem}
 
 \begin{proof}
-	За умовою існують не всі рівні нулю $C_1, C_2, \ldots, C_n$, такі, що $C_1 \cdot x_1(t) + C_2 \cdot x_2(t) + \ldots + C_n \cdot x_n(t) \equiv 0$ при $t \in [a, b]$. \\
+	За умовою існують не всі рівні нулю $C_1, C_2, \ldots, C_n$, такі, що $C_1 x_1(t) + C_2 x_2(t) + \ldots + C_n x_n(t) \equiv 0$ при $t \in [a, b]$. \\
 
 	Або, розписавши покоординатно, одержимо
 	\begin{equation*}
 		\left\{
 			\begin{array}{rl}
-				C_1 \cdot x_{11}(t) + C_2 \cdot x_{12}(t) + \ldots + C_n \cdot x_{1n}(t) &\equiv 0, \\
-				C_1 \cdot x_{21}(t) + C_2 \cdot x_{22}(t) + \ldots + C_n \cdot x_{2n}(t) &\equiv 0, \\
-				\hdotsfor{2}, \\
-				C_1 \cdot x_{n1}(t) + C_2 \cdot x_{n2}(t) + \ldots + C_n \cdot x_{nn}(t) &\equiv 0.
+				C_1 x_{11}(t) + C_2 x_{12}(t) + \ldots + C_n x_{1n}(t) &\equiv 0, \\
+				C_1 x_{21}(t) + C_2 x_{22}(t) + \ldots + C_n x_{2n}(t) &\equiv 0, \\
+				\hdotsfor{2} \\
+				C_1 x_{n1}(t) + C_2 x_{n2}(t) + \ldots + C_n x_{nn}(t) &\equiv 0.
 			\end{array}
 		\right.
 	\end{equation*}
 
 	А однорідна система має ненульовий розв'язок $C_1, C_2, \ldots, C_n$ тоді і тільки тоді, коли визначник дорівнює нулю, тобто
 	\begin{equation*}
-		W[x_1, x_2, \ldots, x_n](t) = \begin{vmatrix} x_{11}(t) & x_{12}(t) & \ldots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \ldots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \ldots & x_{nn}(t) \end{vmatrix} \equiv 0, \quad t \in [a, b].
+		W[x_1, x_2, \ldots, x_n](t) = \begin{vmatrix} x_{11}(t) & x_{12}(t) & \cdots & x_{1n}(t) \\ x_{21}(t) & x_{22}(t) & \cdots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \cdots & x_{nn}(t) \end{vmatrix} \equiv 0, \quad t \in [a, b].
 	\end{equation*}
 \end{proof}
 
@@ -124,27 +124,27 @@
 \begin{proof}
 	Нехай, від супротивного, існує точка $t_0 \in [a, b]$ і \[W[x_1, x_2, \ldots, x_n](t_0) = 0.\]
 
-	Тоді виконується система однорідних алгебраїчних рівнянь \[C_1 \cdot x_1(t_0) + C_2 \cdot x_2(t_0) + \ldots + C_n \cdot x_n(t_0) = 0. \]
+	Тоді виконується система однорідних алгебраїчних рівнянь \[C_1 x_1(t_0) + C_2 x_2(t_0) + \ldots + C_n x_n(t_0) = 0. \]
 
 	Або, розписавши покоординатно, одержимо
 	\begin{equation*}
 		\left\{
 			\begin{array}{rl}
-				C_1 \cdot x_{11}(t_0) + C_2 \cdot x_{12}(t_0) + \ldots + C_n \cdot x_{1n}(t_0) &= 0, \\
-				C_1 \cdot x_{21}(t_0) + C_2 \cdot x_{22}(t_0) + \ldots + C_n \cdot x_{2n}(t_0) &= 0, \\
-				\hdotsfor{2}, \\
-				C_1 \cdot x_{n1}(t_0) + C_2 \cdot x_{n2}(t_0) + \ldots + C_n \cdot x_{nn}(t_0) &= 0.
+				C_1 x_{11}(t_0) + C_2 x_{12}(t_0) + \ldots + C_n x_{1n}(t_0) &= 0, \\
+				C_1 x_{21}(t_0) + C_2 x_{22}(t_0) + \ldots + C_n x_{2n}(t_0) &= 0, \\
+				\hdotsfor{2} \\
+				C_1 x_{n1}(t_0) + C_2 x_{n2}(t_0) + \ldots + C_n x_{nn}(t_0) &= 0.
 			\end{array}
 		\right.
 	\end{equation*}
  	має ненульовий розв'язок $C_1^0, C_2^0, \ldots, C_n^0$. Розглянемо лінійну комбінацію розв'язків з отриманими коефіцієнтами
  	\begin{equation*}
- 		x(t) = C_1^0 \cdot x_1(t) + C_2^0 \cdot x_2(t) + \ldots + C_n^0 \cdot x_n(t).
+ 		x(t) = C_1^0 x_1(t) + C_2^0 x_2(t) + \ldots + C_n^0 x_n(t).
  	\end{equation*}
 
 	Відповідно до властивості 4, ця комбінація буде розв'язком. Крім того, як випливає із системи алгебраїчних рівнянь, для отриманих $C_1^0, C_2^0, \ldots, C_n^0$: $x(t_0) = 0$, $t_0 \in [a, b]$. Але розв'язком, що задовольняють таким умовам, є $x \equiv 0$. І в силу теореми існування та єдиності ці два розв'язки збігаються, тобто $x(t) \equiv 0$ при $t \in [a, b]$, або 
  	\begin{equation*}
- 		C_1^0 \cdot x_1(t) + C_2^0 \cdot x_2(t) + \ldots + C_n^0 \cdot x_n(t) \equiv 0,
+ 		C_1^0 x_1(t) + C_2^0 x_2(t) + \ldots + C_n^0 x_n(t) \equiv 0,
  	\end{equation*}
 	або розв'язки $x_1(t), x_2(t), \ldots, x_n(t)$ лінійно залежні, що суперечить умові теореми.  \\
 
@@ -173,10 +173,10 @@
 	\begin{equation*}
 		\left\{
 			\begin{array}{rl}
-				C_1 \cdot x_{11}(t_0) + C_2 \cdot x_{12}(t_0) + \ldots + C_n \cdot x_{1n}(t_0) &= x_1^0, \\
-				C_1 \cdot x_{21}(t_0) + C_2 \cdot x_{22}(t_0) + \ldots + C_n \cdot x_{2n}(t_0) &= x_2^0, \\
-				\hdotsfor{2}, \\
-				C_1 \cdot x_{n1}(t_0) + C_2 \cdot x_{n2}(t_0) + \ldots + C_n \cdot x_{nn}(t_0) &= x_n^0.
+				C_1 x_{11}(t_0) + C_2 x_{12}(t_0) + \ldots + C_n x_{1n}(t_0) &= x_1^0, \\
+				C_1 x_{21}(t_0) + C_2 x_{22}(t_0) + \ldots + C_n x_{2n}(t_0) &= x_2^0, \\
+				\hdotsfor{2} \\
+				C_1 x_{n1}(t_0) + C_2 x_{n2}(t_0) + \ldots + C_n x_{nn}(t_0) &= x_n^0.
 			\end{array}
 		\right.
 	\end{equation*}
@@ -184,7 +184,7 @@
 
 	Тоді лінійна комбінація
 	\begin{equation*}
-		x(t) = C_1^0 \cdot x_1(t) + C_2^0 \cdot x_2(t) + \ldots + C_n^0 \cdot x_n(t)
+		x(t) = C_1^0 x_1(t) + C_2^0 x_2(t) + \ldots + C_n^0 x_n(t)
 	\end{equation*}
 	є розв'язком поставленої задачі Коші. Теорема доведена.
 \end{proof}
@@ -203,12 +203,12 @@
 
 Якщо лінійно незалежними розв'язками будуть \[ x_1 = \begin{pmatrix} x_{11}(t) \\ x_{21}(t) \\ \vdots \\ x_{n1}(t) \end{pmatrix}, \quad x_2 = \begin{pmatrix} x_{12}(t) \\ x_{22}(t) \\ \vdots \\ x_{n2}(t) \end{pmatrix}, \quad \ldots, \quad x_n = \begin{pmatrix} x_{1n}(t) \\ x_{2n}(t) \\ \vdots \\ x_{nn}(t) \end{pmatrix} \] то матриця
 \begin{equation*}
-	X(t) = \begin{pmatrix} x_{11} (t) & x_{12} (t) & \ldots & x_{1n} (t) \\ x_{21} (t) & x_{22} (t) & \ldots & x_{2n} (t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1} (t) & x_{n2} (t) & \ldots & x_{nn} (t) \end{pmatrix}
+	X(t) = \begin{pmatrix} x_{11} (t) & x_{12} (t) & \cdots & x_{1n} (t) \\ x_{21} (t) & x_{22} (t) & \cdots & x_{2n} (t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1} (t) & x_{n2} (t) & \cdots & x_{nn} (t) \end{pmatrix}
 \end{equation*}
 буде фундаментальною матрицею розв'язків. \\
 
 Як випливає з попередньої теореми загальний розв'язок може бути представлений у вигляді
 \begin{equation*}
-	x_{\text{homo}} = \sum_{i = 1}^n C_i \cdot x_i(t),
+	x_{\text{homo}} = \sum_{i = 1}^n C_i x_i(t),
 \end{equation*}
-де $C_i$ --- довільні сталі. Якщо ввести вектор $C = (C_1, C_2, \ldots, C_n)^T$, то загальний розв'язок можна записати у вигляді $x_{\text{homo}} = X(t) \cdot C$.
+де $C_i$ --- довільні сталі. Якщо ввести вектор $C = (C_1, C_2, \ldots, C_n)^T$, то загальний розв'язок можна записати у вигляді $x_{\text{homo}} = X(t) C$.

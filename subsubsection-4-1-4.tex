@@ -1,12 +1,12 @@
 Нехай маємо систему диференціальних рівнянь
 \begin{equation*}
 	\left\{
-		\begin{aligned}
+		\begin{array}{rl}
 			\dot x_1 &= f_1 (x_1, x_2, \ldots, x_n, t), \\
 			\dot x_2 &= f_2 (x_1, x_2, \ldots, x_n, t), \\
-			\ldots & \ldots \ldots \ldots \ldots \ldots \ldots \ldots, \\
+			\hdotsfor{2} \\
 			\dot x_n &= f_n (x_1, x_2, \ldots, x_n, t).
-		\end{aligned}
+		\end{array}
 	\right.
 \end{equation*}
 і заданий її розв'язок $x_1 = x_1(t), x_2 = x_2(t), \ldots, x_n = x_n(t)$. Якщо цей розв'язок підставити в перше рівняння, то вийде тотожність і її можна диференціювати
@@ -14,14 +14,14 @@
 	\frac{\diff^2 x_1}{\diff t^2} = \frac{\partial f_1}{\partial t} + \sum_{i = 1}^n \frac{\partial f_1}{\partial x_i} \cdot \frac{\diff x_i(t)}{\diff t}.
 \end{equation*}
 
-Підставивши замість $\frac{\diff x_i(t)}{\diff t}$ їх значення, одержимо
+Підставивши замість $\diff x_i(t) /\diff t$ їх значення, одержимо
 \begin{equation*}
-	\frac{\diff^2 x_1}{\diff t^2} = \frac{\partial f_1}{\partial t} + \sum_{i = 1}^n \frac{\partial f_1}{\partial x_i} \cdot f_i = F_2(t, x_1, x_2, \ldots, x_n).
+	\frac{\diff^2 x_1}{\diff t^2} = \frac{\partial f_1}{\partial t} + \sum_{i = 1}^n \frac{\partial f_1}{\partial x_i} f_i = F_2(t, x_1, x_2, \ldots, x_n).
 \end{equation*}
 
 Знову диференціюємо це рівняння й одержимо
 \begin{equation*}
-	\frac{\diff^3 x_1}{\diff t^3} = \frac{\partial F_2}{\partial t} + \sum_{i = 1}^n \frac{\partial F_2}{\partial x_i} \cdot \frac{\diff x_i(t)}{\diff t} = \frac{\partial F_2}{\partial t} + \sum_{i = 1}^n \frac{\partial F_2}{\partial x_i} \cdot f_i = F_3(t, x_1, x_2, \ldots, x_n).
+	\frac{\diff^3 x_1}{\diff t^3} = \frac{\partial F_2}{\partial t} + \sum_{i = 1}^n \frac{\partial F_2}{\partial x_i} \cdot \frac{\diff x_i(t)}{\diff t} = \frac{\partial F_2}{\partial t} + \sum_{i = 1}^n \frac{\partial F_2}{\partial x_i} f_i = F_3(t, x_1, x_2, \ldots, x_n).
 \end{equation*}
 
 Продовжуючи процес далі, одержимо
@@ -33,36 +33,36 @@
 Таким чином, маємо систему
 \begin{equation*}
 	\left\{
-		\begin{aligned}
-			\frac{\diff x_1}{\diff t} &= f_1 (x_1, x_2, \ldots, x_n, t), \\
-			\frac{\diff^2 x_1}{\diff t^2} &= F_2(t, x_1, x_2, \ldots, x_n), \\
-			\ldots \ldots & \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots, \\
-			\frac{\diff^{n - 1} x_1}{\diff t^{n - 1}} &= F_{n - 1}(t, x_1, x_2, \ldots, x_n), \\
+		\begin{array}{rl}
+			\dfrac{\diff x_1}{\diff t} &= f_1 (x_1, x_2, \ldots, x_n, t), \\
+			\dfrac{\diff^2 x_1}{\diff t^2} &= F_2(t, x_1, x_2, \ldots, x_n), \\
+			\hdotsfor{2} \\
+			\dfrac{\diff^{n - 1} x_1}{\diff t^{n - 1}} &= F_{n - 1}(t, x_1, x_2, \ldots, x_n), \\
 			\frac{\diff^n x_1}{\diff t^n} &= F_n(t, x_1, x_2, \ldots, x_n).
-		\end{aligned}
+		\end{array}
 	\right.
 \end{equation*}
 
 Припустимо, що \[\frac{D(f_1, F_2, \ldots, F_{n - 1})}{D(x_2, x_3, \ldots, x_n)} \ne 0.\] Тоді систему перших $(n - 1)$ рівнянь 
 \begin{equation*}
 	\left\{
-		\begin{aligned}
-			\frac{\diff x_1}{\diff t} &= f_1 (x_1, x_2, \ldots, x_n, t), \\
-			\frac{\diff^2 x_1}{\diff t^2} &= F_2(t, x_1, x_2, \ldots, x_n), \\
-			\ldots \ldots & \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots, \\
-			\frac{\diff^{n - 1} x_1}{\diff t^{n - 1}} &= F_{n - 1}(t, x_1, x_2, \ldots, x_n).
-		\end{aligned}
+		\begin{array}{rl}
+			\dfrac{\diff x_1}{\diff t} &= f_1 (x_1, x_2, \ldots, x_n, t), \\
+			\dfrac{\diff^2 x_1}{\diff t^2} &= F_2(t, x_1, x_2, \ldots, x_n), \\
+			\hdotsfor{2} \\
+			\dfrac{\diff^{n - 1} x_1}{\diff t^{n - 1}} &= F_{n - 1}(t, x_1, x_2, \ldots, x_n).
+		\end{array}
 	\right.
 \end{equation*}
 можна розв'язати відносно останніх $(n - 1)$ змінних $x_2, x_3, \ldots, x_n$ і одержати
 \begin{equation*}
 	\left\{
-		\begin{aligned}
-			x_2 &= \phi_2 \left( t, x_1, \frac{\diff x_1}{\diff t}, \ldots, \frac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
-			x_3 &= \phi_3 \left( t, x_1, \frac{\diff x_1}{\diff t}, \ldots, \frac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
-			\ldots & \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots, \\
-			x_n &= \phi_n \left( t, x_1, \frac{\diff x_1}{\diff t}, \ldots, \frac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
-		\end{aligned}
+		\begin{array}{rl}
+			x_2 &= \phi_2 \left( t, x_1, \dfrac{\diff x_1}{\diff t}, \ldots, \dfrac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
+			x_3 &= \phi_3 \left( t, x_1, \dfrac{\diff x_1}{\diff t}, \ldots, \dfrac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
+			\hdotsfor{2} \\
+			x_n &= \phi_n \left( t, x_1, \dfrac{\diff x_1}{\diff t}, \ldots, \dfrac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
+		\end{array}
 	\right.
 \end{equation*}
 
@@ -80,12 +80,12 @@
 У загальному випадку, одержимо, що система диференціальних рівнянь першого порядку
 \begin{equation*}
 	\left\{
-		\begin{aligned}
+		\begin{array}{rl}
 			\dot x_1 &= f_1 (x_1, x_2, \ldots, x_n, t), \\
 			\dot x_2 &= f_2 (x_1, x_2, \ldots, x_n, t), \\
-			\ldots & \ldots \ldots \ldots \ldots \ldots \ldots \ldots, \\
+			\hdotsfor{2} \\
 			\dot x_n &= f_n (x_1, x_2, \ldots, x_n, t).
-		\end{aligned}
+		\end{array}
 	\right.
 \end{equation*}
 зводиться до одного рівняння $n$-го порядку
@@ -95,12 +95,12 @@
 і системи $(n - 1)$ рівнянь зв'язку
 \begin{equation*}
 	\left\{
-		\begin{aligned}
-			x_2 &= \phi_2 \left( t, x_1, \frac{\diff x_1}{\diff t}, \ldots, \frac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
-			x_3 &= \phi_3 \left( t, x_1, \frac{\diff x_1}{\diff t}, \ldots, \frac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
-			\ldots & \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots, \\
-			x_n &= \phi_n \left( t, x_1, \frac{\diff x_1}{\diff t}, \ldots, \frac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
-		\end{aligned}
+		\begin{array}{rl}
+			x_2 &= \phi_2 \left( t, x_1, \dfrac{\diff x_1}{\diff t}, \ldots, \dfrac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
+			x_3 &= \phi_3 \left( t, x_1, \dfrac{\diff x_1}{\diff t}, \ldots, \dfrac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
+			\hdotsfor{2} \\
+			x_n &= \phi_n \left( t, x_1, \dfrac{\diff x_1}{\diff t}, \ldots, \dfrac{\diff^{n - 1} x_1}{\diff t^{n - 1}} \right), \\
+		\end{array}
 	\right.
 \end{equation*}
  

@@ -2,10 +2,10 @@
 \begin{equation*}
 	\left\{
 		\begin{array}{rl}
-			\dot x_1 &= a_{11}(t) \cdot x_1 + a_{12}(t) \cdot x_2 + \ldots + a_{1n}(t) \cdot x_n + f_1(t), \\
-			\dot x_2 &= a_{21}(t) \cdot x_1 + a_{22}(t) \cdot x_2 + \ldots + a_{2n}(t) \cdot x_n + f_2(t), \\
-			\hdotsfor{2}, \\
-			\dot x_n &= a_{n1}(t) \cdot x_1 + a_{n2}(t) \cdot x_2 + \ldots + a_{nn}(t) \cdot x_n + f_n(t),
+			\dot x_1 &= a_{11}(t) x_1 + a_{12}(t) x_2 + \ldots + a_{1n}(t) x_n + f_1(t), \\
+			\dot x_2 &= a_{21}(t) x_1 + a_{22}(t) x_2 + \ldots + a_{2n}(t) x_n + f_2(t), \\
+			\hdotsfor{2} \\
+			\dot x_n &= a_{n1}(t) x_1 + a_{n2}(t) x_2 + \ldots + a_{nn}(t) x_n + f_n(t),
 		\end{array}
 	\right.
 \end{equation*}
@@ -13,10 +13,10 @@
 \begin{equation*}
 	\left\{
 		\begin{array}{rl}
-			\dot x_1 &= a_{11}(t) \cdot x_1 + a_{12}(t) \cdot x_2 + \ldots + a_{1n}(t) \cdot x_n, \\
-			\dot x_2 &= a_{21}(t) \cdot x_1 + a_{22}(t) \cdot x_2 + \ldots + a_{2n}(t) \cdot x_n, \\
-			\hdotsfor{2}, \\
-			\dot x_n &= a_{n1}(t) \cdot x_1 + a_{n2}(t) \cdot x_2 + \ldots + a_{nn}(t) \cdot x_n,
+			\dot x_1 &= a_{11}(t) x_1 + a_{12}(t) x_2 + \ldots + a_{1n}(t) x_n, \\
+			\dot x_2 &= a_{21}(t) x_1 + a_{22}(t) x_2 + \ldots + a_{2n}(t) x_n, \\
+			\hdotsfor{2} \\
+			\dot x_n &= a_{n1}(t) x_1 + a_{n2}(t) x_2 + \ldots + a_{nn}(t) x_n,
 		\end{array}
 	\right.
 \end{equation*}
@@ -24,15 +24,15 @@
 \begin{equation*}
 	x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}, \quad 
 	f(t) = \begin{pmatrix} f_1(t) \\ f_2(t) \\ \vdots \\ f_n(t) \end{pmatrix}, \quad
-	A(t) = \begin{pmatrix} a_{11}(t) & a_{12}(t) & \ldots & a_{1n}(t) \\ a_{21}(t) & a_{22}(t) & \ldots & a_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1}(t) & a_{n2}(t) & \ldots & a_{nn}(t) \end{pmatrix},
+	A(t) = \begin{pmatrix} a_{11}(t) & a_{12}(t) & \cdots & a_{1n}(t) \\ a_{21}(t) & a_{22}(t) & \cdots & a_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1}(t) & a_{n2}(t) & \cdots & a_{nn}(t) \end{pmatrix},
 \end{equation*}
 то лінійну неоднорідну систему можна переписати у вигляді
 \begin{equation*}
-	\dot x = A(t) \cdot x + f(t),
+	\dot x = A(t) x + f(t),
 \end{equation*}
 а лінійну однорідну систему у вигляді
 \begin{equation*}
-	\dot x = A(t) \cdot x.
+	\dot x = A(t) x.
 \end{equation*}
 
 Якщо функції $a_{ij}(t)$, $f_i(t)$, $i,j=\overline{1,n}$ неперервні в околі точки \[(x_0, t_0) = (x_1^0, x_2^0, \ldots, x_n^0, t_0),\] то виконані умови теореми існування та єдиності розв'язку задачі Коші, і існує єдиний розв'язок
