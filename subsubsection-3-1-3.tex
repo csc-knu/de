@@ -1,78 +1,75 @@
 \begin{definition}
 	Функції $y_0(x), y_1(x), \ldots, y_n(x)$ називаються лінійно залежними на відрізку $[a,b]$ якщо існують не всі рівні нулю сталі $C_0, \ldots, C_n$ такі, що при всіх $x \in [a,b]$: 
 	\begin{equation*}
-		%\label{eq:3.1.18}
-		C_0 \cdot y_0(x) + C_1 \cdot y_1(x) + \ldots + C_n \cdot y_n(x) = 0.
+		C_0 y_0(x) + C_1 y_1(x) + \ldots + C_n y_n(x) = 0.
 	\end{equation*}
 
 	Якщо ж тотожність справедлива лише коли $C_0 = C_1 = \ldots = C_n = 0$, то функції $y_1(x), y_2(x), \ldots, y_n(x)$ називаються лінійно незалежними.
 \end{definition}
 
-\textbf{Приклади:}
+\paragraph{Приклади:}
+
 \begin{enumerate}
-	\item Функції $1, x, x^2, \ldots, x^n$ -- лінійно незалежні на будь-якому відрізку $[a,b]$, тому що вираз $C_0 + C_1 x + \ldots + C_n x^n$ є многочленом ступеню $n$ і має не більш, ніж $n$ дійсних коренів.
-	\item Функції $e^{\lambda_1 x}, e^{\lambda_2 x}, \ldots, e^{\lambda_n x}$, де всі $\lambda_i$ -- дійсні різні числа -- лінійно незалежні. 
-	\item Функції $1, \sin x, \cos x, \ldots, \sin nx, \cos nx$ -- лінійно незалежні.
+	\item Функції $1, x, x^2, \ldots, x^n$ --- лінійно незалежні на будь-якому відрізку $[a,b]$, тому що вираз $C_0 + C_1 x + \ldots + C_n x^n$ є многочленом ступеню $n$ і має не більш, ніж $n$ дійсних коренів.
+	
+	\item Функції $e^{\lambda_1 x}, e^{\lambda_2 x}, \ldots, e^{\lambda_n x}$, де всі $\lambda_i$ --- дійсні різні числа --- лінійно незалежні. 
+	
+	\item Функції $1, \sin x, \cos x, \ldots, \sin nx, \cos nx$ --- лінійно незалежні.
 \end{enumerate}
 
 \begin{theorem}[необхідна умова лінійної незалежності функцій]
-	Якщо функції $y_0(x), y_1(x), \ldots, y_n(x)$ -- лінійно залежні, то визначник Вронського $W[y_0, y_1, \ldots, y_n](x)$ тотожно дорівнює нулю при всіх $x \in [a,b]$:
+	Якщо функції $y_0(x), y_1(x), \ldots, y_n(x)$ --- лінійно залежні, то визначник Вронського $W[y_0, y_1, \ldots, y_n](x)$ тотожно дорівнює нулю при всіх $x \in [a,b]$:
 	\begin{equation*}
-		%\label{eq:3.1.19}
 		W[y_0, y_1, \ldots, y_n](x) = \begin{vmatrix} y_0(x) & y_1(x) & \cdots & y_n(x) \\ y_0'(x) & y_1'(x) & \cdots & y_n'(x) \\ \vdots & \vdots & \ddots & \vdots \\ y_0^{(n)}(x) & y_1^{(n)}(x) & \cdots & y_n^{(n)}(x) \end{vmatrix} = 0.
 	\end{equation*}
 \end{theorem}
 
 \begin{proof}
-	Нехай $y_0(x), y_1(x), \ldots, y_n(x)$ -- лінійно залежні. Тоді існують не всі рівні нулю сталі $C_0, \ldots, C_n$ такі, що при $x \in [a,b]$ буде тотожно виконуватися
+	Нехай $y_0(x), y_1(x), \ldots, y_n(x)$ --- лінійно залежні. Тоді існують не всі рівні нулю сталі $C_0, \ldots, C_n$ такі, що при $x \in [a,b]$ буде тотожно виконуватися
 	\begin{equation*}
-		%\label{eq:3.1.18}
-		C_0 \cdot y_0(x) + C_1 \cdot y_1(x) + \ldots + C_n \cdot y_n(x) = 0.
+		C_0 y_0(x) + C_1 y_1(x) + \ldots + C_n y_n(x) = 0.
 	\end{equation*}
+	
 	Продиференціювавши $n$ разів, одержимо 
 	\begin{equation*}
-		%\label{eq:3.1.20}
-		\left\{ \begin{aligned}
-			C_0 \cdot y_0(x) + C_1 \cdot y_1(x) + \ldots + C_n \cdot y_n(x) &= 0, \\
-			C_0 \cdot y_0'(x) + C_1 \cdot y_1'(x) + \ldots + C_n \cdot y_n(x) &= 0, \\
-			\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots & \ldots \ldots \\
-			C_0 \cdot y_0^{(n)}(x) + C_1 \cdot y_1^{(n)}(x) + \ldots + C_n \cdot y_n^{(n)}(x) &= 0.
-		\end{aligned} \right.
+		\left\{ \begin{array}{rl}
+			C_0 y_0(x) + C_1 y_1(x) + \ldots + C_n y_n(x) &= 0, \\
+			C_0 y_0'(x) + C_1 y_1'(x) + \ldots + C_n y_n(x) &= 0, \\
+			\hdotsfor{2} \\
+			C_0 y_0^{(n)}(x) + C_1 y_1^{(n)}(x) + \ldots + C_n y_n^{(n)}(x) &= 0.
+		\end{array} \right.
 	\end{equation*}
  
 	Для кожного фіксованого $x \in [a,b]$ одержимо лінійну однорідну систему алгебраїчних рівнянь, що має ненульовий розв'язок $C_0, \ldots, C_n$. А це можливо тоді і тільки тоді, коли визначник системи дорівнює нулю, тобто $W[y_0, y_1, \ldots, y_n](x) = 0$ при всіх $x \in [a,b]$.
 \end{proof}
 
 \begin{theorem}[достатня умова лінійної незалежності розв'язків]
-	Якщо розв'язки лінійного однорідного рівняння $y_0(x), y_1(x), \ldots, y_n(x)$ -- лінійно незалежні, то визначник Вронського $W[y_0, y_1, \ldots, y_n](x)$ не дорівнює нулю в жодній точці $x \in [a,b]$.
+	Якщо розв'язки лінійного однорідного рівняння $y_0(x), y_1(x), \ldots, y_n(x)$ --- лінійно незалежні, то визначник Вронського $W[y_0, y_1, \ldots, y_n](x)$ не дорівнює нулю в жодній точці $x \in [a,b]$.
 \end{theorem} 
 
 \begin{proof}
 	Припустимо, від супротивного, що існує $x_0 \in [a,b]$, при якому $W[y_0, y_1, \ldots, y_n](x_0) = 0$. Оскільки визначник дорівнює нулю, то існує ненульовий розв'язок $C_0^0, C_1^0, \ldots, C_n^0$ лінійної однорідної системи алгебраїчних рівнянь \begin{equation*}
-		%\label{eq:3.1.20}
-		\left\{ \begin{aligned}
-			C_0 \cdot y_0(x) + C_1 \cdot y_1(x) + \ldots + C_n \cdot y_n(x) &= 0, \\
-			C_0 \cdot y_0'(x) + C_1 \cdot y_1'(x) + \ldots + C_n \cdot y_n(x) &= 0, \\
-			\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots & \ldots \ldots \\
-			C_0 \cdot y_0^{(n)}(x) + C_1 \cdot y_1^{(n)}(x) + \ldots + C_n \cdot y_n^{(n)}(x) &= 0.
-		\end{aligned} \right.
+		\left\{ \begin{array}{rl}
+			C_0 y_0(x) + C_1 y_1(x) + \ldots + C_n y_n(x) &= 0, \\
+			C_0 y_0'(x) + C_1 y_1'(x) + \ldots + C_n y_n(x) &= 0, \\
+			\hdotsfor{2} \\
+			C_0 y_0^{(n)}(x) + C_1 y_1^{(n)}(x) + \ldots + C_n y_n^{(n)}(x) &= 0.
+		\end{array} \right.
 	\end{equation*}
+	
 	Розглянемо лінійну комбінацію 
 	\begin{equation*}
-		%\label{eq:3.1.21}
 		y(x) = C_0^0 y_0(x) + C_1 y_1(x) + \ldots + C_n y_n(x)
 	\end{equation*}
 	з отриманими коефіцієнтами. \parvskip
 
 	У силу третьої властивості ця комбінація буде розв'язком. У силу вибору сталих $C_0^0, C_1^0, \ldots, C_n^0$, розв'язок буде задовольняти умовам
 	\begin{equation*}
-		%\label{eq:3.1.22}
 		y(x_0) = y'(x_0) = \ldots = y^{(n)}(x_0) = 0.
 	\end{equation*}
  
 	Але цим же умовам, як неважко перевірити простою підстановкою, задовольняє і тотожний нуль, тобто $y \equiv 0$. І в силу теореми існування та єдиності ці два розв'язки співпадають, тобто 
 	\begin{equation*}
-		%\label{eq:3.1.23}
 		y(x) = C_0^0 y_0(x) + C_1 y_1(x) + \ldots + C_n y_n(x) = 0
 	\end{equation*}
 	при $x \in [a,b]$, або система функцій $y_0(x), y_1(x), \ldots, y_n(x)$ лінійно залежна, що суперечить припущенню. Таким чином $W[y_0, y_1, \ldots, y_n](x_0) \ne 0$ у жодній точці $x_0 \in [a,b]$, що і було потрібно довести .
@@ -87,10 +84,9 @@
 \begin{theorem}
 	Загальним розв'язком лінійного однорідного рівняння
 	\begin{equation*}
-		%\label{eq:3.1.24}
-		a_0(x) \cdot y^{(n)} + a_1(x) \cdot y^{(n-1)} + \ldots + a_{n-1}(x) \cdot y' + a_n \cdot y = 0
+		a_0(x) y^{(n)} + a_1(x) y^{(n-1)} + \ldots + a_{n-1}(x) y' + a_n y = 0
 	\end{equation*}
- 	є лінійна комбінація $n$ лінійно незалежних розв'язків $y = \sum_{i = 1}^n C_i \cdot y_i(x)$.
+ 	є лінійна комбінація $n$ лінійно незалежних розв'язків $y = \sum_{i = 1}^n C_i y_i(x)$.
 \end{theorem}
 
 \begin{proof}
@@ -98,21 +94,19 @@
 
 	Покажемо, що цей розв'язок загальний, тобто вибором сталих $C_1, \ldots, C_n$ можна розв'язати довільну задачу Коші
 	\begin{equation*}
-		%\label{eq:3.1.25}
 		y(x_0) = y_0, \quad y'(x_0) = y_0', \quad \ldots, \quad y^{(n - 1)}(x_0) = y_0^{(n - 1)}.
 	\end{equation*}
 
 	Дійсно, оскільки система розв'язків лінійно незалежна, то визначник Вронського відмінний від нуля й алгебраїчна система неоднорідних рівнянь
 	\begin{equation*}
-		%\label{eq:3.1.26}
-		\left\{ \begin{aligned}
-			C_1 \cdot y_1(x_0) + C_2 \cdot y_2(x_0) + \ldots + C_n \cdot y_n(x_0) &= y_0, \\
-			C_1 \cdot y_1'(x_0) + C_2 \cdot y_2'(x_0) + \ldots + C_n \cdot y_n(x_0) &= y_0', \\
-			\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots & \ldots \ldots \\
-			C_1 \cdot y_1^{(n - 1)}(x_0) + C_2 \cdot y_2^{(n - 1)}(x_0) + \ldots + C_n \cdot y_n^{(n)}(x_0) &= y_0^{(n - 1)},
-		\end{aligned} \right.
+		\left\{ \begin{array}{rl}
+			C_1 y_1(x_0) + C_2 y_2(x_0) + \ldots + C_n y_n(x_0) &= y_0, \\
+			C_1 y_1'(x_0) + C_2 y_2'(x_0) + \ldots + C_n y_n(x_0) &= y_0', \\
+			\hdotsfor{2} \\
+			C_1 y_1^{(n - 1)}(x_0) + C_2 y_2^{(n - 1)}(x_0) + \ldots + C_n y_n^{(n)}(x_0) &= y_0^{(n - 1)},
+		\end{array} \right.
 	\end{equation*}
-	має єдиний розв'язок $C_1^0, C_2^0, \ldots, C_n^0$. І лінійна комбінація $y = \sum_{i = 1}^n C_i^0 \cdot y_i(x)$ є розв'язком, причому, як видно із системи алгебраїчних рівнянь, буде задовольняти довільно обраним умовам Коші.
+	має єдиний розв'язок $C_1^0, C_2^0, \ldots, C_n^0$. І лінійна комбінація $y = \sum_{i = 1}^n C_i^0 y_i(x)$ є розв'язком, причому, як видно із системи алгебраїчних рівнянь, буде задовольняти довільно обраним умовам Коші.
 \end{proof}
 
 Зауважимо, що максимальне число лінійно незалежних розв'язків дорівнює порядку рівняння. Це випливає з попередньої теореми, тому що будь-який розв'язок виражається через лінійну комбінацію $n$ лінійно незалежних розв'язків.

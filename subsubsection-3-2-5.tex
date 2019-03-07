@@ -15,56 +15,61 @@
 		\lambda^2 - 2 \lambda + 1 = 0.
 	\end{equation*}
 
-	Його коренями будуть $\lambda_1 = 1$, $\lambda_2 = 1$. І загальний роз\-в'яз\-ок однорідного має вигляд $y_{\text{homo}}(x) = C_1 \cdot e^x + C_2 \cdot x \cdot e^x$.  \parvskip
+	Його коренями будуть $\lambda_1 = 1$, $\lambda_2 = 1$. І загальний роз\-в'яз\-ок однорідного має вигляд $y_{\text{homo}}(x) = C_1 e^x + C_2 x e^x$.  \parvskip
 
-	Частинний розв'язок неоднорідного рівняння шукаємо методом варіації довільної сталої у вигляді $y_{\text{part}}(x) = C_1(x) \cdot e^x + C_2(x) \cdot x \cdot e^x$. Для знаходження функцій $C_1(x)$, $C_2(x)$ отримаємо систему 
+	Частинний розв'язок неоднорідного рівняння шукаємо методом варіації довільної сталої у вигляді $y_{\text{part}}(x) = C_1(x) e^x + C_2(x) x e^x$. Для знаходження функцій $C_1(x)$, $C_2(x)$ отримаємо систему 
 	\begin{equation*}
 		\left\{
 			\begin{aligned}
-				C_1'(x) \cdot e^x + C_2'(x) \cdot x \cdot e^x &= 0, \\
-				C_1'(x) \cdot e^x + C_2'(x) \cdot \left( x \cdot e^x + e^x \right) &= \frac{e^x}{x}.
+				C_1'(x) e^x + C_2'(x) x e^x &= 0, \\
+				C_1'(x) e^x + C_2'(x) \left( x e^x + e^x \right) &= \frac{e^x}{x}.
 			\end{aligned}
 		\right.
 	\end{equation*}
+	
 	Звідси
 	\begin{align*}
-		C_1(x) &= \int \frac{\begin{vmatrix} 0 & x \cdot e^x \\ \frac{e^x}{x} & x \cdot e^x + e^x \end{vmatrix}}{\begin{vmatrix} e^x & x \cdot e^x \\ e^x & x \cdot e^x + e^x \end{vmatrix}} \diff x = \int \frac{e^{2x}}{e^{2x}} \diff x = x + \bar C_1, \\
-		C_2(x) &= \int \frac{\begin{vmatrix} e^x & 0 \\ e^x & \frac{e^x}{x} \end{vmatrix}}{\begin{vmatrix} e^x & x \cdot e^x \\ e^x & x \cdot e^x + e^x \end{vmatrix}} \diff x = \int \frac{e^{2x}}{x \cdot e^{2x}} \diff x = \ln |x| + \bar C_2.
+		C_1(x) &= \int \frac{\begin{vmatrix} 0 & x e^x \\ \frac{e^x}{x} & x e^x + e^x \end{vmatrix}}{\begin{vmatrix} e^x & x e^x \\ e^x & x e^x + e^x \end{vmatrix}} \diff x = \int \frac{e^{2x}}{e^{2x}} \diff x = x + \bar C_1, \\
+		C_2(x) &= \int \frac{\begin{vmatrix} e^x & 0 \\ e^x & \frac{e^x}{x} \end{vmatrix}}{\begin{vmatrix} e^x & x e^x \\ e^x & x e^x + e^x \end{vmatrix}} \diff x = \int \frac{e^{2x}}{x e^{2x}} \diff x = \ln |x| + \bar C_2.
 	\end{align*}
 
 	Поклавши (для зручності) $\bar C_1 = 0$, $\bar C_2 = 0$, одержимо
 	\begin{equation*}
-		y_{\text{part}}(x) = x \cdot e^x + \ln |x| \cdot x \cdot e^x.
+		y_{\text{part}}(x) = x e^x + x e^x \ln |x|.
 	\end{equation*}
+	
 	Загальний розв'язок має вигляд
 	\begin{equation*}
-		y_{\text{hetero}}(x) = C_1 \cdot e^x + C_2 \cdot x \cdot e^x + \ln |x| \cdot x \cdot e^x.
+		y_{\text{hetero}}(x) = C_1 e^x + C_2 x e^x + x e^x \ln |x|.
 	\end{equation*}
 \end{solution}
 
 \begin{example}
 	Знайти загальний розв'язок рівняння \[y'' + 3 y' + 2 y = \frac{1}{e^x + 1}.\]
 \end{example}
+
 \begin{solution}
 	Загальний розв'язок складається з суми загального роз\-в'яз\-ку однорідного та частинного роз\-в'яз\-ку неоднорідного. Розглянемо однорідне рівняння
 	\begin{equation*}
 		y'' + 3 y ' + 2 y = 0.
 	\end{equation*}
+	
 	Його характеристичне рівняння має вигляд
 	\begin{equation*}
 		\lambda^2 + 3 \lambda + 2 = 0.
 	\end{equation*}
-	Його коренями будуть $\lambda_1 = - 1$, $\lambda_2 = -2$. І загальний розв'язок однорідного має вигляд $y_{\text{homo}}(x) = C_1 \cdot e^{-x} + C_2 \cdot e^{-2x}$. \parvskip
+	
+	Його коренями будуть $\lambda_1 = - 1$, $\lambda_2 = -2$. І загальний розв'язок однорідного має вигляд $y_{\text{homo}}(x) = C_1 e^{-x} + C_2 e^{-2x}$. \parvskip
 
 	Частинний розв'язок неоднорідного рівняння шукаємо методом Коші. Враховуючи вигляд загального роз\-в'яз\-ку однорядного рівняння функцію $K(x, s)$ шукаємо у вигляді
 	\begin{equation*}
-		K(x, s) = C_1(s) \cdot e^{-x} + C_2(s) \cdot e^{-2x}.
+		K(x, s) = C_1(s) e^{-x} + C_2(s) e^{-2x}.
 	\end{equation*}
 
 	Початкові умови дають наступне
 	\begin{align*}
-		K(s, s) = 0 &\implies C_1(s) \cdot e^{-x} + C_2(s) \cdot e^{-2s} = 0, \\
-		K_x'(s, s) = 1 &\implies C_1(s) \cdot e^{-x} - 2 C_2(s) \cdot e^{-2s} = 1, \\
+		K(s, s) = 0 &\implies C_1(s) e^{-x} + C_2(s) e^{-2s} = 0, \\
+		K_x'(s, s) = 1 &\implies C_1(s) e^{-x} - 2 C_2(s) e^{-2s} = 1, \\
 	\end{align*}
 
 	Звідси
@@ -74,31 +79,36 @@
 
 	Таким чином $K(x, s) = e^{s - x} - e^{2(s - x)}$. І частинний роз\-в'яз\-ок, що задовольняє нульовим початковим умовам, має вигляд
 	\begin{align*}
-		y_{\text{part}}(x) &= \int \frac{e^{s - x} - e^{2(s - x)}}{e^s + 1} \diff s = e^{-x} \int_{x_0}^x \frac{e^s}{e^s + 1} \diff s - e^{-2x} \frac{e^{2 s}}{e^s + 1} \diff s = \\ &= e^{-x} \cdot \left. \ln |e^s + 1| \right|_{s = x_0}^{s = x} - e^{-2x} \cdot \int_{x_0}^x \frac{e^s + 1 - 1}{e^s + 1} \diff (e^s) = \\ &= e^{-x} \cdot \left( \ln |e^x + 1| - \ln |e^{x_0} - 1| \right) + \\ & \quad + e^{-2x} \cdot \left( e^x - e^{x_0} - \ln |e^x + 1| + \ln |e^{x_0} + 1| \right).
+		y_{\text{part}}(x) &= \int \frac{e^{s - x} - e^{2(s - x)}}{e^s + 1} \diff s = e^{-x} \int_{x_0}^x \frac{e^s}{e^s + 1} \diff s - e^{-2x} \frac{e^{2 s}}{e^s + 1} \diff s = \\ &= e^{-x} \left. \ln |e^s + 1| \right|_{s = x_0}^{s = x} - e^{-2x} \int_{x_0}^x \frac{e^s + 1 - 1}{e^s + 1} \diff (e^s) = \\ &= e^{-x} \left( \ln |e^x + 1| - \ln |e^{x_0} - 1| \right) + \\ & \quad + e^{-2x} \left( e^x - e^{x_0} - \ln |e^x + 1| + \ln |e^{x_0} + 1| \right).
 	\end{align*}
+	
 	Враховуючи, що початкові дані не задані, остаточно отримаємо
 	\begin{equation*}
-		y_{\text{hetero}}(x) = C_1 \cdot e^{-x} + C_2 \cdot e^{-2x} + e^{-x} \cdot \ln |e^x + 1| + e^{-2x} \cdot \ln |e^x + 1|.
+		y_{\text{hetero}}(x) = C_1 e^{-x} + C_2 e^{-2x} + e^{-x} \ln |e^x + 1| + e^{-2x} \ln |e^x + 1|.
 	\end{equation*}
 \end{solution}
 
 Розв'язати лінійні неоднорідні рівняння
 \begin{multicols}{2}
-\begin{problem}
-	\[y'' + y = \frac{1}{\sin x};\]
-\end{problem}
-\begin{problem}
-	\[y'' + 4 y = 2 \tan (x);\]
-\end{problem}
-\begin{problem}
-	\[y'' + 2 y' + y = 3 \cdot e^{-x \cdot \sqrt{x + 1}};\]
-\end{problem}
-\begin{problem}
-	\[y'' + y = 2 \sec^3(x);\]
-\end{problem}
-\begin{problem}
-	\[y'' - y= \frac{x^2 - 2}{x^3}.\]
-\end{problem}
+    \begin{problem}
+    	\[y'' + y = \frac{1}{\sin x};\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y'' + 4 y = 2 \tan x;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y'' + 2 y' + y = 3 e^{-x \sqrt{x + 1}};\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y'' + y = 2 \sec^3 x;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y'' - y= \frac{x^2 - 2}{x^3}.\]
+    \end{problem}
 \end{multicols}
 
 Якщо рівняння зі сталими коефіцієнтами, а функція $b(x)$ спеціального вигляду, то зручніше використовувати метод невизначених коефіцієнтів.
@@ -106,6 +116,7 @@
 \begin{example}
 	Розв'язати лінійне неоднорідне рівняння \[y'' + 2 y' + y = x^2 + 1.\]
 \end{example}
+
 \begin{solution}
 	Спочатку розв'язуємо однорідне рівняння
 	\begin{equation*}
@@ -117,7 +128,7 @@
 		\lambda^2 + 2 \lambda + 1 = 0.
 	\end{equation*}
 
-	Його коренями будуть $\lambda_1 = -1$, $\lambda_2 = -1$. І загальним роз\-в'яз\-ком однорідного рівняння буде $y_{\text{homo}}(x) = C_1 \cdot e^{-x} + C_2 \cdot x \cdot e^{-x}$. Оскільки справа стоїть многочлени другого ступеня і характеристичне рівняння не містить нульових коренів, то частинний роз\-в'яз\-ок має вигляд
+	Його коренями будуть $\lambda_1 = -1$, $\lambda_2 = -1$. І загальним роз\-в'яз\-ком однорідного рівняння буде $y_{\text{homo}}(x) = C_1 e^{-x} + C_2 x e^{-x}$. Оскільки справа стоїть многочлени другого ступеня і характеристичне рівняння не містить нульових коренів, то частинний роз\-в'яз\-ок має вигляд
 	\begin{equation*}
 		y_{\text{part}}(x) = a x^2 + b x + c.
 	\end{equation*}
@@ -146,7 +157,7 @@
 
 	Таким чином загальний розв'язок має вигляд
 	\begin{equation*}
-		y_{\text{hetero}}(x) = C_1 \cdot e^{-x} + C_2 \cdot x \cdot e^{-x} + x^2 - 4 x + 7.
+		y_{\text{hetero}}(x) = C_1 e^{-x} + C_2 x e^{-x} + x^2 - 4 x + 7.
 	\end{equation*}
 \end{solution}
 
@@ -164,14 +175,15 @@
 	\begin{equation*}
 		\lambda^3 + \lambda^2 = 0
 	\end{equation*}
+	
 	Його коренями будуть $\lambda_1 = \lambda_2 = 0$, $\lambda_3 = 1$. І загальним роз\-в'яз\-ком однорідного рівняння буде
 	\begin{equation*}
-		y_{\text{homo}}(x) = C_1 + C_2 \cdot x + C_3 \cdot e^{-x}.
+		y_{\text{homo}}(x) = C_1 + C_2 x + C_3 e^{-x}.
 	\end{equation*}
 
 	Оскільки справа стоїть многочлен другого порядку, а характеристичне рівняння має нульовий корінь кратності два, то частинний розв'язок має вигляд 
 	\begin{equation*}
-		y_{\text{part}}(x) = x^2 \cdot (a x + b),
+		y_{\text{part}}(x) = x^2 (a x + b),
 	\end{equation*}
 	або
 	\begin{equation*}
@@ -202,13 +214,14 @@
 
 	Таким чином загальний розв'язок має вигляд
 	\begin{equation*}
-		y_{\text{hetero}}(x) = C_1 + C_2 \cdot x + C_3 \cdot e^{-x} + \frac{x^3}{6}
+		y_{\text{hetero}}(x) = C_1 + C_2 x + C_3 e^{-x} + \frac{x^3}{6}
 	\end{equation*}
 \end{solution}
 
 \begin{example}
-	Розв'язати лінійне неоднорідне рівняння $y'' + y = e^x \cdot x$.
+	Розв'язати лінійне неоднорідне рівняння $y'' + y = e^x x$.
 \end{example}
+
 \begin{solution}
 	Розв'язуємо лінійне однорідне рівняння
 	\begin{equation*}
@@ -222,30 +235,30 @@
 
 	Його коренями будуть $\lambda_{1, 2} = \pm i$. І загальним роз\-в'яз\-ком однорідного рівняння буде
 	\begin{equation*}
-		y_{\text{homo}}(x) = C_1 \cdot \cos (x) + C_2 \cdot \sin (x).
+		y_{\text{homo}}(x) = C_1 \cos x + C_2 \sin x.
 	\end{equation*}
 
 	Оскільки справа стоїть многочлен першого порядку, помножений на експоненту, то частинний роз\-в'яз\-ок має вигляд
 	\begin{equation*}
-		y_{\text{part}}(x) = e^x \cdot (a x + b).
+		y_{\text{part}}(x) = e^x (a x + b).
 	\end{equation*}
 
 	Звідси
 	\begin{align*}
-		y_{\text{part}}'(x) &= e^x \cdot (a x + a + b), \\
-		y_{\text{part}}'(x) &= e^x \cdot (a x + 2 a + b).
+		y_{\text{part}}'(x) &= e^x (a x + a + b), \\
+		y_{\text{part}}'(x) &= e^x (a x + 2 a + b).
 	\end{align*}
 
 	Підставляємо одержані вирази у диференціальне рівняння
 	\begin{equation*}
-		e^x \cdot (a x + 2 a + b) + e^x \cdot (a x + b) = e^x \cdot x.
+		e^x (a x + 2 a + b) + e^x (a x + b) = e^x x.
 	\end{equation*}
 
 	Прирівнюємо коефіцієнти при однакових членах
 	\begin{table}[H]
 		\centering
 		\begin{tabular}{c|l}
-			$x \cdot e^x$ & $2 a = 1$ \\
+			$x e^x$ & $2 a = 1$ \\
 			$e^x$ & $2 a + 2 b = 0$
 		\end{tabular}
 	\end{table}
@@ -254,13 +267,14 @@
 
 	Таким чином загальний розв'язок має вигляд
 	\begin{equation*}
-		y_{\text{hetero}}(x) = C_1 \cdot \cos (x) + C_2 \cdot \sin (x) + \frac{e^x \cdot (x - 1)}{2}.
+		y_{\text{hetero}}(x) = C_1 \cos x + C_2 \sin x + \frac{e^x (x - 1)}{2}.
 	\end{equation*}
 \end{solution}
 
 \begin{example}
-	Розв'язати лінійне неоднорідне рівняння \[ y'' - 2 y' + y = e^x \cdot x.\]
+	Розв'язати лінійне неоднорідне рівняння \[ y'' - 2 y' + y = e^x x.\]
 \end{example}
+
 \begin{solution}
 	Розв'язуємо однорідне рівняння
 	\begin{equation*}
@@ -274,34 +288,34 @@
 	
 	Його коренями будуть $\lambda_1 = 1$, $\lambda_2 = 1$. І загальним роз\-в'яз\-ком однорідного рівняння буде
 	\begin{equation*}
-		y_{\text{homo}}(x) = C_1 \cdot e^x + C_2 \cdot x \cdot e^x.
+		y_{\text{homo}}(x) = C_1 e^x + C_2 x e^x.
 	\end{equation*}
 
 	Оскільки справа стоїть многочлен першого порядку, а показник при експоненті є двократним коренем характеристичного рівняння, частинний розв'язок має вигляд
 	\begin{equation*}
-		y_{\text{part}}(x) = x^2 \cdot e^x \cdot (a x + b),
+		y_{\text{part}}(x) = x^2 e^x (a x + b),
 	\end{equation*}
 	або
 	\begin{equation*}
-		y_{\text{part}}(x) = e^x \cdot (a x^3 + b x^2),
+		y_{\text{part}}(x) = e^x (a x^3 + b x^2),
 	\end{equation*}
 
 	Звідси
 	\begin{align*}
-		y_{\text{part}}'(x) &= e^x \cdot (a x^3 + (3 a + b) x^2 + 2 b x), \\
-		y_{\text{part}}''(x) &= e^x \cdot (a x^3 + (6 a + b) x^2 + (6 a + 4 b) x + 2 b).
+		y_{\text{part}}'(x) &= e^x (a x^3 + (3 a + b) x^2 + 2 b x), \\
+		y_{\text{part}}''(x) &= e^x (a x^3 + (6 a + b) x^2 + (6 a + 4 b) x + 2 b).
 	\end{align*}
 
 	Підставляємо одержані вирази в диференціальне рівняння
 	\begin{multline*}
-		e^x \cdot (a x^3 + (6 a + b) x^2 + (6 a + 4 b) x + 2 b) - 2 e^x \cdot (a x^3 + (3 a + b) x^2 + 2 b x) + \\ + e^x \cdot (a x^3 + b x^2) = e^x \cdot x.
+		e^x (a x^3 + (6 a + b) x^2 + (6 a + 4 b) x + 2 b) - 2 e^x (a x^3 + (3 a + b) x^2 + 2 b x) + \\ + e^x (a x^3 + b x^2) = e^x x.
 	\end{multline*}
 
 	Прирівнюємо коефіцієнти при однакових членах
 	\begin{table}[H]
 		\centering
 		\begin{tabular}{c|l}
-			$x \cdot e^x$ & $6 a + 4 b + 2 b = 1$ \\
+			$x e^x$ & $6 a + 4 b + 2 b = 1$ \\
 			$e^x$ & $2 b = 0$
 		\end{tabular}
 	\end{table}
@@ -310,13 +324,14 @@
 
 	Таким чином загальний розв'язок має вигляд
 	\begin{equation}
-		y_{\text{hetero}}(x) = C_1 \cdot e^x + C_2 \cdot x \cdot e^x + \frac{x^3 \cdot e^x}{6}.
+		y_{\text{hetero}}(x) = C_1 e^x + C_2 x e^x + \frac{x^3 e^x}{6}.
 	\end{equation}
 \end{solution}
 
 \begin{example}
-	Розв'язати лінійне неоднорідне рівняння \[ y'' - y = x \cdot \cos(x) + \sin (x).\]
+	Розв'язати лінійне неоднорідне рівняння \[ y'' - y = x \cos x + \sin x.\]
 \end{example}
+
 \begin{solution}
 	Розв'язуємо однорідне рівняння
 	\begin{equation*}
@@ -330,34 +345,34 @@
 
 	Його коренями будуть $\lambda_1 = 1$, $\lambda_2 = -1$. І загальним роз\-в'яз\-ком однорідного рівняння буде
 	\begin{equation*}
-		y_{\text{homo}}(x) = C_1 \cdot e^x + C_2 \cdot e^{-x}.
+		y_{\text{homo}}(x) = C_1 e^x + C_2 e^{-x}.
 	\end{equation*}
 
 	Частинний розв'язок неоднорідного має вигляд
 	\begin{equation*}
-		y_{\text{part}}(x) = (a x + b) \cdot \cos (x) + (c x + d) \cdot \sin(x).
+		y_{\text{part}}(x) = (a x + b) \cos x + (c x + d) \sin x.
 	\end{equation*}
 
 	Звідси
 	\begin{align*}
-		y_{\text{part}}'(x) &= (c x + a + d) \cdot \cos (x) + (-a x - b + c) \cdot \sin(x), \\
-		y_{\text{part}}''(x) &= (-a x - b + 2 c) \cdot \cos (x) + (- c x - 2 a - d) \cdot \sin(x)
+		y_{\text{part}}'(x) &= (c x + a + d) \cos x + (-a x - b + c) \sin x, \\
+		y_{\text{part}}''(x) &= (-a x - b + 2 c) \cos x + (- c x - 2 a - d) \sin x
 	\end{align*}
 
 	Підставляємо одержані вирази в диференціальне рівняння
 	\begin{multline*}
-		(-a x - b + 2 c) \cdot \cos (x) + (- c x - 2 a - d) \cdot \sin(x) - \\
-		- (a x + b) \cdot \cos (x) - (c x + d) \cdot \sin(x) = x \cdot \cos(x) + \sin (x).
+		(-a x - b + 2 c) \cos x + (- c x - 2 a - d) \sin x - \\
+		- (a x + b) \cos x - (c x + d) \sin x = x \cos x + \sin x.
 	\end{multline*}
 		 
 	Прирівнюємо коефіцієнти при однакових виразах
 	\begin{table}[H]
 		\centering
 		\begin{tabular}{c|l}
-			$x \cdot \cos (x)$ & $- 2 a = 1$ \\
-			$x \cdot \sin (x)$ & $- 2 c = 0$ \\
-			$\cos (x)$ & $- b + 2c - b = 0$ \\
-			$\sin (x)$ & $- 2 a - d - d = 1$
+			$x \cos x$ & $- 2 a = 1$ \\
+			$x \sin x$ & $- 2 c = 0$ \\
+			$\cos x$ & $- b + 2c - b = 0$ \\
+			$\sin x$ & $- 2 a - d - d = 1$
 		\end{tabular}
 	\end{table}
 
@@ -365,13 +380,14 @@
 
 	Таким чином загальний розв'язок має вигляд
 	\begin{equation*}
-		y_{\text{hetero}}(x) = C_1 \cdot e^x + C_2 \cdot x \cdot e^{x} - \frac{\cos (x)}{2}.
+		y_{\text{hetero}}(x) = C_1 e^x + C_2 x e^{x} - \frac{\cos x}{2}.
 	\end{equation*}
 \end{solution}
 
 \begin{example}
-	Розв'язати диференціальне рівняння \[y'' + 2 y' + 2 y = e^{-x} \cdot \sin (x).\]
+	Розв'язати диференціальне рівняння \[y'' + 2 y' + 2 y = e^{-x} \sin x.\]
 \end{example}
+
 \begin{solution}
 	Розв'язуємо однорідне рівняння
 	\begin{equation*}
@@ -380,31 +396,31 @@
 
 	Характеристичне рівняння $\lambda^2 + 2 \lambda + 2 = 0$ має корені $\lambda_{1,2} = -1\pm i$. І загальним розв'язком однорідного рівняння буде
 	\begin{equation*}
-		y_{\text{homo}}(x) = C_1 \cdot e^{-x} \cdot \cos(x) + C_2 \cdot e^{-x} \cdot \sin(x).
+		y_{\text{homo}}(x) = C_1 e^{-x} \cos x + C_2 e^{-x} \sin x.
 	\end{equation*}
 
 	Оскільки $\lambda_1 = 1 + i$ корінь кратності один, то частинний роз\-в'яз\-ок неоднорідного має вигляд
 	\begin{equation*}
-		y_{\text{part}}(x) = x \cdot e^{-x} \cdot (a \cdot \cos(x) + b \cdot \sin(x)).
+		y_{\text{part}}(x) = x e^{-x} (a \cos x + b \sin x ).
 	\end{equation*}
 
 	Звідси
 	\begin{align*}
-		y_{\text{part}}'(x) &= e^{-x} \cdot ((b - a x) \cdot \sin(x) + (a - (a - b) \cdot x) \cdot \cos(x)) \\
-		y_{\text{part}}'(x) &= -2 e^{-x} \cdot ((a + b - a x) \cdot \sin(x) + ((a - b) + b \cdot x) \cdot \cos(x))
+		y_{\text{part}}'(x) &= e^{-x} ((b - a x) \sin x + (a - (a - b) x) \cos x) \\
+		y_{\text{part}}'(x) &= -2 e^{-x} ((a + b - a x) \sin x + ((a - b) + b x) \cos x)
 	\end{align*}
 
 	Підставляємо одержані вирази в диференціальне рівняння
 	\begin{multline*}
-		-2 e^{-x} \cdot ((a + b - a x) \cdot \sin(x) + ((a - b) + b \cdot x) \cdot \cos(x)) + \\ + 2 e^{-x} \cdot ((b - a x) \cdot \sin(x) + (a - (a - b) \cdot x) \cdot \cos(x)) + \\ + 2 x \cdot e^{-x} \cdot (a \cdot \cos(x) + b \cdot \sin(x)) = e^{-x} \cdot \sin(x). 
+		-2 e^{-x} ((a + b - a x) \sin x + ((a - b) + b x) \cos x) + \\ + 2 e^{-x} ((b - a x) \sin x + (a - (a - b) x) \cos x) + \\ + 2 x e^{-x} (a \cos x + b \sin x) = e^{-x} \sin x. 
 	\end{multline*}
 
 	Прирівнюємо коефіцієнти при однакових членах
 	\begin{table}[H]
 		\centering
 		\begin{tabular}{c|l}
-			$e^{-x} \cdot \cos(x)$ & $2a + 2b = 0$ \\
-			$e^{-x} \cdot \sin(x)$ & $-2 a - 2 b + c = 1$
+			$e^{-x} \cos x$ & $2a + 2b = 0$ \\
+			$e^{-x} \sin x$ & $-2 a - 2 b + c = 1$
 		\end{tabular}
 	\end{table}
 
@@ -412,112 +428,143 @@
 
 	Таким чином загальний розв'язок має вигляд
 	\begin{equation*}
-		y_{\text{hetero}}(x) = C_1 \cdot e^{-x} \cdot \cos(x) + C_2 \cdot e^{-x} \cdot \sin(x) + x \cdot e^{-x} \cdot \left( \sin(x) - \cos(x) \right).
+		y_{\text{hetero}}(x) = C_1 e^{-x} \cos x + C_2 e^{-x} \sin x + x e^{-x} \left( \sin x - \cos x \right).
 	\end{equation*}
 \end{solution}
 
 Знайти загальний розв'язок рівнянь:
 
 \begin{multicols}{2}
-\begin{problem}
-	\[y'''-4y''+5y'-2y=2x+3;\]
-\end{problem}
-\begin{problem}
-	\[y'''-3y'+2y=e^{-x}(4x^2+4x-10);\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}+8y''+16y=\cos(x);\]
-\end{problem}
-\begin{problem}
-	\[y^{(5)}+y'''=x^2-1;\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}-y=x\cdot e^x+\cos(x);\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}+2y''+y=x^2\cdot\cos(x);\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}-y=5e^x\cdot\sin(x)+x^4;\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}+5y''+4y=\sin(x)\cdot\cos(2x);\]
-\end{problem}
-\begin{problem}
-	\[y'''-4y''+3y'=x^3 \cdot e^{2x};\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}+y''=7x-3\cos(x);\]
-\end{problem}
-\begin{problem}
-	\[y'''-y''-y'+y=3e^x+5x\cdot\sin(x);\]
-\end{problem}
-\begin{problem}
-	\[y'''-2y''+4y'-8y=e^{2x}\sin(2x)+2x^2;\]
-\end{problem}
-\begin{problem}
-	\[y'''+y'=\sin(x)+x\cdot\cos(x);\]
-\end{problem}
-\begin{problem}
-	\[y'''-y=x^3-1;\]
-\end{problem}
-\begin{problem}
-	\[y'''+y''=x^2+1+3x\cdot e^x;\]
-\end{problem}
-\begin{problem}
-	\[y'''+y''+y'+y=x\cdot e^x;\]
-\end{problem}
-\begin{problem}
-	\[y'''-9y'=-9(e^{3x}-2\sin3x+\cos3x);\]
-\end{problem}
-\begin{problem}
-	\[y'''-y'=10\sin(x)+6\cos(x)+4e^x;\]
-\end{problem}
-\begin{problem}
-	\[y'''-6y''+9y'=4x\cdot e^x;\]
-\end{problem}
-\begin{problem}
-	\[y'''+2y''-3y'=(8x+6)\cdot e^x;\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}+y''=x^2+x;\]
-\end{problem}
-\begin{problem}
-	\[y'''-3y'+2y=(2x^2-x) e^x+\cos(x);\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}-y=5e^x\cdot\cos(x)+3;\]
-\end{problem}
-\begin{problem}
-	\[y^{(5)}-y'''=x^2+\cos(x);\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}-2y''+y'=e^x;\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}-2y'''+y''=x^3;\]
-\end{problem}
-\begin{problem}
-	\[y^{(4)}+y'''=\cos(3x).\]
-\end{problem}
+    \begin{problem}
+    	\[y'''-4y''+5y'-2y=2x+3;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-3y'+2y=e^{-x}(4x^2+4x-10);\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}+8y''+16y=\cos x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(5)}+y'''=x^2-1;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}-y=xe^x+\cos x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}+2y''+y=x^2\cos x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}-y=5e^x\sin x+x^4;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}+5y''+4y=\sin x\cos 2x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-4y''+3y'=x^3 e^{2x};\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}+y''=7x-3\cos x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-y''-y'+y=3e^x+5x\sin x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-2y''+4y'-8y=e^{2x}\sin 2x+2x^2;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''+y'=\sin x+x\cos x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-y=x^3-1;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''+y''=x^2+1+3xe^x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''+y''+y'+y=xe^x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-9y'=-9(e^{3x}-2\sin3x+\cos3x);\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-y'=10\sin x+6\cos x+4e^x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-6y''+9y'=4xe^x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''+2y''-3y'=(8x+6)e^x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}+y''=x^2+x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'''-3y'+2y=(2x^2-x) e^x+\cos x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}-y=5e^x\cos x+3;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(5)}-y'''=x^2+\cos x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}-2y''+y'=e^x;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}-2y'''+y''=x^3;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y^{(4)}+y'''=\cos 3x.\]
+    \end{problem}
 \end{multicols}
 
 Знайти частинний розв'язок диференціальних рівнянь:
 \begin{problem}
-	\[y'''-2y''+y'=4(\sin(x)+\cos(x)),\quad y(0)=1,y'(0)=0,y''(0)=-1;\]
+	\[y'''-2y''+y'=4(\sin x+\cos x),\quad y(0)=1,y'(0)=0,y''(0)=-1;\]
 \end{problem}
+
 \begin{problem}
 	\[y'''+2y''+y'=-2e^{-2x},\quad y(0)=2,y'(0)=y''(0)=1;\]
 \end{problem}
+
 \begin{problem}
 	\[y'''-3y'=3(2-x^2),\quad y(0)=y'(0)=y''(0)=1;\]
 \end{problem}
+
 \begin{problem}
 	\[y'''+2y''+y'=5e^x,\quad y(0)=y'(0)=y''(0)=0;\]
 \end{problem}
+
 \begin{problem}
 	\[y'''-y'=3(2-x^2),\quad y(0)=y'(0)=y''(0)=1;\]
 \end{problem}
+
 \begin{problem}
 	\[y'''+2y''+2y'+y=x,\quad y(0)=y'(0)=y''(0)=0.\]
 \end{problem}

@@ -1,45 +1,38 @@
 Розглянемо застосування формули Остроградського-Ліувіля до рівняння 2-го порядку
 \begin{equation*}
-	%\label{eq:3.1.36}
-	y'' + p_1(x) \cdot y' + p_2(x) \cdot y = 0.
+	y'' + p_1(x) y' + p_2(x) y = 0.
 \end{equation*}
 
-Нехай $y_1(x)$ -- один з розв’язків. Тоді
+Нехай $y_1(x)$ --- один з розв'язків. Тоді
 \begin{equation*}
-	%\label{eq:3.1.37}
 	\begin{vmatrix}
 		y_1(x) & y(x) \\
 		y_1'(x) & y'(x)
-	\end{vmatrix} = C_2 \cdot \exp \left\{ - \int p_1(x) \diff x \right\}.
+	\end{vmatrix} = C_2 \exp \left\{ - \int p_1(x) \diff x \right\}.
 \end{equation*}
 
 Розкривши визначник, одержимо
 \begin{equation*}
-	%\label{eq:3.1.38}
-	y_1(x) \cdot y'(x) - y(x) \cdot y_1'(x) = C_2 \cdot \exp \left\{ - \int p_1(x) \diff x \right\}.
+	y_1(x) y'(x) - y(x) y_1'(x) = C_2 \exp \left\{ - \int p_1(x) \diff x \right\}.
 \end{equation*}
  
 Розділивши на $y_1^2(x)$, запишемо
 \begin{equation*}
-	%\label{eq:3.1.39}
-	\frac{y_1(x) \cdot y'(x) - y(x) \cdot y_1'(x)}{y_1^2(x)} = \frac{C_2}{y_1^2(x)} \cdot \exp \left\{ - \int p_1(x) \diff x \right\},
+	\frac{y_1(x) y'(x) - y(x) y_1'(x)}{y_1^2(x)} = \frac{C_2}{y_1^2(x)} \exp \left\{ - \int p_1(x) \diff x \right\},
 \end{equation*}
 або
 \begin{equation*}
-	%\label{eq:3.1.40}
-	\frac{\diff}{\diff x} \left( \frac{y(x)}{y_1(x)} \right) = \frac{C_2}{y_1^2(x)} \cdot \exp \left\{ - \int p_1(x) \diff x \right\},
+	\frac{\diff}{\diff x} \left( \frac{y(x)}{y_1(x)} \right) = \frac{C_2}{y_1^2(x)} \exp \left\{ - \int p_1(x) \diff x \right\},
 \end{equation*}
 
 Проінтегрувавши, одержимо
 \begin{equation*}
-	%\label{eq:3.1.41}
-	\frac{y(x)}{y_1(x)} = C_2 \cdot \int \left( \frac{1}{y_1^2(x)} \cdot \exp \left\{ - \int p_1(x) \diff x \right\} \right) \diff x + C_1,
+	\frac{y(x)}{y_1(x)} = C_2 \int \left( \frac{1}{y_1^2(x)} \exp \left\{ - \int p_1(x) \diff x \right\} \right) \diff x + C_1,
 \end{equation*}
 
 Остаточно
 \begin{equation*}
-	%\label{eq:3.1.42}
-	y(x) = C_1 \cdot y_1(x) + C_2 \cdot y_1(x) \cdot \int \left( \frac{1}{y_1^2(x)} \cdot \exp \left\{ - \int p_1(x) \diff x \right\} \right) \diff x,
+	y(x) = C_1 y_1(x) + C_2 y_1(x) \int \left( \frac{1}{y_1^2(x)} \exp \left\{ - \int p_1(x) \diff x \right\} \right) \diff x,
 \end{equation*}
 
 Отримана формула називається формулою Абеля. Вона дозволяє по одному відомому роз\-в'яз\-ку знайти загальний роз\-в'яз\-ок однорідного лінійного рівняння другого порядку.
