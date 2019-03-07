@@ -1,0 +1,118 @@
+\setcounter{property}{0}
+\begin{property}
+	Якщо вектор 
+	\begin{equation*}
+		x(t) = \begin{pmatrix} x_1(t) & \cdots & x_n(t) \end{pmatrix}^T
+	\end{equation*}
+	є розв'язком лінійної неоднорідної системи, a 
+	\begin{equation*}
+		y(t) = \begin{pmatrix} y_1(t) & \cdots & y_n(t) \end{pmatrix}^T
+	\end{equation*}
+	розв'язком відповідної лінійної однорідної системи, то сума $x(t) + y(t)$ є розв'язком лінійної неоднорідної системи.
+\end{property}
+
+\begin{proof}
+	Дійсно, за умовою
+	\begin{equation*}
+		\dot x(t) - A(t) x(t) \equiv f(t)
+	\end{equation*}
+	і
+	\begin{equation*}
+		\dot y(t) - A(t) y(t) \equiv 0.
+	\end{equation*}
+
+	Але тоді і
+	\begin{multline*}
+		\frac{\diff}{\diff t} (x(t) + y(t)) - A(t) (x(t) + y(t)) = \left( \frac{\diff}{\diff t} x(t) - A(t) x(t) \right) + \\
+		+ \left( \frac{\diff}{\diff t} y(t) - A(t) y(t) \right) \equiv f(t) + 0 \equiv f(t),
+	\end{multline*}
+	тобто $x(t) + y(t)$ є розв'язком неоднорідної системи.
+\end{proof}
+
+\begin{property}[Принцип суперпозиції]
+	Якщо вектори 
+	\begin{equation*}
+		x_i(t) = \begin{pmatrix} x_{1i}(t) & \cdots & x_{ni}(t) \end{pmatrix}^T, \quad i = \overline{1, n}
+	\end{equation*}
+	є розв'язками лінійних неоднорідних систем
+	\begin{equation*}
+		\dot x(t) - A(t) x(t) \equiv f_i(t) \quad i = \overline{1, n}
+	\end{equation*}
+	де 
+	\begin{equation*}
+		f_i(t) = \begin{pmatrix} f_{1i}(t) & \cdots & f_{ni}(t) \end{pmatrix}^T, \quad i = \overline{1, n},
+	\end{equation*}
+	то вектор $x(t) = \sum_{i = 1}^n C_i x_i(t)$, де $C_i$ --- довільні сталі буде розв'язком лінійної неоднорідної системи
+	\begin{equation*}
+		\dot x(t) - A(t) x(t) \equiv \sum_{i = 1}^n C_i f_i(t) \quad i = \overline{1, n}.
+	\end{equation*}
+\end{property}
+
+\begin{proof}
+	Дійсно, за умовою виконуються $n$ тотожностей
+	\begin{equation*}
+		\dot x_i(t) - A(t) x_i(t) \equiv f_i(t) \quad i = \overline{1, n}.
+	\end{equation*}
+
+	Склавши лінійну комбінацію з лівих і правих частин, одержимо
+	\begin{multline*}
+		\frac{\diff}{\diff t} \left( \sum_{i = 1}^n C_i x_i(t) \right) - A(t) \left( \sum_{i = 1}^n C_i x_i(t) \right) = \\
+		= \sum_{i = 1}^n C_i (\dot x_i(t) - A(t) x_i(t) ) \equiv \sum_{i = 1}^n C_i f_i(t),
+	\end{multline*}
+	тобто лінійна комбінація $x(t) = \sum_{i = 1}^n C_i x_i(t)$ буде розв'язком системи
+	\begin{equation*}
+		\dot x(t) - A(t) x(t) \equiv \sum_{i = 1}^n C_i f_i(t) \quad i = \overline{1, n}.
+	\end{equation*}
+\end{proof}
+
+\begin{property}
+	Якщо комплексний вектор з дійсними елементами 
+	\begin{equation*}
+		x(t) = u(t) + i v(t) = \begin{pmatrix} u_1(t) & \cdots & u_n(t) \end{pmatrix}^T + i \begin{pmatrix} v_1(t) & \cdots & v_n(t) \end{pmatrix}^T
+	\end{equation*}
+	є розв'язком неоднорідної системи $\dot x = A(t) x + f(t)$, де 
+	\begin{equation*}
+		f(t) = p(t) + i q(t) = \begin{pmatrix} p_1(t) & \cdots & p_n(t) \end{pmatrix}^T + i \begin{pmatrix} q_1(t) & \cdots & q_n(t) \end{pmatrix}^T,
+	\end{equation*}
+	то окремо дійсна і уявна частини є розв'язками систем $\dot x = A(t) x + p(t)$ і $\dot x = A(t) x + q(t)$ відповідно.
+\end{property}
+
+\begin{proof}
+	Дійсно, за умовою
+	\begin{equation*}
+		\frac{\diff}{\diff t} (u(t) + i v(t)) - A(t) (u(t) + i v(t) \equiv p(t) + i q(t).
+	\end{equation*}
+
+	Розкривши дужки і перетворивши, одержимо
+	\begin{equation*}
+		(\dot u(t) - A(t) u(t)) + i (\dot v(t) - A(t) v(t)) \equiv p(t) + i q(t).
+	\end{equation*}
+	
+	Але комплексні вирази рівні між собою тоді і тільки тоді, коли рівні дійсні та уявні частини, що і було потрібно довести.
+\end{proof}
+
+\begin{theorem}[про загальний розв'язок лінійної неоднорідної системи]
+	Загальний розв'язок лінійної неоднорідної системи складається із суми загального розв'язку однорідної системи і якого-небудь частинного розв'язку неоднорідної системи.
+\end{theorem}
+
+\begin{proof}
+	Нехай $x(t) = \sum_{i = 1}^n C_i x_i(t)$ --- загальний розв'язок однорідної системи і $y(t)$ --- частинний розв'язок неоднорідної. Тоді, як випливає з властивості 1, їхня сума $x(t) + y(t)$ буде розв'язком неоднорідної системи. \parvskip
+
+	Покажемо, що цей розв'язок загальний, тобто підбором сталих $C_i$, $i = \overline{1, n}$  можна розв'язати довільну задачу Коші
+	\begin{equation*}
+		x_1(t_0) = x_1^0, \quad x_2(t_0) = x_2^0, \quad \ldots, \quad x_n(t_0) = x_n^0.
+	\end{equation*}
+
+	Оскільки $x(t) = \sum_{i = 1}^n C_i x_i(t)$ --- загальний розв'язок однорідного рівняння, то вектори $x_1(t), \ldots, x_n(t)$ лінійно незалежні, $W[x_1, \ldots, x_n](t) \ne 0$ і система алгебраїчних рівнянь
+	\begin{equation*}
+		\left\{
+			\begin{array}{rl}
+				C_1 x_{11}(t_0) + C_2 x_{12}(t_0) + \ldots + C_n x_{1n}(t_0) &= x_1^0 - y_1(t_0), \\
+				C_1 x_{21}(t_0) + C_2 x_{22}(t_0) + \ldots + C_n x_{2n}(t_0) &= x_2^0 - y_2(t_0), \\
+				\hdotsfor{2} \\
+				C_1 x_{n1}(t_0) + C_2 x_{n2}(t_0) + \ldots + C_n x_{nn}(t_0) &= x_n^0 - y_n(t_0)
+			\end{array}
+		\right.
+	\end{equation*}
+ 	має єдиний розв'язок $C_i^0$, $i = \overline{1, n}$. І лінійна комбінація $z(t) = y(t) + \sum_{i = 1}^n C_i^0 x_i(t)$ з отриманими сталими є розв'язком поставленої задачі Коші.
+\end{proof}

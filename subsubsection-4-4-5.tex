@@ -1,0 +1,595 @@
+\begin{example}
+	Розв'язати систему неоднорідних рівнянь методом варіації довільної сталої
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				\dot x &= - 4 x - 2 y + \frac{2}{e^t - 1}, \\
+				\dot y &= 6 x + 3 y - \frac{3}{e^t - 1}.
+			\end{aligned}
+		\right.
+	\end{equation*}
+\end{example}
+
+\begin{solution}
+	Розв'язуємо спочатку однорідну систему. Її характеристичне рівняння має вигляд
+	\begin{equation*}
+		\det (A - \lambda E) = \begin{vmatrix} - 4 - \lambda & -2 \\ 6 & 3 - \lambda \end{vmatrix} = \lambda^2 + \lambda = 0 \implies \lambda_1 = 0, \lambda_2 = -1.
+	\end{equation*}
+
+	Розв'язуємо (наприклад) матричним методом. Маємо
+	\begin{equation*}
+		\Lambda = \begin{pmatrix}
+			0 & 0 \\ 0 & -1
+		\end{pmatrix}, \quad 
+		e^{\Lambda t} = \begin{pmatrix}
+			1 & 0 \\ 0 & e^{-t}
+		\end{pmatrix}
+	\end{equation*}
+
+	Матричне рівняння $A S = S \Lambda$ має вигляд
+	\begin{equation*}
+		\begin{pmatrix} -4 & -2 \\ 6 & 3 \end{pmatrix} \begin{pmatrix} a_1^1 & a_1^2 \\ a_2^1 & a_2^2 \end{pmatrix} = \begin{pmatrix} a_1^1 & a_1^2 \\ a_2^1 & a_2^2 \end{pmatrix} \begin{pmatrix} 0 & 0 \\ 0 & -1 \end{pmatrix}.
+	\end{equation*}
+
+	Звідси маємо дві системи рівнянь
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				- 4 a_1^1 - 2 a_2^1 &= 0, \\
+				6 a_1^1 + 3 a_2^1 &= 0,
+			\end{aligned}
+		\right.
+		\qquad
+		\left\{
+			\begin{aligned}
+				- 4 a_1^2 - 2 a_2^2 &= -a_1^2, \\
+				6 a_1^2 + 3 a_2^2 &= -a_2^2,
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Їх розв'язками будуть
+	\begin{equation*}
+		a_1^1 = 1, \quad a_2^1 = -2, \quad a_1^2 = -2, \quad a_2^2 = 3.
+	\end{equation*}
+
+	І розв'язок однорідної системи має вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} 1 & -2 \\ -2 & 3 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & e^t \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix} = \begin{pmatrix} 1 & -2e^{-t} \\ -2 & 3e^{-t} \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix}.
+	\end{equation*}
+
+	Частинний розв'язок неоднорідної системи має вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} 1 & -2e^{-t} \\ -2 & 3e^{-t} \end{pmatrix} \begin{pmatrix} C_1(t) \\ C_2(t) \end{pmatrix}.
+	\end{equation*}
+
+	Функції $C_1(t), C_2(t)$ задовольняють системі рівнянь
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				C_1'(t) - 2 C_2(r) e^{-t} = \frac{2}{e^t - 1}, \\
+				-2 C_1'(t) + 3 C_2(r) e^{-t} = - \frac{3}{e^t - 1}.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Звідси
+	\begin{align*}
+		C_1(t) &= \int \frac{\begin{vmatrix} \rfrac{2}{e^t - 1} & - 2 e^{-t} \\ \rfrac{-3}{e^t - 1} & 3 e^{-t} \end{vmatrix}}{\begin{vmatrix} 1 & - 2 e^{-t} \\ -2 & 3 e^{-t} \end{vmatrix}} \diff t = 0 + \bar C_1, \\
+		C_2(t) &= \int \frac{\begin{vmatrix} 1 & \rfrac{2}{e^t - 1} \\ - 2 & \rfrac{-3}{e^t - 1} \end{vmatrix}}{\begin{vmatrix} 1 & - 2 e^{-t} \\ -2 & 3 e^{-t} \end{vmatrix}} \diff t =\int \frac{\frac{1}{e^t - 1}}{- e^{-t}} \diff t = - \int \frac{e^t}{e^t - 1} \diff t = \\
+		&= - \ln |e^t - 1| + \bar C_2.
+	\end{align*}
+
+	Поклавши $\bar C_1 = \bar C_2 = 0$, одержуємо $C_1(t) \equiv 0$, $C_2(t) = - \ln |e^t - 1|$. Таким чином, частинний розв'язок має вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} 1 & -2e^{-t} \\ -2 & 3e^{-t} \end{pmatrix} \begin{pmatrix} 0 \\ - \ln |e^t - 1| \end{pmatrix} = \begin{pmatrix} 2 e^{-t} \ln |e^t - 1| \\ - 3 e^{-t} \ln |e^t - 1| \end{pmatrix}
+	\end{equation*}
+
+	А загальний розв'язок 
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} 1 & -2e^{-t} \\ -2 & 3e^{-t} \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix} + \begin{pmatrix} 2 e^{-t} \ln |e^t - 1| \\ - 3 e^{-t} \ln |e^t - 1| \end{pmatrix}
+	\end{equation*}
+\end{solution}
+
+\begin{example}
+	Розв'язати систему неоднорідних рівнянь за допомогою формули Коші
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				\dot x &= - x + 2 y, \\
+				\dot y &= 3 x + 4 y + \frac{e^{3 t}}{e^{2 t} + 1}.
+			\end{aligned}
+		\right.
+	\end{equation*}
+\end{example}
+
+\begin{solution}
+	Розв'язуємо спочатку однорідну систему. Характеристичне рівняння має вигляд
+	\begin{equation*}
+		\det (A - \lambda E) = \begin{vmatrix} - 1 - \lambda & 2 \\ 3 & 4 - \lambda \end{vmatrix} = \lambda^2 - 3 \lambda + 2 = 0 \implies \lambda_1 = 1, \lambda_2 = -1.
+	\end{equation*}
+
+	Розв'язуємо матричним методом. Маємо
+	\begin{equation*}
+		\Lambda = \begin{pmatrix}
+			1 & 0 \\ 0 & 2
+		\end{pmatrix}, \quad 
+		e^{\Lambda t} = \begin{pmatrix}
+			e^t & 0 \\ 0 & e^{2t}
+		\end{pmatrix}
+	\end{equation*}
+
+	Матричне рівняння $A S = S \Lambda$ має вигляд
+	\begin{equation*}
+		\begin{pmatrix} -1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} a_1^1 & a_1^2 \\ a_2^1 & a_2^2 \end{pmatrix} = \begin{pmatrix} a_1^1 & a_1^2 \\ a_2^1 & a_2^2 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & 2 \end{pmatrix}.
+	\end{equation*}
+ 
+	Одержуємо дві системи 
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				- a_1^1 + 2 a_2^1 &= a_1^1, \\
+				3 a_1^1 + 4 a_2^1 &= a_2^1,
+			\end{aligned}
+		\right.
+		\qquad
+		\left\{
+			\begin{aligned}
+				- a_1^2 + 2 a_2^2 &= 2 a_1^2, \\
+				3 a_1^2 + 4 a_2^2 &= 2 a_2^2,
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Їх розв'язками будуть
+	\begin{equation*}
+		a_1^1 = 1, \quad a_2^1 = 1, \quad a_1^2 = 2, \quad a_2^2 = 3.
+	\end{equation*}
+
+	І розв'язок однорідної системи має вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} 1 & 2 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} e^t & 0 \\ 0 & e^{2 t} \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix} = \begin{pmatrix} e^t & 2 e^{2 t} \\ e^t & 3 e^{2t} \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix}.
+	\end{equation*}
+
+	Фундаментальна матриця лінійної однорідної системи, нормована в точці $t = 0$, має вигляд
+	\begin{equation*}
+		X(t) = \begin{pmatrix} e^t & 2 e^{2 t} \\ e^t & 3 e^{2t} \end{pmatrix} \begin{pmatrix} 1 & 2 \\ 1 & 3 \end{pmatrix}^{-1} = \begin{pmatrix} (3 - 2 e^t) e^t & -2 (1 - e^t) e^t \\ 3 (1 - e^t) e^t & (-2 + 3 e^t) e^t \end{pmatrix}.
+	\end{equation*}
+
+	Використовуючи формулу Коші, одержуємо частинний розв'язок, який задовольняє нульовим початковим умовам
+	\begin{align*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} &= \int_0^t \begin{pmatrix} (3 - 2 e^s) e^s & -2 (1 - e^s) e^s \\ 3 (1 - e^s) e^s & (-2 + 3 e^s) e^s \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix} \diff s = \\
+		&= \begin{pmatrix} \displaystyle \int_0^t \frac{-2 (1 - e^{t - s}) e^{t + 2 s}}{e^{2 s}} \diff s \\ \\ \displaystyle  \int_0^t \frac{(-2 +3 e^{t - s}) e^{t + 2 s}}{e^{2 s}} \diff s \end{pmatrix} = \\
+		&= \begin{pmatrix} - 2 e^t \displaystyle \int_0^t \frac{e^{2 s}}{e^{2 s}} \diff s + 2 e^{2 t} \displaystyle \int_0^t \frac{e^{2 s}}{e^{2 s}} \diff s \\ \\ - 2 e^t \displaystyle \int_0^t \frac{e^{2 s}}{e^{2 s}} \diff s + 3 e^{2 t} \displaystyle \int_0^t \frac{e^{2 s}}{e^{2 s}} \diff s \end{pmatrix} = \\
+		&= \left. \begin{pmatrix} -e^t \ln |e^{2 s} + 1| + 2 e^{2 t} \arctan e^s \\ -e^t \ln |e^{2 s} + 1| + 3 e^{2 t} \arctan e^s \end{pmatrix} \right|_{s = 0}^{s = t} = \\
+		&= \begin{pmatrix} -e^t (\ln |e^{2 t} + 1| - \ln 2) + 2 e^{2 t} \left( \arctan e^t - \frac\pi4 \right) \\ -e^t (\ln |e^{2 t} + 1| - \ln 2) + 3 e^{2 t} \left( \arctan e^t - \frac\pi4 \right) \end{pmatrix}.
+	\end{align*}
+
+	І загальний розв'язок системи у формі Коші має вигляд
+	\begin{multline*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} (3 - 2 e^t) e^t & -2 (1 - e^t) e^t \\ 3 (1 - e^t) e^t & (-2 + 3 e^t) e^t \end{pmatrix} \begin{pmatrix} x_1(0) \\ x_2(0) \end{pmatrix} + \\
+		+ \begin{pmatrix} -e^t (\ln |e^{2 t} + 1| - \ln 2) + 2 e^{2 t} \left( \arctan e^t - \frac\pi4 \right) \\ -e^t (\ln |e^{2 t} + 1| - \ln 2) + 3 e^{2 t} \left( \arctan e^t - \frac\pi4 \right) \end{pmatrix}.
+	\end{multline*}
+\end{solution}
+
+\begin{remark}
+	Якщо шукати розв'язок не в формі Коші, то він має більш простіший вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} e^t & 2 e^t \\ e^t & 3 e^t \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix} + \begin{pmatrix} -e^t \ln |e^{2 t} + 1| + 2 e^{2 t} \arctan e^t \\ -e^t \ln |e^{2 t} + 1| + 3 e^{2 t} \arctan e^t \end{pmatrix}.
+	\end{equation*}
+\end{remark}
+
+\begin{example}
+	Знайти загальний розв'язок системи лінійних неоднорідних рівнянь за допомогою методу невизначених коефіцієнтів:
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				\dot x_1 &= x_2, \\
+				\dot x_2 &= x_1 + t.
+			\end{aligned}
+		\right.
+	\end{equation*}
+\end{example}
+
+\begin{solution}
+	Складаємо характеристичне рівняння
+	\begin{equation*}
+		\det (A - \lambda E) = \begin{vmatrix} - \lambda & 1 \\ 1 & - \lambda \end{vmatrix} = \lambda^2 - 1 = 0 \implies \lambda_1 = 1, \lambda_2 = -1.
+	\end{equation*}
+
+	Оскільки рівняння не містить нульових коренів, частинний розв'язок шукаємо у вигляді
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} a t + b \\ c t + d \end{pmatrix}.
+	\end{equation*}
+
+	Підставивши в систему, отримаємо
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				a &= c t + d, \\
+				c &= a t + b + t.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Прирівнявши коефіцієнти при членах з однаковими степенями, отримаємо
+	\begin{equation*}
+		0 = c, \quad 0 = a + 1, \quad a = d, \quad c = b.
+	\end{equation*}
+
+	Звідси $a = -1$, $b = c = 0$, $d = -1$. І частинний розв'язок має вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} - t \\ - 1 \end{pmatrix}.
+	\end{equation*}
+\end{solution}
+
+\begin{example}
+	Знайти загальний розв'язок системи лінійних неоднорідних рівнянь за допомогою методу невизначених коефіцієнтів:
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				\dot x_1 &= x_1 + 2 x_2, \\
+				\dot x_2 &= 2 x_1 + 4 x_2 + t.
+			\end{aligned}
+		\right.
+	\end{equation*}
+\end{example}
+
+\begin{solution}
+	Складаємо характеристичне рівняння
+	\begin{equation*}
+		\det (A - \lambda E) = \begin{vmatrix} 1 - \lambda & 2 \\ 2 & 4 - \lambda \end{vmatrix} = \lambda^2 - 5 \lambda = 0 \implies \lambda_1 = 0, \lambda_2 = 5.
+	\end{equation*}
+
+	Оскільки є один нульовий корінь, то частинний розв'язок шукаємо у вигляді
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} a t^2 + b t + c \\ d t^2 + e t + f \end{pmatrix}.
+	\end{equation*}
+
+	Підставляємо в неоднорідну систему
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				2 a t + b &= a t^2 + b t + c + 2 (d t^2 + e t + f), \\
+				2 d t + e &= 2 (a t^2 + b t + c) + 4 (d t^2 + e t + f) + t.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Прирівнюємо коефіцієнти при членах з однаковими степенями.
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				0 &= a + 2 d, \\
+				0 &= 2 a + 4 d, 
+			\end{aligned}
+		\right. \qquad \left\{
+			\begin{aligned}
+				2 a &= b + 2 e, \\
+				2 d &= 2 b + 4 e + 1, 
+			\end{aligned}
+		\right. \qquad \left\{
+			\begin{aligned}
+				b &= c + 2 f, \\
+				e &= 2 c + 4 f.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Помноживши перше рівняння у другій підсистемі на мінус два і склавши з другим рівнянням, одержуємо $-4 a + 2 d = 1$. Разом з першим рівнянням першої системи маємо
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				a + 2 d &= 0, \\
+				- 4 a + 2 d &= 1.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Звідси $a = - 1 / 5, d = - 1 / 10$. І перше рівняння другої підсистеми має вигляд*
+	\begin{equation*}
+		b - 2 e = - 2 / 5.
+	\end{equation*}
+
+	Помноживши перше рівняння останньої підсистеми на два і віднявши друге рівняння, маємо
+	\begin{equation*}
+		2 b - e = 0.
+	\end{equation*}
+
+	З одержаних двох рівнянь дістаємо $b = - 2 / 25, e = - 4 / 25$. І остання підсистема дає співвідношення $c = - 2 / 25 - 2 f$. Таким чином частинний розв'язок має вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} - t^2 / 5 - 2 t / 25 - 2 / 25 - 2 f \\ - t^2 / 10 - 4 t / 25 + f \end{pmatrix}.
+	\end{equation*}
+
+	Стала $f$ входить в загальний розв'язок однорідної системи і точно не визначається. Поклавши $f = 0$, одержуємо
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} - t^2 / 5 - 2 t / 25 - 2 / 25 \\ - t^2 / 10 - 4 t / 25 \end{pmatrix}.
+	\end{equation*}
+\end{solution}
+
+\begin{example}
+	Знайти частинний розв'язок системи за допомогою методу невизначених коефіцієнтів:
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				\dot x_1 &= x_2 + e^t, \\
+				\dot x_2 &= - x_1 + t e^t.
+			\end{aligned}
+		\right.
+	\end{equation*}
+\end{example}
+
+\begin{solution}
+	Складаємо характеристичне рівняння однорідної системи
+	\begin{equation*}
+		\det (A - \lambda E) = \begin{vmatrix} - \lambda & 1 \\ -1 & - \lambda \end{vmatrix} = \lambda^2 + 1 = 0 \implies \lambda_{1, 2} = \pm i.
+	\end{equation*}
+
+	Оскільки одиниця не є коренем, то частинний розв'язок шукаємо у вигляді
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} (a t + b) e^t \\ (c t + d) e^t \end{pmatrix}.
+	\end{equation*}
+
+	Підставляємо в неоднорідну систему, одержуємо
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				a e^t + (a t + b) e^t &= (c t + d) e^t + e^t, \\
+				c e^t + (c t + d) e^t &= - (a t + b) e^t + t e^t.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Прирівнюємо коефіцієнти при однакових членах, одержуємо
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				a &= c, \\
+				c &= - a + 1, 
+			\end{aligned}
+		\right. \qquad \left\{
+			\begin{aligned}
+				a + b &= d + 1, \\
+				e &= 2 c + 4 f.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Розв'язавши, одержуємо: $b = 0, a = c = d = 1 / 2$. Таким чином частинний розв'язок має вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} t e^t / 2 \\ (t + 1) e^t / 2 \end{pmatrix}.
+	\end{equation*}
+\end{solution}
+
+\begin{example}
+	Знайти частинний розв'язок системи за допомогою методу невизначених коефіцієнтів:
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				\dot x_1 &= x_2 + e^t, \\
+				\dot x_2 &= x_1 + t e^t.
+			\end{aligned}
+		\right.
+	\end{equation*}
+\end{example}
+
+\begin{solution}
+	Складаємо характеристичне рівняння
+	\begin{equation*}
+		\det (A - \lambda E) = \begin{vmatrix} - \lambda & 1 \\ 1 & - \lambda \end{vmatrix} = \lambda^2 - 1 = 0 \implies \lambda_1 = 1, \lambda_2 = -1.
+	\end{equation*}
+
+	Оскільки характеристичне рівняння має коренем одиницю кратності один, то частинний розв'язок шукаємо у вигляді
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} (a t^2 + b t + c) e^t \\ (d t^2 + e t + f) e^t \end{pmatrix}.
+	\end{equation*}
+
+	Підставляємо в неоднорідну систему, одержуємо
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				(2 a t + b) e^t + (a t^2 + b t + c) e^t &= (d t^2 + e t + f) e^t + e^t, \\
+				(2 d t + e) e^t + (d t^2 + e t + f) e^t &= (a t^2 + b t + c) e^t + t e^t.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Прирівнюємо коефіцієнти при однакових членах, одержуємо
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				a &= d, \\
+				d &= a,
+			\end{aligned}
+		\right. \qquad \left\{
+			\begin{aligned}
+				2 a + b &= e, \\
+				2 d + e &= b + 1,
+			\end{aligned}
+		\right. \qquad \left\{
+			\begin{aligned}
+				b + c &= f + 1, \\
+				e + f &= c.
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	З першої підсистеми одержуємо $a = d$. Підставляємо в другу
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				2 a + b - e&= 0, \\
+				2 a + e - b &= 1,
+			\end{aligned}
+		\right.
+	\end{equation*}
+
+	Склавши два рівняння, одержуємо: $a = 1 / 4$, $b - e = - 1 / 2$. Склавши два рівняння останньої підсистеми, маємо $b + e = 1$. Звідси  $b = 1 / 4, e = 3 / 4$, $f - c = 3 / 4$. Таким чином частинний розв'язок має вигляд
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} (t^2 / 4 + t / 4 + c) e^t \\ (t^2 / 4 + 3 t / 4 - 3 / 4 + c) e^t \end{pmatrix}.
+	\end{equation*}
+
+	Поклавши $c = 0$, одержуємо
+	\begin{equation*}
+		\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} (t^2 + t) e^t / 4 \\ (t^2 + 3 t - 3) e^t / 4 \end{pmatrix}.
+	\end{equation*}
+\end{solution}
+
+Знайти загальний розв'язок неоднорідної системи.
+\begin{multicols}{2}
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= y + \tan^2 t - 1, \\
+			\dot y &= - x + \tan t.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 3 x - y, \\
+			\dot y &= 2 x - y + 15 e^t \sqrt{t}.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= y - 5 \cos t, \\
+			\dot y &= 2 x + y.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 2 x - 4 y + 4 e^{-2t}, \\
+			\dot y &= 2 x - 2 y.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= - x + 2 y + 1, \\
+			\dot y &= 2 x - 2 y.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 2 x + y + e^t, \\
+			\dot y &= - 2 x + 2 t.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 3 x - 4 y, \\
+			\dot y &= x - 3 y + 3 e^t.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= x + 2 y + 16 t e^t, \\
+			\dot y &= 2 x - 2 y.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 2 x - 3 y, \\
+			\dot y &= x - 2 y + 2 \sin t.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 2 x - y, \\
+			\dot y &= x + 2 e^t.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 2 x + y + 2 e^t, \\
+			\dot y &= x + 2 y - 3 e^{4 t}.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= x - y + 1 / \cos t, \\
+			\dot y &= 2 x - y.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= y + 2 e^t, \\
+			\dot y &= x + t^2.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 3 x + 2 y + 4 e^{5 t}, \\
+			\dot y &= x + 2 y.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 4 x + y - e^{2 t}, \\
+			\dot y &= - 2 x + t.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 5 x - 3 y + 2 e^{3 t}, \\
+			\dot y &= x + y + 5 e^{-t}.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= x + 2 y, \\
+			\dot y &= x - 5 \sin t.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 2 x - y, \\
+			\dot y &= - 2 x + y + 18 t.
+		\end{aligned} \right. \]
+	\end{problem}
+\end{multicols}
+
+\begin{multicols}{2}
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 2 x + 4 t - 8, \\
+			\dot y &= 3 x + 4 y.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= x - y + 2 \sin t, \\
+			\dot y &= 2 x - y.
+		\end{aligned} \right. \]
+	\end{problem}
+	
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 4 x - 3 y + \sin t, \\
+			\dot y &= 2 x - y - 2 \cos t.
+		\end{aligned} \right. \]
+	\end{problem}
+
+	\begin{problem}
+		\[ \left\{ \begin{aligned}
+			\dot x &= 2 x - y, \\
+			\dot y &= - x + 2 y - 5 e^t \sin t.
+		\end{aligned} \right. \]
+	\end{problem}
+\end{multicols}

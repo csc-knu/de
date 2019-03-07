@@ -1,0 +1,52 @@
+Нехай $X(t, t_0)$ --- фундаментальна система, нормована при $t = t_0$ тобто $X(t_0, t_0) = E$, де $E$ --- одинична матриця. Загальний розв'язок однорідної системи має вигляд
+\begin{equation*}
+	x(t) = X(t, t_0) C.
+\end{equation*}
+
+Вважаючи $C$ невідомою вектором-функцією і повторюючи викладення методу варіації довільної постійний, одержимо
+\begin{equation*}
+	X(t, t_0) C'(t) = f(t).
+\end{equation*}
+
+Звідси
+\begin{equation*}
+	\frac{\diff C(t)}{\diff t} = X^{-1}(t, t_0) f(t).
+\end{equation*}
+
+Проінтегруємо отриманий вираз
+\begin{equation*}
+	C(t) = C + \int_{t_0}^t X^{-1}(\tau, t_0) f(\tau) \diff \tau.
+\end{equation*}
+
+Тут $C$ --- вектор із сталих, що отриманий при інтегруванні системи. Підставивши у вихідний вираз, одержимо:
+\begin{multline*}
+	x(t) = X(t, t_0) \left( C + \int_{t_0}^t X^{-1}(\tau, t_0) f(\tau) \diff \tau \right) = \\
+	= X(t, t_0) C + \int_{t_0}^t X(t, t_0) X^{-1}(\tau, t_0) f(\tau) \diff \tau 
+\end{multline*}
+  
+Якщо $X(t, t_0)$ --- фундаментальна матриця, нормована при $t = t_0$, то $X(t, t_0) = X(t) X^{-1} (t_0)$. Звідси
+\begin{equation*}
+	X(t, t_0) X^{-1}(\tau, t_0) = X(t) X^{-1}(t_0) \left( X(\tau) X^{-1}(t_0) \right)^{-1} = X(t) X^{-1} (\tau) = X(t, \tau).
+\end{equation*}
+ 
+Підставивши початкові значення $x(t_0 = x_0)$ і з огляду на те, що фундаметнальна матриця нормована, тобто $X(t_0, t_0) = E$, одержимо
+\begin{equation*}
+	x(t) = X(t, t_0) x_0 + \int_{t_0}^t X(t, \tau) f(\tau) \diff \tau.
+\end{equation*}
+
+Отримана формула називається формулою Коші загального розв'язку неоднорідного рівняння. \parvskip
+
+Частинний розв'язок неоднорідного рівняння, що задовольняє нульовій початковій умові, має вид
+\begin{equation*}
+	x_{\text{hetero}}(t) = \int_{t_0}^t X(t, \tau) f(\tau) \diff \tau.
+\end{equation*}
+
+Якщо система з сталою матрицею $A$, то
+\begin{equation*}
+	X(t, t_0) = X(t - t_0), \qquad X(t, \tau) = X(t - \tau).
+\end{equation*}
+
+І формула Коші має вигляд
+\begin{equation*}
+	x(t) = X(t - t_0) x_0 + \int_{t_0}^t X(t - \tau) f(\tau) \diff \tau.
+\end{equation*}
