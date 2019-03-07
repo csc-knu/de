@@ -25,9 +25,10 @@
 \end{multline*}
   
 Якщо $X(t, t_0)$ --- фундаментальна матриця, нормована при $t = t_0$, то $X(t, t_0) = X(t) X^{-1} (t_0)$. Звідси
-\begin{equation*}
-	X(t, t_0) X^{-1}(\tau, t_0) = X(t) X^{-1}(t_0) \left( X(\tau) X^{-1}(t_0) \right)^{-1} = X(t) X^{-1} (\tau) = X(t, \tau).
-\end{equation*}
+\begin{align*}
+	X(t, t_0) X^{-1}(\tau, t_0) &= X(t) X^{-1}(t_0) \left( X(\tau) X^{-1}(t_0) \right)^{-1} = \\
+	&= X(t) X^{-1} (\tau) = X(t, \tau).
+\end{align*}
  
 Підставивши початкові значення $x(t_0 = x_0)$ і з огляду на те, що фундаметнальна матриця нормована, тобто $X(t_0, t_0) = E$, одержимо
 \begin{equation*}
@@ -38,7 +39,7 @@
 
 Частинний розв'язок неоднорідного рівняння, що задовольняє нульовій початковій умові, має вид
 \begin{equation*}
-	x_{\text{hetero}}(t) = \int_{t_0}^t X(t, \tau) f(\tau) \diff \tau.
+	x(t) = \int_{t_0}^t X(t, \tau) f(\tau) \diff \tau.
 \end{equation*}
 
 Якщо система з сталою матрицею $A$, то
