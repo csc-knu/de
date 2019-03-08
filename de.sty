@@ -3,7 +3,7 @@
 \usepackage[T2A,T1]{fontenc}
 \usepackage[english, ukrainian]{babel}
 \usepackage{amsmath, amssymb}
-%\usepackage[showframe]{geometry}
+\usepackage{geometry}
 \usepackage{natbib}
 
 \allowdisplaybreaks
@@ -16,6 +16,7 @@
 \date{\today}
 
 \usepackage{float, multirow, multicol, xcolor, hyperref}
+\definecolor{cover}{RGB}{191,0,0}
 \hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=red}
 
 \usepackage{amsthm}
@@ -43,6 +44,11 @@
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\rfrac[2]{{}^{#1}\!/_{\!#2}}
 
+\usepackage{watermark,graphicx}
+\thiswatermark{\centering \put(-103,-770){\includegraphics[scale=0.17]{cover.png}}}
+
+\newcommand{\parvskip}{\vspace{1em}}
+
 \numberwithin{equation}{section}% reset equation counter for sections
 \numberwithin{equation}{subsection}% Omit `.0` in equation numbers for non-existent subsections.
 \renewcommand*{\theequation}{%
@@ -65,5 +71,3 @@
 	\fi%
 }
 \makeatother
-
-\newcommand{\parvskip}{\vspace{1em}}
