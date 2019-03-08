@@ -6,16 +6,17 @@
 
 Комп'ютерний набір та верстка – Скибицький Нікіта Максимович.
 
-## [Частина 1](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations%20Chapter%201.pdf)
-
-## [Частина 2](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations%20Chapter%202.pdf)
-
-## [Частина 3](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations%20Chapter%203.pdf)
-
-## [Частина 4](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations%20Chapter%204.pdf)
-
 ## [Усе разом](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations.pdf)
 
-### Допомогти проекту
+### [Частина 1](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations%20Chapter%201.pdf)
+
+### [Частина 2](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations%20Chapter%202.pdf)
+
+### [Частина 3](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations%20Chapter%203.pdf)
+
+### [Частина 4](https://github.com/Sky-Nik/differential-equations/blob/master/Differential%20Equations%20Chapter%204.pdf)
+
+
+#### Допомогти проекту
 
 Я не тішу себе надією що у цьому констпекті немає помилок, але сподіваюся що рано чи пізно їх усі вдасться виправити. Як невеличкий стимул для вас допомогти мені у цій непростій затії пропоную наступне: за кожнй знайдену вами змістовну, математичну, типографічну, чи будь-яку іншу помилку, так само як за будь-які (суттєві) пропозиції щодо покращення, я заплачу вам `2.56₴`. Так, дрібниця, але приємно.
