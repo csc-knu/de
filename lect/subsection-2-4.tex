@@ -1,0 +1,279 @@
+Розглянемо приклади.
+\begin{example}
+	Розв'язати рівняння: $y'' = x + \sin x$.
+\end{example}
+
+\begin{solution}
+	Інтегруємо два рази
+	\begin{align*}
+		y' &= \int (x + \sin x) \diff x + C_1 = \frac{x^2}{2} - \cos x + C_1; \\
+		y &= \int \left( \frac{x^2}{2} - \cos x + C_1 \right) \diff x = \frac{x^3}{6} - \sin x + C_1 x+ C_2.
+	\end{align*}
+\end{solution}
+
+\begin{example}
+	Розв'язати рівняння $(y'')^3 - 2 y'' - x = 0$.
+\end{example}
+
+\begin{solution}
+	Запишемо рівняння у параметричній формі \[ y'' = y, \quad x = t^3 - 2 t. \] 
+	
+	Використовуючи співвідношення $\diff y' = y'' \diff x$, одержуємо \[ \diff y' = t (3t^2 - 2) \diff t,\] або \[ \diff y' = (3t^2 - 2t) \diff t.\]
+	
+	Звідси понижуємо порядок рівняння на одиницю \[ y' = \frac{3t^3}{4}-t^2+C_1, \quad x = t^3 - 2t.\]
+	
+	Знов використовуючи співвідношення $\diff y = y' \diff x$, одержуємо \[ \diff y = \left( \frac{3t^3}{4}-t^2+C_1 \right)  (3t^2 - 2) \diff t,\] або \[ \diff y = \left( \frac{9t^5}{4} - 3 t^4 - \frac{3t^3}{2} + (2 + 3 C_1) t^2 - 2 C_1 \right) \diff t.\]
+	
+	Звідси загальний розв'язок у параметричній формі має вигляд \[ x = t^3 - 2 t, \quad y = \frac{3t^6}{8} - \frac{3 t^5}{5} - \frac{3t^4}{8} + \frac{(2 + 3 C_1) t^3}{3} - 2 C_1 t + C_2.\]
+\end{solution}
+
+\begin{example}
+	Розв'язати рівняння: $(y'')^3 + x y'' = y'$.
+\end{example}
+
+\begin{solution}
+	Запишемо рівняння у параметричній формі \[ y'' = t, \quad y''' = e^{-t}. \]
+	
+	Використовуючи співвідношення $\diff y' = y'' \diff x$, одержуємо \[ \diff t = e^{-t} \diff x. \] 
+	
+	Звідси $\diff x = e^t \diff t$ і $x = e^t + C_1$. Запишемо рівняння другого порядку \[ x = e^r + C_1, \quad y'' = t.\]
+	
+	Запишемо рівняння у параметричній формі \[ y'' = t, \quad x = t^3 - 2 t.\]
+	
+	Використовуючи співвідношення $\diff y' = y'' \diff x$, одержуємо \[ \diff y' = t e^t \diff t. \]
+	
+	Звідси \[y' = \int t e^t \diff t = e^t (t - 1) + C_2.\]
+	
+	Одержали диференціальне рівняння першого порядку \[ x = e^t + C_1, \quad y' = e^t (t - 1) + C_2.\]
+	
+	Використовуючи співвідношення $\diff y = y' \diff x$, запишемо \[ \diff y = (e^t (t - 1) + C_2) e^t \diff t.\]
+	
+	Звідси \[ y = \frac{e^{2t}(t-1)}{2} - \frac{e^{2t}}{4} + C_2 e^t + C_3.\] 
+	
+	Остаточно загальний розв'язок має вигляд \[ x = e^t + C_1, \quad y = \frac{e^{2t}(2t - 3)}{4}+C_2e^t + C_3.\] 
+	
+	Якщо вилучити параметр $t$, то одержимо загальний розв'язок \[ y = \frac{(x-C_1)^2}{4}  \left( 2 \ln |x - C_1| - 3 \right) + C_2 (x - C_1) + C_3.\]
+\end{solution}
+
+\begin{example}
+	Розв'язати рівняння: $3 \sqrt[3]{y} y'' = 1$.
+\end{example}
+
+\begin{solution}
+	Запишемо рівняння у вигляді \[ y'' = \frac{1}{3\sqrt[3]{y}}. \]
+	
+	Помножимо обидві частини на $2 y' \diff x$. Одержимо \[ 2 y'' y' \diff x = \frac{2y'\diff x}{3\sqrt[3]{y}}, \] або \[ \diff (y')^2 = \frac{2\diff y}{3\sqrt[3]{y}}. \]
+	
+	Проінтегруємо і одержимо \[ (y')^2 = \sqrt[3]{y^2} + C_1.\]
+	
+	Звідси $y' = \pm \sqrt{y^{2/3} + C_1}$. Нехай початкові умови такі, що $C_1 = {\bar C_1}^2 > 0$. Тобто рівняння має вигляд \[ \frac{\diff y}{\diff x} = \pm \sqrt{y^{2/3} + {\bar C_1}^2}. \]
+	
+	Розділимо змінні \[ \int \frac{\diff y}{\sqrt{y^{2/3} + {\bar C_1}^2}} = \pm \int \diff x + C_2. \]
+	
+	Робимо заміну $\sqrt{y^{2/3} + {\bar C_1}^2} = t$. Тоді \[ y = \left(t^2 - {\bar C_1}^2\right)^{3/2}, \quad \diff y = 3 \left(t^2 - {\bar C_1}^2\right)^{1/2} t \diff t,\] і інтеграл має вигляд \[ \int \frac{\diff y}{\sqrt{y^{2/3} + {\bar C_1}^2}}=3\int \sqrt{t^2 - {\bar C_1}^2} \diff t = 3.\]
+\end{solution}
+
+Розв'язати рівняння:
+\begin{multicols}{2}
+    \begin{problem}
+    	\[ y''  x  \ln x = y';\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y''' = x + \cos x;\]
+    \end{problem}
+\end{multicols}
+
+\begin{problem}
+	$2 x y'' = y'$ при $x_0 = 0$, $y_0 = 0$, $y_0' = 0$, $y_0'' = 0$;
+\end{problem}
+
+\begin{problem}
+	$x y'' + y' = x + 1$ при $x_0 = 0$, $y_0 = 0$, $y_0' = 0$, $y_0'' = 0$;
+\end{problem}
+
+\begin{problem}
+	$y'' \tan x = y' + \frac{1}{\sin x} = 0$ при $x_0 = 0$, $y_0 = 2$, $y_0' = 1$, $y_0'' = 1$;
+\end{problem}
+
+\begin{multicols}{2}
+    \begin{problem}
+    	\[(y'')^4+y''-x=0;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y''+\ln y''-x=0;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y''-a(1+(y')^2)^{3/2}=0;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y'''-(y'')^3;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y'''-y''=0;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y''+2y''\ln y'-1=0;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[(y''')^2+(y'')^2-1=0;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y'' y^3-1=0;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[y^3 y''-y^4+0;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[4\sqrt{y} y''=1;\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[3y''=y^{-5/3};\]
+    \end{problem}
+    
+    \begin{problem}
+    	\[(y'')^2+(y')^2-(y')^4=0;\]
+    \end{problem}
+\end{multicols}
+
+\begin{example}
+	Розв'язати рівняння: $(y'')^3 + x  y'' = y'$.
+\end{example}
+
+\begin{solution}
+	Позначимо $y'=z$, $y''=z'$. Одержимо рівняння $(z')^3+xz'=z$, тобто рівняння Клеро, що легко інтегрується введенням параметра. \parvskip
+
+	Нехай $z' = p$. Тоді $z=xp+p^3$. Продиференцюємо це співвідношення: \[\diff z + x \diff p + p \diff x + 3 p^2 \diff p.\]
+	
+	Підставивши $\diff z = p \diff z$, отримаємо $(x+3p^2)\diff p = 0$. Це рівняння розділяється на два:
+	\begin{enumerate}
+		\item $x + 3p^2 = 0$. Звідси маємо $x = -3p^2$, $z=-2p^2$. Повертаємось до вихідних змінних $x=-3p^2$, $y'=-2p^3$. Використовуємо основне співвідношення $\diff y = y' \diff x$. Одержуємо \[ \diff y = 12 p^4 \diff p \implies y = \frac{12p^5}{5} + C_1.\]
+		
+		Таким чином перша гілка дає розв'язок \[ x = -3p^2, \quad y=\frac{12p^5}{5} + C_1.\]
+		
+		\item $\diff p = 0$. Звідси маємо $z = C_1 x + C_1^3$. Повертаємось до вихідних змінних $y'=C_1x+C_1^3$. Проінтегруємо і отримаємо другу гілку розв'язків \[y=\frac{C_1x^2}{2}+C_1^3x+C_2.\]
+	\end{enumerate}
+\end{solution}
+
+\begin{example}
+	Розв'язати рівняння: $y^4 - y^3  y'' = 1$.
+\end{example}
+
+\begin{solution}
+	Відсутній аргумент $x$, отже, його порядок знижується заміною: \[y'=p,\quad y''=p\frac{\diff p}{\diff y}.\]
+	
+	Звідси одержуємо \[ y^4 - y^3  p  \frac{\diff p}{\diff y} = 1.\] Розділимо змінні: \[ \frac{y^4-1}{y^3}  \diff y=p  \diff p.\]
+	
+	Проінтегруємо \[ \frac{y^2}{2}+\frac{1}{2y^2}=\frac{p^2}{2}-\frac{C_1}{2}.\]
+	
+	Звідси одержали \[p^2=y^2+C_1+y^{-2}.\]
+	
+	Повертаємось до вихідних змінних \[(y')^2=y^2+C_1+y^{-2}.\]
+	
+	Розв'яжемо рівняння відносно похідної \[ y' = \pm \sqrt{y^2 + C_1 + y^{-2}}.\]
+	
+	Розділимо змінні \[ \pm\frac{\diff y}{\sqrt{y^2+C_1+y^{-2}}}=\diff x.\]
+	
+	Візьмемо інтеграл 
+	\begin{multline*}
+	    \pm \int \frac{\diff y}{\sqrt{y^2+C_1+y^{-2}}} = \pm \int \frac{y \diff y}{\sqrt{y^4+C_1y^2+1}} = \\
+	    = \pm \int \frac{\diff \left(y^2 + \frac{C_1}{2}\right)}{\sqrt{\left(y^2+\frac{C_1}{2}\right)^2+\left(1-\frac{C_1}{4}\right)}} = \pm \frac12 \ln \left| y^2 + \frac{C_1}{2} + \sqrt{y^4+C_1y^2+1}\right|.
+	\end{multline*}
+	
+	Таким чином загальний розв'язок має вигляд: \[x = \pm \frac12 \ln \left| y^2 + C_1/2 + \sqrt{y^4+C_1y^2+1}\right|.\]
+\end{solution}
+
+\begin{example}
+	Розв'язати рівняння: $y  y'' = (y')^2$.
+\end{example}
+
+\begin{solution}
+	Оскільки рівняння однорідне по змінним $y, y', y''$, то робимо заміну \[ y = e^{\int u \diff x}, \quad y' = e^{\int u \diff x} u, \quad y'' = e^{\int u \diff x} (u^2 +u). \]
+	
+	Рівняння буде мати вигляд \[ e^{\int u \diff x}  e^{\int u \diff x} (u^2 + u) = \left( e^{\int u \diff x} u\right)^2.\]
+	
+	Скоротимо на $e^{\int u \diff x}$. Маємо $u^2 + u' = u^2$, або $u'=0$. Звідси $u'=C_1$ і одержимо загальний розв'язок \[ y = e^{\int C_1 x \diff x} = e^{c_1 x^2 + \ln |c_2|}=c_2 e^{c_1x^2}.\]
+\end{solution}
+
+\begin{example}
+	Розв'язати рівняння: $y  y'' - (y')^2 = y^2$.
+\end{example} 
+
+\begin{solution}
+	Розділимо рівняння на $y^2$: \[ \frac{y  y'' - (y')^2}{y^2} = 1,\] і перепишемо у вигляді: \[ \frac{\diff}{\diff x} \left( \frac{y'}{y}\right)=1.\]
+	
+	Проінтегрувавши, одержимо загальний розв'зок \[\frac{y'}{y}=x+C_1\implies \ln |y| = \frac{x^2}{2}+C_1x+\ln |C_2|\implies y=C_2 e^{x^2/2+C_1x}.\]
+\end{solution}
+
+Розв'язати рівняння:
+\begin{multicols}{2}
+    \begin{problem}
+    	\[x  y'' = y'  \ln\left(\frac{y'}{x}\right);\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[ 2 y  y'' - 3 (y')^2 = 4 y^2;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[2x  y'' = y';\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[x  y'' + y' = x + 1;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'' \tan x - y' + \frac{1}{\sin x}=0;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[x^2 y''+x y'=1;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y''  \cot 2x + 2y' = 0;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[x^3  y'' + x^2  y = 0;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y'' \tan x = 2 y';\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[y  y'' - (y')^2 - y^2  \ln y = 0;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[x^4 y''+x^3 y'=1;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[x y y''-x  (y')^2 - 2 y  y' = 0;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[x y y''-x  (y')^2 = y  y'+\frac{x  (y')^2}{\sqrt{1-x^2}};\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[x^2 y'''-x  (y'')^2=0;\]
+    \end{problem}
+ 
+    \begin{problem}
+    	\[x^5 y''+x^4  y'=1.\]
+    \end{problem}
+\end{multicols}

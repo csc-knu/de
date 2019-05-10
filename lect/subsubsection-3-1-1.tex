@@ -1,0 +1,32 @@
+\begin{theorem}
+	Лінійність і однорідність зберігаються при довільному перетворенні незалежної змінної $x = \phi(t)$.
+\end{theorem}
+
+\begin{proof}
+	Справді, після заміни $x = \phi(t)$, одержимо
+	\begin{align*}
+		y_x' &= \frac{\diff y}{\diff x} = \frac{\diff y}{\diff t} \cdot \frac{\diff t}{\diff x} = \frac{1}{\phi'(t)} \cdot \frac{\diff y}{\diff t}, \\
+		y_{x^2}'' &= \frac{\diff}{\diff x} y_x' = \frac{\diff}{\diff t} \left( \frac{1}{\phi'(t)} \cdot \frac{\diff y}{\diff t} \right) \frac{1}{\phi'(t)} = \\
+		&= - \frac{\phi''(t)}{(\phi'(t))^2} \cdot \frac{\diff y}{\diff t} + \frac{1}{(\phi'(t))^2} \cdot \frac{\diff^2 y}{\diff t^2}, \nonumber
+	\end{align*}
+	і так далі до $n$-го порядку. Після підстановки і приведення подібних, знову отримуємо лінійне однорідне рівняння
+	\begin{equation*}
+		A_0(t) \frac{\diff^n y}{\diff t^n} + A_1(t) \frac{\diff^{n - 1} y}{\diff t^{n - 1}} + \ldots + A_n(t) y = 0.
+	\end{equation*}
+\end{proof}
+
+\begin{theorem}
+	Лінійність і однорідність зберігаються при лінійному перетворенні невідомої функції $y = \alpha (x) z$.
+\end{theorem}
+
+\begin{proof}
+	Справді, після заміни $y = \alpha (x) z$, одержимо
+	\begin{align*}
+		y_x' &= \alpha'(x) z + \alpha(x) z', \\
+		y_{x^2}'' &= \alpha''(x) z + 2 \alpha'(x) z' + \alpha(x) z'',
+	\end{align*}
+	і так далі до $n$-го порядку. Після підстановки знову отримаємо лінійне однорідне рівняння
+	\begin{equation*}
+		\bar A_0(x) z^{(n)} + \bar A_1(x) z^{(n - 1)} + \ldots + \bar A_n(x) z = 0.
+	\end{equation*}
+\end{proof}

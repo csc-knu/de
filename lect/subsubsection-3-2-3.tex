@@ -1,0 +1,117 @@
+Нехай $y(x) = K(x, s)$ --- розв'язок однорідного диференціального рівняння, що задовольняє умовам
+\begin{equation*}
+	K(s, s) = K_x'(s, s) = \ldots = K_{x^{n - 2}}^{(n - 2)}(s, s) = 0, \quad K_{x^{n - 1}}^{(n - 1)}(s, s) = 1.
+\end{equation*}
+
+Тоді функція
+\begin{equation*}
+	y(x) = \int_{x_0}^x K(x, s) \frac{b(s)}{a_0(s)} \diff s
+\end{equation*}
+буде розв'язком неоднорідного рівняння, що задовольняє початковим умовам
+\begin{equation*}
+	y(x_0) = y'(x_0) = \ldots = y^{(n - 1)}(x_0) = 0.
+\end{equation*}
+
+Дійсно, розглянемо похідні від функції $y(x)$:
+\begin{equation*}
+	y'(x) = \int_{x_0}^x K_x'(x, s) \frac{b(s)}{a_0(s)} \diff s + K(x, x) \frac{b(x)}{a_0(x)}.
+\end{equation*}
+
+І, оскільки $K(x, x) = 0$, то
+\begin{equation*}
+	y'(x) = \int_{x_0}^x K_x'(x, s) \frac{b(s)}{a_0(s)} \diff s.
+\end{equation*}
+
+Аналогічно
+\begin{equation*}
+	y''(x) = \int_{x_0}^x K_{x^2}''(x, s) \frac{b(s)}{a_0(s)} \diff s + K_x'(x, x) \frac{b(x)}{a_0(x)} = \int_{x_0}^x K_{x^2}''(x, s) \frac{b(s)}{a_0(s)} \diff s,
+\end{equation*}
+і так далі до
+\begin{align*}
+	y^{(n - 1)}(x) &= \int_{x_0}^x K_{x^{n - 1}}^{(n - 1)}(x, s) \frac{b(s)}{a_0(s)} \diff s + K_{x^{n - 2}}^{(n - 2)}(x, x) \frac{b(x)}{a_0(x)} = \\ &= \int_{x_0}^x K_{x^{n - 1}}^{(n - 1)}(x, s) \frac{b(s)}{a_0(s)} \diff s, \\
+	y^{(n)}(x) &= \int_{x_0}^x K_{x^n}^{(n)}(x, s) \frac{b(s)}{a_0(s)} \diff s + K_{x^{n - 1}}^{(n - 1)}(x, x) \frac{b(x)}{a_0(x)}.
+\end{align*}
+
+І, оскільки $K_{x^{n - 1}}^{(n - 1)}(x, x) = 1$, то
+\begin{equation*}
+	y^{(n)}(x) = \int_{x_0}^x K_{x^n}^{(n)}(x, s) \frac{b(s)}{a_0(s)} \diff s + \frac{b(x)}{a_0(x)}.
+\end{equation*}
+
+Підставивши функцію $y(x)$ і її похідні у вихідне диференціальне рівняння, одержимо
+\begin{multline*}
+	a_0(x) \left( \int_{x_0}^x K_{x^n}^{(n)} (x, s) \frac{b(s)}{a_0(s)} \diff s + \frac{b(x)}{a_0(x)} \right) + \\ + a_1(x) \left( \int_{x_0}^x K_{x^{n - 1}}^{(n - 1)} (x, s) \frac{b(s)}{a_0(s)} \diff s \right) + \ldots + a_n(x) \int_{x_0}^x K_x' (x, s)  \frac{b(s)}{a_0(s)} \diff s = \\ = \int_{x_0}^x \left( a_0(x) K_{x^n}^{(n)}(x, s) + a_1(x) K_{x^{n - 1}}^{(n - 1)}(x, s) + \ldots + a_n(x) K(x, s) \right).
+\end{multline*}
+
+Оскільки $K(x, s)$ --- є розв'язком лінійного однорідного рівняння і, отже,
+\begin{equation*}
+	a_0(x) K_{x^n}^{(n)}(x, s) + a_1(x) K_{x^{n - 1}}^{(n - 1)}(x, s) + \ldots + a_n(x) K(x, s) = 0.
+\end{equation*}
+ 
+У такий спосіб показано, що
+\begin{equation*}
+    y(x) = \int_{x_0}^x K(x, s) \frac{b(s)}{a_0(s)} \diff s
+\end{equation*}
+є розв'язком лінійного неоднорідного рівняння. \parvskip
+
+Підставляючи $x = x_0$ в значення $y(x), y'(x), \ldots, y^{(n)}(x)$ одержимо, що
+\begin{equation*}
+	y(x_0) = y'(x_0) = \ldots = y^{(n - 1)}(x_0) = 0.
+\end{equation*}
+
+Для знаходження функції $K(x, s)$ (інтегрального ядра) можна використати такий спосіб. Якщо $y_1(x), y_2(x), \ldots, y_n(x)$ лінійно незалежні роз\-в'яз\-ки однорідного рівняння, то загальний роз\-в'яз\-ок однорідного рівняння має вигляд 
+\begin{equation*}
+	y_{\text{homo}}(x) = C_1 y_1(x) + C_2 y_2(x) + \ldots + C_n y_n(x).
+\end{equation*}
+
+Оскільки $K(x, s)$ є розв'язком однорідного рівняння, то його слід шукати у вигляді
+\begin{equation*}
+	K(x, s) = C_1(s) y_1(x) + C_2(s) y_2(x) + \ldots + C_n(s) y_n(x).
+\end{equation*}
+
+Відповідні початкові умови мають вигляд
+\begin{align*}
+	K(s, s) = 0 &\Rightarrow C_1(s) y_1(s) + C_2(s) y_2(s) + \ldots + C_n(s) y_n(s) = 0, \\
+	K_x'(s, s) = 0 &\Rightarrow C_1(s) y_1'(s) + C_2(s) y_2'(s) + \ldots + C_n(s) y_n'(s) = 0,
+\end{align*}
+і так далі до
+\begin{multline*}
+	K_{x^{n - 2}}^{(n - 2)}(s, s) = 0 \Rightarrow \\ \Rightarrow C_1(s) y_1^{(n - 2)}(s) + C_2(s) y_2^{(n - 2)}(s) + \ldots + C_n(s) y_n^{(n - 2)}(s) = 0,
+\end{multline*}
+і
+\begin{multline*}
+	K_{x^{n - 1}}^{(n - 1)}(s, s) = 1 \Rightarrow \\ \Rightarrow C_1(s) y_1^{(n - 1)}(s) + C_2(s) y_2^{(n - 1)}(s) + \ldots + C_n(s) y_n^{(n - 1)}(s) = 0. 
+\end{multline*}
+
+Звідси
+\begin{align*}
+	C_1(s) &= \int \frac{\begin{vmatrix} 0 & y_2(s) & \cdots & y_n(s) \\ \vdots & \vdots & \ddots & \vdots \\ 0 & y_2^{(n - 2)}(s) & \cdots & y_n^{(n - 2)}(s) \\ 1 & y_2^{(n - 1)}(s) & \cdots & y_n^{(n - 1)}(s) \end{vmatrix}}{W[y_1, y_2, \ldots, y_n](s)} \diff s, \\
+	C_2(s) &= \int \frac{\begin{vmatrix} y_1(s) & 0 & \cdots & y_n(s) \\ \vdots & \vdots & \ddots & \vdots \\ y_2^{(n - 2)} & 0 & \cdots & y_n^{(n - 2)}(s) \\ y_2^{(n - 1)}(s) & 1 & \cdots & y_n^{(n - 1)}(s) \end{vmatrix}}{W[y_1, y_2, \ldots, y_n](s)} \diff s,
+\end{align*}
+і так далі до
+\begin{align*}
+	C_n(s) &= \int \frac{\begin{vmatrix} y_1(s) & y_2(s) & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ y_1^{(n - 2)}(s) & y_2^{(n - 2)}(s) & \cdots & 0 \\ y_1^{(n - 1)}(s) & y_2^{(n - 1)}(s) & \cdots & 1 \end{vmatrix}}{W[y_1, y_2, \ldots, y_n](s)} \diff s.
+\end{align*}
+ 
+І ядро $K(x, s)$ має вигляд
+\begin{equation*}
+	K(x, s) = C_1(s) y_1(x) + C_2(s) y_2(x) + \ldots + C_n(s) y_n(x)
+\end{equation*}
+з одержаними функціями $C_1(s), C_2(s), \ldots, C_n(s)$. \parvskip
+
+Якщо розглядати диференціальне рівняння другого порядку 
+\begin{equation*}
+	a_0(x) y''(x) + a_1(x) y'(x) + a_2(x) y(x) = b(x),
+\end{equation*}
+то функція  має вигляд
+\begin{equation*}
+	K(x, s) = C_1(s) y_1(x) + C_2(s) y_2(x),
+\end{equation*}
+де
+\begin{equation*}
+	C_1(s) = \frac{\begin{vmatrix} 0 & y_2(s) \\ 1 & y_2'(s) \end{vmatrix}}{\begin{vmatrix} y_1(s) & y_2(s) \\ y_1'(s) & y_2'(s) \end{vmatrix}}, \quad C_1(s) = \frac{\begin{vmatrix} y_1(s) & 0 \\ y_1'(s) & 1 \end{vmatrix}}{\begin{vmatrix} y_1(s) & y_2(s) \\ y_1'(s) & y_2'(s) \end{vmatrix}}.
+\end{equation*}
+
+Звідси
+\begin{equation*}
+	K(x, s) = \frac{\begin{vmatrix} 0 & y_2(s) \\ 1 & y_2'(s) \end{vmatrix} y_1(x) + \begin{vmatrix} y_1(s) & 0 \\ y_1'(s) & 1 \end{vmatrix} y_2(x) }{W[y_1, y_2](s)} = \frac{y_1(s) y_2(x) - y_1(x) y_2(s)}{W[y_1, y_2](s)}
+\end{equation*}

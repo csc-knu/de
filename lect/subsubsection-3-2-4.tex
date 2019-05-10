@@ -1,0 +1,127 @@
+Якщо лінійне диференціальне рівняння є рівнянням з сталими коефіцієнтами, а функція $b(x)$ спеціального виду, то частинний розв'язок можна знайти за допомогою методу невизначених коефіцієнтів.
+
+\begin{enumerate}
+	\item Нехай $b(x)$ має вид многочлена, тобто
+	\begin{equation*}
+		b(x) = A_0 x^s + A_1 x^{s - 1} + \ldots + A_{s - 1} x + A_s.
+	\end{equation*}
+
+	\begin{enumerate}
+		\item Розглянемо випадок, коли характеристичне рівняння не має нульового кореня, тобто $\lambda \ne 0$. Частинний розв'язок неоднорідного рівняння шукаємо вигляді:
+		\begin{equation*}
+			y_{\text{part}} = B_0 x^s + B_1 x^{s - 1} + \ldots + B_{s - 1} + B_s,
+		\end{equation*}
+		де $B_0, \ldots, B_s$ --- невідомі сталі. Тоді
+		\begin{align*}
+			y_{\text{part}}' &= s B_0 x^{s - 1} + (s - 1) B_1 x^{s - 2} + \ldots + 1 B_{s - 1}, \\
+			y_{\text{part}}'' &= s (s - 1) B_0 x^{s - 2} + (s - 1) (s - 2) B_1 x^{s - 3} + \ldots \\ & \quad \ldots + 2 \cdot 1 \cdot B_{s - 2},
+		\end{align*}
+		і так далі. \parvskip
+
+		Підставляючи у вихідне диференціальне рівняння, одержимо
+		\begin{multline*}
+			a_0 \left( s! B_s \right) + \ldots \\ + a_{n - 2} \left( s (s - 1) B_0 x^{s - 2} + (s - 1) (s - 2) B_1 x^{s - 3} + \ldots + 2 B_{s - 1} \right) + \\ + a_{n - 1} \left( s B_0 x^{s - 1} + (s - 1) B_1 x^{s - 2} + \ldots + B_{s - 1} \right) + \\ + a_n \left( B_0 x^s + B_1 x^{s - 1} + \ldots + B_{s - 1} + B_s \right) = \\ = A_0 x^s + A_1 x^{s - 1} + \ldots + A_{s - 1} x + A_s.
+		\end{multline*}
+
+		Прирівнявши коефіцієнти при однакових степенях $x$ запишемо: 
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|l}
+				$x^s$ & $a_n B_0 = A_0$ \\
+				$x^{s - 1}$ & $a_n B_1 + s a_{n - 1} B_0 = A_1$ \\
+				$x^{s - 2}$ & $a_n B_2 + (s - 1) a_{n - 1} B_1 + s (s - 1) a_{n - 2} B_0 = A_2$
+			\end{tabular}
+		\end{table}
+		і так далі. \parvskip
+
+		Оскільки характеристичне рівняння не має нульового кореня, то $a_n \ne 0$. Звідси одержимо $B_0 = \frac{A_0}{a_n}$, $B_1 = \frac{A_1 - s a_{n - 1} B_0}{a_n}$, і так далі.
+
+		\item Розглянемо випадок, коли характеристичне рівняння має нульовий корінь кратності $r$. Тоді диференціальне рівняння має вигляд
+		\begin{equation*}
+			a_0 y^{(n)} + a_1 y^{(n - 1)} + \ldots + a_{n - r} y^{(r)} = A_0 x^s + A_1 x^{s - 1} + \ldots + A_s.
+		\end{equation*}
+
+		Зробивши заміну $y^{(r)} = z$ одержимо диференціальне рівняння 
+		\begin{equation*}
+			a_0 z^{(n - r)} + a_1 z^{(n - r - 1)} + \ldots + a_{n - r} z = A_0 x^s + A_1 x^{s - 1} + \ldots + A_s,
+		\end{equation*}
+		характеристичне рівняння якого вже не має нульового кореня, тобто повернемося до попереднього випадку. Звідси частинний розв'язок шукається у вигляді
+		\begin{equation*}
+			z_{\text{part}} = \bar B_0 x^s + \bar B_1 x^{s - 1} + \ldots + \bar B_s.
+		\end{equation*}
+
+ 		Проінтегрувавши його $r$-разів, одержимо, що частиний роз\-в'яз\-ок вихідного однорідного рівняння має вигляд
+ 		\begin{equation*}
+			y_{\text{part}} = \left(B_0 x^s + B_1 x^{s - 1} + \ldots + B_s\right) x^r.
+		\end{equation*}
+ 	\end{enumerate}
+ 	
+	\item Нехай $b(x)$ має вигляд $b(x) = e^{px} \left( A_0 x^s + A_1 x^{s - 1} + \ldots + A_s \right)$.
+	\begin{enumerate}
+		\item Розглянемо випадок, коли $p$ не є коренем характеристичного рівняння. Зробимо заміну
+		\begin{align*}
+			y &= e^{p x} z, \\
+			y' &= p e^{p x} z + e^{p x} z = e^{p x} (p z + z'), \\
+			y'' &= p e^{p x} (p z + z') + e^{p x} (p z' + z'') = e^{p x} (p^2 z + 2 p z' + z''),
+		\end{align*}
+ 		і так далі до
+ 		\begin{equation*}
+ 			y^{(n)} = e^{p x} \left( p^n z + n p^{n - 1} z' + \ldots + z^{(n)} \right).
+ 		\end{equation*}
+		
+		Підставивши отримані вирази у вихідне диференціальне рівняння, одержимо
+		\begin{multline*}
+			e^{p x} \left( B_0 z^{(n)} + B_1 z^{(n - 1)} + \ldots B_n z \right) = \\ = e^{p z} \left( A_0 x^s + A_1 x^{s - 1} + \ldots + A_s \right).
+		\end{multline*}
+		де $B_i$ --- сталі коефіцієнти, що виражаються через $a_i$ і $p$. Скоротивши на $e^{p x}$, одержимо рівняння 
+ 		\begin{equation*}
+			B_0 z^{(n)} + B_1 z^{(n - 1)} + \ldots B_n z = A_0 x^s + A_1 x^{s - 1} + \ldots + A_s.
+		\end{equation*}
+		
+		Причому, оскільки $p$ не є коренем характеристичного рівняння, то після заміни $y = e^{px} z$, отримане диференціальне рівняння не буде мати коренем характеристичного рівняння $\mu = 0$. Таким чином, повернулися до випадку 1.a). Частинний роз\-в'яз\-ок неоднорідного рівняння шукаємо у вигляді
+		\begin{equation*}
+			z_{\text{part}} = B_0 x^s + B_1 x^{s - 1} + \ldots + B_{s - 1} + B_s,
+		\end{equation*}
+
+		А частинний розв'язок вихідного неоднорідного диференціального рівняння у вигляді:
+		\begin{equation*}
+			y_{\text{part}} = e^{px} \left( B_0 x^s + B_1 x^{s - 1} + \ldots + B_{s - 1} + B_s \right),
+		\end{equation*}
+
+		\item Розглянемо випадок, коли $p$ --- корінь характеристичного рівняння кратності $r$. Це значить, що після, заміни $y = e^{px} z$ і скорочення на $e^{p x}$, вийде диференціальне рівняння, що має коренем характеристичного рівняння, число $\mu = 0$ кратності $r$, тобто
+		\begin{equation*}
+			B_0 z^{(n)} + B_1 z^{(n - 1)} + \ldots B_{n - r} z^{(r)} = A_0 x^s + A_1 x^{s - 1} + \ldots + A_s.
+		\end{equation*}
+
+		Як випливає з пункту 1.б) частинний розв'язок шукається у вигляді
+		\begin{equation*}
+			z_{\text{part}} = \left( B_0 x^s + B_1 x^{s - 1} + \ldots + B_s \right) x^r,
+		\end{equation*}
+		а частинний розв'язок вихідного неоднорідного диференціального рівняння у вигляді
+		\begin{equation*}
+			y_{\text{part}} = e^{p x} \left( B_0 x^s + B_1 x^{s - 1} + \ldots + B_s \right) x^r,
+		\end{equation*}
+ 	\end{enumerate}
+ 	
+	\item Нехай $b(x)$ має вигляд:
+	\begin{equation*}
+		b(x) = e^{px} \left( P_s(x) \cos (qx) + Q_\ell (x) \sin(q x) \right),
+	\end{equation*}
+	де $P_s(x)$, $Q_\ell(x)$ --- многочлени степеня $s$ і $\ell$, відповідно, і, наприклад, $\ell \le s$. Використовуючи формулу Ейлера, перетворимо вираз до вигляду:
+	\begin{equation*}
+		b(x) = e^{(p + i q) x} R_s(x) + e^{(p - i q) x} T_s(x),
+	\end{equation*}
+	де $R_s(x)$, $T_s(x)$ --- многочлени степеня не вище, ніж $s$. Використовуючи властивості 2, 3 розв'язків неоднорідних диференціальних рівнянь, а також випадки 2.а), 2.б) знаходження частинного розв'язку лінійних неоднорідних рівнянь, одержимо, що частинний розв'язок шукається у виглядах:
+ 	\begin{enumerate}
+ 		\item 
+ 		\begin{multline*}
+ 			y_{\text{part}} = e^{p x} \left( \left( A_0 x^s + A_1 x^{s - 1} + \ldots + A_s \right) \cos (qx) \right. + \\ + \left. \left( B_0 x^s + B_1 x^{s - 1} + \ldots + B_s \right) \sin (q x) \right),
+ 		\end{multline*}
+		якщо $p \pm i q$ не є коренем характеристичного рівняння;
+		\item
+		\begin{multline*}
+ 			y_{\text{part}} = e^{p x} \left( \left( A_0 x^s + A_1 x^{s - 1} + \ldots + A_s \right) \cos (qx) \right. + \\ + \left. \left( B_0 x^s + B_1 x^{s - 1} + \ldots + B_s \right) \sin (q x) \right) x^r,
+ 		\end{multline*}
+ 		якщо $p \pm i q$ є коренем характеристичного рівняння кратності $r$.
+ 	\end{enumerate}
+\end{enumerate}

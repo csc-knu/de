@@ -1,0 +1,52 @@
+Розв'язати лінійне однорядне диференціальне рівняння другого порядку, якщо відомий один розв'язок
+
+\begin{example}
+	$(x^2 + 1) y'' - 2 x y' + 2 y = 0$, $y_1(x) = x$.
+\end{example}
+
+\begin{solution}
+	За формулою Абеля маємо
+	\begin{multline*}
+		y_2(x) = x \int \left(\frac{1}{x} \exp \left\{ \int \frac{2x\diff x}{x^2+1} \right\} \right) \diff x = x \int \left(\frac{1}{x} e^{\ln |x^2 + 1|} \right) \diff x = \\ = x \int \left(\frac{x^2 + 1}{x} \right) \diff x = x \left( x - \frac1x \right) = x^2 - 1.
+	\end{multline*}
+	
+	Загальний розв'язок має вигляд \[ y(x) = C_1 x + C_2 (x^2 - 1).\]
+\end{solution}
+
+Розв'язати рівняння: 
+\begin{problem}
+	\[x^2\cdot(x+1)y''-2y=0,\quad y_1(x)=1+\frac1x;\]
+\end{problem}
+
+\begin{problem}
+	\[xy''+2y'-xy=0,\quad y_1(x)=\frac{e^x}{x};\]
+\end{problem}
+
+\begin{problem}
+	\[y''-2\cdot(1+\tan^2 x)y=0,\quad y_1(x)=\tan x;\]
+\end{problem}
+
+\begin{problem}
+	\[(e^x+1)y''-2y'+e^xy=0,\quad y_1(x)=e^x-1;\]
+\end{problem}
+
+\begin{problem}
+	\[y''-y'\cdot\tan x+2y=0,\quad y_1(x)=\sin x;\]
+\end{problem}
+
+\begin{problem}
+	\[y''+4xy'+(4x^2+2)y=0,\quad y_1(x)=e^{a x^2}.\]
+\end{problem}
+
+Знайти загальний розв'язок підібравши один частинний
+\begin{problem}
+	\[(2x+1)y''+4xy'-4y=0;\]
+\end{problem}
+
+\begin{problem}
+	\[xy''-(2x+1)y'+(x+1)y=0;\]
+\end{problem}
+
+\begin{problem}
+	\[x\cdot(x-1)y''-xy'+y=0.\]
+\end{problem}

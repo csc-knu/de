@@ -1,0 +1,262 @@
+% cd ..\..\Users\NikitaSkybytskyi\Desktop\differential-equations
+% pdflatex main.tex && cls && pdflatex main.tex && cls && pdflatex main.tex && del main.toc, main.log, main.aux, main.out && start main.pdf
+
+\input{de.sty}
+
+\begin{document}
+
+\AddToShipoutPicture*{\BackgroundPic}
+{
+    \newgeometry{right=-14mm}
+    \begin{center}
+        {\obeylines Київський національний університет імені Тараса Шевченка
+        факультет комп'ютерних наук та кібернетики}
+    \end{center}
+    
+    \vfill
+    
+    \begin{center}
+        \bf \Huge 
+        {\obeylines ДИФЕРЕНЦІАЛЬНІ 
+        РІВНЯННЯ
+        \LARGE (КУРС ЛЕКЦІЙ)}
+    \end{center}
+    
+    \vfill
+    
+    \begin{center}
+        \bf \Large
+        {\obeylines Скибицький Н. М.,
+        Хусаїнов Д. Я.}
+    \end{center}
+    
+    \vfill
+    
+    \begin{center}
+        \large
+        Київ --- 2019
+    \end{center}
+}
+\thispagestyle{empty} 
+\newpage 
+
+У ваших руках конспект лекцій з нормативного курсу ``Диференціальні рівняння'' прочитаного проф., д.ф.-м.н. Хусаїновим Денисом Ях'євичем на другому курсі спеціальності ``прикладна математика'' факультету ком\-п'ю\-тер\-них наук та кібернетики Київського національного університету імені Тараса Шевченка восени 2017-го та навесні 2018-го року. \parvskip
+
+Конспект у компактній формі відображає матеріал курсу, допомагає сформувати загальне уявлення про предмет вивчення, правильно зорієнтуватися в даній галузі знань. Конспект лекцій з названої дисципліни сприятиме більш успішному вивченню дисципліни, причому більшою мірою для студентів заочної форми, екстернату, дистанційного та індивідуального навчання. \parvskip
+
+Комп'ютерний набір та верстка --- Скибицький Нікіта Максимович. \newpage
+
+\tableofcontents \newpage
+
+\section*{Вступ}
+\input{introduction.tex}
+
+\section{Рівняння першого порядку}
+\input{section-1.tex}
+
+	\subsection{Рівняння зі змінними, що розділяються}
+	\input{subsection-1-1.tex}
+
+		\subsubsection{Загальна теорія}
+		\input{subsubsection-1-1-1.tex}
+
+		\subsubsection{Рівняння, що зводяться до рівнянь зі змінними, що розділяються}
+		\input{subsubsection-1-1-2.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-1-1-3.tex}
+
+	\subsection{Однорідні рівняння}
+	\input{subsection-1-2.tex}
+
+		\subsubsection{Загальна теорія}
+		\input{subsubsection-1-2-1.tex}
+
+		\subsubsection{Рівняння, що зводяться до однорідних}
+		\input{subsubsection-1-2-2.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-1-2-3.tex}
+
+	\subsection{Лінійні рівняння першого порядку}
+	\input{subsection-1-3.tex}
+
+		\subsubsection{Загальна теорія}
+		\input{subsubsection-1-3-1.tex}
+
+		\subsubsection{Рівняння Бернуллі}
+		\input{subsubsection-1-3-2.tex}
+
+		\subsubsection{Рівняння Рікатті}
+		\input{subsubsection-1-3-3.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-1-3-4.tex}
+
+	\subsection{Рівняння в повних диференціалах}
+	\input{subsection-1-4.tex}
+
+		\subsubsection{Загальна теорія}
+		\input{subsubsection-1-4-1.tex}
+
+		\subsubsection{Множник, що інтегрує}
+		\input{subsubsection-1-4-2.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-1-4-3.tex}
+
+	\subsection{Рівняння першого порядку, не розв'язані відносно похідної}
+	\input{subsection-1-5.tex}
+
+		\subsubsection{Частинні випадки рівнянь, що інтегруються в квадратурах}
+		\input{subsubsection-1-5-1.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-1-5-2.tex}
+
+	\subsection{Існування та єдиність розв'язків рівнянь першого порядку. Неперервна залежність та диференційованість}
+	\input{subsection-1-6.tex}
+
+		\subsubsection{Особливі розв'язки}
+		\input{subsubsection-1-6-1.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-1-6-2.tex}
+
+\section{Нелінійні рівняння вищих порядків}
+\input{section-2.tex}
+
+	\subsection{Загальні визначення. Існування та єдиність роз\-в'я\-з\-ків рівнянь}
+	\input{subsection-2-1.tex}
+
+	\subsection{Рівняння вищих порядків, що інтегруються в \allowbreak квадратурах}
+	\input{subsection-2-2.tex}
+
+	\subsection{Найпростіші випадки зниження порядку у рівняннях вищих порядків}
+	\input{subsection-2-3.tex}
+
+	\subsection{Вправи для самостійної роботи}
+	\input{subsection-2-4.tex}
+
+\section{Лі\-ній\-ні рів\-ня\-н\-ня ви\-щих \allowbreak по\-ряд\-ків}
+\input{section-3.tex}
+
+	\subsection{Лінійні однорідні рівняння}
+	\input{subsection-3-1.tex}
+
+		\subsubsection{Властивості лінійних однорідних рівнянь}
+		\input{subsubsection-3-1-1.tex}
+
+		\subsubsection{Властивості роз\-в'яз\-ків лінійних однорідних рівнянь}
+		\input{subsubsection-3-1-2.tex}
+
+		\subsubsection{Лінійна залежність і незалежність роз\-в'яз\-ків. Загальний роз\-в'яз\-ок лінійного однорідного рівняння вищого порядку}
+		\input{subsubsection-3-1-3.tex}
+
+		\subsubsection{Формула Остроградського-Ліувіля}
+		\input{subsubsection-3-1-4.tex}
+
+		\subsubsection{Формула Абеля}
+		\input{subsubsection-3-1-5.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-3-1-6.tex}
+
+	\subsection{Лінійні однорідні рівняння зі сталими коефіцієнтами}
+	
+		\subsubsection{Загальна теорія}
+		\input{subsubsection-3-1-7.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-3-1-8.tex}
+
+	\subsection{Лінійні неоднорідні диференціальні рівняння}
+	\input{subsection-3-2.tex}
+
+		\subsubsection{Властивості розв'язків лінійних неоднорідних рівнянь. Загальний розв'язок лінійного неоднорідного рівняння}
+		\input{subsubsection-3-2-1.tex}
+
+		\subsubsection{Метод варіації довільної сталої побудови частинного роз\-в'яз\-ку лінійного неоднорідного рівняння}
+		\input{subsubsection-3-2-2.tex}
+
+		\subsubsection{Метод Коші}
+		\input{subsubsection-3-2-3.tex}
+
+		\subsubsection{Метод невизначених коефіцієнтів}
+		\input{subsubsection-3-2-4.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-3-2-5.tex}
+
+\section{Системи рівнянь}
+\input{section-4.tex}
+
+	\subsection{Загальна теорія}
+	\input{subsection-4-1.tex}
+
+		\subsubsection{Геометрична інтерпретація розв'язків}
+		\input{subsubsection-4-1-1.tex}
+
+		\subsubsection{Механічна інтерпретація розв'язків}
+		\input{subsubsection-4-1-2.tex}
+
+		\subsubsection{Зведення одного рівняння вищого порядку до системи рівнянь першого порядку}
+		\input{subsubsection-4-1-3.tex}
+
+		\subsubsection{Зведення системи рівнянь до одного рівняння вищого порядку}
+		\input{subsubsection-4-1-4.tex}
+
+		\subsubsection{Комбінації, що інтегруються}
+		\input{subsubsection-4-1-5.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-4-1-6.tex}
+
+	\subsection{Системи лінійних рівнянь. Загальні положення}
+	\input{subsection-4-2.tex}
+
+		\subsubsection{Властивості розв'язків лінійних однорідних систем}
+		\input{subsubsection-4-2-1.tex}
+
+		\subsubsection{Формула Якобі}
+		\input{subsubsection-4-2-2.tex}
+
+	\subsection{Системи лінійних однорідних рівнянь з сталими коефіцієнтами}
+	\input{subsection-4-3.tex}
+
+		\subsubsection{Розв'язування систем однорідних рівнянь з сталими коефіцієнтами методом Ейлера}
+		\input{subsubsection-4-3-1.tex}
+
+		\subsubsection{Розв'язок систем однорідних рівнянь зі сталими коефіцієнтами матричним методом}
+		\input{subsubsection-4-3-2.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-4-3-3.tex}
+
+	\subsection{Лінійні неоднорідні системи}
+	\input{subsection-4-4.tex}
+
+		\subsubsection{Властивості розв'язків лінійних неоднорідних систем}
+		\input{subsubsection-4-4-1.tex}
+
+		\subsubsection{Побудова частинного розв'язку неоднорідної системи методом варіації довільних сталих}
+		\input{subsubsection-4-4-2.tex}
+
+		\subsubsection{Формула Коші}
+		\input{subsubsection-4-4-3.tex}
+
+		\subsubsection{Метод невизначених коефіцієнтів}
+		\input{subsubsection-4-4-4.tex}
+
+		\subsubsection{Вправи для самостійної роботи}
+		\input{subsubsection-4-4-5.tex}%
+
+\newpage
+
+\nocite{*}
+
+\bibliographystyle{plain}
+
+\bibliography{literature}
+
+\end{document}

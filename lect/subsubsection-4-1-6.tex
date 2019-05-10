@@ -1,0 +1,92 @@
+\begin{example}
+	Розв'язати систему диференціальних рівнянь зведенням до одного рівняння вищого порядку: \[ \frac{\diff y}{\diff x} = \frac{x}{z}, \quad \frac{\diff z}{\diff x} = -\frac{x}{y}.\]
+\end{example}
+
+\begin{solution}
+	Диференціюємо перше рівняння по змінній $x$:
+	\[ y'' = \frac{1}{z} - \frac{x}{z^2} z' = \frac{1}{z} + \frac{x}{z^2} \cdot \frac{x}{y}. \]
+	
+	Таким чином, одержали допоміжну систему:
+	\[ y' = \frac{x}{z}, \quad y'' = \frac{1}{z} + \frac{x}{z^2} \cdot \frac{x}{y}. \]
+
+	З першого рівняння отримаємо $z = x / y'$. Підставляємо одержане значення в другу систему \[ y'' = \frac{y'}{x} + \frac{(y')^2}{y}.\]
+
+	Маємо однорідне (по $y, y', y''$) диференціальне рівняння другого порядку. Робимо заміну \begin{align*} y &= \exp\left\{\int u \diff x\right\}, \\ y' &= u \exp\left\{\int u \diff x\right\}, \\ y'' &= (u^2 + u') \exp\left\{\int u \diff x\right\}. \end{align*}
+
+	Після підстановки та скорочення на $e^{\int u \diff x}$ одержуємо \[ u^2 + u' = \frac{u}{x} + u^2, \] або \[ \frac{\diff u}{\diff x} = \frac{u}{x}. \]
+
+	Далі \[ \frac{\diff u}{u} = \frac{\diff x}{x} \implies u = \frac{C_1 x}{2}. \]
+
+	Звідси \[ y = \exp\left\{\int \frac{C_1 x}{2} \diff x\right\} = e^{C_1 x^2 + \ln C_2}, \] або \[ y_2 = C_2 e^{C_1 x^2}. \]
+
+	Змінна $z$ знаходиться з умови $z = x / y'$, або \[ z = \frac{x}{2 C_2 C_1 x e^{C_1 x^2}} = \frac{1}{2 C_1 C_2} e^{- C_1 x^2}. \]
+\end{solution}
+
+\begin{example}
+	Розв'язати систему в симетричному вигляді за допомогою інтегрованих комбінацій \[\frac{\diff x}{y} = \frac{\diff y}{x} = \frac{\diff z}{z}.\]
+\end{example}
+
+\begin{solution}
+	Використовуючи властивості ``пропорційності'', маємо \[ \frac{\diff x}{y} = \frac{\diff y}{x} = \frac{\diff z}{z} = \frac{\diff (x - y)}{-(x - y)} = \frac{\diff (x + y + z)}{(x + y + z)}. \]
+
+	\begin{enumerate}
+		\item Візьмемо \[\frac{\diff z}{z} = \frac{\diff (x - y)}{-(x - y)}.\] Звідси \[\ln |z| + \ln |x - y| = \ln C_1,\] і перший інтеграл має вигляд $z (x - y) = C_1$.
+		\item Візьмемо \[\frac{\diff z}{z} = \frac{\diff (x + y + z)}{(x + y + z)}.\] Звідси \[\ln |z| + \ln |x + y + z| = \ln C_2,\] і ще один інтеграл має вигляд \[\frac{x + y + z}{z} = C_2.\]
+	\end{enumerate}
+
+	Умовою функціональної незалежності одержаних інтегралів є \[\frac{D(C_1, C_2)}{D(x, y)} \ne 0.\] Перевіряємо: \[ \frac{D(C_1, C_2)}{D(x, y)} = \begin{vmatrix} \rfrac{\partial C_1}{\partial x} & \rfrac{\partial C_1}{\partial y} \\ \rfrac{\partial C_2}{\partial x} & \rfrac{\partial C_2}{\partial y} \end{vmatrix} = \begin{vmatrix} z & -z \\ \rfrac{1}{z} & \rfrac{1}{z} \end{vmatrix} = 2 \ne 0. \]
+	
+	Таким чином \[ z (x - y) = C_1, \quad \frac{x + y + z}{z} = C_2 \] є загальним інтегралом системи.
+\end{solution}
+
+Розв'язати системи диференціальних рівнянь, зведенням до одного рівняння вищого порядку
+
+\begin{multicols}{2}
+\begin{problem}
+	\[ \frac{\diff y}{\diff x} = \frac{y^2}{z - x}, \quad \frac{\diff z}{\diff x} = y + 1; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff y}{\diff x} = \frac{z}{x}, \quad \frac{\diff z}{\diff x} = \frac{z (y + 2 z - 1)}{x (y - 1)}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff y}{\diff x} = y^2 z, \quad \frac{\diff z}{\diff x} = \frac{z}{x} - y z^2; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff y}{\diff x} = \frac{y^2 - z^2 + 1}{2 z}, \quad \frac{\diff z}{\diff x} = z + y. \]
+\end{problem}
+\end{multicols}
+
+Розв’язати системи диференціальних рівнянь за допомогою інтегрованих комбінацій.
+
+\begin{multicols}{2}
+\begin{problem}
+	\[ \frac{\diff x}{y + z} = \frac{\diff y}{x + z} = \frac{\diff z}{x + y}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x}{y - x} = \frac{\diff y}{x + y + z} = \frac{\diff z}{x - y}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x}{z} = \frac{\diff y}{x z} = \frac{\diff z}{y}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x}{z^2 - y^2} = \frac{\diff y}{z} = \frac{\diff z}{- y}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x}{x} = \frac{\diff y}{y} = \frac{\diff z}{x y + z}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x}{x + y^2 + z^2} = \frac{\diff y}{y} = \frac{\diff z}{z}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x}{x (y + z)} = \frac{\diff y}{z (z - y)} = \frac{\diff z}{y  (y - z)}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x}{-x^2} = \frac{\diff y}{x y - 2 z^2} = \frac{\diff z}{x z}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x}{x (z - y)} = \frac{\diff y}{y (y - x)} = \frac{\diff z}{y^2 - x z}; \]
+\end{problem}
+\begin{problem}
+	\[ \frac{\diff x / x}{y^2 - z^2} = \frac{\diff y / y}{- z^2 - x^2)} = \frac{\diff z / z}{x^2 + y^2}. \]
+\end{problem}
+\end{multicols}

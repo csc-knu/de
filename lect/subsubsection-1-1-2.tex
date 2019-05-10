@@ -1,0 +1,31 @@
+% version 1.0
+Розглянемо рівняння вигляду
+\begin{equation*}
+	\frac{\diff y}{\diff x} = f(a x + b y + c)
+\end{equation*}
+де $a$, $b$, $c$ --- сталі. \parvskip
+
+Зробимо заміну $a x + b y + c = z$. Тоді
+\begin{equation*}
+	a \diff x + b \diff y = \diff z, \quad \frac{\diff y}{\diff x} = \frac1b \left( \frac{\diff z}{\diff x} - a \right).
+\end{equation*}
+
+Підставивши в початкове рівняння, одержимо
+\begin{equation*}
+	\frac1b \left( \frac{\diff z}{\diff x} - a \right) = f(z),
+\end{equation*}
+або
+\begin{equation*}
+	\frac{\diff z}{\diff x} = a + b f (z).
+\end{equation*}
+
+Розділивши змінні, запишемо
+\begin{equation*}
+	\frac{\diff z}{a + b f (z)} - \diff x = 0
+\end{equation*}
+і
+\begin{equation*}
+	\int \frac{\diff z}{a + b f (z)} - x = C.
+\end{equation*}
+
+Загальний інтеграл має вигляд $\Phi(a x + b y + c, x) = C$.

@@ -1,0 +1,98 @@
+Як випливає з останньої теореми, для побудови загального розв'язку неоднорідної системи потрібно розв'язати однорідну і яким-небудь засобом знайти частинний розв'язок неоднорідної системи. Розглянемо метод, який називається методом варіації довільної сталої. \parvskip
+
+Нехай маємо систему
+\begin{equation*}
+ 	\dot x = A(t) x + f(t)
+\end{equation*}
+і $x(t) = \sum_{i = 1}^n C_i x_i(t)$ --- загальний розв'язок однорідної системи. Розв'язок неоднорідної будемо шукати в такому ж вигляді, але вважати $C_i$ не сталими, а невідомими функціями, тобто $C_i = C_i(t)$ і 
+\begin{equation*}
+	x_{\text{hetero}}(t) = \sum_{i = 1}^n C_i(t) x_i(t),
+\end{equation*}
+чи в матричній формі
+\begin{equation*}
+	x_{\text{hetero}}(t) = X(t) C(t),
+\end{equation*}
+де $X(t)$ --- фундаментальна матриця розв'язків, $C(t)$ --- вектор з невідомих функцій. Підставивши в систему, одержимо
+\begin{equation*}
+	\frac{\diff}{\diff t} X(t) C(t) + X(t) \frac{\diff C(t)}{\diff t} = A(t) X(t) C(t) + f(t),
+\end{equation*}
+чи
+\begin{equation*}
+	\left( \frac{\diff}{\diff t} X(t) - A(t) X(t) \right) C(t) + X(t) \frac{\diff C(t)}{\diff t} = f(t).
+\end{equation*}
+
+Оскільки $X(t)$ --- фундаментальна матриця, тобто матриця складена з розв'язків, то
+\begin{equation*}
+	\frac{\diff}{\diff t} X(t) - A(t) X(t) \equiv 0
+\end{equation*}
+і залишається система рівнянь
+\begin{equation*}
+	X(t) C'(t) = f(t).
+\end{equation*}
+
+Розписавши покоординатно, одержимо
+\begin{equation*}
+	\left\{
+		\begin{array}{rl}
+			C_1' x_{11}(t) + C_2' x_{12}(t) + \ldots + C_n' x_{1n}(t) &= f_1(t), \\
+			C_1' x_{21}(t) + C_2' x_{22}(t) + \ldots + C_n' x_{2n}(t) &= f_2(t), \\
+			\hdotsfor{2} \\
+			C_1' x_{n1}(t) + C_2' x_{n2}(t) + \ldots + C_n' x_{nn}(t) &= f_n(t).
+		\end{array}
+	\right.
+\end{equation*}
+
+Оскільки визначником системи є визначник Вронського і він не дорівнює нулю, то система має єдиний розв'язок і функції  визначаються в такий спосіб
+\begin{equation*}
+	\begin{array}{rl}
+		C_1(t) &= \displaystyle \int \frac{\begin{vmatrix} f_1(t) & x_{12}(t) & \cdots & x_{1n}(t) \\ f_2(t) & x_{22}(t) & \cdots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ f_n(t) & x_{n2}(t) & \cdots & x_{nn}(t) \end{vmatrix}}{W[x_1, \ldots, x_n](t)} \diff t, \\
+		C_2(t) &= \displaystyle \int \frac{\begin{vmatrix} x_{11}(t) & f_1(t) & \cdots & x_{1n}(t) \\ x_{21}(t) & f_2(t) & \cdots & x_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & f_n(t) & \cdots & x_{nn}(t) \end{vmatrix}}{W[x_1, \ldots, x_n](t)} \diff t, \\
+		\hdotsfor{2} \\
+		C_n(t) &= \displaystyle \int \frac{\begin{vmatrix} x_{11}(t) & x_{12}(t) & \cdots & f_1(t) \\ x_{21}(t) & x_{22}(t) & \cdots & f_2(t) \\ \vdots & \vdots & \ddots & \vdots \\ x_{n1}(t) & x_{n2}(t) & \cdots & f_n(t) \end{vmatrix}}{W[x_1, \ldots, x_n](t)} \diff t.
+	\end{array}
+\end{equation*}
+
+Звідси частинний розв'язок неоднорідної системи має вигляд
+\begin{equation*}
+	x_{\text{hetero}}(t) = \sum_{i = 1}^n C_i(t) x_i(t).
+\end{equation*}
+
+Для лінійної неоднорідної системи на площині 
+\begin{equation*}
+	\left\{
+		\begin{aligned}
+			\dot x_1 &= a_{11} x_1 + a_{12}(t) x_2 + f_1(t), \\
+			\dot x_2 &= a_{21} x_1 + a_{22}(t) x_2 + f_2(t) 
+		\end{aligned}
+	\right.
+\end{equation*}
+метод варіації довільної сталої реалізується таким чином. \parvskip
+
+Нехай
+\begin{equation*}
+	X(t) = \begin{pmatrix}
+		x_{11}(t) & x_{12}(t) \\
+		x_{21}(t) & x_{22}(t).
+	\end{pmatrix}
+\end{equation*}
+
+Фундаментальна матриця розв'язків однорідної системи. Тоді частинний розв'язок неоднорідної шукається з системи
+\begin{equation*}
+	\left\{
+		\begin{aligned}
+			C_1' x_{11}(t) + C_2' x_{12}(t) &= f_1(t), \\
+			C_2' x_{21}(t) + C_2' x_{22}(t) &= f_2(t).
+		\end{aligned}
+	\right.
+\end{equation*}
+
+Звідси
+\begin{equation*}
+	C_1(t) = \int \frac{\begin{vmatrix} f_1(t) & x_{12}(t) \\ f_2(t) & x_{22}(t) \end{vmatrix}}{\begin{vmatrix} x_{11}(t) & x_{12}(t) \\ x_{21}(t) & x_{22}(t) \end{vmatrix}}, \qquad C_2(t) = \int \frac{\begin{vmatrix} x_{11}(t) & f_1(t) \\ x_{21}(t) & f_2(t) \end{vmatrix}}{\begin{vmatrix} x_{11}(t) & x_{12}(t) \\ x_{21}(t) & x_{22}(t) \end{vmatrix}}
+\end{equation*}
+   
+І загальний розв'язок має вигляд
+\begin{equation*}
+	\begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix} = \begin{pmatrix} x_{11}(t) & x_{12}(t) \\ x_{21}(t) & x_{22}(t) \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix} + \begin{pmatrix} x_{11}(t) & x_{12}(t) \\ x_{21}(t) & x_{22}(t) \end{pmatrix} \begin{pmatrix} C_1(t) \\ C_2(t) \end{pmatrix},
+\end{equation*}
+де $C_1, C_2$ --- довільні сталі.
