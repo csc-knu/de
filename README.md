@@ -4,17 +4,17 @@
 
 ### Викладацький склад
 
-Курс лекцій читається позмінно Хусаїновим Д.Я. та Харченком І.І.
+Курс лекцій читається позмінно Хусаїновим Денисом Ях'євичем та Харченком Ігорем Івановичем.
 
 Практичні заняття проводять:
 
-- Хусаїнов Д.Я.
+- Хусаїнов Денис Ях'євич, dkh<span style="font-family:monospace;">@</span>unicyb.kiev.ua, d.y.khysainov<span style="font-family:monospace;">@</span>gmail.com
 
-- Харченко І.І.
+- Харченко Ігор Іванович, ihar<span style="font-family:monospace;">@</span>unicyb.kiev.ua
 
-- Матвієнко . .
+- Матвієнко Володимир Тихонович, matvienko.vt<span style="font-family:monospace;">@</span>gmail.com
 
-- Кулян . .
+- Кулян Віктор Романович, v.kulyan<span style="font-family:monospace;">@</span>gmail.com
 
 Підтримкою сайту займається Скибицький Н.М., n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
 
