@@ -16,7 +16,7 @@
 
 - Кулян Віктор Романович, v.kulyan<span style="font-family:monospace;">@</span>gmail.com
 
-Підтримкою сайту займається Скибицький Н.М., n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
+Підтримкою сайту займається Скибицький Нікіта Максимович, n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
 
 ### Розподіл балів
 
