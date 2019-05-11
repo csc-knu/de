@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 12pt, dvipsnames]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A,T1]{fontenc}
 \usepackage[english, ukrainian]{babel}
@@ -6,6 +6,8 @@
 \usepackage{natbib}
 \usepackage{geometry}
 \usepackage{graphicx}
+
+% \input{th.sty}
 
 \usepackage{eso-pic}
 \newcommand\BackgroundPic{\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\includegraphics[width=\paperwidth, height=\paperheight]{background.png}}}}
@@ -21,19 +23,19 @@
 
 \usepackage{xcolor, float, multirow, multicol, hyperref}
 \definecolor{cover}{RGB}{191,0,0}
-\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=red}
+\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=Red}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Теорема}[section]
-\newtheorem{lemma}{Лема}[section]
-\theoremstyle{definition}
-\newtheorem*{definition}{Визначення}
-\newtheorem{problem}{Задача}[subsection]
-\newtheorem*{example*}{Приклад}
-\newtheorem{example}[problem]{Приклад}
-\newtheorem{property}{Властивість}
-\newtheorem*{solution}{Розв'язок}
-\newtheorem*{remark}{Зауваження}
+% \usepackage{amsthm}
+% \newtheorem{theorem}{Теорема}[section]
+% \newtheorem{lemma}{Лема}[section]
+% \theoremstyle{definition}
+% \newtheorem*{definition}{Визначення}
+% \newtheorem{problem}{Задача}[subsection]
+% \newtheorem*{example*}{Приклад}
+% \newtheorem{example}[problem]{Приклад}
+% \newtheorem{property}{Властивість}
+% \newtheorem*{solution}{Розв'язок}
+% \newtheorem*{remark}{Зауваження}
 
 \renewcommand{\phi}{\varphi}
 \renewcommand{\epsilon}{\varepsilon}
@@ -72,4 +74,3 @@
 	\fi%
 }
 \makeatother
-
