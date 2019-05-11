@@ -2,17 +2,21 @@
 
 Тут розміщений конспект лекцій прочитаних проф., д.ф.-м.н. Хусаіновим Денисом Ях'євичем восени 2017-го року, _тобто першого семестру._
 
-- [Усе разом](Differential%20Equations.pdf)
+- Усе разом: [pdf](de.pdf), [pdf with cover](de-cover.pdf)
 
-- [Частина 1](Differential%20Equations%20Chapter%201.pdf)
+- Розбите за частинами
 
-- [Частина 2](Differential%20Equations%20Chapter%202.pdf)
+	1.  Рiвняння першого порядку: [color pdf](chapter-1.pdf), [b&amp;w pdf](chapter-1-black-white.pdf)
 
-- [Частина 3](Differential%20Equations%20Chapter%203.pdf)
+	2. Нелiнiйнi диференцiальнi рiвняння вищих порядкiв: [color pdf](chapter-2.pdf), [b&amp;w pdf](chapter-2-black-white.pdf)
 
-- [Частина 4](Differential%20Equations%20Chapter%204.pdf)
+	3. Лiнiйнi диференцiальнi рiвняння вищих порядкiв: [color pdf](chapter-3.pdf), [b&amp;w pdf](chapter-3-black-white.pdf)
+
+	4. Системи рiвнянь: [color pdf](chapter-4.pdf), [b&amp;w pdf](chapter-4-black-white.pdf)
 
 _Електронний конспект лекцій другого семестру знаходиться у розробці._
+
+_Розбивка за лекціями знаходиться у розробці._
 
 ### Допомогти проекту
 
