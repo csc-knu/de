@@ -1,0 +1,125 @@
+\section*{Заняття 22--23: Методи Ляпунова. Побудова функцій Ляпунова для лінійних стаціонарних систем. Критерій Гурвіца}
+
+\subsection*{Рекомендовані приклади для аудиторної роботи}
+
+\begin{problem}
+	Дослідити стійкість розв'язків з вказаними початковими умовами $\dot x = 4 x - t^2 x$, $x(0) = 0$.
+\end{problem}
+
+\begin{problem}
+	Дослідити стійкість нульового розв'язку, якщо відомо загальний розв'язок системи $x = C_1 \cdot \cos^2 (t) - C_2 \cdot e^{-t}$.
+\end{problem}
+
+\begin{problem}
+	За допомогою теореми Ляпунова про стійкість за першим наближенням дослідити на стійкість нульовий розв'язок: 
+	\[\left\{ \begin{aligned} \dot x &= e^{x + 2 y} - \cos (3 x), \\ \dot y &= \sqrt{4 + 8 x} - 2 e^y. \end{aligned} \right.\]
+\end{problem}
+
+\begin{problem}
+	При яких значеннях параметрів $a$ i $b$ є асимптотично стійким нульовий розв'язок системи звичайних диференціальних рівнянь: 
+	\[\left\{ \begin{aligned} \dot x &= y + \sin (x), \\ \dot y &= a \cdot x + b \cdot y. \end{aligned} \right.\]
+\end{problem}
+
+\begin{problem}
+	Дослідити, при яких значеннях параметра $a$ буде асимптотично стійким нульовий розв'язок: 
+	\[\left\{ \begin{aligned} \dot x &= a \cdot x - 2 y + x^2, \\ \dot y &= x + y + x y. \end{aligned} \right.\]
+\end{problem}
+
+\begin{problem}
+	Знайти стан рівноваги даної системи і дослідити його на стійкість 
+	\[\left\{ \begin{aligned} \dot x &= y - x^2 - x, \\ \dot y &= x + y + x y. \end{aligned} \right.\]
+\end{problem}
+
+Дослідити стійкість користуючись відомими критеріями:
+
+\begin{problem}
+	$y''' + y'' + y' + 2 y = 0$.
+\end{problem}
+
+\begin{problem}
+	$y^{IV} + 3.1 y''' + 5.2 y'' + 9.8 y' + 5.8 y = 0$.
+\end{problem}
+
+\begin{problem}
+	Дослідити, при яких значеннях параметрів $a$ і $b$ нульовий розв'язок буде асимптотично стійким: $y''' + a \cdot y'' + b \cdot y' + 2 y = 0$.
+\end{problem}
+
+\begin{problem}
+	Побудувати функцію Ляпунова у вигляді квадратичної форми
+	\[V(x) = x^\intercal B x, \quad x = (x_1, x_2)^\intercal, \quad B = \begin{pmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{pmatrix}\]
+	для системи
+	\[\left\{ \begin{aligned} \dot x_1 &= - 2 x_1 + x_2, \\ \dot x_2 &= 2 x_1 - 3 x_2, \end{aligned} \right.\]
+	таким чином, що її похідна в силу системи дорівнює $-x_1^2 - x_2^2$.
+\end{problem}
+
+\begin{problem}
+	При яких значеннях параметрів $a$ i $b$ є асимптотично стійким нульовий розв'язок системи звичайних диференціальних рівнянь:
+	\[\left\{ \begin{aligned} \dot x &= \ln (e + a \cdot x) - e^y, \\ \dot y &= b \cdot x + \tan (y). \end{aligned} \right.\]
+\end{problem}
+
+\begin{problem}
+	Знайти всі положення рівноваги та дослідити їх на стійкість системи звичайних диференціальних рівнянь:
+	\[\left\{ \begin{aligned} \dot x &= \ln (y^2 - x), \\ \dot y &= x - y - 1. \end{aligned} \right.\]
+\end{problem}
+
+\subsection*{Рекомендовані приклади для домашнього завдання}
+
+\begin{problem}
+	Дослідити стійкість розв'язків з вказаними початковими умовами $3 \cdot (t - 1) \cdot \dot x = x$, $x(2) = 0$.
+\end{problem}
+
+За допомогою теореми Ляпунова про стійкість за першим наближенням дослідити на стійкість нульовий розв'язок:
+
+\begin{problem}
+	\[\left\{ \begin{aligned} \dot x &= x^2 + y^2 - 2 x, \\ \dot y &= 3 x^2 - x + 3 y. \end{aligned} \right.\]
+\end{problem}
+
+\begin{problem}
+	\[\left\{ \begin{aligned} \dot x &= \ln (4 y + e^{- 3 x}), \\ \dot y &= 2 y - 1 + \sqrt[3]{1 - 6 x}. \end{aligned} \right.\]
+\end{problem}
+
+\begin{problem}
+	При яких значеннях параметрів $a$ i $b$ є асимптотично стійким нульовий розв'язок системи звичайних диференціальних рівнянь: 
+	\[\left\{ \begin{aligned} \dot x &= a \cdot x + y + x^2, \\ \dot y &= x + a \cdot y + y^2. \end{aligned} \right.\]
+\end{problem}
+
+\begin{problem}
+	Знайти стан рівноваги даної системи і дослідити його на стійкість 
+	\[\left\{ \begin{aligned} \dot x &= (x - 1) (y - 1), \\ \dot y &= x y - 2. \end{aligned} \right.\]
+\end{problem}
+
+Дослідити стійкість користуючись відомими критеріями:
+
+\begin{problem}
+	$y''' + 2 y'' + 2 y' + 3 y = 0$.
+\end{problem}
+
+\begin{problem}
+	$y^V + 2 y^{IV} + 4 y''' + 6 y'' + 5 y' + 4 y = 0$.
+\end{problem}
+
+\begin{problem}
+	При яких значеннях параметрів $a$ і $b$ нульовий розв'язок буде асимптотично стійким: $y^{IV} + y''' + a \cdot y'' + y' + b \cdot y = 0$.
+\end{problem}
+
+\begin{problem}
+	Дослідити, при яких значеннях параметрів $a$ і $b$ нульовий розв'язок буде асимптотично стійким: $y''' + 3 \cdot y'' + a \cdot y' + b \cdot y = 0$.
+\end{problem}
+
+\begin{problem}
+	Побудувати функцію Ляпунова у вигляді квадратичної форми
+	\[V(x) = x^\intercal B x, \quad x = (x_1, x_2)^\intercal, \quad B = \begin{pmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{pmatrix}\]
+	для системи
+	\[\left\{ \begin{aligned} \dot x_1 &= - 3 x_1 + 3 x_2, \\ \dot x_2 &= 2 x_1 - 4 x_2, \end{aligned} \right.\]
+	таким чином, що її похідна в силу системи дорівнює $-x_1^2 - x_2^2$.
+\end{problem}
+
+\begin{problem}
+	При яких значеннях параметрів $a$ i $b$ є асимптотично стійким нульовий розв'язок системи звичайних диференціальних рівнянь:
+	\[\left\{ \begin{aligned} \dot x &= y + \sin (x), \\ \dot y &= a \cdot x + b \cdot y. \end{aligned} \right.\]
+\end{problem}
+
+\begin{problem}
+	Знайти всі положення рівноваги та дослідити їх на стійкість системи звичайних диференціальних рівнянь:
+	\[\left\{ \begin{aligned} \dot x &= y, \\ \dot y &= \sin (x + y). \end{aligned} \right.\]
+\end{problem}
