@@ -1,11 +1,8 @@
-% cd ..\..\Users\NikitaSkybytskyi\Desktop\differential-equations
-% pdflatex chapter-1.tex && cls && pdflatex chapter-1.tex && cls && pdflatex chapter-1.tex && del chapter-1.toc, chapter-1.log, chapter-1.aux, chapter-1.out && start chapter-1.pdf
-
 \documentclass[a4paper, 12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A,T1]{fontenc}
 \usepackage[english, ukrainian]{babel}
-\usepackage{amsmath, amssymb, natbib, float, multirow, multicol, xcolor, hyperref}
+\usepackage{amsmath, amssymb, natbib, float, multirow, multicol, hyperref}
 
 \allowdisplaybreaks
 \setlength\parindent{0pt}
@@ -14,19 +11,9 @@
 \author{Скибицький Нікіта}
 \date{\today}
 
-\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=red}
+\input{th.sty}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Теорема}[section]
-\newtheorem{lemma}{Лема}[section]
-\theoremstyle{definition}
-\newtheorem*{definition}{Визначення}
-\newtheorem{problem}{Задача}[subsection]
-\newtheorem*{example*}{Приклад}
-\newtheorem{example}[problem]{Приклад}
-\newtheorem{property}{Властивість}
-\newtheorem*{solution}{Розв'язок}
-\newtheorem*{remark}{Зауваження}
+\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=blue}
 
 \renewcommand{\phi}{\varphi}
 \renewcommand{\epsilon}{\varepsilon}
@@ -66,6 +53,8 @@
 \newcommand{\parvskip}{\vspace{1em}}
 
 \begin{document}
+
+\tableofcontents
 
 \subsection*{Вступ}
 \input{introduction.tex}

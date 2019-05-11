@@ -13,7 +13,7 @@
 	Функція $\rho(x,y)$ називається відстанню (метрикою) в просторі $M$.
 \end{definition}
 
-\begin{example*} 
+\begin{example} 
 	Векторний $n$-вимірний простір $\RR^n$. \parvskip
 
 	Нехай $x=(x_1,x_2,\ldots,x_n)$, $y=(y_1,y_2,\ldots,y_n)$. За метрику можна взяти: 
@@ -24,9 +24,9 @@
 	\begin{equation*}
 		\rho(x,y)=\max_{i=\overline{1,n}}|x_i-y_i|.
 	\end{equation*}
-\end{example*}
+\end{example}
 
-\begin{example*} 
+\begin{example} 
 	Простір неперервних функцій на відрізку $[a,b]$ позначається $C([a,b])$. За метрику можна взяти
 		\begin{equation*}
 		\rho(x(t), y(t)) = \left(\int_a^b (x(t)-y(t))^2 \diff t\right)^{1/2},
@@ -35,7 +35,7 @@
 	\begin{equation*}
 		\rho(x(t), y(t)) = \max_{t\in[a,b]} |x(t)-y(t)|.
 	\end{equation*}
-\end{example*}
+\end{example}
 
 \begin{definition} 
 	Послідовність $\{x_n\}_{n=1}^\infty$ називається фундаментальною, як\-що для довільного $\epsilon > 0$ існує $n \ge N(\epsilon)$ таке, що при $n \ge N(\epsilon)$ і довільному $m\in\NN$ буде $\rho(x_n,x_{n+m}) < \epsilon$.

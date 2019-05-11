@@ -7,8 +7,8 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 
-\usepackage{eso-pic}
-\newcommand\BackgroundPic{\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\includegraphics[width=\paperwidth, height=\paperheight]{background.png}}}}
+% \usepackage{eso-pic}
+% \newcommand\BackgroundPic{\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\includegraphics[width=\paperwidth, height=\paperheight]{background.png}}}}
 
 \allowdisplaybreaks
 \setlength\parindent{0pt}
@@ -19,21 +19,12 @@
 % \author{{\Large Скибицький Нікіта} \\ {\tt n.skybytskyi@knu.ua} \\ {Київський національний університет імені Тараса Шевченка}}
 \date{\today}
 
-\usepackage{xcolor, float, multirow, multicol, hyperref}
-\definecolor{cover}{RGB}{191,0,0}
-\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=red}
+\usepackage{float, multirow, multicol, hyperref}
+% \definecolor{cover}{RGB}{191,0,0}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Теорема}[section]
-\newtheorem{lemma}{Лема}[section]
-\theoremstyle{definition}
-\newtheorem*{definition}{Визначення}
-\newtheorem{problem}{Задача}[subsection]
-\newtheorem*{example*}{Приклад}
-\newtheorem{example}[problem]{Приклад}
-\newtheorem{property}{Властивість}
-\newtheorem*{solution}{Розв'язок}
-\newtheorem*{remark}{Зауваження}
+\input{th.sty}
+
+\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=blue}
 
 \renewcommand{\phi}{\varphi}
 \renewcommand{\epsilon}{\varepsilon}

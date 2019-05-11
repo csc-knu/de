@@ -1,11 +1,8 @@
-% cd ..\..\Users\NikitaSkybytskyi\Desktop\differential-equations
-% pdflatex chapter-4.tex && cls && pdflatex chapter-4.tex && cls && pdflatex chapter-4.tex && del chapter-4.toc, chapter-4.log, chapter-4.aux, chapter-4.out && start chapter-4.pdf
-
 \documentclass[a4paper, 12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A,T1]{fontenc}
 \usepackage[english, ukrainian]{babel}
-\usepackage{amsmath, amssymb, natbib, float, multirow, multicol, xcolor, hyperref}
+\usepackage{amsmath, amssymb, natbib, float, multirow, multicol, hyperref}
 
 \allowdisplaybreaks
 \setlength\parindent{0pt}
@@ -14,19 +11,9 @@
 \author{Скибицький Нікіта}
 \date{\today}
 
-\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=red}
+\hypersetup{unicode=true, colorlinks=true, linktoc=all, linkcolor=blue}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Теорема}[section]
-\newtheorem{lemma}{Лема}[section]
-\theoremstyle{definition}
-\newtheorem*{definition}{Визначення}
-\newtheorem{problem}{Задача}[subsection]
-\newtheorem*{example*}{Приклад}
-\newtheorem{example}[problem]{Приклад}
-\newtheorem{property}{Властивість}
-\newtheorem*{solution}{Розв'язок}
-\newtheorem*{remark}{Зауваження}
+\input{th.sty}
 
 \renewcommand{\phi}{\varphi}
 \renewcommand{\epsilon}{\varepsilon}
@@ -67,6 +54,8 @@
 \newcommand{\parvskip}{\medskip}
 
 \begin{document}
+
+\tableofcontents
 
 \setcounter{section}{3}
 \section{Системи рівнянь}
