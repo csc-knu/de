@@ -4,17 +4,17 @@
 
 ### Викладацький склад
 
-Курс лекцій читається позмінно Хусаїновим Денисом Ях'євичем та Харченком Ігорем Івановичем.
+Курс лекцій читається позмінно Хусаіновим Денисом Ях'євичем та Харченком Ігорем Івановичем.
 
 Практичні заняття проводять:
 
-- Хусаїнов Денис Ях'євич, dkh<span style="font-family:monospace;">@</span>unicyb.kiev.ua, d.y.khysainov<span style="font-family:monospace;">@</span>gmail.com
+- Хусаінов Денис Ях'євич, dkh<span style="font-family:monospace;">@</span>unicyb.kiev.ua, d.y.khysainov<span style="font-family:monospace;">@</span>gmail.com, [розклад](https://mytimetable.live/teacher/Hysainov-DYA/)
 
-- Харченко Ігор Іванович, ihar<span style="font-family:monospace;">@</span>unicyb.kiev.ua
+- Харченко Ігор Іванович, ihar<span style="font-family:monospace;">@</span>unicyb.kiev.ua, [розклад](https://mytimetable.live/teacher/Harchenko-II/)
 
-- Матвієнко Володимир Тихонович, matvienko.vt<span style="font-family:monospace;">@</span>gmail.com
+- Матвієнко Володимир Тихонович, matvienko.vt<span style="font-family:monospace;">@</span>gmail.com, [розклад](https://mytimetable.live/teacher/Matviienko-VT/)
 
-- Кулян Віктор Романович, v.kulyan<span style="font-family:monospace;">@</span>gmail.com
+- Кулян Віктор Романович, v.kulyan<span style="font-family:monospace;">@</span>gmail.com, [розклад](https://mytimetable.live/teacher/Kylyan-VR/)
 
 Підтримкою сайту займається Скибицький Нікіта Максимович, n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
 
