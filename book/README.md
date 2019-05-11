@@ -4,9 +4,11 @@
 
 - Понтрягин Л. С., &laquo;Обыкновенные дифференциальные уравнения&raquo;, видання 1974-го року: [pdf](pontryagin-1974.pdf), [djvu](pontryagin-1974.djvu)
 
-- Тихонов А. Н., Васильева А. Б., Свешников А. Г., &laquo;Дифференциальные уравнения&raquo;, видання 2005-го року: [pdf](tikhonov-2005.pdf), [djvu](tikhonov-2005.djvu)
+- Самойленко А.М., Перестюк Н.О., Парасюк І.О., &laquo;Диференціальні рівняння&raquo;, видання 2003)-го року: [pdf](samoilenko-2003.pdf), [djvu](samoilenko-2003.djvu), [small pdf](samoilenko-2003-small.pdf)
 
-- Филиппов А. Ф., &laquo;Введение в теорию дифференциальных уравнений&raquo;, видання 2007-го року: [pdf](filippov-2007.pdf), [djvu](filippov-2007.djvu)
+- Тихонов А. Н., Васильева А. Б., Свешников А. Г., &laquo;Дифференциальные уравнения&raquo;, видання 2005-го року: [pdf](tikhonov-2005.pdf), [djvu](tikhonov-2005.djvu), [small pdf](tikhonov-2005-small.pdf)
+
+- Филиппов А. Ф., &laquo;Введение в теорию дифференциальных уравнений&raquo;, видання 2007-го року: [pdf](filippov-2007.pdf), [djvu](filippov-2007.djvu), [small pdf](filippov-2007-small.pdf)
 
 - Петровский И. Г., &laquo;Лекции по теории обыкновенных дифференциальных уравнений&raquo;, видання 2009-го року: [pdf](petrovsky-2009.pdf), [djvu](petrovsky-2009.djvu)
 
