@@ -5,8 +5,8 @@
 			TeX: { 
 				equationNumbers: { autoNumber: "AMS" },
 				Macros: {
-					RR: "{\mathbb{R}}",
-					diff: "{\mathop{}\!\mathrm{d}}",
+					RR: "{\\mathbb{R}}",
+					diff: "{\\mathop{}\\!\\mathrm{d}}",
 				}
 			}
 		});
