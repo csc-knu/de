@@ -1,9 +1,11 @@
-Hi! 
+Nikita Skybytskyi and Denis Khusainov appreciate your intention to contribute!
 
-If you are here, then I expect that you want to help me with this project, and I am excited about that.
+Typical ways to contribute include but are not limited to:
 
-How you can help:
-1. create an Issue on GitHub if you found a type or error;
-2. write to n.skybytskyi@gmail.com if you want to help with overall structure or contents of the document.
+1. issue with report about a typo or an error in lecture notes;
+
+2. pull request with new books added;
+
+Please contact us at csc.knu@gmail.com for less common contributions.
 
 Thanks in advance for your contribution!
